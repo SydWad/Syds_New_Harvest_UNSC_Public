@@ -4,7 +4,7 @@
 This repository does **not** include any textures or sound files.
 
 ## Project Branches
-- **Main Branch (Complete Project):**  
+- **Developer Branch (WIP Project):**  
   [Steam Workshop - Main Branch](https://steamcommunity.com/sharedfiles/filedetails/?id=3096140652)  
 
 - **Public Branch (Public Release):**  
