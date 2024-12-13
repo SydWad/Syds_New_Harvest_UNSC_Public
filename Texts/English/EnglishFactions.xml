@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+
+<Override>
+
+<!-- Modified values -->
+<missionname.escort1>UNSC Personnel Transport</missionname.escort1>
+<missiondescription.escort1>The UNSC has hired a number of commoners from [location1] and needs them to be transported to [location2]. Take care not to endanger their lives, as you will only be paid your reward of [reward] marks if none of them die.</missiondescription.escort1>
+<missionname.escort2>UNSC Official Transport</missionname.escort2>
+<missiondescription.escort2>A highly valuable UNSC official and their armed escort must be transported to [location2]. Take care not to pose any unnecessary risk to the VIP, as you will only be paid a reward of [reward] marks if they survive.</missiondescription.escort2>
+<eventtext.missionevent_escort1.c1>“Looking for work? The UNSC's hired some fresh meat from our outpost and assigned them a job at a nearby outpost. Escort them over there safely and you'll be paid.”</eventtext.missionevent_escort1.c1>
+<eventtext.missionevent_escort2.c1>“If you're looking to make yourself known among the UNSC higher-ups, I've got a nice opportunity for you… A high-ranking UNSC official and their armed escort came to visit our outpost, and are now looking for transportation to a nearby outpost. Get them over there safely, and there's some marks in it for you as well.”</eventtext.missionevent_escort2.c1>
+<eventtext.missionevent_escort3.c1>“We recently captured some Separatists and are looking for someone to transport them to a nearby outpost. If it was up to me, I'd throw them out the airlock, but the UNSC higher-ups apparently want them for interrogation. You'll be paid well for their transportation, but be aware that they need to be closely guarded.”</eventtext.missionevent_escort3.c1>
+<eventtext.missionevent_escort4.c1>“We believe that Separatist terrorists have snuck among the innocent civilians looking to leave on the next transport ship. If you're willing to have your ship act as that transport, you might be able to draw the terrorists out into the open and detain them. Just make sure the civilians survive.”</eventtext.missionevent_escort4.c1>
+<lockedpathtooltipcoalitionreputation>The passageway is sealed off. You may need a [requiredreputation] reputation with the ‖color:faction.coalition‖Europa UNSC‖end‖ and permission from an officer in the outpost to transit farther. You can track your reputation in the info tab.\n\nCurrent reputation: [currentreputation]</lockedpathtooltipcoalitionreputation>
+
+<!-- New values -->
+<missionname.coalitionattack1>UNSC Ambush</missionname.coalitionattack1>
+<missionheader0.coalitionattack1>Incoming transmission</missionheader0.coalitionattack1>
+<missionmessage0.coalitionattack1>“End of the road, traitors! The price for treason against the UNSC is death!”</missionmessage0.coalitionattack1>
+<missiondescription.escort4separatists>There are reports of undercover UNSC operatives staking out Separatist activity in the area. Some may attempt to sneak onto your ship alongside innocent passengers. Make sure the innocent civilians make it to [location2] alive, and deal with any operatives that reveal themselves, and you'll be paid a reward of [reward] marks.</missiondescription.escort4separatists>
+<missionsuccess.escort4separatists>Personnel transport successful, and the UNSC operatives have been dealt with.</missionsuccess.escort4separatists>
+<missionheader1.escort4separatists>UNSC operatives defeated</missionheader1.escort4separatists>
+<eventtext.missionevent_escort2separatists.c1>“If you're interested in contributing to our fight against the UNSC fascists, we've got a job for you… A certain activist who is very important to our cause is looking for transportation to a nearby outpost along with their armed escort. Get them over there safely, and we'll be sure to make it worth your while.”</eventtext.missionevent_escort2separatists.c1>
+<eventtext.missionevent_escort3separatists.c1>“We had a little trouble with a UNSC attack sub recently, and long story short, we've now got their surviving crew locked up in our brig. After some negotiation, we've agreed to get them transferred to the next outpost over. If you're willing to get them there, there's some marks in it for you, but be aware that they need to be closely guarded.”</eventtext.missionevent_escort3separatists.c1>
+<eventtext.missionevent_escort4separatists.c1>“According to our sources, the UNSC has sent some undercover operatives to investigate Separatist activity around this area. We have reason to believe that some of them may be trying to get out of here disguised as innocent civilians on the next transport ship. If you're willing to have your ship act as that transport, you might be able to draw the operatives out into the open and detain them. Just make sure the civilians survive.”</eventtext.missionevent_escort4separatists.c1>
+<missionname.escort1huskcult>Cultist Transport</missionname.escort1huskcult>
+<missiondescription.escort1huskcult>The Church of Husk has offered a reward of [reward] marks for transporting a group of acolytes to [location2]. There is reason to believe some of them might be planning a premature "communion" of their own, and a subsequent escape into the cold sea, but the Church has asked you to keep an eye on them and bring them to [location2] in human form.</missiondescription.escort1huskcult>
+<EventText.missionevent_escort1huskcult.c1>“Psst! Looking for work? A couple of our acolytes are looking for transportation to the next outpost over. I have to warn you though; even though we've made it very clear they're not ready for it yet, I suspect they might be planning a communion of their own. So you should keep an eye on them and make sure they don't do anything stupid on board.”</EventText.missionevent_escort1huskcult.c1>
+<eventtext.missionevent_cargohuskcult>“Looking for work? We've got some…let's say, research materials that are sorely needed in the neighboring outpost. Get them there, don't ask questions, and we'll pay you.”</eventtext.missionevent_cargohuskcult>
+<missionname.huskcultspecialassassinate>Keeper of Silence</missionname.huskcultspecialassassinate>
+<missiondescription.huskcultspecialassassinate>The Church has become aware of a UNSC operative investigating their activity. The operative has already stuck their nose so deep into the Church's secrets that there's no option but to silence them for good. Travel to [location1] and kill the operative as discreetly as you can.</missiondescription.huskcultspecialassassinate>
+<eventtext.missionevent_pirate1separatists.c1>“A UNSC vessel has been patrolling the waters around our outpost for a while, seizing inbound cargo shipments and harassing our ships. We've so far avoided escalating the situation further, but supplies are starting to run low. If you'd be willing to help us and take down that vessel, it would be a great favor to our outpost and to the Separatist cause. And we'd be more than happy to pay you for it, of course.”</eventtext.missionevent_pirate1separatists.c1>
+<EventText.missionevent_cargocompoundn.c1>“If you're willing to help us in our fight against the UNSC, I've got an offer for you… We've got a couple of operatives in the next outpost over, requesting some explosives for their mission. Get them there intact, and we'll be sure to make it worth your while.”</EventText.missionevent_cargocompoundn.c1>
+<missiondescription.cargoweaponscoalition>The UNSC has sent some undercover operatives to investigate Separatist activity in [location2]. They are in urgent need of weapons and ammunition—deliver them and you will receive a reward of [reward] marks.</missiondescription.cargoweaponscoalition>
+<EventText.missionevent_cargoweaponscoalition.c1>“I've got an important job available. The UNSC's got a couple of undercover operatives investigating Separatist activity in the neighboring outpost. It's better I don't go into the details, but we need to get them some weapons and ammunition stat. Deliver them and you'd be doing a great favor for the UNSC, and there'd also be some marks in it for you, of course.”</EventText.missionevent_cargoweaponscoalition.c1>
+<missionname.pirate1separatists>UNSC Vessel</missionname.pirate1separatists>
+<missiondescription.pirate1separatists>Seek out the UNSC vessel that has been terrorizing this area and eliminate its crew. The marked locations show where the ship has last been sighted.</missiondescription.pirate1separatists>
+<missionsuccess.pirate1separatists>The UNSC vessel's crew was successfully eliminated.</missionsuccess.pirate1separatists>
+<missionfailure.pirate1separatists>The UNSC vessel's crew was not eliminated.</missionfailure.pirate1separatists>
+<missionsonarlabel.pirate1separatists>UNSC vessel sighting</missionsonarlabel.pirate1separatists>
+<missionheader0.pirate1separatists>UNSC vessel detected</missionheader0.pirate1separatists>
+<missionheader1.pirate1separatists>UNSC vessel eliminated</missionheader1.pirate1separatists>
+<missiondescription.tormsdalereport>The Jovian Separatists have tasked you to retrieve a classified report of the so-called "Tormsdale Incident," which the Separatists believe to have been orchestrated by the UNSC to eliminate their political opposition.</missiondescription.tormsdalereport>
+<missiondescription.jailbreak_separatists>The Jovian Separatists have tasked you to free some of their operatives who are being held captive by the UNSC.</missiondescription.jailbreak_separatists>
+<missiondescription.jailbreak_coalition>The Europa UNSC has tasked you to free some of their operatives who are being held captive by the Jovian Separatists.</missiondescription.jailbreak_coalition>
+<missiondescription.jailbreak_sootman>The Jovian Separatists have tasked you to free a high-profile operative who's being held captive by the UNSC.</missiondescription.jailbreak_sootman>
+<dialogundercoverannounce>This vessel is hereby confiscated by the Europa UNSC!</dialogundercoverannounce>
+<dialogundercoverannounce>The price for treason against the UNSC is death!</dialogundercoverannounce>
+<dialogundercoverannounce>Long live the UNSC!</dialogundercoverannounce>
+<locationchange.none.changeto.outpost.coalition>A ‖color:faction.coalition‖UNSC‖end‖ force has claimed the area of [previousname] and established a new outpost.</locationchange.none.changeto.outpost.coalition>
+<locationchange.outpost.changeto.military.coalition>A ‖color:faction.coalition‖UNSC‖end‖ force has moved into [previousname], establishing a military presence in the area.</locationchange.outpost.changeto.military.coalition>
+<locationchange.outpost.changeto.mine.coalition>The ‖color:faction.coalition‖UNSC‖end‖ has started mining operations at [previousname].</locationchange.outpost.changeto.mine.coalition>
+<locationchange.outpost.changeto.research.coalition>The ‖color:faction.coalition‖UNSC‖end‖ has turned [previousname] into a research station to study the surrounding fauna.</locationchange.outpost.changeto.research.coalition>
+<randomnews3>UNSC officials remind all law-abiding citizens that selling unsanctioned materials to Separatist-affiliated outposts is a criminal offense</randomnews3>
+<randomnews17>Landslide election win for sitting UNSC president</randomnews17>
+<randomnews29>UNSC to put a bounty on the mysterious terrorist dubbed as "Sootman"</randomnews29>
+<randomnews30>UNSC dockyard destroyed in a fire—security accuse the masked terrorist "Sootman"</randomnews30>
+<npctitle.merchanthusk>Cultist Merchant</npctitle.merchanthusk>
+<npctitle.huskcultecclesiast>Ecclesiast</npctitle.huskcultecclesiast>
+<npctitle.coalitionspy>UNSC Operative</npctitle.coalitionspy>
+<npctitle.coalitioncaptain>UNSC Captain</npctitle.coalitioncaptain>
+<npctitle.coalitioncaptainlord>UNSC Admiral</npctitle.coalitioncaptainlord>
+<npctitle.coalitionsecurityrecruit>UNSC Recruit</npctitle.coalitionsecurityrecruit>
+<npctitle.coalitionsecuritygunner>UNSC Gunner</npctitle.coalitionsecuritygunner>
+<npctitle.coalitionsecuritybrute>UNSC Corporal</npctitle.coalitionsecuritybrute>
+<npctitle.coalitionsecurityelite>UNSC Lieutenant</npctitle.coalitionsecurityelite>
+<npctitle.coalitionmechanicrecruit>UNSC Mechanic</npctitle.coalitionmechanicrecruit>
+<npctitle.coalitionmechanicveteran>Veteran UNSC Mechanic</npctitle.coalitionmechanicveteran>
+<npctitle.coalitionengineerrecruit>UNSC Engineer</npctitle.coalitionengineerrecruit>
+<npctitle.coalitionengineerveteran>Veteran UNSC Engineer</npctitle.coalitionengineerveteran>
+<npctitle.hireablecoalitionsecurityofficer>UNSC Corporal</npctitle.hireablecoalitionsecurityofficer>
+<npctitle.hireablecoalitionsecurityofficerveteran>UNSC Lieutenant</npctitle.hireablecoalitionsecurityofficerveteran>
+<npctitle.hireablecoalitionmechanic>UNSC Mechanic</npctitle.hireablecoalitionmechanic>
+<npctitle.hireablecoalitionmechanicveteran>Veteran UNSC Mechanic</npctitle.hireablecoalitionmechanicveteran>
+<npctitle.hireablecoalitionengineer>UNSC Engineer</npctitle.hireablecoalitionengineer>
+<npctitle.hireablecoalitionengineerveteran>Veteran UNSC Engineer</npctitle.hireablecoalitionengineerveteran>
+<npctitle.hireablecoalitionmedic>UNSC Medic</npctitle.hireablecoalitionmedic>
+<npctitle.hireablecoalitionmedicveteran>Veteran UNSC Medic</npctitle.hireablecoalitionmedicveteran>
+<eventtext.separatistspecialhire2.o1.c1>“It was your crew who got me out of that UNSC holding cell, wasn't it? Didn't have time for introductions then, but they call me Sootman. Let's go with that. Say, you don't happen to need an extra crewmate?”</eventtext.separatistspecialhire2.o1.c1>
+<eventtext.separatistspecialhire2.o1.o1>“Sootman? As in that masked Separatist the UNSC has been trying to track down for ages? Are you shitting me?”</eventtext.separatistspecialhire2.o1.o1>
+<eventtext.separatistspecialhire2.o1.o1.c1>“Aye, that's me. The word around the outposts is that you folks have been putting up a real good fight against the UNSC, and I want in on that. So, how about it?”</eventtext.separatistspecialhire2.o1.o1.c1>
+<eventtext.coalitionspecialhire1.o1.c1>“Ah, excuse my manners—it's not every day I get to meet a national hero like you! Ignatius May, the Captain of Internal Affairs of the Europa UNSC. I've been keeping an eye on your crew's accomplishments for some time now, and in fact, many of the missions you've undertaken were commissioned by me. On behalf of the Europa UNSC, I would like to extend our utmost gratitude to you and your crew for your service.”</eventtext.coalitionspecialhire1.o1.c1>
+<EventText.waytoascension3.o1.c1>“According to our informants, a UNSC operative has infiltrated one of our sects to investigate the Church. There's a chance he may have gained access to very sensitive information, including the identities and whereabouts of some of our Arch-Ecclesiasts. We have reason to believe he's currently in a nearby outpost, so now's our chance to take action and make sure he'll talk to no one.”</EventText.waytoascension3.o1.c1>
+<EventText.waytoascension4.o1.c1>“As you surely know, the UNSC has put a bounty on Jacov Subra, one of our Arch-Ecclesiasts.”</EventText.waytoascension4.o1.c1>
+<EventText.missionevent_tormsdalereport.c1.o1.c1>“Okay, I guess I’ll start from the beginning. Back when the UNSC was starting to gain a foothold on Europa, Tormsdale was by far the largest independent colony, and the Jovian People’s Movement obviously had strong support there. I suppose it was in a sense considered the headquarters of the independent colonies and the Movement. At that time, Europa was still somewhat democratic, and the general elections were coming up.”</EventText.missionevent_tormsdalereport.c1.o1.c1>
+<EventText.missionevent_tormsdalereport.c1.o1.o1.c1>“Just a few weeks before the elections, there was a nuclear disaster in Tormsdale. Over a hundred people dead. And conveniently for the UNSC, almost all of them happened to be supporters of the Jovian People’s Movement. That was enough to tip the scales in their favor, and let them become the de jure government of Europa.”</EventText.missionevent_tormsdalereport.c1.o1.o1.c1>
+<EventText.missionevent_tormsdalereport.c1.o1.o1.o1.o1.c1>“We have reason to believe the UNSC still possesses some classified reports of what actually happened at Tormsdale. Our informants have strong evidence that copies of them are kept in a nearby outpost. If we got our hands on them, maybe we could finally prove this isn’t just a conspiracy theory, and get others to understand how dirty the UNSC has been playing ever since its early years.”</EventText.missionevent_tormsdalereport.c1.o1.o1.o1.o1.c1>
+<EventText.tormsdalereport_outpost.o1>“Hello. We’re doing a UNSC-mandated security inspection and need to examine the secure cabinet in your office. Would you mind opening it for me?”</EventText.tormsdalereport_outpost.o1>
+<eventtext.unlockpathcoldcavernsseparatists.c1>“As you may be aware, this outpost is the last stop before the Europan Ridge. We don't let every sub pass through here, but if there's any truth to the rumors we've been hearing about your crew, you've been a valuable ally in our fight against the UNSC, so you're more than welcome to pass.”</eventtext.unlockpathcoldcavernsseparatists.c1>
+<eventtext.unlockpathcoldcavernsseparatists.c2>“Looking to pass through the outpost to the deeper regions? I'm sorry, but you'd better find another route. I don't know who you are or who you're working for, and for all I know you could be another UNSC pawn heading to harass our people down in the Europan Ridge. Of course, if you happened to have some marks to share with me, perhaps you could convince me of your good intentions…”</eventtext.unlockpathcoldcavernsseparatists.c2>
+<eventtext.unlockpatheuropanridgeseparatists.c1>“It says here you've been a great asset in our fight against the UNSC here in the Ridge. For that, we've decided to grant you access to the Aphotic Plateau. Bon voyage!”</eventtext.unlockpatheuropanridgeseparatists.c1>
+<EventText.missionevent_jailbreak_separatists.o1.c1>“A couple of our operatives were recently captured by the UNSC, and according to our informants, they're currently locked away in an outpost nearby. If you can get them out of there safely, we'll be sure to make it worth your while. I'll mark the location on your map.”</EventText.missionevent_jailbreak_separatists.o1.c1>
+<EventText.missionevent_jailbreak_sootman.c1.c1>“The UNSC managed to capture one of our operatives recently. A very high-profile one, although luckily it seems they're not aware of his identity—otherwise he'd surely have been executed already.”</EventText.missionevent_jailbreak_sootman.c1.c1>
+<EventText.missionevent_jailbreak_sootman.c1.o1.c1>“Perhaps it's better we leave him unnamed, but let's say it's someone who's left quite a trail of smoldering UNSC outposts and vessels behind him. In any case, he is currently being held captive in a nearby outpost. Get him out safely, and there'll be a sizeable reward waiting for you.”</EventText.missionevent_jailbreak_sootman.c1.o1.c1>
+
+</Override>
+
+</infotexts>

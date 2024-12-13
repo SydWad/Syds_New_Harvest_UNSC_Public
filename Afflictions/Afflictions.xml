@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+
+<Affliction
+	name="Cremation"
+	identifier="nh_cremation"
+	description="Measures how long till the bodie is destroyed by fire.."
+	type="debuff"
+	showiconthreshold="1" 
+	showicontoothersthreshold="1"
+	showinhealthscannerthreshold="1"
+	maxstrength="100">
+	<Effect 
+	minstrength="0" 
+	maxstrength="100" />
+	<icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,0,128,128" color="255,75,255,255" origin="0,0" />
+</Affliction>
+
+<!-- Hate it but i had to make three in order to have three levels of protection for different types -->
+<Affliction
+	name="སAdditional Armor 1"
+	identifier="nh_extra_armor_1"
+	description=""
+	type="buff"
+    isbuff="true"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="5"
+	multiplybymaxvitality="false"
+	iconcolors="80,255,80,255">
+	<Effect minstrength="0" 
+	maxstrength="5"
+	strengthchange="-10"
+	multiplybymaxvitality="false"
+	resistancefor="damage"
+	minresistance="0.8"
+	maxresistance="0.8" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+
+<Affliction
+	name="སAdditional Armor 2"
+	identifier="nh_extra_armor_2"
+	description=""
+	type="buff"
+    isbuff="true"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="5"
+	multiplybymaxvitality="false"
+	iconcolors="80,255,80,255">
+	<Effect minstrength="0" 
+	maxstrength="5"
+	strengthchange="-10"
+	multiplybymaxvitality="false"
+	resistancefor="burn"
+	minresistance="0.9"
+	maxresistance="0.9" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+
+<Affliction
+	name="སAdditional Armor 3"
+	identifier="nh_extra_armor_3"
+	description=""
+	type="buff"
+    isbuff="true"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="5"
+	multiplybymaxvitality="false"
+	iconcolors="80,255,80,255">
+	<Effect minstrength="0" 
+	maxstrength="5"
+	strengthchange="-10"
+	multiplybymaxvitality="false"
+	resistancefor="bleeding,stun"
+	minresistance="0.7"
+	maxresistance="0.7" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+
+<!-- Energy Shields -->
+<Affliction
+	name=""
+	identifier="nh_energy_shields"
+	description=""
+	type="buff"
+    isbuff="true"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="0.1" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="100"
+	multiplybymaxvitality="false"
+	iconcolors="0,0,255,100; 100,255,100,255; 100,255,100,255; 0,100,0,255;  255,0,0,255">
+	<Effect minstrength="0" 
+	maxstrength="60"
+	multiplybymaxvitality="false"
+	resistancefor="damage,bleeding,bloodloss,stun,alieninfection,spaceherpes,poison,paralysis,infection"
+	minresistance="1.0"
+	maxresistance="1.0"
+	tag="shielded">
+		<StatusEffect targettype="Character" checkconditionalalways="true">
+			<Conditional nh_energy_shield_delay_short="lteq 0" />
+			<ReduceAffliction type="nh_energy_shields" amount="12" multiplybymaxvitality="true" />
+		</StatusEffect>
+		
+		<StatusEffect type="OnDamaged" targettype="Character" disabledeltatime="true" foreceplaysounds="true" >
+			<Affliction identifier="nh_energy_shields_visual_timer" amount="999" multiplybymaxvitality="true" />
+			<Affliction identifier="nh_energy_shield_delay_short" amount="999" multiplybymaxvitality="true" />
+			<Affliction identifier="nh_energy_shields" amount="3.0" multiplybymaxvitality="true" />
+			<Sound file="%ModDir%/Afflictions/spartan_shield_damaged.ogg" volume="5" range="180" loop="false" />
+		</StatusEffect>
+		
+		<!--<StatusEffect type="OnDamaged" targettype="NearbyCharacters" range="150" targets="monster" disabledeltatime="true" >
+			<Affliction identifier="burn" amount="0.025" />
+		</StatusEffect>-->
+	</Effect>
+	<Effect minstrength="60" 
+	maxstrength="98"
+	multiplybymaxvitality="false"
+	resistancefor="damage,bleeding,bloodloss,stun,alieninfection,spaceherpes,poison,paralysis,infection"
+	minresistance="1.0"
+	maxresistance="1.0"
+	tag="shielded">
+		<StatusEffect targettype="Character" comparison="and" >
+			<Conditional nh_energy_shield_delay_short="lteq 0" />
+			<ReduceAffliction type="nh_energy_shields" amount="12" multiplybymaxvitality="true" />
+		</StatusEffect>
+		
+		<StatusEffect type="OnDamaged" targettype="Character" disabledeltatime="true" foreceplaysounds="true" >
+			<Affliction identifier="nh_energy_shields_visual_timer" amount="999" multiplybymaxvitality="true" />
+			<Affliction identifier="nh_energy_shield_delay_short" amount="999" multiplybymaxvitality="true" />
+			<Affliction identifier="nh_energy_shields" amount="3.0" multiplybymaxvitality="true" />
+			<Sound file="%ModDir%/Afflictions/spartan_shield_damaged.ogg" volume="5" range="180" loop="false" />
+		</StatusEffect>
+		
+		<!-- Play shields low beep -->
+		<StatusEffect targettype="Character" foreceplaysounds="true" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nh_energy_shield_delay_short="gt 0" />
+			<Sound file="%ModDir%/Afflictions/spartan_shield_low.ogg" volume="0.75" loop="true" />
+		</StatusEffect>
+	</Effect>
+	<Effect minstrength="98" 
+	maxstrength="100"
+	multiplybymaxvitality="false">
+		<!-- When shields broken, hide all shields -->
+		<StatusEffect targettype="AllLimbs" targets="Shields" setvalue="true" Hide="True" />
+		
+		<StatusEffect targettype="Character" disabledeltatime="true" comparison="and" >
+			<Conditional nh_energy_shield_delay_short="lteq 0" />
+			<Conditional nh_energy_shield_delay_long="lteq 0" />
+			<Affliction identifier="nh_energy_shields_visual_timer" amount="2" multiplybymaxvitality="true" />
+			<ReduceAffliction type="nh_energy_shields" amount="2" multiplybymaxvitality="true" />
+		</StatusEffect>
+		
+		<StatusEffect type="OnDamaged" targettype="Character" disabledeltatime="true" foreceplaysounds="true" >
+			<ReduceAffliction type="nh_energy_shields_visual_timer" amount="999" multiplybymaxvitality="true" />
+			<Affliction identifier="nh_energy_shield_delay_long" amount="999" multiplybymaxvitality="true" />
+			<Affliction identifier="nh_energy_shields" amount="3.0" multiplybymaxvitality="true" />
+			<Sound file="%ModDir%/Afflictions/spartan_shield_damaged.ogg" volume="5" range="180" loop="false" />
+		</StatusEffect>
+		
+		<!-- Play shields low beep -->
+		<StatusEffect targettype="Character" foreceplaysounds="true" comparison="and">
+			<Conditional IsLocalPlayer="True" />
+			<Conditional nh_energy_shield_delay_long="lteq 0" />
+			<Sound file="%ModDir%/Afflictions/spartan_shield_low.ogg" volume="0.75" loop="true" />
+		</StatusEffect>
+		
+		<!-- Play shields down beep -->
+		<StatusEffect targettype="Character" foreceplaysounds="true" >
+			<Conditional nh_energy_shield_delay_long="gt 0" />
+			<Sound file="%ModDir%/Afflictions/spartan_shield_depleted.ogg" volume="1.5" range="200" loop="true" />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="448,448,64,64" origin="0,0" />
+</Affliction>
+
+<Affliction
+	name="Shield Delay Short"
+	identifier="nh_energy_shield_delay_short"
+	description=""
+	type="debuff"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="4"
+	multiplybymaxvitality="false"
+	iconcolors="255,0,0,255">
+	<Effect minstrength="0" 
+	maxstrength="4"
+	strengthchange="-1"
+	multiplybymaxvitality="false" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+
+<Affliction
+	name="Shield Delay Long"
+	identifier="nh_energy_shield_delay_long"
+	description=""
+	type="debuff"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="10"
+	multiplybymaxvitality="false"
+	iconcolors="255,0,0,255">
+	<Effect minstrength="0" 
+	maxstrength="0.1"
+	strengthchange="-1"
+	multiplybymaxvitality="false" >
+		<StatusEffect targettype="Character" duration="0.4">
+			<Conditional IsLocalPlayer="True" />
+			<Sound file="%ModDir%/Afflictions/spartan_shield_low.ogg" volume="0.3" loop="true" />
+		</StatusEffect>
+	</Effect>
+	<Effect minstrength="0.1" 
+	maxstrength="10"
+	strengthchange="-1"
+	multiplybymaxvitality="false" >
+		<StatusEffect targettype="AllLimbs" Targets="Head (1)" interval="0.2" disabledeltatime="true" >
+			<ParticleEmitter particle="ElectricShock" distancemin="0" distancemax="30" particleamount="1" anglemin="0" anglemax="360" scalemin="0.05" scalemax="0.1" colormultiplier="255,125,100,200" />
+		</StatusEffect>
+		<StatusEffect targettype="AllLimbs" Targets="RightThigh (9)" interval="0.2" disabledeltatime="true" >
+			<ParticleEmitter particle="ElectricShock" distancemin="0" distancemax="50" particleamount="1" anglemin="0" anglemax="360" scalemin="0.05" scalemax="0.1" colormultiplier="255,125,100,200" />
+		</StatusEffect>
+		<!-- Periodic large spark like in Halo 3 -->
+		<StatusEffect targettype="AllLimbs" Targets="Torso (0)" interval="1.5" disabledeltatime="true" >
+			<ParticleEmitter particle="ElectricShock" distancemin="0" distancemax="0" particleamount="1" anglemin="0" anglemax="360" scalemin="0.3" scalemax="0.35" colormultiplier="255,125,100,150" />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+
+</Afflictions>

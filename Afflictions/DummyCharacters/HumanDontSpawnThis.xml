@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character speciesname="HumanDontSpawnThis" displayname="WHAT HAVE YOU DONE" husk="False" humanoid="False" caninteract="False" hasinfo="False" usehuskappendage="True" needsair="False" genders="false" canspeak="False" blooddecal="blood" group="husk" needswater="False" noise="0" visibility="0" bleedparticleair="blooddrop" bleedparticlewater="waterblood" bleedparticlemultiplier="1" eatingspeed="10" pathfinderpriority="1" hideinsonar="True" hideinthermalgoggles="True" sonardisruption="0" disabledistance="0.1">
+  <ragdolls folder="Content/Characters/Human/Ragdolls" />
+  <animations folder="Content/Characters/Human/Animations" />
+  <huskappendage affliction="nh_energy_shields_visual" path="%ModDir%/Afflictions/LimbSets/energy_shields_limbs.xml" onlyfromafflictions="true" />
+  <huskappendage affliction="nh_mk5_eva_2_helmet_visual" path="%ModDir%/Afflictions/LimbSets/mk5_helmet_eva_2_limb.xml" onlyfromafflictions="true" />
+  <huskappendage affliction="nh_mk5_eva_helmet_visual" path="%ModDir%/Afflictions/LimbSets/mk5_helmet_eva_limb.xml" onlyfromafflictions="true" />
+  <huskappendage affliction="nh_mk5_helmet_visual" path="%ModDir%/Afflictions/LimbSets/mk5_helmet_limb.xml" onlyfromafflictions="true" />
+  <huskappendage affliction="nh_mk5_visual" path="%ModDir%/Afflictions/LimbSets/mk5_limbs.xml" onlyfromafflictions="true" />
+  <huskappendage affliction="nh_radio_antenna_visual" path="%ModDir%/Afflictions/LimbSets/radio_antenna.xml" onlyfromafflictions="true" />
+  <huskappendage affliction="nh_spnkr_visual" path="%ModDir%/Afflictions/LimbSets/rocket_sprite.xml" onlyfromafflictions="true" />
+	<health Vitality="10" CrushDepth="Infinity" />
+	<inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, HealthInterface" AccessibleWhenAlive="True" Commonness="1" />
+	<ai />
+	<StatusEffect type="Always" OneShot="true" targettype="This" forceplaysounds="true" disabledeltatime="True">
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+		<Sound file="Content/Characters/Tigerthresher/TIGERTRESHER_attack2.ogg" volume="10" range="99999999" loop="false" />
+	</StatusEffect>
+	<StatusEffect type="Always" targettype="This" forceplaysounds="true" delay="0.01" disabledeltatime="True">
+		<RemoveCharacter />
+	</StatusEffect>
+</Character>

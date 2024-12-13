@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+
+<!-- Fake Afflictions to have numbers on items -->
+<Affliction
+	name="སArmor"
+	identifier="nh_fake_penetration"
+	description="Not a real affliction."
+	type="fake"
+	maxstrength="5">
+	<Effect 
+	minstrength="0" 
+	maxstrength="5"
+	strengthchange="-1" />
+	<icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,0,128,128" color="255,75,255,255" origin="0,0" />
+</Affliction>
+
+<Affliction
+	name="སPressure"
+	identifier="nh_fake_pressure"
+	description="Not a real affliction."
+	type="fake"
+	maxstrength="5">
+	<Effect 
+	minstrength="0" 
+	maxstrength="5"
+	strengthchange="-1" />
+	<icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,0,128,128" color="255,75,255,255" origin="0,0" />
+</Affliction>
+
+<Affliction
+	name="སField of View"
+	identifier="nh_fake_fov"
+	description="Not a real affliction."
+	type="fake"
+	maxstrength="5">
+	<Effect 
+	minstrength="0" 
+	maxstrength="5"
+	strengthchange="-1" />
+	<icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,0,128,128" color="255,75,255,255" origin="0,0" />
+</Affliction>
+
+<Affliction
+	name="སSpeed"
+	identifier="nh_fake_speed"
+	description="Not a real affliction."
+	type="fake"
+	maxstrength="5">
+	<Effect 
+	minstrength="0" 
+	maxstrength="5"
+	strengthchange="-1" />
+	<icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,0,128,128" color="255,75,255,255" origin="0,0" />
+</Affliction>
+
+<!-- The following is to fix two problems: 
+1. If a person is revived through the console their husk limbs (shields) douplicate which causes lag and more. 
+2. There is a chance that if a NPC is targeting a husklimb and then said limb is removed the game will crash due to a NULL pointer. -->
+
+<!-- When active it makes the Mk5 Armor limb visible -->
+<Affliction name="Mk5 Helmet EVA 2 Visiblility"
+	identifier="nh_mk5_eva_2_helmet_timer"
+	description=""
+	type="debuff"
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="1.5"
+	multiplybymaxvitality="false"
+	iconcolors="50,50,255,255">
+	<Effect minstrength="0" 
+	maxstrength="1"
+	multiplybymaxvitality="false" >
+		<StatusEffect targettype="AllLimbs" targets="mk5_eva_2_helmet" setvalue="true" Hide="True" />
+	</Effect>
+	<Effect minstrength="1" 
+	maxstrength="1.5"
+	strengthchange="-10"
+	multiplybymaxvitality="false" >
+		<StatusEffect type="OnDeath" targettype="AllLimbs" targets="mk5_eva_2_helmet" setvalue="true" Hide="True" />
+		<StatusEffect targettype="AllLimbs" targets="mk5_eva_2_helmet" setvalue="true" Hide="False" />
+		<!-- If character already has husklimbs, dont add more -->
+		<StatusEffect targettype="Character" checkconditionalalways="true" >
+			<Conditional hasstatustag="! has_mk5_eva_2_helmet_limb" />
+			<Affliction identifier="nh_mk5_eva_2_helmet_visual" amount="100" multiplybymaxvitality="true"  />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+<!-- Just gives the husk limbs and never takes them away -->
+<AfflictionHusk name="Mk5 Helmet EVA 2 Visual" 
+	identifier="nh_mk5_eva_2_helmet_visual" 
+	type="debuff" 
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false" 
+	indicatorlimb="Torso" 
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	huskedspeciesname="dontspawnthis" 
+	causespeechimpediment="false" 
+    dormantthreshold="0"
+    activethreshold="0"
+	treatmentthreshold="1000" 
+	transitionthreshold="1000" 
+	transformthresholdondeath="1000" 
+	sendmessages="false" 
+	iconcolors="50,255,50,255"
+	maxstrength="1"
+    needsair="true">
+	<Effect minstrength="0"
+	maxstrength="1" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</AfflictionHusk>
+
+<!-- When active it makes the Mk5 Armor limb visible -->
+<Affliction name="Mk5 Helmet EVA Visiblility"
+	identifier="nh_mk5_eva_helmet_timer"
+	description=""
+	type="debuff"
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="1.5"
+	multiplybymaxvitality="false"
+	iconcolors="50,50,255,255">
+	<Effect minstrength="0" 
+	maxstrength="1"
+	multiplybymaxvitality="false" >
+		<StatusEffect targettype="AllLimbs" targets="mk5_eva_helmet" setvalue="true" Hide="True" />
+	</Effect>
+	<Effect minstrength="1" 
+	maxstrength="1.5"
+	strengthchange="-10"
+	multiplybymaxvitality="false" >
+		<StatusEffect type="OnDeath" targettype="AllLimbs" targets="mk5_eva_helmet" setvalue="true" Hide="True" />
+		<StatusEffect targettype="AllLimbs" targets="mk5_eva_helmet" setvalue="true" Hide="False" />
+		<!-- If character already has husklimbs, dont add more -->
+		<StatusEffect targettype="Character" checkconditionalalways="true" >
+			<Conditional hasstatustag="! has_mk5_eva_helmet_limb" />
+			<Affliction identifier="nh_mk5_eva_helmet_visual" amount="100" multiplybymaxvitality="true"  />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+<!-- Just gives the husk limbs and never takes them away -->
+<AfflictionHusk name="Mk5 Helmet EVA Visual" 
+	identifier="nh_mk5_eva_helmet_visual" 
+	type="debuff" 
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false" 
+	indicatorlimb="Torso" 
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	huskedspeciesname="dontspawnthis" 
+	causespeechimpediment="false" 
+    dormantthreshold="0"
+    activethreshold="0"
+	treatmentthreshold="1000" 
+	transitionthreshold="1000" 
+	transformthresholdondeath="1000" 
+	sendmessages="false" 
+	iconcolors="50,255,50,255"
+	maxstrength="1"
+    needsair="true">
+	<Effect minstrength="0"
+	maxstrength="1" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</AfflictionHusk>
+
+<!-- When active it makes the Mk5 Armor limb visible -->
+<Affliction name="Mk5 Helmet Visiblility"
+	identifier="nh_mk5_helmet_timer"
+	description=""
+	type="debuff"
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="1.5"
+	multiplybymaxvitality="false"
+	iconcolors="50,50,255,255">
+	<Effect minstrength="0" 
+	maxstrength="1"
+	multiplybymaxvitality="false" >
+		<StatusEffect targettype="AllLimbs" targets="mk5_helmet" setvalue="true" Hide="True" />
+	</Effect>
+	<Effect minstrength="1" 
+	maxstrength="1.5"
+	strengthchange="-10"
+	multiplybymaxvitality="false" >
+		<StatusEffect type="OnDeath" targettype="AllLimbs" targets="mk5_helmet" setvalue="true" Hide="True" />
+		<StatusEffect targettype="AllLimbs" targets="mk5_helmet" setvalue="true" Hide="False" />
+		<!-- If character already has husklimbs, dont add more -->
+		<StatusEffect targettype="Character" checkconditionalalways="true" >
+			<Conditional hasstatustag="! has_mk5_helmet_limb" />
+			<Affliction identifier="nh_mk5_helmet_visual" amount="100" multiplybymaxvitality="true"  />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+<!-- Just gives the husk limbs and never takes them away -->
+<AfflictionHusk name="Mk5 Helmet Visual" 
+	identifier="nh_mk5_helmet_visual" 
+	type="debuff" 
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false" 
+	indicatorlimb="Torso" 
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	huskedspeciesname="dontspawnthis" 
+	causespeechimpediment="false" 
+    dormantthreshold="0"
+    activethreshold="0"
+	treatmentthreshold="1000" 
+	transitionthreshold="1000" 
+	transformthresholdondeath="1000" 
+	sendmessages="false" 
+	iconcolors="50,255,50,255"
+	maxstrength="1"
+    needsair="true">
+	<Effect minstrength="0"
+	maxstrength="1" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</AfflictionHusk>
+
+<!-- When active it makes the Mk5 Armor limb visible -->
+<Affliction name="Mk5 Visiblility"
+	identifier="nh_mk5_timer"
+	description=""
+	type="debuff"
+	targets="Human,HumanAirInfected"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="1.5"
+	multiplybymaxvitality="false"
+	iconcolors="50,50,255,255">
+	<Effect minstrength="0" 
+	maxstrength="1"
+	multiplybymaxvitality="false" >
+		<StatusEffect targettype="AllLimbs" targets="mk5_undersuit" setvalue="true" Hide="True" />
+	</Effect>
+	<Effect minstrength="1" 
+	maxstrength="1.5"
+	strengthchange="-10"
+	multiplybymaxvitality="false" >
+		<StatusEffect type="OnDeath" targettype="AllLimbs" targets="mk5_undersuit" setvalue="true" Hide="True" />
+		<StatusEffect targettype="AllLimbs" targets="mk5_undersuit" setvalue="true" Hide="False" />
+		<!-- If character already has husklimbs, dont add more -->
+		<StatusEffect targettype="Character" checkconditionalalways="true" >
+			<Conditional hasstatustag="! has_mk5_limb" />
+			<Affliction identifier="nh_mk5_visual" amount="100" multiplybymaxvitality="true"  />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+<!-- Just gives the husk limbs and never takes them away -->
+<AfflictionHusk name="Mk5 Visual" 
+	identifier="nh_mk5_visual" 
+	type="debuff" 
+	targets="Human,HumanAirInfected"
+	limbspecific="false" 
+	indicatorlimb="Torso" 
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	huskedspeciesname="dontspawnthis" 
+	causespeechimpediment="false" 
+    dormantthreshold="0"
+    activethreshold="0"
+	treatmentthreshold="1000" 
+	transitionthreshold="1000" 
+	transformthresholdondeath="1000" 
+	sendmessages="false" 
+	iconcolors="50,255,50,255"
+	maxstrength="1"
+    needsair="true">
+	<Effect minstrength="0"
+	maxstrength="1" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</AfflictionHusk>
+
+<!-- When active it makes the SPNKR limb visible -->
+<Affliction name="SPNKr Visiblility"
+	identifier="nh_spnkr_timer"
+	description=""
+	type="debuff"
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="1.5"
+	multiplybymaxvitality="false"
+	iconcolors="50,50,255,255">
+	<Effect minstrength="0" 
+	maxstrength="1"
+	multiplybymaxvitality="false" >
+		<StatusEffect targettype="AllLimbs" targets="SPNKR" setvalue="true" Hide="True" />
+	</Effect>
+	<Effect minstrength="1" 
+	maxstrength="1.5"
+	strengthchange="-10"
+	multiplybymaxvitality="false" >
+		<StatusEffect type="OnDeath" targettype="AllLimbs" targets="SPNKR" setvalue="true" Hide="True" />
+		<StatusEffect targettype="AllLimbs" targets="SPNKR" setvalue="true" Hide="False" />
+		<!-- If character already has husklimbs, dont add more -->
+		<StatusEffect targettype="Character" checkconditionalalways="true" >
+			<Conditional hasstatustag="! has_spnkr_limb" />
+			<Affliction identifier="nh_spnkr_visual" amount="100" multiplybymaxvitality="true"  />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+<!-- Just gives the husk limbs and never takes them away -->
+<AfflictionHusk name="SPNKr Visual" 
+	identifier="nh_spnkr_visual" 
+	type="debuff" 
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false" 
+	indicatorlimb="Torso" 
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	huskedspeciesname="dontspawnthis" 
+	causespeechimpediment="false" 
+    dormantthreshold="0"
+    activethreshold="0"
+	treatmentthreshold="1000" 
+	transitionthreshold="1000" 
+	transformthresholdondeath="1000" 
+	sendmessages="false" 
+	iconcolors="50,255,50,255"
+	maxstrength="1"
+    needsair="true">
+	<Effect minstrength="0"
+	maxstrength="1" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</AfflictionHusk>
+
+<!-- When active it makes the antenna limbs visible -->
+<Affliction name="Radio Antenna Visiblility"
+	identifier="nh_radio_antenna_visual_timer"
+	description=""
+	type="debuff"
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="1.5"
+	multiplybymaxvitality="false"
+	iconcolors="50,50,255,255">
+	<Effect minstrength="0" 
+	maxstrength="1"
+	multiplybymaxvitality="false" >
+		<StatusEffect targettype="AllLimbs" targets="RadioAntenna" setvalue="true" Hide="True" />
+	</Effect>
+	<Effect minstrength="1" 
+	maxstrength="1.5"
+	strengthchange="-10"
+	multiplybymaxvitality="false" >
+		<StatusEffect type="OnDeath" targettype="AllLimbs" targets="RadioAntenna" setvalue="true" Hide="True" />
+		<StatusEffect targettype="AllLimbs" targets="RadioAntenna" setvalue="true" Hide="False" />
+		<!-- If character already has husklimbs, dont add more -->
+		<StatusEffect targettype="Character" checkconditionalalways="true" >
+			<Conditional hasstatustag="! has_radio_limb" />
+			<Affliction identifier="nh_radio_antenna_visual" amount="100" multiplybymaxvitality="true"  />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+<!-- Just gives the husk limbs and never takes them away -->
+<AfflictionHusk name="Radio Antenna Visual" 
+	identifier="nh_radio_antenna_visual" 
+	type="debuff" 
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false" 
+	indicatorlimb="Torso" 
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	huskedspeciesname="dontspawnthis" 
+	causespeechimpediment="false" 
+    dormantthreshold="0"
+    activethreshold="0"
+	treatmentthreshold="1000" 
+	transitionthreshold="1000" 
+	transformthresholdondeath="1000" 
+	sendmessages="false" 
+	iconcolors="50,255,50,255"
+	maxstrength="1"
+    needsair="true">
+	<Effect minstrength="0"
+	maxstrength="1" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</AfflictionHusk>
+
+<!-- When active it makes the shield limbs visible -->
+<Affliction name="Energy Shields Visiblility"
+	identifier="nh_energy_shields_visual_timer"
+	description=""
+	type="debuff"
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="5"
+	multiplybymaxvitality="false"
+	iconcolors="50,50,255,255">
+	<Effect minstrength="0" 
+	maxstrength="1"
+	multiplybymaxvitality="false" >
+		<StatusEffect targettype="AllLimbs" targets="Shields" setvalue="true" Hide="True" />
+	</Effect>
+	<Effect minstrength="1" 
+	maxstrength="5"
+	strengthchange="-1"
+	multiplybymaxvitality="false" >
+		<StatusEffect type="OnDeath" targettype="AllLimbs" targets="Shields" setvalue="true" Hide="True" />
+		<StatusEffect targettype="AllLimbs" targets="Shields" setvalue="true" Hide="False" />
+		<!-- If character already has husklimbs, dont add more -->
+		<StatusEffect targettype="Character" checkconditionalalways="true" >
+			<Conditional hasstatustag="! has_shield_limb" />
+			<Affliction identifier="nh_energy_shields_visual" amount="100" multiplybymaxvitality="true" />
+		</StatusEffect>
+	</Effect>
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</Affliction>
+<!-- Just gives the husk limbs and never takes them away -->
+<AfflictionHusk name="སEnergy Shields Visual" 
+	identifier="nh_energy_shields_visual" 
+	type="debuff" 
+	targets="Human,HumanFlood,HumanHusk,HumanAirInfected"
+	limbspecific="false" 
+	indicatorlimb="Torso" 
+	showiconthreshold="1000" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	huskedspeciesname="dontspawnthis" 
+	causespeechimpediment="false" 
+    dormantthreshold="0"
+    activethreshold="0"
+	treatmentthreshold="1000" 
+	transitionthreshold="1000" 
+	transformthresholdondeath="1000" 
+	sendmessages="false" 
+	iconcolors="50,255,50,255"
+	maxstrength="1"
+    needsair="true">
+	<Effect minstrength="0"
+	maxstrength="1" />
+	<icon texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="1024,0,128,128" origin="0,0" />
+</AfflictionHusk>
+
+</Afflictions>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style>
+  <!--<ItemCategoryExplosives color="105,118,116,240" hovercolor="136,153,150,240" selectedcolor="117,157,153,255" pressedcolor="80,90,88,255">
+    <Sprite texture="Content/UI/CampaignUIAtlas.png" sourcerect="472,10,151,145" tile="false" maintainaspectratio="true"/>
+    <GUITextBlock textcolor="16,34,33,255" padding="10.0, 0.0, 10.0, 0.0"/>
+  </ItemCategoryExplosives>
+  <CategoryButton.Explosives color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
+    <Sprite name="CategoryButton.Explosives" texture="Content/UI/InventoryUIAtlas.png" sourcerect="565,397,64,64" tile="false" maintainaspectratio="true" origin="0.5,0.5"/>
+  </CategoryButton.Explosives>-->
+  <Override>
+  <ItemCategoryHalo color="105,118,116,240" hovercolor="136,153,150,240" selectedcolor="117,157,153,255" pressedcolor="80,90,88,255">
+    <Sprite texture="Content/UI/CampaignUIAtlas.png" sourcerect="472,10,151,145" tile="false" maintainaspectratio="true"/>
+    <GUITextBlock textcolor="16,34,33,255" padding="10.0, 0.0, 10.0, 0.0"/>
+  </ItemCategoryHalo>
+  <CategoryButton.Halo color="169,212,187,255" hovercolor="220,220,220,255" selectedcolor="255,255,255,255" pressedcolor="100,100,100,255" disabledcolor="125,125,125,125">
+    <Sprite name="CategoryButton.Halo" texture="Content/UI/InventoryUIAtlas.png" sourcerect="565,397,64,64" tile="false" maintainaspectratio="true" origin="0.5,0.5"/>
+  </CategoryButton.Halo>
+  </Override>
+</style>

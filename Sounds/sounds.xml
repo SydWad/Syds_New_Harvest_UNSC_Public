@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sounds>
+<Override>
+	<!-- Impact Sounds -->
+	<impact_bullet file="%ModDir%/Sounds/Impact/impact_bullet1.ogg" volume="0.5" range="500"/>
+	<impact_bullet file="%ModDir%/Sounds/Impact/impact_bullet2.ogg" volume="0.5" range="500"/>
+	<impact_bullet file="%ModDir%/Sounds/Impact/impact_bullet3.ogg" volume="0.5" range="500"/>
+	<impact_bullet file="%ModDir%/Sounds/Impact/impact_bullet4.ogg" volume="0.5" range="500"/>
+	<impact_bullet file="%ModDir%/Sounds/Impact/impact_bullet5.ogg" volume="0.5" range="500"/>
+	<impact_bulletsmall file="%ModDir%/Sounds/Impact/impact_bulletsmall1.ogg" volume="0.9" range="500"/>
+	<impact_bulletsmall file="%ModDir%/Sounds/Impact/impact_bulletsmall2.ogg" volume="0.9" range="500"/>
+	<impact_bulletsmall file="%ModDir%/Sounds/Impact/impact_bulletsmall3.ogg" volume="0.9" range="500"/>
+	<impact_shotgunshell file="%ModDir%/Sounds/Impact/impact_shotgunshell1.ogg" volume="0.5" range="500"/>
+	<impact_shotgunshell file="%ModDir%/Sounds/Impact/impact_shotgunshell2.ogg" volume="0.5" range="500"/>
+	<impact_shotgunshell file="%ModDir%/Sounds/Impact/impact_shotgunshell3.ogg" volume="0.5" range="500"/>
+	<impact_shotgunshell file="%ModDir%/Sounds/Impact/impact_shotgunshell4.ogg" volume="0.5" range="500"/>
+	<impact_shotgunshell file="%ModDir%/Sounds/Impact/impact_shotgunshell5.ogg" volume="0.5" range="500"/>
+	<impact_shotgunshell file="%ModDir%/Sounds/Impact/impact_shotgunshell6.ogg" volume="0.5" range="500"/>
+	<impact_shotgunshell file="%ModDir%/Sounds/Impact/impact_shotgunshell7.ogg" volume="0.5" range="500"/>
+	<impact_grenade_frag file="%ModDir%/Sounds/Impact/impact_weapon_m9.ogg" volume="0.7" range="1000"/>
+	<impact_weapon_99cs2 file="%ModDir%/Sounds/Impact/impact_weapon_99cs2.ogg" volume="0.1" range="800"/>
+	<impact_weapon_br55 file="%ModDir%/Sounds/Impact/impact_weapon_br55.ogg" volume="0.1" range="800"/>
+	<impact_weapon_m6d file="%ModDir%/Sounds/Impact/impact_weapon_m6d.ogg" volume="0.1" range="800"/>
+	<impact_weapon_m7 file="%ModDir%/Sounds/Impact/impact_weapon_m7.ogg" volume="0.1" range="800"/>
+	<impact_weapon_m41 file="%ModDir%/Sounds/Impact/impact_weapon_m41.ogg" volume="0.1" range="800"/>
+	<impact_weapon_m90 file="%ModDir%/Sounds/Impact/impact_weapon_m90.ogg" volume="0.1" range="800"/>
+	<impact_none file="%ModDir%/Sounds/Null.ogg" volume="0.01" range="1"/>
+	
+	<!-- Music -->
+	<music file="%ModDir%/Sounds/Music/Main Menu Music.ogg" type="menu" continuefromprevioustime="true"/>
+</Override>
+</sounds>

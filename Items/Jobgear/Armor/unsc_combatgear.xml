@@ -1,0 +1,1436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+<!-- ///////////////////////////////////////////////////////////
+//////////// Marine Armors /////////////////////////////////////
+///////////////////////////////////////////////////////////// -->
+<!-- Light Marine Armor -->
+<Item name="" identifier="nh_marinearmor1" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="400" >
+		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8"  />
+		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
+		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="15">
+		<RequiredSkill identifier="weapons" level="30" />
+		<RequiredItem identifier="titaniumaluminiumalloy" />
+		<RequiredItem identifier="ballisticfiber" amount="2" />
+	</Fabricate>
+	<!-- 1 plastic, 2 aluminium, 3 titanium -->
+	<Deconstruct time="6" >
+		<Item identifier="plastic" />
+		<Item identifier="aluminium" />
+		<Item identifier="titanium" amount="2" />
+	</Deconstruct>
+	<InventoryIcon name="Light Marine Armor" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="384,256,128,128" origin="0.5,0.5" />
+	<Sprite name="Light Marine Armor" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="96,192,96,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+		<!-- Fake modifier to show speed change -->
+		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.9" armorsector="0.0,0.0" />
+		<sprite name="Light Marine Armor Torso" texture="heavy_armor_torso.png" sourcerect="22,31,99,175" origin="0.5,0.58" scale="0.67" limb="Torso" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Left Arm" texture="heavy_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftArm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Right Arm" texture="heavy_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightArm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Right Lower Arm" texture="heavy_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Left Lower Arm" texture="heavy_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Right Hand" texture="%ModDir%/UI/Container_Icons.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightHand" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Left Hand" texture="%ModDir%/UI/ContainerIndicators.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftHand" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Waist" texture="heavy_armor_legs.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.64" limb="Waist" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Right Thigh" texture="heavy_armor_legs.png" limb="RightThigh" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Left Thigh" texture="heavy_armor_legs.png" limb="LeftThigh" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Right Leg" texture="heavy_armor_legs.png" limb="RightLeg" rotation="3" sourcerect="117,170,47,86" origin="0.4,0.55" scale="0.85" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Left Leg" texture="heavy_armor_legs.png" limb="LeftLeg" rotation="3" sourcerect="194,170,48,86" origin="0.4,0.55" scale="0.85" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Right Shoe" texture="heavy_armor_legs.png" limb="RightFoot" rotation="100" sourcerect="39,97,56,51" origin="0.0,0.55" scale="0.64" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Light Marine Armor Left Shoe" texture="heavy_armor_legs.png" limb="LeftFoot" rotation="100" sourcerect="39,97,56,51" origin="0.0,0.55" scale="0.64" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.35" damagesound="LimbArmor" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" />
+		<!--<StatValue stattype="WalkingSpeed" value="-0.1" />-->
+		<StatusEffect type="OnWearing" targettype="Character" duration="0.1" stackable="false" >
+			<Affliction identifier="nh_slow" amount="10" />
+		</StatusEffect>
+	</Wearable>
+</Item>
+
+<!-- Heavy Marine Armor -->
+<Item name="" identifier="nh_marinearmor2" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="550" >
+		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8"  />
+		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
+		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+		<RequiredSkill identifier="weapons" level="40" />
+		<RequiredItem identifier="nh_marinearmor1" />
+		<RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+		<RequiredItem identifier="ballisticfiber" />
+	</Fabricate>
+	<!-- 3 plastic, 6 aluminium, 6 titanium -->
+	<Deconstruct time="10" >
+		<Item identifier="plastic" amount="2" />
+		<Item identifier="aluminium" amount="4" />
+		<Item identifier="titanium" amount="4" />
+	</Deconstruct>
+	<InventoryIcon name="Heavy Marine Armor" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="256,256,128,128" origin="0.5,0.5" />
+	<Sprite name="Heavy Marine Armor" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,192,96,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="40" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+		<!-- Fake modifier to show speed change -->
+		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.8" armorsector="0.0,0.0" />
+		<sprite name="Heavy Marine Armor Torso" texture="heavy_armor_torso.png" sourcerect="22,31,99,175" origin="0.5,0.58" scale="0.67" limb="Torso" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Left Arm Back" texture="heavy_armor_torso.png" sourcerect="134,128,48,26" origin="0.5,0.6" scale="0.7" limb="LeftArm" depthlimb="LeftArm" depth="0.999" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Left Arm Front" texture="heavy_armor_torso.png" sourcerect="134,158,51,70" origin="0.5,0.8" scale="0.7" limb="LeftArm" depthlimb="LeftForearm" depth="0.001" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Right Arm" texture="heavy_armor_torso.png" sourcerect="134,4,51,70" origin="0.5,0.8" scale="0.7" limb="RightArm" depth="0.001" depthlimb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Right Lower Arm" texture="heavy_armor_torso.png" rotation="-5" sourcerect="195,8,48,89" origin="0.55,0.6" scale="0.6" limb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Left Lower Arm" texture="heavy_armor_torso.png" sourcerect="195,162,48,63" origin="0.53,0.45" scale="0.6" limb="LeftForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Right Hand" texture="heavy_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightHand" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Left Hand" texture="heavy_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftHand" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Waist" texture="heavy_armor_legs.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.64" limb="Waist" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Right Thigh" texture="heavy_armor_legs.png" limb="RightThigh" sourcerect="102,1,70,140" origin="0.47,0.5" scale="0.7" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Left Thigh" texture="heavy_armor_legs.png" limb="LeftThigh" sourcerect="193,81,56,61" origin="0.5,0.0" scale="0.8" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Right Leg" texture="heavy_armor_legs.png" limb="RightLeg" rotation="3" sourcerect="117,170,47,86" origin="0.4,0.55" scale="0.85" inheritlimbdepth="False" depth="0.001" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Left Leg" texture="heavy_armor_legs.png" limb="LeftLeg" rotation="3" sourcerect="194,170,48,86" origin="0.4,0.55" scale="0.85" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Right Shoe" texture="heavy_armor_legs.png" limb="RightFoot" rotation="100" sourcerect="39,97,56,51" origin="0.1,0.45" scale="0.64" inheritlimbdepth="False" depth="0.002" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Left Shoe" texture="heavy_armor_legs.png" limb="LeftFoot" rotation="100" sourcerect="39,97,56,51" origin="0.1,0.45" scale="0.64" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<!--<StatValue stattype="WalkingSpeed" value="-0.2" />
+		<StatValue stattype="SwimmingSpeed" value="-0.2" />-->
+		<StatusEffect type="OnWearing" targettype="Character" duration="0.1" stackable="false" >
+			<Affliction identifier="nh_slow" amount="20" />
+		</StatusEffect>
+	</Wearable>
+</Item>
+
+<!-- HEADGEAR START -->
+
+<!-- Marine Trooper Helmet -->
+<Item name="" identifier="nh_marinehelmettroop" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.4">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="200" >
+		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8"  />
+		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
+		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+		<RequiredSkill identifier="weapons" level="20" />
+		<RequiredItem identifier="steel" amount="1" />
+		<RequiredItem identifier="titanium" amount="2" />
+	</Fabricate>
+	<!-- 1 steel, 2 titanium -->
+	<Deconstruct time="2">
+		<Item identifier="steel" />
+		<Item identifier="titanium" />
+	</Deconstruct>
+	<Sprite name="Marine Trooper Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="0,0,100,100" depth="0.6" origin="0.5,0.5" />
+	<Body radius="30" density="50" />
+	<Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
+		<sprite name="Marine Trooper Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" sourcerect="0,0,100,100" origin="0.5,0.5" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+	</Wearable>
+</Item>
+
+<!-- Marine Comms Helmet -->
+<Item name="" identifier="nh_marinehelmetcomms" category="Equipment" tags="smallitem,clothing,nh_needs_battery" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.4">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="275" >
+		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8"  />
+		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
+		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+		<RequiredSkill identifier="weapons" level="30" />
+		<RequiredItem identifier="nh_marinehelmettroop" />
+		<RequiredItem identifier="headset" />
+		<RequiredItem identifier="plastic" />
+	</Fabricate>
+	<!-- 1 plastic, 1 steel, 2 titanium -->
+	<Deconstruct time="3">
+		<Item identifier="plastic" />
+		<Item identifier="steel" />
+		<Item identifier="titanium" />
+		<Item identifier="headset" />
+	</Deconstruct>
+	<WifiComponent range="15000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+		<RequiredItems items="mobilebattery" type="Contained" />
+		<StatusEffect type="OnActive" targettype="This">
+			<Conditional JamTimer="gt 0" targetitemcomponent="WifiComponent" />
+			<sound file="Content/Sounds/RadioStatic.ogg" range="500.0" frequencymultiplier="0.7" loop="true" volume="0.5" />
+		</StatusEffect>
+	</WifiComponent>
+	<Sprite name="Marine Comms Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="100,0,100,100" depth="0.6" origin="0.5,0.5" />
+	<Body radius="30" density="50" />
+	<Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
+		<!-- Fake modifier to show speed change -->
+		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.95" armorsector="0.0,0.0" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />		
+		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+		<sprite name="Marine Comms Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" sourcerect="100,0,100,100" origin="0.5,0.5" />
+		<!--<StatValue stattype="WalkingSpeed" value="-0.05" />
+		<StatValue stattype="SwimmingSpeed" value="-0.05" />-->
+		<StatusEffect type="OnWearing" targettype="Character" duration="0.1" stackable="false" >
+			<Affliction identifier="nh_slow" amount="5" />
+		</StatusEffect>
+	</Wearable>
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery" >
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+		<Containable items="mobilebattery" >
+			<StatusEffect type="OnWearing" targettype="Character,Contained" Condition="-0.03" >
+				<Conditional IsPlayer="true" />
+			</StatusEffect>
+		</Containable>
+	</ItemContainer>
+</Item>
+
+<!-- Marine Medic Helmet -->
+<Item name="" identifier="nh_marinehelmetmedic" category="Equipment" tags="smallitem,clothing,nh_needs_battery" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.4">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="275" >
+		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8"  />
+		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
+		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+		<RequiredSkill identifier="weapons" level="30" />
+		<RequiredItem identifier="nh_marinehelmettroop" />
+		<RequiredItem identifier="healthscanner" />
+		<RequiredItem identifier="plastic" />
+	</Fabricate>
+	<!-- 1 plastic, 1 steel, 2 titanium -->
+	<Deconstruct time="3">
+		<Item identifier="plastic" />
+		<Item identifier="steel" />
+		<Item identifier="titanium" />
+		<Item identifier="healthscanner" />
+	</Deconstruct>
+	<Sprite texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="200,0,100,100" depth="0.6" origin="0.5,0.5" />
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="200,0,100,100" depth="0.6" origin="0.5,0.5" />
+	<Body radius="30" density="50" />
+	<Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
+		<!-- Fake modifier to show speed change -->
+		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.95" armorsector="0.0,0.0" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+		<sprite name="Marine Medic Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" sourcerect="200,0,100,100" origin="0.5,0.5" >
+			<LightComponent range="30" lightcolor="125,255,150,40" powerconsumption="1" IsOn="true" castshadows="false">
+				<LightTexture texture="Content/Lights/lightcone_old.png" origin="0.03,0.5" size="0.1,0.1" />
+			</LightComponent>
+		</sprite>
+		<!--<StatValue stattype="WalkingSpeed" value="-0.03" />
+		<StatValue stattype="SwimmingSpeed" value="-0.03" />-->
+		<StatusEffect type="OnWearing" targettype="Character" duration="0.1" stackable="false" >
+			<Affliction identifier="nh_slow" amount="5" />
+		</StatusEffect>
+		<StatusEffect type="OnWearing" targettype="This" drawhudwhenequipped="false" setvalue="true" targetitemcomponent="StatusHUD" >
+			<Conditional HasStatusTag="! nh_powered" />
+		</StatusEffect>
+	</Wearable>
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery" >
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+		<Containable items="mobilebattery" >
+			<StatusEffect type="OnWearing" targettype="this" voltage="1" setvalue="true" />
+			<StatusEffect type="OnWearing" targettype="Character,Contained" Condition="-0.05" >
+				<Conditional IsPlayer="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Character,This" drawhudwhenequipped="true" setvalue="true" targetitemcomponent="StatusHUD" tags="nh_powered" duration="0.5" >
+				<Conditional InWater="false" />
+			</StatusEffect>
+		</Containable>
+	</ItemContainer>
+	<StatusHUD drawhudwhenequipped="true" />
+</Item>
+
+<!-- Marine Diving Helmet -->
+<Item name="" identifier="nh_marinehelmetdiver" category="Equipment" tags="smallitem,diving,lightdiving,divinggear_wearableindoors,divingmask" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.4">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="300" >
+		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8"  />
+		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
+		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
+		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="15">
+		<RequiredSkill identifier="weapons" level="35" />
+		<RequiredItem identifier="nh_marinehelmettroop" />
+		<RequiredItem identifier="divingmask" />
+		<RequiredItem identifier="steel" />
+		<RequiredItem identifier="rubber" />
+	</Fabricate>
+	<!-- 1 plastic, 3 rubber, 2 steel, 2 titanium -->
+	<Deconstruct time="4">
+		<Item identifier="plastic" />
+		<Item identifier="rubber" amount="2" />
+		<Item identifier="steel" />
+		<Item identifier="titanium" />
+	</Deconstruct>
+	<Sprite name="Marine Space Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="0,100,100,100" depth="0.6" origin="0.5,0.5" />
+	<Body radius="30" density="50" />
+	<Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
+		<sprite name="Marine Space Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="Hair,Beard" scale="1.35" sourcerect="0,100,100,100" origin="0.5,0.48" />
+		<!-- Fake modifier to show speed change -->
+		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.9" armorsector="0.0,0.0" />
+		<damagemodifier afflictionidentifiers="nh_fake_fov" damagemultiplier="0.5" armorsector="0.0,0.0" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="true" LowPassMultiplier="0.4" setvalue="true" disabledeltatime="true" />
+		<!--<StatValue stattype="WalkingSpeed" value="-0.1" />
+		<StatValue stattype="SwimmingSpeed" value="-0.1" />-->
+		<StatusEffect type="OnWearing" targettype="Character" duration="0.1" stackable="false" >
+			<Affliction identifier="nh_slow" amount="10" />
+		</StatusEffect>
+	</Wearable>
+	<ItemContainer capacity="1" hideitems="true" containedstateindicatorstyle="tank" >
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+		<Containable items="oxygensource,weldingtoolfuel" excludeditems="oxygenitetank" />
+		<Containable items="oxygensource">
+			<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="1000.0" UseHullOxygen="false" />
+			<StatusEffect type="OnWearing" targettype="Contained" Condition="-0.3" comparison="And">
+				<Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" InWater="true" />
+			</StatusEffect>
+		</Containable>
+		<Containable items="oxygenitetank">
+			<StatusEffect type="OnWearing" targettype="Character" SpeedMultiplier="1.2" setvalue="true" targetslot="0" comparison="And">
+				<Conditional IsDead="false" />
+				<Conditional DecreasedOxygenConsumption="lt 99" />
+				<Conditional NeedsAir="true" />
+			</StatusEffect>
+		</Containable>
+		<Containable items="weldingfueltank">
+			<StatusEffect type="OnWearing" targettype="Contained" Condition="-0.5" comparison="And">
+				<Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
+				<Conditional IsDead="false" />
+				<Conditional DecreasedOxygenConsumption="lt 99" />
+				<Conditional NeedsAir="true" />
+			</StatusEffect>
+		</Containable>
+		<Containable items="incendiumfueltank">
+			<StatusEffect type="OnWearing" targettype="Contained" Condition="-0.5" comparison="And">
+				<Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
+				<Affliction identifier="burn" amount="20.0" />
+				<Conditional IsDead="false" />
+				<Conditional DecreasedOxygenConsumption="lt 99" />
+				<Conditional NeedsAir="true" />
+			</StatusEffect>
+		</Containable>
+	</ItemContainer>
+</Item>
+	<!-- Doesnt Work
+<Item name="Amp Suit" identifier="nh_amp_suit" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" scale="1.0" impactsoundtag="impact_soft">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Deconstruct time="10" />
+	<Sprite name="Light Marine Armor" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="96,192,96,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+		
+		<sprite name="Amp Suit Head" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="Head" hidelimb="false" hideotherwearables="false" />
+		<sprite name="Amp Suit Torso" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="Torso" hidelimb="false" hideotherwearables="false" />
+		
+		<sprite name="Amp Suit Left Arm" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftArm" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Right Arm" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightArm" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Right Lower Arm" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightForearm" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Left Lower Arm" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftForearm" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Right Hand" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightHand" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Left Hand" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftHand" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Waist" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="Waist" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Right Thigh" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightThigh" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Left Thigh" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftThigh" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Right Leg" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightLeg" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Left Leg" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftLeg" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Right Shoe" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightFoot" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Amp Suit Left Shoe" texture="amp_suit.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftFoot" hidelimb="true" hideotherwearables="true" canbehiddenbyotherwearables="false" />
+		
+		<damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" damagemultiplier="0.45" armorsector="0.0,360.0" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="explosiondamage" damagemultiplier="0.8" armorsector="0.0,360.0" damagesound="LimbArmor" />
+		<damagemodifier afflictiontypes="bleeding" damagemultiplier="0.5" armorsector="0.0,360.0" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" damagemultiplier="0.8" armorsector="0.0,360.0" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" damagemultiplier="0.3" armorsector="0.0,360.0" damagesound="LimbArmor" deflectprojectiles="true" />
+		<StatusEffect type="OnWearing" targettype="Character" >
+			<Affliction identifier="nh_amp_suit_visual" amount="100" />
+		</StatusEffect>
+	</Wearable>
+</Item>-->
+
+<!-- Face Mask -->
+<Item name="" identifier="nh_balaclava" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" scale="0.55" impactsoundtag="impact_soft" InventoryIconColor="10,10,10,255" SpriteColor="19,20,17,245">
+	<PreferredContainer primary="nh_dev_cloth" amount="1" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="crewcab" spawnprobability="0.1" notcampaign="true"/>
+	<PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+	<PreferredContainer primary="wreckcrewcab" spawnprobability="0.02" />
+	<Price baseprice="50">
+		<Price storeidentifier="merchantoutpost" minavailable="1" />
+		<Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+		<Price storeidentifier="merchantmilitary" minavailable="5" />
+		<Price storeidentifier="merchantmine" minavailable="15" />
+	</Price>
+	<!--<Fabricate suitablefabricators="fabricator" requiredtime="5">
+		<RequiredItem identifier="organicfiber" />
+	</Fabricate>-->
+	<Deconstruct time="1">
+		<Item identifier="organicfiber" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/Security/balaclava_male.png" sourcerect="16,13,95,101" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Jobgear/Security/balaclava_male.png" sourcerect="29,27,62,16" depth="0.6" origin="0.5,0.5" />
+	<Body width="62" height="15" density="2" />
+	<Wearable slots="Any,Headset" msg="ItemMsgPickUpSelect" ><!-- 0.10204 -->
+		<sprite name="Balaclava" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,128,128" origin="0.5,0.5" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Hair" depth="0.999" />
+		<sprite name="Hide Beard" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,1,1" origin="0.5,0.5" limb="Head" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Beard" depth="0.999" />
+		<sprite name="Balaclava Neck" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="43,129,33,39" origin="0.67,2.18" limb="Torso" depth="0.1" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" />
+		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" setvalue="true" />
+	</Wearable>
+	<Wearable slots="Any,Head" >
+		<sprite name="Balaclava" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,128,128" origin="0.5,0.5" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Hair" depth="0.999" />
+		<sprite name="Hide Beard" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,1,1" origin="0.5,0.5" limb="Head" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Beard" depth="0.999" />
+		<sprite name="Balaclava Neck" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="43,129,33,39" origin="0.67,2.18" limb="Torso" depth="0.1" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" />
+		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" setvalue="true" />
+	</Wearable>
+</Item>
+
+<!-- Tactical Sunglasses (Orange) -->
+<Item name="" identifier="nh_sunglasses" scale="0.12" SpriteColor="255,100,0,255" category="Equipment" tags="smallitem,clothing" maxstacksize="8" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" >
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="crewcab" spawnprobability="0.1" notcampaign="true"/>
+	<PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+	<PreferredContainer primary="wreckcrewcab" spawnprobability="0.02" />
+	<Price baseprice="50">
+		<Price storeidentifier="merchantoutpost" minavailable="1" />
+		<Price storeidentifier="merchantcity" multiplier="0.9" minavailable="3" />
+		<Price storeidentifier="merchantmilitary" minavailable="2" />
+	</Price>
+	<Sprite texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" depth="0.5" origin="0.5,0.57" />
+	<!--<InventoryIcon texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.5,0.5" />-->
+	<Body width="150" height="50" density="15" />
+	<Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="25" fabricationlimitmin="0" fabricationlimitmax="3" quality="0"/>
+	<Deconstruct time="1" >
+		<Item identifier="plastic" OutConditionMin="0.5" OutConditionMax="0.5" />
+	</Deconstruct>
+	<Wearable slots="Any,Headset" msg="ItemMsgPickUpSelect" >
+		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
+	</Wearable>  
+	<Wearable slots="Any,Head" >
+		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
+	</Wearable> 
+</Item>
+
+<!-- Tactical Sunglasses (Black) -->
+<Item name="" identifier="nh_sunglasses_2" variantof="nh_sunglasses" descriptionidentifier="nh_sunglasses" scale="0.12" SpriteColor="0,0,0,255" category="Equipment" tags="smallitem,clothing" maxstacksize="8" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" >
+</Item>
+
+<!-- Tactical Sunglasses (White) -->
+<Item name="" identifier="nh_sunglasses_3" variantof="nh_sunglasses" descriptionidentifier="nh_sunglasses" scale="0.12" SpriteColor="255,255,255,255" category="Equipment" tags="smallitem,clothing" maxstacksize="8" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" >
+</Item>
+
+<!-- Tactical Sunglasses (Red), had to make a custom one or else it wouldnt equip in the right slot on mechanics -->
+<Item name="" identifier="nh_sunglasses_4" scale="0.12" SpriteColor="255,0,0,255" category="Equipment" tags="smallitem,clothing" maxstacksize="8" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" >
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="crewcab" spawnprobability="0.1" notcampaign="true"/>
+	<PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+	<PreferredContainer primary="wreckcrewcab" spawnprobability="0.02" />
+	<Price baseprice="50">
+		<Price storeidentifier="merchantoutpost" minavailable="1" />
+		<Price storeidentifier="merchantcity" multiplier="0.9" minavailable="3" />
+		<Price storeidentifier="merchantmilitary" minavailable="2" />
+	</Price>
+	<Sprite texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" depth="0.5" origin="0.5,0.57" />
+	<!--<InventoryIcon texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.5,0.5" />-->
+	<Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="25" fabricationlimitmin="0" fabricationlimitmax="3" quality="0"/>
+	<Body width="150" height="50" density="15" />
+	<Deconstruct time="1" >
+		<Item identifier="plastic" OutConditionMin="0.5" OutConditionMax="0.5" />
+	</Deconstruct>
+	<Wearable slots="Any,Head" msg="ItemMsgPickUpSelect" >
+		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
+	</Wearable>  
+	<Wearable slots="Any,Headset" >
+		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
+	</Wearable> 
+</Item>
+
+<!-- Tactical Sunglasses (Blue) -->
+<Item name="" identifier="nh_sunglasses_5" variantof="nh_sunglasses" descriptionidentifier="nh_sunglasses" scale="0.12" SpriteColor="0,0,255,255" category="Equipment" tags="smallitem,clothing" maxstacksize="8" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" >
+</Item>
+
+<!-- Tactical Sunglasses (Green) -->
+<Item name="" identifier="nh_sunglasses_6" variantof="nh_sunglasses" descriptionidentifier="nh_sunglasses" scale="0.12" SpriteColor="0,255,0,255" category="Equipment" tags="smallitem,clothing" maxstacksize="8" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" >
+</Item>
+
+<!-- Tactical Sunglasses (Purple) -->
+<Item name="" identifier="nh_sunglasses_7" variantof="nh_sunglasses" descriptionidentifier="nh_sunglasses" scale="0.12" SpriteColor="255,0,255,255" category="Equipment" tags="smallitem,clothing" maxstacksize="8" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" >
+</Item>
+
+<!-- Tactical Sunglasses (Cyan) -->
+<Item name="" identifier="nh_sunglasses_8" variantof="nh_sunglasses" descriptionidentifier="nh_sunglasses" scale="0.12" SpriteColor="0,255,255,255" category="Equipment" tags="smallitem,clothing" maxstacksize="8" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" >
+</Item>
+
+<!-- ///////////////////////////////////////////////////////////
+//////////// ODST Armors ///////////////////////////////////////
+//////////////////////////////////////////////////////////// -->
+<!-- ODST Armor -->
+<Item name="" identifier="nh_odstarmor" category="Diving,Equipment" tags="smallitem,deepdiving,divinggear_wearableindoors" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="1000" sold="false" CanBeSpecial="false">
+		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
+		<Price storeidentifier="merchantcity" multiplier="0.7" />
+		<Price storeidentifier="merchantresearch" multiplier="0.8" />
+		<Price storeidentifier="merchantmilitary" sold="true" BuyingPriceMultiplier="2" minamount="1" maxamount="8" >
+			<Reputation faction="coalition" min="75"/>
+		</Price>
+		<Price storeidentifier="merchantmine" multiplier="0.6" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="30">
+		<RequiredSkill identifier="weapons" level="60" />
+		<RequiredItem identifier="nh_marinearmor2" />
+		<RequiredItem identifier="rubber" amount="4" />
+		<RequiredItem tag="titanium_a" amount="2" />
+	</Fabricate>
+	<!-- 3 plastic, 4 rubber, 6 aluminium, 8 titanium -->
+	<Deconstruct time="15" >
+		<Item identifier="plastic" amount="2" />
+		<Item identifier="rubber" amount="3" />
+		<Item identifier="aluminium" amount="4" />
+		<Item identifier="titanium" amount="6" />
+	</Deconstruct>
+	<InventoryIcon name="ODST Armor" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="128,256,128,128" origin="0.5,0.5" />
+	<Sprite name="ODST Armor" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="288,192,96,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="35" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+		<!-- Fake modifier to show effects to player -->
+		<damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.85" armorsector="0.0,0.0" />
+			
+		<sprite name="ODST Armor Torso" texture="odst_armor_torso.png" sourcerect="6,31,119,188" origin="0.53,0.55" scale="0.64" limb="Torso" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Arm" texture="odst_armor_torso.png" sourcerect="126,126,68,107" origin="0.5,0.5" scale="0.7" limb="LeftArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Arm" texture="odst_armor_torso.png" sourcerect="127,1,68,107" origin="0.5,0.5" scale="0.7" limb="RightArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Lower Arm" texture="odst_armor_torso.png" sourcerect="195,10,49,80" origin="0.6,0.6" scale="0.8" limb="RightForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Lower Arm" texture="odst_armor_torso.png" sourcerect="194,137,50,76" origin="0.6,0.6" scale="0.8" limb="LeftForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Hand" texture="odst_armor_torso.png" sourcerect="23,233,38,47" origin="0.45,0.5" scale="0.7" limb="RightHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Hand" texture="odst_armor_torso.png" sourcerect="61,233,42,46" origin="0.45,0.5" scale="0.7" limb="LeftHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Waist" texture="odst_armor_legs.png" sourcerect="5,2,85,84" origin="0.5,0.5" scale="0.8" limb="Waist" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Thigh" texture="odst_armor_legs.png" sourcerect="100,2,76,143" origin="0.5,0.5" scale="0.7" limb="RightThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Thigh" texture="odst_armor_legs.png" sourcerect="178,2,76,143" origin="0.5,0.5" scale="0.7" limb="LeftThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Leg" texture="odst_armor_legs.png" sourcerect="111,146,60,106" origin="0.45,0.5" scale="0.8" limb="RightLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Leg" texture="odst_armor_legs.png" sourcerect="189,146,60,106" origin="0.45,0.5" scale="0.8" limb="LeftLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Shoe" texture="odst_armor_legs.png" sourcerect="13,94,37,83" origin="0.55,0.5" scale="0.75" rotation="90" limb="RightFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Shoe" texture="odst_armor_legs.png" sourcerect="13,94,37,83" origin="0.55,0.5" scale="0.75" rotation="90" limb="LeftFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="leftarm" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" canbehiddenbyotherwearables="false" />
+		<!-- Needs a pressurised helmet on in order to get pressure protection -->
+		<StatusEffect type="OnWearing" targettype="Character" PressureProtection="4000.0" setvalue="true" disabledeltatime="true" >
+			<Conditional HasStatusTag="pressure_helmet" />
+		</StatusEffect>
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<!--<StatValue stattype="WalkingSpeed" value="-0.15" />
+		<StatValue stattype="SwimmingSpeed" value="-0.15" />-->
+		<StatusEffect type="OnWearing" targettype="Character" duration="0.1" stackable="false" >
+			<Affliction identifier="nh_slow" amount="15" />
+		</StatusEffect>
+	</Wearable>
+</Item>
+
+<!-- ODST Heavy Armor -->
+<Item name="" identifier="nh_odstarmor_heavy" descriptionidentifier="nh_odstarmor" category="Diving,Equipment" tags="smallitem,diving,deepdiving,divinggear_wearableindoors" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="1100" sold="false" CanBeSpecial="false">
+		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
+		<Price storeidentifier="merchantcity" multiplier="0.7" />
+		<Price storeidentifier="merchantresearch" multiplier="0.8" />
+		<Price storeidentifier="merchantmilitary" sold="true" BuyingPriceMultiplier="2" minamount="1" maxamount="8" >
+			<Reputation faction="coalition" min="75"/>
+		</Price>
+		<Price storeidentifier="merchantmine" multiplier="0.6" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="30">
+		<RequiredSkill identifier="weapons" level="70" />
+		<RequiredItem identifier="nh_odstarmor" />
+		<RequiredItem identifier="ballisticfiber" amount="2" />
+		<RequiredItem identifier="rubber" amount="1" />
+		<RequiredItem tag="titanium_a" amount="4" />
+	</Fabricate>
+	<!-- 5 plastic, 5 rubber, 6 aluminium, 14 titanium -->
+	<Deconstruct time="18" >
+		<Item identifier="plastic" amount="4" />
+		<Item identifier="rubber" amount="4" />
+		<Item identifier="aluminium" amount="4" />
+		<Item identifier="titanium" amount="10" />
+	</Deconstruct>
+	<InventoryIcon name="ODST Armor" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="256,384,128,128" origin="0.5,0.5" />
+	<Sprite name="ODST Armor" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="288,192,96,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="35" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+		<!-- Fake modifier to show effects to player -->
+		<damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.75" armorsector="0.0,0.0" />
+			
+		<sprite name="ODST Armor Torso" texture="odst_armor_torso.png" sourcerect="6,31,119,188" origin="0.53,0.55" scale="0.64" limb="Torso" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Arm" texture="odst_armor_torso.png" sourcerect="126,126,68,107" origin="0.5,0.5" scale="0.7" limb="LeftArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Arm" texture="odst_armor_torso.png" sourcerect="127,1,68,107" origin="0.5,0.5" scale="0.7" limb="RightArm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Lower Arm" texture="odst_armor_torso.png" sourcerect="195,10,49,80" origin="0.6,0.6" scale="0.8" limb="RightForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Lower Arm" texture="odst_armor_torso.png" sourcerect="194,137,50,76" origin="0.6,0.6" scale="0.8" limb="LeftForearm" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Hand" texture="odst_armor_torso.png" sourcerect="23,233,38,47" origin="0.45,0.5" scale="0.7" limb="RightHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Hand" texture="odst_armor_torso.png" sourcerect="61,233,42,46" origin="0.45,0.5" scale="0.7" limb="LeftHand" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Waist" texture="odst_armor_legs.png" sourcerect="5,2,85,84" origin="0.5,0.5" scale="0.8" limb="Waist" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Thigh" texture="odst_armor_legs.png" sourcerect="100,2,76,143" origin="0.5,0.5" scale="0.7" limb="RightThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Thigh" texture="odst_armor_legs.png" sourcerect="178,2,76,143" origin="0.5,0.5" scale="0.7" limb="LeftThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Right Shoe" texture="odst_armor_legs.png" sourcerect="13,94,37,83" origin="0.55,0.5" scale="0.75" rotation="90" limb="RightFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="ODST Armor Left Shoe" texture="odst_armor_legs.png" sourcerect="13,94,37,83" origin="0.55,0.5" scale="0.75" rotation="90" limb="LeftFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="leftarm" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" canbehiddenbyotherwearables="false" />
+			
+		<sprite name="ODST Torso Plating" texture="odst_armor_heavy.png" sourcerect="182,18,45,154" origin="-0.5,0.6" scale="0.65" limb="Torso" depthlimb="Torso" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Right Arm Plating" texture="odst_armor_heavy.png" sourcerect="4,7,67,100" origin="0.55,0.8" scale="0.65" limb="RightArm" depthlimb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Left Arm Plating" texture="odst_armor_heavy.png" sourcerect="95,7,67,100" origin="0.55,0.8" scale="0.65" limb="LeftArm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Right Lower Arm Plating" texture="odst_armor_heavy.png" rotation="350" sourcerect="16,114,50,51" origin="0.7,1.0" scale="0.8" limb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Left Lower Arm Plating" texture="odst_armor_heavy.png" rotation="350" sourcerect="106,114,50,51" origin="0.7,1.0" scale="0.8" limb="LeftForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Outer Waist Plating" texture="odst_armor_heavy.png" sourcerect="2,165,81,89" origin="0.55,0.3" scale="0.6" limb="Waist" depthlimb="Torso" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Waist Plating" texture="odst_armor_heavy.png" sourcerect="151,180,58,72" origin="-0.2,0.2" scale="0.6" limb="Waist" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Right Leg Plating" texture="odst_armor_heavy.png" sourcerect="9,262,70,132" origin="0.4,0.55" scale="0.75" limb="RightLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Left Leg Plating" texture="odst_armor_heavy.png" sourcerect="89,262,70,132" origin="0.4,0.55" scale="0.75" limb="LeftLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Right Shoe Plating" texture="odst_armor_heavy.png" sourcerect="162,352,51,34" origin="-0.1,0.3" scale="0.6" limb="RightFoot" depthlimb="RightLeg" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+		<sprite name="ODST Left Shoe Plating" texture="odst_armor_heavy.png" sourcerect="162,315,51,34" origin="-0.1,0.3" scale="0.6" limb="LeftFoot" depthlimb="LeftLeg" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
+
+		<StatusEffect type="OnWearing" targettype="Character" PressureProtection="4000.0" setvalue="true" disabledeltatime="true" >
+			<Conditional HasStatusTag="pressure_helmet" />
+		</StatusEffect>
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+		<!--<StatValue stattype="WalkingSpeed" value="-0.25" />
+		<StatValue stattype="SwimmingSpeed" value="-0.25" />-->
+		<StatusEffect type="OnWearing" targettype="Character" duration="0.1" stackable="false" >
+			<Affliction identifier="nh_slow" amount="25" />
+		</StatusEffect>
+	</Wearable>
+</Item>
+
+<!-- HEADGEAR START -->
+
+<!-- ODST Helmet -->
+<Item name="" identifier="nh_odsthelmet" category="Diving,Equipment" tags="smallitem,deepdiving,divinggear_wearableindoors,divingmask,nh_needs_battery" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.4" impactsoundtag="impact_soft">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="800" sold="false" CanBeSpecial="false">
+		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
+		<Price storeidentifier="merchantcity" multiplier="0.7" sold="true" BuyingPriceMultiplier="3" minamount="0" maxamount="2"  />
+		<Price storeidentifier="merchantresearch" multiplier="0.8" />
+		<Price storeidentifier="merchantmilitary" sold="true" BuyingPriceMultiplier="2" minamount="1" maxamount="8" >
+			<Reputation faction="coalition" min="75"/>
+		</Price>
+		<Price storeidentifier="merchantmine" multiplier="0.6" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="15">
+		<RequiredSkill identifier="weapons" level="60" />
+		<RequiredItem identifier="nh_marinehelmetdiver" />
+		<RequiredItem identifier="rubber" amount="2" />
+		<RequiredItem identifier="ballisticfiber" />
+		<RequiredItem tag="titanium_a" amount="3" />
+	</Fabricate>
+	<!-- 2 plastic, 5 rubber, 2 steel, 6 titanium -->
+	<Deconstruct time="4">
+		<Item identifier="plastic" />
+		<Item identifier="rubber" amount="4" />
+		<Item identifier="steel" />
+		<Item identifier="titanium" amount="4" />
+	</Deconstruct>
+	<!--<InventoryIcon name="ODST Armor" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="200,205,99,91" origin="0.5,0.5" />-->
+	<Sprite name="ODST Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="200,205,99,91" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="35" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
+		<!-- Fake modifier to show effects to player -->
+		<damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+		<damagemodifier afflictionidentifiers="nh_fake_fov" damagemultiplier="0.5" armorsector="0.0,0.0" />
+			
+		<sprite name="ODST Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="200,205,99,91" origin="0.52,0.53" scale="1.4" rotation="7" limb="Head" hidewearablesoftype="Hair,Beard" hidelimb="false" hideotherwearables="true" inherittexturescale="true" >
+			<LightComponent range="300" lightcolor="255,255,200,150" powerconsumption="1" IsOn="true">
+				<LightTexture texture="Content/Lights/lightcone.png" origin="0.04, 0.5" size="1.0,1.0" />
+				<StatusEffect type="OnActive" targettype="Contained" Condition="-0.2" targetslot="1">
+					<RequiredItem items="mobilebattery" type="Contained" />
+				</StatusEffect>
+			</LightComponent>
+		</sprite>
+		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="true" LowPassMultiplier="0.3" setvalue="true" tags="pressure_helmet" interval="1.0" duration="1.1" />
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+	</Wearable>
+	<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+		<GuiFrame relativesize="0.1,0.1" anchor="TopLeft" absoluteoffset="0,0" style="ItemUI" />
+			<TickBox text="Helmet Flashlight">
+				<StatusEffect type="OnUse" targettype="This" IsOn="true" />
+				<StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" />
+			</TickBox>
+	</CustomInterface>
+	<ItemContainer capacity="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0" >
+	<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+	<SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+		<SubContainer capacity="1" maxstacksize="1">
+			
+			<!--<Containable items="oxygensource,weldingtoolfuel" excludeditems="oxygenitetank" />-->
+				
+			<Containable items="oxygensource">
+				<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="1000.0" UseHullOxygen="false" />
+				<StatusEffect type="OnWearing" targettype="Contained" Condition="-0.3" targetslot="0" comparison="And">
+					<Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+					<Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+					<Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+				</StatusEffect>
+			</Containable>
+				
+			<Containable items="oxygenitetank">
+				<StatusEffect type="OnWearing" targettype="Character" SpeedMultiplier="1.2" setvalue="true" targetslot="0" comparison="And">
+					<Conditional IsDead="false" />
+					<Conditional DecreasedOxygenConsumption="lt 99" />
+					<Conditional NeedsAir="true" />
+				</StatusEffect>
+			</Containable>
+				
+			<Containable items="weldingfueltank">
+				<StatusEffect type="OnWearing" targettype="Contained" Condition="-0.5" targetslot="0" comparison="And">
+					<Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+					<Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+					<Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+				</StatusEffect>
+					
+				<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
+					<Conditional IsDead="false" />
+					<Conditional DecreasedOxygenConsumption="lt 99" />
+					<Conditional NeedsAir="true" />
+				</StatusEffect>
+			</Containable>
+				
+			<Containable items="incendiumfueltank">
+				<StatusEffect type="OnWearing" targettype="Contained" Condition="-0.5" targetslot="0" comparison="And">
+					<Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+					<Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+					<Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+				</StatusEffect>
+					
+				<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
+					<Affliction identifier="burn" amount="20.0" />
+					<Conditional IsDead="false" />
+					<Conditional DecreasedOxygenConsumption="lt 99" />
+					<Conditional NeedsAir="true" />
+				</StatusEffect>
+			</Containable>
+		</SubContainer>
+			
+		<SubContainer capacity="1" maxstacksize="1">
+			<Containable items="mobilebattery">
+				<StatusEffect type="OnContaining" targettype="This,Character" Voltage="1" setvalue="true" comparison="Or">
+					<Conditional IsDead="false" />
+				</StatusEffect>
+			</Containable>
+		</SubContainer>
+	</ItemContainer>
+</Item>
+	
+<!-- ///////////////////////////////////////////////////////////
+//////////// Spartan Armors ////////////////////////////////////
+//////////////////////////////////////////////////////////// -->
+
+<!-- Spartan Armor -->
+<Item name="" identifier="nh_spartanarmor" category="Diving,Equipment" tags="diving,deepdiving,divinggear_wearableindoors,provocative" SpriteColor="89,117,76,255" scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" >
+	<Price baseprice="7000" sold="false" CanBeSpecial="false">
+		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
+		<Price storeidentifier="merchantcity" multiplier="0.6" />
+		<Price storeidentifier="merchantresearch" multiplier="0.8" />
+		<Price storeidentifier="merchantmilitary" sold="true" BuyingPriceMultiplier="5" DefaultAmount="1" >
+			<Reputation faction="coalition" min="99"/>
+		</Price>
+		<Price storeidentifier="merchantmine" multiplier="0.6" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="60">
+		<RequiredSkill identifier="weapons" level="85" />
+		<RequiredSkill identifier="mechanical" level="70" />
+		<RequiredItem tag="titanium_a" amount="30" />
+		<RequiredItem identifier="rubber" amount="3" />
+		<RequiredItem identifier="ballisticfiber" amount="5" />
+		<RequiredItem identifier="fpgacircuit" amount="4" />
+	</Fabricate>
+	<Deconstruct time="30">
+		 <Item identifier="aluminium" />
+		 <Item identifier="titanium" amount="13" />
+		 <Item identifier="rubber" />
+	</Deconstruct>
+	<Sprite name="Spartan Armor" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="256,128,128,64" depth="0.6" origin="0.5,0.5" />
+	<!--<Sprite name="Spartan Armor" texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="217,34,122,161" depth="0.6" origin="0.5,0.5" />-->
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="0,256,128,128" />
+	<ContainedSprite allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_cabinet.png" sourcerect="5,7,77,208" depth="0.55" origin="-0.12,-0.14" />
+	<Body radius="25" width="75" density="15" />
+	<Wearable slots="OuterClothes" msg="itemmsgequipselect">
+		<!-- Fake modifier to show effects to player -->
+		<damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="217,34,122,161" origin="0.6,0.7" scale="0.7" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="237,245,83,86" origin="0.57,0.55" scale="0.65" limb="Waist" rotation="350" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="367,125,41,81" origin="0.75,0.5" scale="0.8" limb="RightForearm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="446,126,41,79" origin="0.75,0.5" scale="0.81" limb="LeftForearm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="364,14,52,98" origin="0.55,0.55" scale="0.75" limb="RightArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="448,15,52,98" origin="0.55,0.55" scale="0.75" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="368,210,31,38" origin="0.7,0.5" scale="0.83" limb="RightHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="450,209,32,38" origin="0.7,0.5" scale="0.83" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="11,11,71,145" origin="0.5,0.5" scale="0.7" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="117,15,71,145" origin="0.5,0.5" scale="0.7" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="16,175,76,138" origin="0.45,0.6" scale="0.7" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="117,177,76,138" origin="0.45,0.6" scale="0.7" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="347,270,83,60" origin="0.5,0.55" scale="0.7" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="430,270,83,60" origin="0.5,0.55" scale="0.7" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="leftarm" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" canbehiddenbyotherwearables="false" />
+
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="acidburn" armorsector="0.0,360.0" damagemultiplier="0.0" deflectprojectiles="true" />
+		<!--<StatusEffect type="OnWearing" targettype="Character" PropulsionSpeedMultiplier="1.4" setvalue="true" disabledeltatime="true" />-->
+		<!--<StatValue stattype="MovementSpeed" value="-0.8" />-->
+		<StatusEffect type="OnWearing" targettype="Character" duration="0.01" stackable="false" >
+			<Affliction identifier="nh_slow" amount="90" multiplybymaxvitality="true" />
+			<Affliction identifier="nh_mk5_timer" amount="9999" />
+		</StatusEffect>
+		<StatusEffect type="OnWearing" targettype="Character" PressureProtection="5750.0" PropulsionSpeedMultiplier="1.4" setvalue="true" disabledeltatime="true" >
+			<Conditional HasStatusTag="pressure_helmet" />
+		</StatusEffect>
+		<!--<damagemodifier armorsector="180.0,360.0" afflictiontypes="cold" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="floodinfection" damagemultiplier="0.05" />-->
+		<!--<StatusEffect tags="medical" type="OnWearing" targettype="Character">
+			<Affliction identifier="spartanneurallink" strength="1" />
+			<Affliction identifier="haste" strength="300" />
+		</StatusEffect>-->
+	</Wearable>
+	<Holdable slots="LeftHand+RightHand" holdpos="10,-40" holdangle="45" msg="ItemMsgPickUpUse" pickkey="Use" >
+		<StatusEffect type="OnActive" targettype="Character" duration="0.1" stackable="false" >
+			<Affliction identifier="nh_slow" amount="35" />
+		</StatusEffect>
+	</Holdable>
+	<!-- Seporate wearable component so the player doesnt get armor protection on their head -->
+	<Wearable slots="OuterClothes">
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5.png" sourcerect="0,0,1,1" origin="0.5,0.5" limb="Head" hideotherwearables="false" >
+			<LightComponent range="350.0" lightcolor="255,255,225,150" powerconsumption="1" IsOn="true">
+				<LightTexture texture="Content/Lights/lightcone.png" origin="0.04,0.51" />
+			</LightComponent>
+		</sprite>
+		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" hidelimb="true" inherittexturescale="true" depth="1.0" canbehiddenbyotherwearables="false" />
+	</Wearable>
+	<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+		<GuiFrame relativesize="0.15,0.1" anchor="TopLeft" absoluteoffset="0,0" style="ItemUI" />
+		<TickBox text="Armor Flashlight" State="true">
+			<StatusEffect type="OnUse" targettype="This" IsOn="true" TargetItemComponent="LightComponent" />
+			<StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" TargetItemComponent="LightComponent" />
+		</TickBox>
+	</CustomInterface>
+	<ItemContainer capacity="0" hideitems="true" containedstateindicatorslot="0" containedstateindicatorstyle="battery" AutoInjectThreshold="0.15" >
+		<SlotIcon slotindex="0" texture="%ModDir%/UI/Container_Icons.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="1" texture="%ModDir%/UI/Container_Icons.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="2" texture="%ModDir%/UI/Container_Icons.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
+				
+		<!-- When power source is contained -->
+		<SubContainer capacity="1" maxstacksize="1">
+			<!-- 60 minutes of use -->
+			<Containable identifiers="nh_fusion_power" >
+				<StatusEffect type="OnWearing" targettype="Contained" targetitemslot="0" condition="47.2222222222" />
+			</Containable>
+			<!-- 1 minute of use -->
+			<Containable identifiers="alienpowercell" >
+				<StatusEffect type="OnWearing" targettype="Contained" targetitemslot="0" condition="48.3333333333" />
+			</Containable>
+			
+			<Containable identifiers="nh_fusion_power,mobilebattery,alienpowercell" >
+				<StatusEffect type="OnWearing" targettype="Contained" targetitemslot="0" condition="-50" />
+				<StatusEffect type="OnWearing" targettype="This,Character" voltage="1" setvalue="true" />
+				<StatusEffect type="OnWearing" targettype="This,Character" setvalue="true" comparison="and" >
+					<Conditional nh_energy_shields="lt 1" />
+					<RequiredItem identifier="nh_shieldmodule" type="Contained" />
+					<Affliction identifier="nh_energy_shields" amount="1" />
+				</StatusEffect>
+				<StatusEffect type="OnWearing" targettype="Character" >
+					<!-- Counteract the speed debuff +10% -->
+					<Affliction identifier="nh_fast" amount="100" multiplybymaxvitality="true" />
+				</StatusEffect>
+		
+				<!-- Play recharge sound on loop when shields increasing -->
+				<StatusEffect type="OnWearing" targettype="This,Character" comparison="and" >
+					<Conditional IsLocalPlayer="True" />
+					<Conditional nh_energy_shields="gt 2" />
+					<Conditional nh_energy_shield_delay_short="lteq 0" />
+					<Conditional nh_energy_shield_delay_long="lteq 0" />
+					<RequiredItem identifier="nh_shieldmodule" type="Contained" />
+					<Sound file="%ModDir%/Afflictions/spartan_shield_recharge.ogg" volume="1.25" loop="true" />
+				</StatusEffect>
+			</Containable>
+		</SubContainer>
+		<!-- When medicine is contained -->
+		<SubContainer capacity="1" maxstacksize="1" autoinject="true" >
+			<Containable identifiers="medical" />
+		</SubContainer>
+		
+		<SubContainer capacity="1" maxstacksize="1" >
+			<!-- When shield module is contained -->
+			<Containable identifiers="nh_shieldmodule" />
+			<!-- When extra armor is contained -->
+			<Containable identifiers="nh_armormodule" >
+				<!-- Hate it but i had to make three in order to have three levels of protection for different types -->
+				<StatusEffect type="OnWearing" targettype="Character" >
+					<Affliction identifier="nh_slow" amount="30" />
+					<Affliction identifier="nh_extra_armor_1" amount="9999" />
+					<Affliction identifier="nh_extra_armor_2" amount="9999" />
+					<Affliction identifier="nh_extra_armor_3" amount="9999" />
+				</StatusEffect>
+			</Containable>
+		</SubContainer>
+	</ItemContainer>
+	<!-- Paint System -->
+	<ItemContainer capacity="1" maxstacksize="1" drawinventory="false" canbeselected="true" hideitems="true" removecontaineditemsondeconstruct="true" >
+		<Containable identifiers="greenpaint" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="89,117,76,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<Containable identifiers="redpaint" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="230,20,20,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<Containable identifiers="bluepaint" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="60,50,255,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<Containable identifiers="blackpaint" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="30,30,40,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<Containable identifiers="whitepaint" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="225,225,225,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<!-- Purple -->
+		<Containable identifiers="fiberplant" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="177,9,177,255" setvalue="true" >
+				<sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="250" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/SoftImpact2.ogg" range="250" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/SoftImpact3.ogg" range="250" selectionmode="random" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<sound file="Content/Sounds/Damage/Gore3.ogg" range="250" volume="0.8" />
+				<ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1.0" />
+				<ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="500" scalemin="0.25" scalemax="0.6" colormultiplier="50,0,255,255" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="fiberplant" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<!-- Seperatist Brown -->
+		<Containable identifiers="copper" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="122,79,38,255" setvalue="true" >
+				<sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" range="250" volume="0.6" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" range="250" volume="0.6" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" range="250" volume="0.6" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" range="250" volume="0.6" selectionmode="random" />
+				<ParticleEmitter particle="spark" anglemin="0" anglemax="360" particleamount="25" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="1" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="copper" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+	</ItemContainer>
+    <Upgrade gameversion="1.6.18.1" SpriteColor="89,117,76,255" />
+</Item>
+
+<!-- A copy that can spawn inside dev containers -->
+<Item name="" identifier="nh_dev_spartanarmor" nameidentifier="nh_spartanarmor" variantof="nh_spartanarmor" descriptionidentifier="nh_spartanarmor" tags="smallitem,diving,deepdiving,divinggear_wearableindoors,provocative" SpriteColor="89,117,76,255" hideinmenus="true" >
+	<Price baseprice="7000" sold="false">
+		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
+		<Price storeidentifier="merchantcity" multiplier="0.6" />
+		<Price storeidentifier="merchantresearch" multiplier="0.8" />
+		<Price storeidentifier="merchantmilitary" sold="false" />
+		<Price storeidentifier="merchantmine" multiplier="0.6" />
+	</Price>
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<!-- not naturally spawning -->
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<!-- not purchaseable -->
+	<Price sold="false" canbespecial="false" />
+	<!-- not fabricable -->
+	<Fabricate suitablefabricators="hiddenfabricator" />
+	<Fabricate suitablefabricators="hiddenfabricator" />
+	<Fabricate suitablefabricators="hiddenfabricator" />
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="89,117,76,255" />
+</Item>
+
+<!-- HEADGEAR START -->
+
+<!-- Spartan Helmet Mk.V -->
+<Item name="" identifier="nh_spartanhelmet_1" variantof="nh_dummy_spartanhelmet" hideinmenus="false" tags="smallitem,diving,deepdiving,divinggear_wearableindoors,divingmask" nameidentifier="" SpriteColor="89,117,64,255" >
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="2500" sold="false" CanBeSpecial="false" >
+		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
+		<Price storeidentifier="merchantcity" multiplier="0.6" />
+		<Price storeidentifier="merchantresearch" />
+		<Price storeidentifier="merchantmilitary" sold="true" BuyingPriceMultiplier="5" minamount="1" maxamount="1" >
+			<Reputation faction="coalition" min="99"/>
+		</Price>
+		<Price storeidentifier="merchantmine" multiplier="0.6" />
+	</Price>
+	
+	<Fabricate suitablefabricators="fabricator" requiredtime="45">
+		<RequiredSkill identifier="weapons" level="85" />
+		<RequiredSkill identifier="mechanical" level="70" />
+		<RequiredItem tag="titanium_a" amount="10" />
+		<RequiredItem identifier="rubber" amount="1" />
+		<RequiredItem identifier="ballisticfiber" amount="2" />
+		<RequiredItem identifier="fpgacircuit" amount="6" />
+		<RequiredItem identifier="silicon" amount="2" />
+	</Fabricate>
+	<Deconstruct time="10">
+		<Item identifier="steel" amount="5" />
+	</Deconstruct>
+	
+	<InventoryIcon name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet.png" sourcerect="12,23,108,79" origin="0.5,0.5" />
+	<Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_worn.png" sourcerect="12,23,108,79" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="35" friction="0.8" restitution="0.01" />
+	
+	<Wearable slots="Head" msg="ItemMsgEquipSelect">
+		<!-- Fake modifier to show effects to player -->
+		<damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+		<damagemodifier afflictionidentifiers="nh_fake_fov" damagemultiplier="0.5" armorsector="0.0,0.0" />
+		
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_worn.png" sourcerect="0,0,128,128" origin="0.52,0.55" scale="1.4" limb="Head" hidelimb="true" hideotherwearables="true" inherittexturescale="true" >
+		</sprite>
+		
+		<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="true" LowPassMultiplier="0.44444443285" setvalue="true" tags="pressure_helmet" interval="1.0" duration="1.1" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="acidburn" armorsector="0.0,360.0" damagemultiplier="0.0" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+		<StatusEffect type="OnWearing" targettype="This" drawhudwhenequipped="false" setvalue="true" targetitemcomponent="StatusHUD" comparison="and" >
+			<Conditional HasStatusTag="! nh_healthscanner" />
+			<Conditional HasStatusTag="! nh_thermalgoggles" />
+		</StatusEffect>
+		<StatusEffect type="Always" oneshot="true" targettype="This" >
+			<Spawnitem identifier="nh_spartanhelmet_1_visor" amount="1" spawnposition="ThisInventory" />
+		</StatusEffect>
+		<StatusEffect type="OnWearing" targettype="Character" >
+			<Affliction identifier="nh_mk5_helmet_timer" amount="9999" />
+		</StatusEffect>
+	</Wearable>
+	<Holdable slots="LeftHand" holdpos="25,0" holdangle="-35" msg="ItemMsgPickUpSelect" />
+    <Upgrade gameversion="1.6.18.1" SpriteColor="89,117,64,255" />
+</Item>
+<!-- I added visors that only show up when not contained just so the visor on the helmet doesnt look colored too. -->
+<Item name="Visor" identifier="nh_spartanhelmet_1_visor" hideinmenus="true" scale="0.36" tags="nh_visor" >
+	<Body width="10" height="10" density="10" />
+	<Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_limb.png" sourcerect="12,23,108,79" depth="0.001" origin="0.5,0.5" />
+	<Holdable slots="Any" >
+		<StatusEffect type="OnNotContained" targettype="this" >
+			<Remove />
+		</StatusEffect>
+	</Holdable>
+</Item>
+
+<!-- Spartan Helmet EVA -->
+<Item name="" identifier="nh_spartanhelmet_2" variantof="nh_dummy_spartanhelmet" hideinmenus="false" tags="smallitem,diving,deepdiving,divinggear_wearableindoors,divingmask" nameidentifier="" SpriteColor="89,117,64,255" >
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="2500" sold="false">
+		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
+		<Price storeidentifier="merchantcity" multiplier="0.6" />
+		<Price storeidentifier="merchantresearch" />
+		<Price storeidentifier="merchantmilitary" />
+		<Price storeidentifier="merchantmine" multiplier="0.6" />
+	</Price>
+	
+	<Fabricate suitablefabricators="fabricator" requiredtime="45">
+		<RequiredSkill identifier="weapons" level="85" />
+		<RequiredSkill identifier="mechanical" level="70" />
+		<RequiredItem tag="titanium_a" amount="9" />
+		<RequiredItem identifier="rubber" amount="1" />
+		<RequiredItem identifier="ballisticfiber" amount="2" />
+		<RequiredItem identifier="fpgacircuit" amount="6" />
+		<RequiredItem identifier="silicon" amount="12" />
+	</Fabricate>
+	<Deconstruct time="10">
+		<Item identifier="steel" amount="5" />
+	</Deconstruct>
+	
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet.png" sourcerect="147,24,88,80" />
+	<Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_worn.png" sourcerect="147,24,88,80" depth="0.6" origin="0.5,0.5" />
+	<Body radius="40" density="35" friction="0.8" restitution="0.01" />
+	
+	<Wearable slots="Head" msg="ItemMsgEquipSelect">
+		<!-- Fake modifier to show effects to player -->
+		<damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+		
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_worn.png" sourcerect="128,0,128,128" origin="0.55,0.5" scale="1.4" limb="Head" hidelimb="true" hideotherwearables="true" inherittexturescale="true" >
+		</sprite>
+		
+		<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="false" LowPassMultiplier="0.44444443285" setvalue="true" tags="pressure_helmet" interval="1.0" duration="1.1" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="acidburn" armorsector="0.0,360.0" damagemultiplier="0.0" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+		<StatusEffect type="OnWearing" targettype="This" drawhudwhenequipped="false" setvalue="true" targetitemcomponent="StatusHUD" comparison="and" >
+			<Conditional HasStatusTag="! nh_healthscanner" />
+			<Conditional HasStatusTag="! nh_thermalgoggles" />
+		</StatusEffect>
+		<StatusEffect type="Always" oneshot="true" targettype="This" >
+			<Spawnitem identifier="nh_spartanhelmet_2_visor" amount="1" spawnposition="ThisInventory" />
+		</StatusEffect>
+		<StatusEffect type="OnWearing" targettype="Character" >
+			<Affliction identifier="nh_mk5_eva_helmet_timer" amount="9999" />
+		</StatusEffect>
+	</Wearable>
+	<Holdable slots="LeftHand" holdpos="25,0" holdangle="-35" msg="ItemMsgPickUpSelect" />
+    <Upgrade gameversion="1.6.18.1" SpriteColor="89,117,64,255" />
+</Item>
+<!-- I added visors that only show up when not contained just so the visor on the helmet doesnt look colored too. -->
+<Item name="Visor" identifier="nh_spartanhelmet_2_visor" hideinmenus="true" scale="0.36" tags="nh_visor" >
+	<Body width="10" height="10" density="10" />
+	<Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_limb.png" sourcerect="147,24,88,80" depth="0.001" origin="0.5,0.5" />
+	<Holdable slots="Any" >
+		<StatusEffect type="OnNotContained" targettype="this" >
+			<Remove />
+		</StatusEffect>
+	</Holdable>
+</Item>
+
+<!-- Damaged EVA Helmet -->
+<Item name="" identifier="nh_spartanhelmet_2_emile" descriptionidentifier="nh_spartanhelmet_2" variantof="nh_dummy_spartanhelmet" hideinmenus="true" tags="smallitem,diving,deepdiving,divinggear_wearableindoors,divingmask" nameidentifier="" SpriteColor="89,117,64,255" >
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer secondary="wreckstoragecab,wreckreactorcab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.01" />
+	<Price baseprice="2400" sold="false">
+		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
+		<Price storeidentifier="merchantcity" multiplier="0.6" />
+		<Price storeidentifier="merchantresearch" />
+		<Price storeidentifier="merchantmilitary" />
+		<Price storeidentifier="merchantmine" multiplier="0.6" />
+	</Price>
+	
+	<Deconstruct time="10">
+		<Item identifier="steel" amount="5" />
+	</Deconstruct>
+	
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet.png" sourcerect="147,24,88,80" />
+	<Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_worn.png" sourcerect="275,24,88,80" depth="0.6" origin="0.5,0.5" />
+	<Body radius="40" density="35" friction="0.8" restitution="0.01" />
+	
+	<Wearable slots="Head" msg="ItemMsgEquipSelect">
+		<!-- Fake modifier to show effects to player -->
+		<damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+		
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_worn.png" sourcerect="128,0,128,128" origin="0.55,0.5" scale="1.4" limb="Head" hidelimb="true" hideotherwearables="true" inherittexturescale="true" >
+		</sprite>
+		
+		<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="false" LowPassMultiplier="0.44444443285" setvalue="true" tags="pressure_helmet" interval="1.0" duration="1.1" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="acidburn" armorsector="0.0,360.0" damagemultiplier="0.0" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+		<StatusEffect type="OnWearing" targettype="This" drawhudwhenequipped="false" setvalue="true" targetitemcomponent="StatusHUD" comparison="and" >
+			<Conditional HasStatusTag="! nh_healthscanner" />
+			<Conditional HasStatusTag="! nh_thermalgoggles" />
+		</StatusEffect>
+		<StatusEffect type="Always" oneshot="true" targettype="This" >
+			<Spawnitem identifier="nh_spartanhelmet_2_emile_visor" amount="1" spawnposition="ThisInventory" />
+		</StatusEffect>
+		<StatusEffect type="OnWearing" targettype="Character" >
+			<Affliction identifier="nh_mk5_eva_2_helmet_timer" amount="9999" />
+		</StatusEffect>
+	</Wearable>
+	<Holdable slots="LeftHand" holdpos="25,0" holdangle="-35" msg="ItemMsgPickUpSelect" />
+    <Upgrade gameversion="1.6.18.1" SpriteColor="89,117,64,255" />
+</Item>
+<!-- I added visors that only show up when not contained just so the visor on the helmet doesnt look colored too. -->
+<Item name="Visor" identifier="nh_spartanhelmet_2_emile_visor" hideinmenus="true" scale="0.36" tags="nh_visor" >
+	<Body width="10" height="10" density="10" />
+	<Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_limb.png" sourcerect="275,24,88,80" depth="0.001" origin="0.5,0.5" />
+	<Holdable slots="Any" >
+		<StatusEffect type="OnNotContained" targettype="this" >
+			<Remove />
+		</StatusEffect>
+	</Holdable>
+</Item>
+
+<!-- Base helmet that all the others are variants of, has the most basic of info on it (i made it because i found out if you make a variant with a "Wearable" comp and add another "Wearable" comp then the DamageModifiers stack) -->
+<Item name="Dummy Spartan Helmet" identifier="nh_dummy_spartanhelmet" nameidentifier="nh_hide_from_console" category="Equipment" tags="smallitem,diving,deepdiving,divinggear_wearableindoors,divingmask" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.36" impactsoundtag="impact_soft" hideinmenus="true" SpriteColor="89,117,64,255" >
+
+	<InventoryIcon name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet.png" sourcerect="12,23,108,79" depth="0.6" origin="0.5,0.5" />
+	<Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_worn.png" sourcerect="12,23,108,79" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="35" friction="0.8" restitution="0.01" />
+	<!-- Just in case people somehow get one i dont want it to be trapped on the ship forever -->
+	<Deconstruct time="0.1">
+		<Item identifier="nh_spartanhelmet_1" />
+	</Deconstruct>
+	<Holdable slots="LeftHand" holdpos="25,0" holdangle="-35" msg="ItemMsgPickUpSelect" >
+		<StatusEffect type="OnActive" targettype="This" drawhudwhenequipped="false" setvalue="true" targetitemcomponent="StatusHUD" />
+	</Holdable>
+	
+	<WifiComponent range="15000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+		<StatusEffect type="OnActive" targettype="This">
+			<Conditional JamTimer="gt 0" targetitemcomponent="WifiComponent" />
+		<sound file="Content/Sounds/RadioStatic.ogg" range="500.0" frequencymultiplier="0.7" loop="true" volume="0.5" />
+		</StatusEffect>
+	</WifiComponent>
+	
+	<ItemContainer capacity="1" containedstateindicatorslot="0" hideitems="true" containedstateindicatorstyle="tank" >
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="1" texture="%ModDir%/UI/Container_Icons.png" sourcerect="0,64,64,64" origin="0.5,0.5" />
+		
+		<Containable items="oxygensource,weldingtoolfuel" excludeditems="oxygenitetank" />
+		
+		<Containable items="oxygensource">
+			<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="1000.0" >
+				<ReduceAffliction identifier="oxygenlow" amount="5" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" Condition="-0.3" targetitemslot="0" comparison="And">
+				<Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targetitemslot="0">
+				<Conditional condition="lt 5.0" />
+				<Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
+			</StatusEffect>
+		</Containable>
+		
+		<Containable items="oxygenitetank">
+			<StatusEffect type="OnWearing" targettype="Character" SpeedMultiplier="1.2" setvalue="true" targetslot="0" comparison="And">
+				<Conditional IsDead="false" />
+				<Conditional DecreasedOxygenConsumption="lt 99" />
+				<Conditional NeedsAir="true" />
+			</StatusEffect>
+		</Containable>
+		
+		<Containable items="weldingfueltank">
+			<StatusEffect type="OnWearing" targettype="Contained" Condition="-0.5" targetitemslot="0" comparison="And">
+				<Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
+				<Conditional IsDead="false" />
+				<Conditional DecreasedOxygenConsumption="lt 99" />
+				<Conditional NeedsAir="true" />
+			</StatusEffect>
+		</Containable>
+		
+		<Containable items="incendiumfueltank">
+			<StatusEffect type="OnWearing" targettype="Contained" Condition="-0.5" targetitemslot="0" comparison="And">
+				<Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+				<Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
+				<Affliction identifier="burn" amount="20.0" />
+				<Conditional IsDead="false" />
+				<Conditional DecreasedOxygenConsumption="lt 99" />
+				<Conditional NeedsAir="true" />
+			</StatusEffect>
+		</Containable>
+		
+		<StatusEffect type="OnWearing" targettype="Contained" targetitemslot="0" playsoundonrequireditemfailure="true">
+			<RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+			<Conditional condition="lte 0.0" />
+			<Sound file="Content/Items/WarningBeep.ogg" range="250" loop="true" />
+		</StatusEffect>
+		
+		<SubContainer capacity="1" maxstacksize="1" >
+			<Containable items="healthscanner" >
+				<StatusEffect type="OnWearing" targettype="This" setvalue="true" targetitemcomponent="StatusHUD" tags="nh_healthscanner" duration="0.5" 
+				 drawhudwhenequipped="true" overlaycolor="0,220,25,110" range="500" thermalgoggles="false" showdeadcharacters="true" showtexts="true" />
+			</Containable>
+			<Containable items="thermalgoggles" >
+				<StatusEffect type="OnWearing" targettype="This" setvalue="true" targetitemcomponent="StatusHUD" tags="nh_thermalgoggles" duration="0.5" 
+				 drawhudwhenequipped="true" overlaycolor="176,0,0,120" range="3000" thermalgoggles="true" showdeadcharacters="false" showtexts="false" />
+			</Containable>
+		</SubContainer>
+	</ItemContainer>
+    <StatusHUD drawhudwhenequipped="false" overlaycolor="176,0,0,120" range="3000" thermalgoggles="true" showdeadcharacters="false" showtexts="false" />
+	<!-- Paint System -->
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="false" containedspritedepth="0.001" drawinventory="false" canbeselected="true" removecontaineditemsondeconstruct="true" >
+		<Containable identifiers="greenpaint" hide="true" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="84,112,59,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<Containable identifiers="redpaint" hide="true" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="225,35,35,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<Containable identifiers="bluepaint" hide="true" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="50,78,255,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<Containable identifiers="blackpaint" hide="true" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="58,58,78,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<Containable identifiers="whitepaint" hide="true" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="207,207,207,255" setvalue="true" duration="0.18" disabledeltatime="true" >
+				<sound file="Content/Items/Tools/Sprayer.ogg" range="250" volume="0.7" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<ParticleEmitter particle="spray" particleamount="35" anglemin="0" anglemax="360" velocitymin="25" velocitymax="150" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="paint" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<!-- Purple -->
+		<Containable identifiers="fiberplant" hide="true" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="207,50,207,255" setvalue="true" >
+				<sound file="Content/Sounds/Impact/SoftImpact1.ogg" range="250" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/SoftImpact2.ogg" range="250" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/SoftImpact3.ogg" range="250" selectionmode="random" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="This" >
+				<sound file="Content/Sounds/Damage/Gore3.ogg" range="250" volume="0.8" />
+				<ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1.0" />
+				<ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="500" scalemin="0.25" scalemax="0.6" colormultiplier="50,0,255,255" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="fiberplant" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<!-- Seperatist Brown -->
+		<Containable identifiers="copper" hide="true" >
+			<StatusEffect type="OnWearing" targettype="This" SpriteColor="139,96,56,255" setvalue="true" >
+				<sound file="Content/Sounds/Impact/MetalImpactHeavy1.ogg" range="250" volume="0.6" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/MetalImpactHeavy2.ogg" range="250" volume="0.6" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/MetalImpactHeavy3.ogg" range="250" volume="0.6" selectionmode="random" />
+				<sound file="Content/Sounds/Impact/MetalImpactHeavy4.ogg" range="250" volume="0.6" selectionmode="random" />
+				<ParticleEmitter particle="spark" anglemin="0" anglemax="360" particleamount="25" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="1" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Contained" targets="copper" delay="0.01" disabledeltatime="true" >
+				<RemoveItem />
+			</StatusEffect>
+		</Containable>
+		<!-- Fake visor so its not colored too -->
+		<SubContainer capacity="1" maxstacksize="1" >
+			<Containable identifiers="nh_visor" hide="false" />
+		</SubContainer>
+	</ItemContainer>
+    <Upgrade gameversion="1.6.18.1" SpriteColor="89,117,64,255" />
+</Item>
+
+</Items>

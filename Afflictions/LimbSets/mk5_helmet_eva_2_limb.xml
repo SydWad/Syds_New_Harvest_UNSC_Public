@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+  <limb Name="mk5_eva_2_helmet" ID="15" Type="None" Mass="0" Notes="Torso" scale="0.7" Flip="True" MirrorVertically="False" MirrorHorizontally="False" Hide="False" SpriteOrientation="0" InheritLimbDepth="None" SteerForce="0" Radius="5" Height="0" Width="0" Density="0.01" IgnoreCollisions="True" AngularDamping="0" AttackPriority="0" PullPos="0,0" StepOffset="0,0" RefJoint="-1" MouthPos="0,0" ConstantTorque="0" ConstantAngle="0" AttackForceMultiplier="1" MinSeveranceDamage="1" CanBeSeveredAlive="False" SeveredFadeOutTime="0.1" ApplyTailAngle="False" SineFrequencyMultiplier="0" SineAmplitudeMultiplier="0" BlinkFrequency="0" BlinkDurationIn="0.0" BlinkDurationOut="0.0" BlinkHoldTime="0" BlinkRotationIn="0" BlinkRotationOut="0" BlinkForce="0" OnlyBlinkInWater="False" UseTextureOffsetForBlinking="False" BlinkTextureOffsetIn="0,0" BlinkTextureOffsetOut="0,0" BlinkTransitionIn="Linear" BlinkTransitionOut="Linear" HealthIndex="0" Friction="0.0" Restitution="0.05" CanEnterSubmarine="True">
+    <sprite sourcerect="256,0,128,128" origin="0.55,0.5" Depth="0.049" Texture="%ModDir%/Items/Jobgear/Armor/spartan_helmet_limb.png" IgnoreTint="True" Color="255,255,255,255" DeadColor="255,255,255,255" DeadColorTime="0" />
+    <damagemodifier DamageSound="" DamageParticle="" DamageMultiplier="0" ProbabilityMultiplier="0" ArmorSector="0,360" DeflectProjectiles="True" AfflictionIdentifiers="" AfflictionTypes="damage,bleeding,bloodloss,stun,alieninfection,spaceherpes,poison,paralysis,infection" />
+	<!-- When the limbs spawn, give a tag so they arent added again if the character is revived -->
+	<StatusEffect Type="Always" OneShot="True" TargetType="Character,This,Limb" tags="has_mk5_eva_2_helmet_limb" duration="10800" disabledeltatime="true" />
+	<StatusEffect Type="Always" OneShot="True" TargetType="Character,This,Limb" disabledeltatime="true">
+		<ReduceAffliction identifier="stun" amount="1000" />
+	</StatusEffect>
+  </limb>
+  
+  <joint Name="Joint 1 - 15" Limb1="1" Limb2="15" Limb1Anchor="0,0" Limb2Anchor="0,0" CanBeSevered="False" SeveranceProbabilityModifier="0" BreakSound="gore" LimitEnabled="True" UpperLimit="0" LowerLimit="0" Stiffness="100" Scale="1" WeldJoint="True" ClockWiseRotation="True" />
+</huskappendage>

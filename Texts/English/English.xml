@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+
+<mapentitycategory.Halo>Halo</mapentitycategory.Halo>
+
+	<!-- Loading Screen tips -->
+	<loadingscreentip>Many ancient secrets lie below the depths... Some that should be left undisturbed.</loadingscreentip>
+	<loadingscreentip>I know you're reading this, i'm watching.</loadingscreentip>
+	<loadingscreentip>¯\_(ツ)_/¯</loadingscreentip>
+	
+<Override>
+	<!-- Factions -->
+	<faction.coalition>U.N.S.C.</faction.coalition>
+	<faction.coalition.description>The United Nations Space Command, or the U.N.S.C. for short, is the primary direct action military wing of the U.E.G. (United Earth Government) which is responsible for overseeing all naval and ground forces. The U.N.S.C also oversees all scientific and explorative ventures by the Government. Surpassed by only the Office of Naval Intelligence, ONI, which integrates itself on occasion with the U.S.N.C. to further research and development of weapons, tactics and ways of gaining the upperhand for humanity at large.</faction.coalition.description>
+	<faction.coalition.shortdescription>The military branch of the United Earth Government which oversees most, if not all, military, scientific, exploratory and colonizational efforts for humanity.</faction.coalition.shortdescription>
+</Override>
+
+	<displayname.repairitem>[itemname] (Repair)</displayname.repairitem>
+
+	<!-- Jobs -->
+	<jobname.spartan>Spartan</jobname.spartan>
+	<jobdescription.spartan>The Spartan is a secretive ONI controlled supersoldier project that was made to counter the Inssurectionist movement and, with the arrival of the Covenant, any other threat to humanity. Their job, primarily, is to deal with threats head on that would otherwise be too dangerous to send other individuals. Combat-wise, they are the best of the best, and with their Spartan augmentations and Mjolnir power armor, they are able to deal with any threat that comes their way.</jobdescription.spartan>
+	<!--<jobname.spartan1>Spartan-II</jobname.spartan1>-->
+
+	<Override>
+		<jobname.assistant>Crewman</jobname.assistant>
+		<jobdescription.assistant>The Crewman is the most basic and essential part of any crew, able to generally perform all tasks asked of them with no specialized training whatsoever. Good for operating weapon-systems and onboard electrical malfunctions, the Crewman is the backbone of ship personell.</jobdescription.assistant>
+		<!--<jobname.assistant1>Crewman</jobname.assistant1>
+		<jobname.assistant2>Marine Trooper</jobname.assistant2>-->
+	</Override>
+	
+	<Override>
+		<jobname.medicaldoctor>Physician</jobname.medicaldoctor>
+		<jobdescription.medicaldoctor>The Physician is the primary medical personell and onboard doctoral staff aboard any ship. Armed with extensive modern medical knowledge, Physicians are trained to rescue any injured personell and treat them with the utmost care and delicacy.</jobdescription.medicaldoctor>
+		<!--<jobname.medicaldoctor1>Physician</jobname.medicaldoctor1>
+		<jobname.medicaldoctor2>Marine Medic</jobname.medicaldoctor2>-->
+	</Override>
+	
+	<Override>
+		<jobname.securityofficer>Marine</jobname.securityofficer>
+		<jobdescription.securityofficer>Trained with extensive firearm knowledge and general weapons and tactics, the Security personell officer is the standard onboard security personell for any ship. They are armed with the best modern military training a soldier could ask for.</jobdescription.securityofficer>
+		<!--<jobname.securityofficer1>Security</jobname.securityofficer1>
+		<jobname.securityofficer2>Marine Sergeant</jobname.securityofficer2>-->
+	</Override>
+	
+	<Override>
+		<jobname.captain>Captain</jobname.captain>
+		<jobdescription.captain>The Commanding officer for all onboard personell determines all crew actions and ship actions. Having studied advanced naval warfare and manuevers.</jobdescription.captain>
+		<!--<jobname.captain1>Captain</jobname.captain1>
+		<jobname.captain2>Pilot</jobname.captain2>
+		<jobname.captain3>Admiral</jobname.captain3>-->
+	</Override>
+	
+	<Override>
+		<jobname.engineer>Engineer</jobname.engineer>
+		<jobdescription.engineer>Granted much ability in the ways of electrical engineering and maintenence, the Engineer specializes in 'keeping the lights on,' so to speak, and are responsible for managing the onboard reactor and any other power source.</jobdescription.engineer>
+		<!--<jobname.engineer1>Engineer</jobname.engineer1>
+		<jobname.engineer2>Marine Technician</jobname.engineer2>-->
+	</Override>
+	
+	<Override>
+		<jobname.mechanic>Mechanic</jobname.mechanic>
+		<jobdescription.mechanic>Given extensive knowledge and shown remarkable skill in their ability to work with their hands, mechanics are an essential part of the ship, and serve to maintain its ability to function physically.</jobdescription.mechanic>
+		<!--<jobname.mechanic1>Mechanic</jobname.mechanic1>
+		<jobname.mechanic2>Marine Mechanic</jobname.mechanic2>-->
+	</Override>	
+	
+	<!-- Descriptions ‖color:gui.blue‖ ‖end‖ -->
+	<Override>
+		<itemmsgdetachcrowbar>[[use]] Detach (Crowbar)</itemmsgdetachcrowbar>
+	</Override>
+	
+	<!-- Gun Names -->
+	<entityname.nh_aie_486h>M247H Heavy Machine Gun</entityname.nh_aie_486h>
+	<entityname.nh_m6g_gnr>Spartan Laser W/AV M6 G/GNR</entityname.nh_m6g_gnr>
+	<entityname.nh_target_designator>Target Designator H-165</entityname.nh_target_designator>
+	<entityname.nh_99cs2>Sniper 99C-S2</entityname.nh_99cs2>
+	<entityname.nh_m41>Rocket Launcher M41-SPNKr</entityname.nh_m41>
+	<entityname.nh_m319>Grenade Launcher M319</entityname.nh_m319>
+	<entityname.nh_m7057>Flame Thrower M7057</entityname.nh_m7057>
+	<entityname.nh_ma3>Makeshift Assault Rifle MA3</entityname.nh_ma3>
+	<entityname.nh_ma37>Assault Rifle MA37</entityname.nh_ma37>
+	<entityname.nh_ma5b>Assault Rifle MA5B</entityname.nh_ma5b>
+	<entityname.nh_ma5c>Assault Rifle MA5C</entityname.nh_ma5c>
+	<entityname.nh_br55>Battle Rifle BR55</entityname.nh_br55>
+	<entityname.nh_m7smg>SMG M7</entityname.nh_m7smg>
+	<entityname.nh_m7ssmg>SMG M7S</entityname.nh_m7ssmg>
+	<entityname.nh_m6d>Magnum M6D</entityname.nh_m6d>
+	<entityname.nh_m6c>Magnum M6C</entityname.nh_m6c>
+	<entityname.nh_m6csocom>M6C/SOCOM</entityname.nh_m6csocom>
+	<entityname.nh_m90>Shotgun M90</entityname.nh_m90>
+	<Override>
+	<entityname.divingknife>Combat Knife</entityname.divingknife>
+	<entityname.divingknifehardened>Hardened Combat Knife</entityname.divingknifehardened>
+	<entityname.divingknifedementonite>Dementonite Combat Knife</entityname.divingknifedementonite>
+	</Override>
+	<!-- Gun Descriptions -->
+	<entitydescription.nh_aie_486h>‖color:gui.blue‖7.62x51mm‖end‖ (.308Win)&#10;The AIE-486H heavy machine gun, nicknamed the Yeller, is a tri-barrelled rotary machine gun manufactured by Misriah Armory in service with the United Nations Space Command. It's a rugged design, consisting of a body housing an electrical motor linked to three rotary barrels.&#10;‖color:gui.orange‖//Quality Spool Up Time//&#10;Good=‖end‖‖color:gui.green‖(-16.6%)‖end‖ ‖color:gui.orange‖Exel=‖end‖‖color:gui.green‖(-33.3%)‖end‖ ‖color:gui.orange‖Mastr=‖end‖‖color:gui.green‖(-50%)‖end‖</entitydescription.nh_aie_486h>
+	<entitydescription.nh_m6g_gnr>‖color:gui.blue‖P.S.C.U.‖end‖&#10;The Weapon/Anti-Vehicle Model 6 Grindell/Galilean Nonlinear Rifle (W/AV M6 G/GNR) colloquially known as the "Spartan Laser" or "Splaser" is an experimental man portable directed-energy anti-armor weapon.&#10;Side effects from prolonged use may include but is not limited to: Muscle Strain, Financial Strain, Burns, Radiation Exposure, Cancer, Permanent Vision Loss and/or Instantaneous Death.</entitydescription.nh_m6g_gnr>
+	<entitydescription.nh_99cs2>‖color:gui.blue‖14.5x114mm‖end‖ (.57cal)&#10;‖color:gui.red‖REQUIRES HIGH SKILL‖end‖&#10;A powerful long range weapon the 99CS2 anti-material rifle is one of the only weapons guaranteed to put almost any alien into the ground.&#10;‖color:gui.green‖   2x Headshot Damage‖end‖</entitydescription.nh_99cs2>
+	<entitydescription.nh_m41>‖color:gui.blue‖102mm.‖end‖&#10;A multi purpose man portable anti-tank system. The M41 SPNKr or more colloquially known as "The Spanker" uses light weight composits to allow shoulder mounted anti armour delivery anywhere UNSC forces find themselves.</entitydescription.nh_m41>
+	<entitydescription.nh_m319>The ‖color:gui.blue‖M319 Individual Grenade Launcher‖end‖ more formally known as the Individual Grenade Launcher, Caliber ‖color:gui.blue‖40mm,‖end‖ M319 is a single-shot, break-action explosives launcher produced by Misriah Armory for use by the United Nations Space Command.</entitydescription.nh_m319>
+	<entitydescription.nh_m7057>‖color:gui.blue‖Welding Fuel, Napalm‖end‖&#10;‖color:gui.red‖"It takes a real lunatic to use a flamethrower..."‖end‖&#10;The M7057/Defoliant Projector, more commonly known as the M7057 flamethrower is an incendiary weapon used primarily against battlefield fortifications, protected emplacements/installations, and for demoralization purposes.</entitydescription.nh_m7057>
+	<entitydescription.nh_ma3>‖color:gui.blue‖7.62x51mm‖end‖ (.308Win)&#10;An early prototype to the assault rifles now in use by UNSC, the MA3 found its documents leaked on public channels and due to its simple nature is now exclusivly produced by city gangs and rebellious factions.</entitydescription.nh_ma3>
+	<entitydescription.nh_ma37>‖color:gui.blue‖7.62x51mm‖end‖ (.308Win)&#10;One of the first mainline AR in production with the UNSC, this well rounded weapon is the backbone of most fighting groups in human space.</entitydescription.nh_ma37>
+	<entitydescription.nh_ma5b>‖color:gui.blue‖7.62x51mm‖end‖ (.308Win)&#10;‖color:gui.red‖REQUIRES HIGH SKILL‖end‖&#10;The heavier, more dangerous and lead hungry older brother to the MA37. This gun often fills the LMG position in UNSC squads.</entitydescription.nh_ma5b>
+	<entitydescription.nh_br55>‖color:gui.blue‖9.5x40mm.‖end‖&#10;‖color:gui.red‖REQUIRES HIGH SKILL‖end‖&#10;An accurate but difficult weapon to weild, built for use by skilled marksmen. The BR55's tight and rapid three shot burst guarentees a hit on target but the resulting recoil can be unweildy to unskilled personell.&#10;‖color:gui.green‖   2x Headshot Damage‖end‖</entitydescription.nh_br55>
+	<entitydescription.nh_m7smg>‖color:gui.blue‖5x23mm.‖end‖&#10;A small but handy sidearm. The M7 SMG offers high rate of fire and low recoil.</entitydescription.nh_m7smg>
+	<entitydescription.nh_m7ssmg>‖color:gui.blue‖5x23mm.‖end‖&#10;‖color:gui.red‖REQUIRES HIGH SKILL‖end‖&#10;Silent, accurate and deadly. This weapon often used by ODST troopers and special ops forces behind enemy lines. Far more expensive than a standard M7, but offers unmatched accuracy and silence.</entitydescription.nh_m7ssmg>
+	<entitydescription.nh_m6d>‖color:gui.blue‖12.7x58mm‖end‖ (.500s&amp;w)&#10;A heavy and brutal pistol often favoured by pilots and officers who need the stopping power of a rifle but the portability of a smallarm. The M6D Magnum is a beast among its piers.&#10;‖color:gui.green‖   2x Headshot Damage‖end‖</entitydescription.nh_m6d>
+	<entitydescription.nh_m6c>‖color:gui.blue‖11.43x23mm‖end‖ (.45acp)&#10;Standard issue sidearm of all UNSC personnel. Lite, cheap and decent stopping power against lightly armored and unshielded targets.</entitydescription.nh_m6c>
+	<entitydescription.nh_m6csocom>Missing Text</entitydescription.nh_m6csocom>
+	<entitydescription.nh_m90>‖color:gui.blue‖8 gague.‖end‖&#10;Although an outdated design the M90 pump action shotgun is a workhorse in the field of breaching and general close quarters combat, its basic design lends itself well to the inconsistent charge strength of specialty munitions fielded by the UNSC.</entitydescription.nh_m90>
+
+	<!-- Ammo Names -->
+	<entityname.nh_havoknuke>HAVOK Tactical Nuke</entityname.nh_havoknuke>
+	<entityname.nh_fraggrenade>Frag Grenade M9</entityname.nh_fraggrenade>
+	<entityname.nh_14.5x114_8>14.5x114mm 8rnd</entityname.nh_14.5x114_8>
+	<entityname.nh_14.5x114_4>14.5x114mm 4rnd</entityname.nh_14.5x114_4>
+	<entityname.nh_spnkr_pod_he>Rocket 102mm HE/FRAG</entityname.nh_spnkr_pod_he>
+	<entityname.nh_spnkr_pod_ap>Rocket 102mm HE/AT</entityname.nh_spnkr_pod_ap>
+	<entityname.nh_40mmgrenade>Timed 40mm Grenade</entityname.nh_40mmgrenade>
+	<entityname.nh_m7057fuel>Napalm Pyrosene-V</entityname.nh_m7057fuel>
+	<entityname.nh_7.62x51mm_300>7.62x51mm 300box</entityname.nh_7.62x51mm_300>
+	<entityname.nh_7.62x51mm_120>7.62x51mm 120box</entityname.nh_7.62x51mm_120>
+	<entityname.nh_7.62x51mm_60>7.62x51mm 60rnd</entityname.nh_7.62x51mm_60>
+	<entityname.nh_7.62x51mm_35>7.62x51mm 35rnd</entityname.nh_7.62x51mm_35>
+	<entityname.nh_9.5x40mag_30>9.5x40mm 30rnd</entityname.nh_9.5x40mag_30>
+	<entityname.nh_9.5x40mag_18>9.5x40mm 18rnd</entityname.nh_9.5x40mag_18>
+	<entityname.nh_5x23mm_60>5x23mm 60rnd</entityname.nh_5x23mm_60>
+	<entityname.nh_12.7x58mag_12>12.7x58mm-APHE 12rnd</entityname.nh_12.7x58mag_12>
+	<entityname.nh_11.43x23mag_12>11.43x23mm 12rnd</entityname.nh_11.43x23mag_12>
+	<entityname.nh_8g_buckshot>8g Buckshot</entityname.nh_8g_buckshot>
+	<entityname.nh_8g_pvp>8g Birdshot-DU</entityname.nh_8g_pvp>
+	<entityname.nh_8g_slug>8g Slug</entityname.nh_8g_slug>
+	<!-- Ammo Descriptions -->
+	<entitydescription.nh_havoknuke>The HAVOK tactical nuclear mine is one of the most powerful ground-based nuclear ordnance in the UNSC arsenal. The bottom of the unit contains bonding strips that allows the HAVOK to be attached to any type of surface ‖color:gui.green‖or mounted as a warhead.‖end‖</entitydescription.nh_havoknuke>
+	<entitydescription.nh_fraggrenade>The ‖color:gui.blue‖M9 Frag Grenade‖end‖, developed by Misriah Armory, is a high-explosive fragmentation device used by modern military forces. Designed for maximum lethality, it disperses shrapnel over a wide area upon detonation, making it highly effective against enemy personnel and lightly fortified positions. Known for its reliability and effectiveness in various combat scenarios, the M9 Frag Grenade is an essential tool in the arsenal of soldiers, providing critical support in both offensive and defensive operations.</entitydescription.nh_fraggrenade>
+	<entitydescription.nh_14.5x114_8>.57cal&#10;‖color:gui.blue‖8 Round Magazine‖end‖&#10;The 14.5x114mm round was developed by the Soviet Union in the late 1930s for use in anti-tank rifles and heavy machine guns. It was initially designed for the PTRD and PTRS anti-tank rifles and later adapted for use in the KPV heavy machine gun. Known for its high velocity and significant armor-piercing capabilities, it has been widely used in anti-material roles and as an anti-aircraft round. The 14.5x114mm cartridge remains in use today in various military applications around the world.</entitydescription.nh_14.5x114_8>
+	<entitydescription.nh_14.5x114_4>.57cal&#10;‖color:gui.blue‖4 Round Magazine‖end‖&#10;The 14.5x114mm round was developed by the Soviet Union in the late 1930s for use in anti-tank rifles and heavy machine guns. It was initially designed for the PTRD and PTRS anti-tank rifles and later adapted for use in the KPV heavy machine gun. Known for its high velocity and significant armor-piercing capabilities, it has been widely used in anti-material roles and as an anti-aircraft round. The 14.5x114mm cartridge remains in use today in various military applications around the world.</entitydescription.nh_14.5x114_4>
+	<entitydescription.nh_spnkr_pod_he>The ‖color:gui.blue‖102mm high-explosive fragmentation‖end‖ rocket, developed by Misriah Armory, is designed for use in man-portable anti-tank platforms. Engineered for modern military applications, it delivers substantial firepower and destructive capabilities, making it ideal for anti-personnel and anti-fortification roles. Known for its precision and impact, the 102mm fragmentation rocket is a critical asset in military arsenals, effectively engaging heavily fortified targets and providing crucial support in combat operations.</entitydescription.nh_spnkr_pod_he>
+	<entitydescription.nh_spnkr_pod_ap>The ‖color:gui.blue‖102mm high-explosive armor-piercing‖end‖ rocket, developed by Misriah Armory, is designed for use in man-portable anti-tank systems. This advanced rocket delivers exceptional firepower and armor penetration, making it highly effective against armored vehicles and fortified structures. Known for its precision and destructive impact, the 102mm armor-piercing rocket is essential in providing reliable and powerful support for engaging heavily armored targets.</entitydescription.nh_spnkr_pod_ap>
+	<entitydescription.nh_40mmgrenade>The ‖color:gui.blue‖Timed 40mm Grenade‖end‖, developed by Misriah Armory, is designed for use in the M319 Individual Grenade Launcher. This high-explosive grenade features a timed fuse, ensuring detonation after a preset delay for maximum impact. Ideal for clearing entrenched enemy positions and creating tactical advantages on the battlefield, the Timed 40mm Grenade provides soldiers with a powerful and reliable option for indirect fire support.</entitydescription.nh_40mmgrenade>
+	<entitydescription.nh_m7057fuel>War-Crime S'mor-Crime, plastic fuel ‖color:gui.green‖sticks to skin and overloads energy shields.‖end‖&#10;‖color:gui.red‖Does not burn underwater.‖end‖</entitydescription.nh_m7057fuel>
+	<entitydescription.nh_7.62x51mm_300>.308Win&#10;‖color:gui.blue‖300 Round Magazine‖end‖&#10;‖color:gui.red‖Cant be used in rifles.‖end‖&#10;The 7.62x51mm NATO round was developed in the early 1950s by the United States and adopted by NATO in 1954. It was designed to replace the .30-06 Springfield in military service and is known for its balance of power and accuracy. Widely used in rifles and machine guns, it became the standard cartridge for NATO forces and remains in service today, notable for its use in firearms like the M14, FN FAL, and the M60 machine gun.</entitydescription.nh_7.62x51mm_300>
+	<entitydescription.nh_7.62x51mm_120>.308Win&#10;‖color:gui.blue‖120 Round Magazine‖end‖&#10;The 7.62x51mm NATO round was developed in the early 1950s by the United States and adopted by NATO in 1954. It was designed to replace the .30-06 Springfield in military service and is known for its balance of power and accuracy. Widely used in rifles and machine guns, it became the standard cartridge for NATO forces and remains in service today, notable for its use in firearms like the M14, FN FAL, and the M60 machine gun.</entitydescription.nh_7.62x51mm_120>
+	<entitydescription.nh_7.62x51mm_60>.308Win&#10;‖color:gui.blue‖60 Round Magazine‖end‖&#10;The 7.62x51mm NATO round was developed in the early 1950s by the United States and adopted by NATO in 1954. It was designed to replace the .30-06 Springfield in military service and is known for its balance of power and accuracy. Widely used in rifles and machine guns, it became the standard cartridge for NATO forces and remains in service today, notable for its use in firearms like the M14, FN FAL, and the M60 machine gun.</entitydescription.nh_7.62x51mm_60>
+	<entitydescription.nh_7.62x51mm_35>.308Win&#10;‖color:gui.blue‖35 Round Magazine‖end‖&#10;The 7.62x51mm NATO round was developed in the early 1950s by the United States and adopted by NATO in 1954. It was designed to replace the .30-06 Springfield in military service and is known for its balance of power and accuracy. Widely used in rifles and machine guns, it became the standard cartridge for NATO forces and remains in service today, notable for its use in firearms like the M14, FN FAL, and the M60 machine gun.</entitydescription.nh_7.62x51mm_35>
+	<entitydescription.nh_9.5x40mag_30>‖color:gui.blue‖30 Round Magazine‖end‖&#10;The 9.5x40mm round is a high-powered, semi-armor-piercing cartridge designed for battle rifles. Developed for modern military use, it provides higher muzzle velocity and enhanced penetration capabilities compared to standard rounds. This cartridge is favored for its effectiveness in various combat scenarios, making it a valuable choice for military forces seeking superior performance in their firearms.</entitydescription.nh_9.5x40mag_30>
+	<entitydescription.nh_9.5x40mag_18>‖color:gui.blue‖18 Round Magazine‖end‖&#10;The 9.5x40mm round is a high-powered, semi-armor-piercing cartridge designed for battle rifles. Developed for modern military use, it provides higher muzzle velocity and enhanced penetration capabilities compared to standard rounds. This cartridge is favored for its effectiveness in various combat scenarios, making it a valuable choice for military forces seeking superior performance in their firearms.</entitydescription.nh_9.5x40mag_18>
+	<entitydescription.nh_5x23mm_60>‖color:gui.blue‖60 Round Magazine‖end‖&#10;The 5x23mm round is a compact, high-velocity cartridge designed for submachine guns. Developed for modern military applications, it features armor-piercing capabilities and eliminates the need for a traditional metallic casing. This caseless design enhances efficiency and performance in close-quarters combat, making it a preferred choice for special operations and tactical units across the UNSC.</entitydescription.nh_5x23mm_60>
+	<entitydescription.nh_12.7x58mag_12>.500s&amp;w&#10;‖color:gui.blue‖12 Round Magazine‖end‖&#10;The .500 s&amp;w Magnum round was developed by Cor-Bon in partnership with Smith &amp; Wesson in 2003. Designed for the Smith &amp; Wesson Model 500 revolver, it is known for its immense power and is often used for big game hunting. The .500 s&amp;w Magnum quickly became one of the most powerful handgun cartridges available, gaining popularity among hunters and shooting enthusiasts for its impressive ballistic performance.</entitydescription.nh_12.7x58mag_12>
+	<entitydescription.nh_11.43x23mag_12>.45acp&#10;‖color:gui.blue‖12 Round Magazine‖end‖&#10;The .45 ACP round was developed by John Browning in 1904 and adopted by the U.S. Army in 1911 for the M1911 pistol. Known for its stopping power, it gained prominence in both World Wars and remains popular in military, law enforcement, and civilian use today.</entitydescription.nh_11.43x23mag_12>
+	<entitydescription.nh_8g_buckshot>3.263mm&#10;8 Gauge buckshot shell containing ‖color:gui.blue‖10‖end‖ lead balls.</entitydescription.nh_8g_buckshot>
+	<entitydescription.nh_8g_pvp>3.263mm&#10;8 Gauge birdshot shell containing ‖color:gui.blue‖25‖end‖ depleted uranium pellets.&#10;Very inaccurate but ‖color:gui.green‖rips flesh and shields to shreds.‖end‖</entitydescription.nh_8g_pvp>
+	<entitydescription.nh_8g_slug>3.263mm&#10;8 Gauge slug shell containg ‖color:gui.blue‖1‖end‖ lead slug with titanium casing.&#10;‖color:gui.red‖Less effective against energy shields.‖end‖</entitydescription.nh_8g_slug>
+	
+	<!-- Armor Names -->
+	<entityname.nh_marinearmor1>Light Marine Armor</entityname.nh_marinearmor1>
+	<entityname.nh_marinearmor2>Heavy Marine Armor</entityname.nh_marinearmor2>
+	<entityname.nh_marinehelmettroop>Marine Trooper Helmet</entityname.nh_marinehelmettroop>
+	<entityname.nh_marinehelmetcomms>Marine Comms Helmet</entityname.nh_marinehelmetcomms>
+	<entityname.nh_marinehelmetmedic>Marine Medic Helmet</entityname.nh_marinehelmetmedic>
+	<entityname.nh_marinehelmetdiver>Marine Diving Helmet</entityname.nh_marinehelmetdiver>
+	<entityname.nh_odstarmor>ODST Armor</entityname.nh_odstarmor>
+	<entityname.nh_odstarmor_heavy>ODST Heavy Armor</entityname.nh_odstarmor_heavy>
+	<entityname.nh_odsthelmet>ODST Helmet</entityname.nh_odsthelmet>
+	<entityname.nh_spartanarmor>Spartan Armor</entityname.nh_spartanarmor>
+	<entityname.nh_spartanhelmet_1>Spartan Helmet Mk.V</entityname.nh_spartanhelmet_1>
+	<entityname.nh_spartanhelmet_2>Spartan Helmet EVA</entityname.nh_spartanhelmet_2>
+	<entityname.nh_spartanhelmet_2_emile>Damaged EVA Helmet</entityname.nh_spartanhelmet_2_emile>
+	<entityname.nh_engineer_hardhat>Hardhat</entityname.nh_engineer_hardhat>
+	<entityname.nh_police_helmet_1>UNMP Helmet</entityname.nh_police_helmet_1>
+	<entityname.nh_police_armor_1>UNMP Armor</entityname.nh_police_armor_1>
+	<!-- Armor Descriptions -->
+	<entitydescription.nh_spartanarmor>‖color:gui.blue‖Pressure Protection 5,700 meters.‖end‖&#10;The Mjolnir Powered Assault Armor is a technologically-advanced combat exoskeleton system designed to vastly improve the strength, speed, agility, reflexes and durability of a Spartan, only the most elite have the honor of dawning this legendary armor.&#10;‖color:gui.red‖// Must be worn with a pressurised helmet! //‖end‖</entitydescription.nh_spartanarmor>
+	<entitydescription.nh_odstarmor>‖color:gui.blue‖Pressure Protection 4,000 meters.‖end‖&#10;The ODST battle dress uniform (BDU) is a suit of combat armor worn by the Orbital Drop Shock Troopers, special forces of the UNSC Marine Corps.&#10;‖color:gui.red‖// Must be worn with a pressurised helmet! //‖end‖</entitydescription.nh_odstarmor>
+	<entitydescription.nh_odsthelmet>‖color:gui.blue‖Pressurised.‖end‖</entitydescription.nh_odsthelmet>
+	<entitydescription.nh_spartanhelmet_1>‖color:gui.blue‖Pressurised.‖end‖&#10;‖color:gui.green‖Contains a‖end‖ ‖color:gui.blue‖(CPAP) device‖end‖ ‖color:gui.green‖preventing hypoxia even in a critical state.‖end‖</entitydescription.nh_spartanhelmet_1>
+	<entitydescription.nh_spartanhelmet_2>‖color:gui.blue‖Pressurised.‖end‖&#10;‖color:gui.green‖Contains a‖end‖ ‖color:gui.blue‖(CPAP) device‖end‖ ‖color:gui.green‖preventing hypoxia even in a critical state.‖end‖</entitydescription.nh_spartanhelmet_2>
+	<entitydescription.nh_police_helmet_1>United Nations Military Police Helmet.</entitydescription.nh_police_helmet_1>
+	<entitydescription.nh_police_armor_1>United Nations Military Police armor.&#10;Manages to provide similar protection as heavy marine armor without the weight, but at the cost of no leg protection.</entitydescription.nh_police_armor_1>
+
+	<!-- Clothing Names -->
+	<entityname.nh_physicianuniform>Physician Uniform</entityname.nh_physicianuniform>
+	<entityname.nh_physicianuniform_2>Combat Medic Uniform</entityname.nh_physicianuniform_2>
+	<entityname.nh_captainuniform>Captain Uniform</entityname.nh_captainuniform>
+	<entityname.nh_pilot_helmet>Pilot Helmet</entityname.nh_pilot_helmet>
+	<entityname.nh_marine_uniform_1>Marine Scout Uniform</entityname.nh_marine_uniform_1>
+	<entityname.nh_marine_uniform_2>Marine Under Armor</entityname.nh_marine_uniform_2>
+	<entityname.nh_captain_cap>Officer's Cap</entityname.nh_captain_cap>
+	<entityname.nh_boonie_hat>Boonie Hat</entityname.nh_boonie_hat>
+	<entityname.nh_bucket_hat>Bucket Hat</entityname.nh_bucket_hat>
+	<entityname.nh_balaclava>Face Mask</entityname.nh_balaclava>
+	<entityname.nh_sunglasses>Tactical Sunglasses (Orange)</entityname.nh_sunglasses>
+	<entityname.nh_sunglasses_2>Tactical Sunglasses (Black)</entityname.nh_sunglasses_2>
+	<entityname.nh_sunglasses_3>Tactical Sunglasses (White)</entityname.nh_sunglasses_3>
+	<entityname.nh_sunglasses_4>Tactical Sunglasses (Red)</entityname.nh_sunglasses_4>
+	<entityname.nh_sunglasses_5>Tactical Sunglasses (Blue)</entityname.nh_sunglasses_5>
+	<entityname.nh_sunglasses_6>Tactical Sunglasses (Green)</entityname.nh_sunglasses_6>
+	<entityname.nh_sunglasses_7>Tactical Sunglasses (Purple)</entityname.nh_sunglasses_7>
+	<entityname.nh_sunglasses_8>Tactical Sunglasses (Cyan)</entityname.nh_sunglasses_8>
+	<entityname.nh_police_uniform_1>UNMP Uniform</entityname.nh_police_uniform_1>
+	
+	<!-- Tool Names -->
+	<entityname.batterycelldisposable>Disposable Battery</entityname.batterycelldisposable>
+	<entityname.nh_ammo_pack>Ammo Pack</entityname.nh_ammo_pack>
+	<entityname.nh_radio_pack>Radio Pack</entityname.nh_radio_pack>
+	<entityname.nh_radio_pack_odst>Radio Pack (ODST)</entityname.nh_radio_pack_odst>
+	<entityname.nh_pscu>PSCU</entityname.nh_pscu>
+	<entityname.hn_motiontracker>Handheld Motion Tracker</entityname.hn_motiontracker>
+	<entityname.nh_tripwire>Tripwire</entityname.nh_tripwire>
+	<entityname.nh_shieldmodule_1>Shield Module</entityname.nh_shieldmodule_1>
+	<entityname.nh_shieldmodule_1_broken>Shield Module (Broken)</entityname.nh_shieldmodule_1_broken>
+	<entityname.nh_armormodule_1>Additional Armor</entityname.nh_armormodule_1>
+	<Override>
+	<entityname.headset>UNSC Communications Tablet</entityname.headset>
+	<entityname.weldingtool>Welding Torch</entityname.weldingtool>
+	<entityname.plasmacutter>Cutting Torch</entityname.plasmacutter>
+	<entityname.oxygentank>O² Tank</entityname.oxygentank>
+	<entityname.metalcrate>Medium Crate</entityname.metalcrate>
+	<!--<entityname.screwdriverhardened>Hardened Screwdriver</entityname.screwdriverhardened>
+	<entityname.screwdriverdementonite>Dementonite Screwdriver</entityname.screwdriverdementonite>
+	<entityname.wrenchhardened>Hardened Wrench</entityname.wrenchhardened>
+	<entityname.wrenchdementonite>Dementonite Wrench</entityname.wrenchdementonite>
+	<entityname.crowbarhardened>Hardened Crowbar</entityname.crowbarhardened>
+	<entityname.crowbardementonite>Dementonite Crowbar</entityname.crowbardementonite>-->
+	</Override>
+	<entityname.nh_jerrycan>Jerry Can</entityname.nh_jerrycan>
+	<entityname.nh_generator>Generator</entityname.nh_generator>
+	<entityname.nh_smallcrate>Small Crate</entityname.nh_smallcrate>
+	<entityname.nh_largecrate>Large Crate</entityname.nh_largecrate>
+	<entityname.nh_fusioncoil>Fusion Coil</entityname.nh_fusioncoil>
+	<entityname.nh_titanium_a>Titanium A</entityname.nh_titanium_a>
+	<entityname.nh_titanium_a_pure>Titanium A</entityname.nh_titanium_a_pure>
+	<entityname.nh_titanium_a_raw>Unrefined Titanium Crystal</entityname.nh_titanium_a_raw>
+	<!-- Tool Descriptions -->
+	<entitydescription.nh_ammo_pack>A large backpack to carry all the ammo and guns a squad could need.&#10;Icon slots slow your movement. If all are empty and only last is full you will still be fully encumbered.</entitydescription.nh_ammo_pack>
+	<entitydescription.nh_radio_pack>A large portable radio for long range communication at a command level.</entitydescription.nh_radio_pack>
+	<entitydescription.nh_pscu>Power Supply Control Unit&#10;A miniature tokamak fusion reactor used for high draw and long diration power requirements.&#10;A small hole in the tokamak reactor allows a charged stream of particles to enter a deceleration chamber where they are turned into usable power output.&#10;Standard quality P.S.C.U. provides 60min of power to powered armor.</entitydescription.nh_pscu>
+	<entitydescription.hn_motiontracker>A portable and weapon-mountable tool used to indicate proximity to non-human entities in the area.&#10;Using an integration of acoustic sensors, thermal cameras, and AI prediction algorithms, this tool can effectively track and alert users to potentially hostile entities nearby.</entitydescription.hn_motiontracker>
+	<entitydescription.nh_tripwire>A simple string and trigger.&#10;Load explosive, place on the ground and after a few seconds it will arm.&#10;If you see the RED LIGHT flashing the tripwire is ARMED.</entitydescription.nh_tripwire>
+	<entitydescription.nh_shieldmodule_1>Energy shielding is an advanced defensive technology making use of a field of energized particles that wraps around a surface, which deflects objects that attempt to impact the surface. Most energy shields are able to deflect various forms of damage, from material projectiles to directed energy streams. Several UNSC, Covenant and Forerunner vehicles, devices, and armor systems make use of energy shielding to protect users from harm.</entitydescription.nh_shieldmodule_1>
+	<entitydescription.nh_shieldmodule_1_broken>A shielding projector that is damaged beyond use by combat or neglect. Perhaps it may still be useful for spare parts...</entitydescription.nh_shieldmodule_1_broken>
+	<entitydescription.nh_armormodule_1>‖color:gui.green‖"The best solution is often simplest one..."‖end‖&#10;Additional armor plating that can be equipped on powered armor. Doesnt make the user invincible but is better than nothing at all.&#10;‖color:gui.blue‖Extreme heat resistance.‖end‖</entitydescription.nh_armormodule_1>
+	<Override>
+	<entitydescription.divingknifehardened>A combat knife that has gone through a process of hardening using depleted fuel. The strengthened material allows for deeper slashes and stabs.</entitydescription.divingknifehardened>
+	</Override>
+	<entitydescription.nh_titanium_a>Mono-Crystal Titanium Alloy&#10;A machined sheet of titanium-carbide alloy. Though it lacks the purity of military-grade Titanium-A plating it’s designed for easier off-world fabrication with accessible materials. Despite lower quality ingredients it retains high strength, though production can often be error-prone.</entitydescription.nh_titanium_a>
+	<entitydescription.nh_titanium_a_pure>Mono-Crystal Titanium Alloy&#10;A high-grade titanium alloy sheet enhanced with zirconium opposed to carbon. Cut to exacting standards and mass-produced in Earth’s orbit, this alloy achieves superior durability and resilience making it the preferred choice for body armor and vehicle plating.</entitydescription.nh_titanium_a_pure>
+	<entitydescription.nh_titanium_a_raw>A jagged chunk of raw titanium carbide, part of the small-scale Titanium-A plating production process. It may contain valuable mono-crystal titanium alloy, but requires deconstruction to identify usable portions.</entitydescription.nh_titanium_a_raw>
+	
+	<!-- Medical Names -->
+	<entityname.nh_biofoam>Biofoam Canister</entityname.nh_biofoam>
+	<entityname.nh_spartaninjector>Spartan Serum</entityname.nh_spartaninjector>
+	<!-- Medical Descriptions -->
+	<entitydescription.nh_biofoam>Self-sealing, space-filling coagulant and an antimicrobial, tissue-regenerative foam polymer used by the United Nations Space Command as a form of medical first aid. This foam keeps damaged organs in place and helps stop bleeding and hemorrhaging.</entitydescription.nh_biofoam>
+	<entitydescription.nh_spartaninjector>Classified ONI super soldier serum used for the creation of Spartan II's, increases dexterity, movement speed, reaction time, vitality and overall general performance on and off the battlefield.</entitydescription.nh_spartaninjector>
+	
+	<!--<entityname.nh_hide_from_console>ས</entityname.nh_hide_from_console>-->
+	<entityname.nh_hide_from_console></entityname.nh_hide_from_console>
+	
+	<!-- Affliction Names -->
+	<afflictionname.nh_energy_shields>Energy Shields</afflictionname.nh_energy_shields>
+	<!-- Affliction Descriptions -->
+	
+	<!-- Stuff from Enhanced Armaments -->
+	<Override>
+	<entityname.scp_portableammofabricator>Portable Ammunition Fabricator</entityname.scp_portableammofabricator>
+	<entitydescription.scp_portableammofabricator>A smaller, more compact fabricator designed and calibrated specifically for ammunition development when a submarine lacks a fabricator or simply for making ammunition without raising as much suspicion. Can be placed using RMB + E.&#10;Enhanced Armaments</entitydescription.scp_portableammofabricator>
+	<entityname.scp_portableweaponfabricator>Portable Weapon Fabricator</entityname.scp_portableweaponfabricator>
+	<entitydescription.scp_portableweaponfabricator>A smaller, more compact fabricator designed and calibrated specifically for firearm development on submarines not featuring fabricators, or to simply create weapons without raising as much suspicion. Can be placed using RMB + E.&#10;Enhanced Armaments</entitydescription.scp_portableweaponfabricator>
+	<entityname.scp_reloadfabricator>Reloading Fabricator</entityname.scp_reloadfabricator>
+	<entitydescription.scp_reloadfabricator>A fabricator for reloading spent magazines. Can be placed using RMB + E.&#10;Enhanced Armaments</entitydescription.scp_reloadfabricator>
+	<entityname.scp_portablejunctionbox>Portable Junction Box</entityname.scp_portablejunctionbox>
+	<entitydescription.scp_portablejunctionbox>A smaller, hot-placeable junction box meant for extending submarine power grids. Due to it's size and non-miniaturized components, it's capabilities are limited and more susceptible to overvolting. Can be placed using RMB + E.&#10;Enhanced Armaments</entitydescription.scp_portablejunctionbox>
+	</Override>	
+</infotexts>

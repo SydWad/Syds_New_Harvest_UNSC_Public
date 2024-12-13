@@ -1,0 +1,2020 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+<!-- Stolen from BaroTraumatic, but i created the damn thing so fuck you its mine -->
+<Override>
+<!-- Disposable Battery -->
+<Item name="" description="" identifier="batterycelldisposable" category="Equipment,Electrical" maxstacksize="8" health="75" tags="smallitem,mobilebattery" scale="0.3" cargocontaineridentifier="metalcrate" fireproof="false" impactsoundtag="impact_metal_light">
+	<PreferredContainer primary="drillsaw" spawnprobability="0.5" />
+	<PreferredContainer primary="trimmer" spawnprobability="0.5" />
+	<PreferredContainer primary="clownsawcutter" spawnprobability="1.0" />
+	<PreferredContainer primary="headset" spawnprobability="1.0" />
+	<PreferredContainer primary="nh_needs_battery" spawnprobability="1" />
+	<Deconstruct time="0.5" />
+	<Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="60" fabricationlimitmin="3" fabricationlimitmax="15" quality="0" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="2,751,60,36" depth="0.55" />
+	<Body width="54" height="30" density="30" />
+	<Throwable characterusable="true" canBeCombined="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+		<StatusEffect type="OnBroken" target="this">
+			<Sound file="Content/Items/Weapons/Emp.ogg" range="75" volume="0.3" dontmuffle="true" />
+			<Explosion range="15.0" structuredamage="0" ballastfloradamage="50" itemdamage="0" force="15.0" severlimbsprobability="0.0">
+				<Affliction identifier="acidburn" strength="15" />
+				<Affliction identifier="burn" strength="5" />
+				<Sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="150" volume="0.5" selectionmode="Random" />
+				<Sound file="Content/Items/Weapons/ExplosionDebris2.ogg" range="150" volume="0.5" selectionmode="Random" />
+				<Sound file="Content/Items/Weapons/ExplosionDebris3.ogg" range="150" volume="0.5" selectionmode="Random" />
+				<Sound file="Content/Items/Weapons/ExplosionDebris4.ogg" range="150" volume="0.5" selectionmode="Random" />
+				<Sound file="Content/Items/Weapons/ExplosionDebris5.ogg" range="150" volume="0.5" selectionmode="Random" />
+			</Explosion>
+			<Remove />
+		</StatusEffect>
+		<!-- <StatusEffect type="Always" target="this" condition="-0.005" disabledeltatime="true" /> -->
+		<StatusEffect type="Always" target="this">
+			<Conditional condition="lteq 10" />
+			<ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+			<ParticleEmitter particle="mistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="30" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
+		</StatusEffect>
+		<!-- Use projectile component -->
+		<StatusEffect type="OnSecondaryUse" target="This" delay="0.01">
+			<Use />
+		</StatusEffect>
+	</Throwable>
+	<Projectile characterusable="false" launchimpulse="0" impulsespread="0.0" hitscan="false" removeonhit="false">
+		<StatusEffect type="OnImpact" target="This" Condition="-13" disabledeltatime="true" />
+		<Attack targetimpulse="15" severlimbsprobability="0.01" itemdamage="2" structuredamage="1" structuresoundtype="StructureSlash">
+			<Affliction identifier="blunttrauma" strength="4" />
+		</Attack>
+	</Projectile>
+</Item>
+</Override>
+
+<!-- Ammo Pack -->
+<Item name="" identifier="nh_ammo_pack" scale="0.28" category="Equipment" tags="mediumitem,mobilecontainer,largemobilecontainer,storage" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" ShowContentsInTooltip="true" >
+	<PreferredContainer primary="nh_dev_tool" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="500" minavailable="0" maxavailable="2" >
+		<Price storeidentifier="merchantoutpost" />
+		<Price storeidentifier="merchantcity" />
+		<Price storeidentifier="merchantresearch" />
+		<Price storeidentifier="merchantmilitary" />
+		<Price storeidentifier="merchantmine" />
+	</Price>
+	<InventoryIcon texture="%ModDir%/Items/Misc/ammo_backpack.png" sourcerect="5,107,145,318" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/ammo_backpack.png" sourcerect="5,3,145,422" depth="0.5" origin="0.5,0.6" />
+	<Body radius="50" height="120" density="15" />
+	<Fabricate suitablefabricators="fabricator" requiredtime="25">
+		<RequiredItem identifier="toolbelt" />
+		<RequiredItem identifier="toolbelt" />
+		<RequiredItem identifier="aluminium" amount="4" />
+		<RequiredItem identifier="organicfiber" amount="2" />
+	</Fabricate>
+	<Deconstruct time="6">
+		<Item identifier="toolbelt" />
+		<Item identifier="aluminium" amount="4" />
+	</Deconstruct>
+	<Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+		<sprite name="NH Ammo Pack" CanBeHiddenByOtherWearables="false" CanBeHiddenByItem="deepdivinglarge" texture="%ModDir%/Items/Misc/ammo_backpack.png" sourcerect="5,3,145,422" scale="0.6" limb="Torso" depthlimb="Waist" inherittexturescale="true" origin="1.25,0.65" rotation="357" />
+		<StatValue stattype="WalkingSpeed" value="-0.2" />
+		<StatValue stattype="SwimmingSpeed" value="-0.2" />
+	</Wearable>
+	<Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,50" handle2="10,50" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false">
+	</Holdable>	
+	<ItemContainer capacity="0" hideitems="true" >
+		<SlotIcon slotindex="6" texture="%ModDir%/UI/Container_Icons.png" sourcerect="384,0,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="7" texture="%ModDir%/UI/Container_Icons.png" sourcerect="384,0,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="8" texture="%ModDir%/UI/Container_Icons.png" sourcerect="384,0,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="9" texture="%ModDir%/UI/Container_Icons.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="10" texture="%ModDir%/UI/Container_Icons.png" sourcerect="448,64,64,64" origin="0.5,0.5" />
+		<SubContainer capacity="6" >
+			<Containable items="smallitem,mediumammo" excludeditems="weapon,toolbelt,toolbox,bandolier,mobilecontainer,largemobilecontainer,storage" />
+		</SubContainer>
+		<SubContainer capacity="3" >
+			<Containable items="smallitem,mediumitem,mediumammo,largeammo" excludeditems="weapon,toolbelt,toolbox,bandolier,mobilecontainer,largemobilecontainer,storage" >
+				<StatusEffect type="OnWearing" targettype="Character" SpeedMultiplier="0.7" setvalue="true" >
+				</StatusEffect>
+			</Containable>
+		</SubContainer>
+		<SubContainer capacity="1" >
+			<Containable items="smallitem,mediumitem,largeitem,mediumammo,largeammo" excludeditems="toolbelt,toolbox,bandolier,mobilecontainer,largemobilecontainer,storage" >
+				<StatusEffect type="OnWearing" targettype="Character" SpeedMultiplier="0.5" setvalue="true" >
+				</StatusEffect>
+			</Containable>
+		</SubContainer>
+		<SubContainer capacity="1" >
+			<Containable items="smallitem,mediumitem,largeitem,mediumammo,largeammo" excludeditems="toolbelt,toolbox,bandolier,mobilecontainer,largemobilecontainer,storage" >
+				<StatusEffect type="OnWearing" targettype="Character" SpeedMultiplier="0.35" setvalue="true" >
+				</StatusEffect>
+			</Containable>
+		</SubContainer>
+	</ItemContainer>
+</Item>
+
+<!-- Radio Pack -->
+<Item name="" identifier="nh_radio_pack" scale="0.34" MaxStackSize="2" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Equipment" InventoryIconColor="85,180,255,255" tags="mediumitem,mobilecontainer,largemobilecontainer,tool,storage,nh_needs_battery" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" ShowContentsInTooltip="true" >
+	<PreferredContainer primary="nh_dev_tool" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="600" >
+		<Price storeidentifier="merchantoutpost" sold="false" />
+		<Price storeidentifier="merchantcity" minavailable="0" maxavailable="2" />
+		<Price storeidentifier="merchantresearch" sold="false" />
+		<Price storeidentifier="merchantmilitary" minavailable="1" maxavailable="2" />
+		<Price storeidentifier="merchantmine" sold="false" />
+	</Price>
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="773,154,132,158" depth="0.5" origin="0.5,0.57" />
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="398,256,104,127" origin="0.5,0.5" />
+	<Body width="110" height="110" density="15" />
+	<Fabricate suitablefabricators="fabricator" requiredtime="25">
+		<RequiredSkill identifier="electrical" level="30" />
+		<RequiredItem identifier="toolbelt" />
+		<RequiredItem identifier="fpgacircuit" />
+		<RequiredItem identifier="headset" />
+		<RequiredItem identifier="aluminium" amount="2" />
+	</Fabricate>
+	<Deconstruct time="10">
+		<Item identifier="toolbelt" />
+		<Item identifier="headset" />
+		<Item identifier="aluminium" amount="2" />
+	</Deconstruct>
+	<WifiComponent range="60000.0" LinkToChat="true" MinChatMessageInterval="0.0" >
+		<RequiredItems items="mobilebattery" type="Contained" targetslot="6" />
+		<StatusEffect type="OnActive" targettype="This" >
+			<Conditional JamTimer="gt 0" targetitemcomponent="WifiComponent" />
+			<RequiredItems items="mobilebattery" type="Contained" />
+			<sound file="Content/Sounds/RadioStatic.ogg" range="500.0" frequencymultiplier="0.7" loop="true" volume="0.5" />
+		</StatusEffect>
+	</WifiComponent>
+	<Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+		<StatusEffect type="OnWearing" targettype="Character,Contained" Condition="-0.05" targetslot="6" >
+			<Conditional IsPlayer="true" />
+		</StatusEffect>
+		<sprite name="NH Radio Pack" CanBeHiddenByOtherWearables="false" CanBeHiddenByItem="deepdivinglarge" texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="783,313,59,154" scale="0.8" limb="Torso" depthlimb="Waist" inherittexturescale="true" origin="1.53,0.8" />
+		<StatValue stattype="WalkingSpeed" value="-0.08" />
+		<StatValue stattype="SwimmingSpeed" value="-0.08" />
+		<StatusEffect type="OnWearing" targettype="Character" stackable="true" disabledeltatime="true" > 
+			<Affliction identifier="nh_radio_antenna_visual_timer" amount="999" />
+		</StatusEffect>
+	</Wearable>
+	<Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,50" handle2="10,50" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false">
+		<StatusEffect type="OnActive" targettype="Contained" Condition="-0.05" targetslot="6" />
+	</Holdable>	
+	<ItemContainer capacity="6" maxstacksize="32" containedstateindicatorslot="6" hideitems="true" containedstateindicatorstyle="battery" >
+		<SlotIcon slotindex="6" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+		<Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,batterycelldisposable"/>
+		<SubContainer capacity="1" maxstacksize="1" >
+			<Containable items="mobilebattery" />
+		</SubContainer>
+	</ItemContainer>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!--ODST Radio Pack -->
+<Item name="" identifier="nh_radio_pack_odst" variantof="nh_radio_pack" descriptionidentifier="nh_radio_pack" InventoryIconColor="150,175,200,255" spritecolor="100,100,120,255" scale="0.34" MaxStackSize="2" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Equipment" tags="mediumitem,mobilecontainer,largemobilecontainer,tool,storage,nh_needs_battery" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" ShowContentsInTooltip="true" >
+	<Price baseprice="500" >
+		<Price storeidentifier="merchantoutpost" sold="false" />
+		<Price storeidentifier="merchantcity" sold="false" />
+		<Price storeidentifier="merchantresearch" sold="false" />
+		<Price storeidentifier="merchantmilitary" sold="false" />
+		<Price storeidentifier="merchantmine" sold="false" />
+	</Price>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="150,175,200,255" />
+</Item>
+
+<!-- Handheld Motion Tracker -->
+<Item name="" identifier="hn_motiontracker" MaxStackSize="4" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Equipment" InventoryIconColor="85,180,255,255" Tags="smallitem,tool,nh_needs_battery,medium_attachment,highpriority" cargocontaineridentifier="metalcrate" Scale="0.25" impactsoundtag="impact_metal_light">
+	<PreferredContainer primary="nh_dev_tool" spawnprobability="1" NotCampaign="true" />
+	<!--<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab,wrecksupplycab,beaconsupplycab" spawnprobability="0.05"/>
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0.05"/>-->
+	
+	<Price baseprice="500" >
+		<Price storeidentifier="merchantoutpost" sold="false" />
+		<Price storeidentifier="merchantcity" minavailable="0" maxavailable="2" />
+		<Price storeidentifier="merchantresearch" sold="false" />
+		<Price storeidentifier="merchantmilitary" minavailable="1" maxavailable="2" />
+		<Price storeidentifier="merchantmine" sold="false" />
+	</Price>
+	
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+		<RequiredSkill identifier="mechanical" level="25" />
+		<RequiredItem identifier="sonarbeacon" />
+		<RequiredItem identifier="aluminium" amount="2" />
+		<RequiredItem identifier="fpgacircuit" />
+	</Fabricate>
+	<Deconstruct time="6">
+		<Item identifier="plastic" />
+		<Item identifier="fpgacircuit" />
+		<Item identifier="aluminium"/>
+	</Deconstruct>
+	
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="256,256,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/items/misc/miscgear.png" sourcerect="764,9,157,140" depth="0.55" origin="0.35,0.45" />
+	<Body width="90" height="90" density="15" />
+	<Holdable slots="Any,LeftHand" holdpos="55,-18" handle1="-45,0" holdangle="-15" msg="ItemMsgPickUpSelect" aimable="false">
+		<StatusEffect type="OnActive" targettype="Contained" Condition="-1.0">
+			<RequiredItem items="mobilebattery" type="Contained" />
+		</StatusEffect>
+	<!-- Tag the scanner when an enemy is found and not dead -->
+		<StatusEffect type="OnActive" Target="This,NearbyCharacters" targets="hn_motiontracker,monster" range="5000" tags="nh_mt_enemy_found" interval="1.0" duration="1.5" stackable="true" comparison="and">
+			<Conditional isdead="false" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This,NearbyCharacters" targets="hn_motiontracker,monster" range="2500" tags="nh_mt_enemy_veryfar" interval="1.0" duration="1.5" stackable="true" comparison="and">
+			<Conditional isdead="false" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This,NearbyCharacters" targets="hn_motiontracker,monster" range="1816" tags="nh_mt_enemy_far" interval="1.0" duration="1.5" stackable="true" comparison="and">
+			<Conditional isdead="false" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This,NearbyCharacters" targets="hn_motiontracker,monster" range="1133" tags="nh_mt_enemy_med" interval="1.0" duration="1.5" stackable="true" comparison="and">
+			<Conditional isdead="false" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This,NearbyCharacters" targets="hn_motiontracker,monster" range="450" tags="nh_mt_enemy_close" interval="1.0" duration="1.5" stackable="true" comparison="and">
+			<Conditional isdead="false" />
+		</StatusEffect>
+		
+	<!-- When tagged and held start sounds, have to keep the StatusEffects seporate so the sounds dont play on the enemy as well (would be a bit silly) -->
+		
+	<!-- Enemy found click -->
+		<StatusEffect type="OnActive" Target="This" interval="0.7" duration="0.1" forceplaysounds="true" comparison="and" >
+			<Conditional hasstatustag="nh_mt_enemy_found" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+			<Sound file="%ModDir%/Items/Misc/motion_tracker/motion_tracker_pulse.ogg" range="350" volume="0.5" loop="true" />
+		</StatusEffect>
+	<!-- Very Far -->
+		<StatusEffect type="OnActive" Target="This" interval="1.5" duration="1.58" forceplaysounds="true" comparison="and" >
+			<Conditional hasstatustag="nh_mt_enemy_veryfar" />
+			<Conditional hasstatustag="! nh_mt_enemy_far" />
+			<Conditional hasstatustag="! nh_mt_enemy_med" />
+			<Conditional hasstatustag="! nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+			<Sound file="%ModDir%/Items/Misc/motion_tracker/motion_tracker_ping_veryfar.ogg" range="350" volume="0.15" loop="true" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This" interval="1.5" comparison="and" targetitemcomponent="LightComponent" LightColor="100,255,100,200" range="70" setvalue="true" >
+			<Conditional hasstatustag="nh_mt_enemy_veryfar" />
+			<Conditional hasstatustag="! nh_mt_enemy_far" />
+			<Conditional hasstatustag="! nh_mt_enemy_med" />
+			<Conditional hasstatustag="! nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This" interval="1.5" delay="0.19" comparison="and" targetitemcomponent="LightComponent" LightColor="100,255,100,125" range="30" setvalue="true" >
+			<Conditional hasstatustag="nh_mt_enemy_veryfar" />
+			<Conditional hasstatustag="! nh_mt_enemy_far" />
+			<Conditional hasstatustag="! nh_mt_enemy_med" />
+			<Conditional hasstatustag="! nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+		</StatusEffect>
+	<!-- Far -->
+		<StatusEffect type="OnActive" Target="This" interval="1.2" duration="1.58" forceplaysounds="true" comparison="and" >
+			<Conditional hasstatustag="nh_mt_enemy_far" />
+			<Conditional hasstatustag="! nh_mt_enemy_med" />
+			<Conditional hasstatustag="! nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+			<Sound file="%ModDir%/Items/Misc/motion_tracker/motion_tracker_ping_far.ogg" range="350" volume="0.17" loop="true" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This" interval="1.2" comparison="and" targetitemcomponent="LightComponent" LightColor="100,255,100,200" range="70" setvalue="true" >
+			<Conditional hasstatustag="nh_mt_enemy_far" />
+			<Conditional hasstatustag="! nh_mt_enemy_med" />
+			<Conditional hasstatustag="! nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This" interval="1.2" delay="0.19" comparison="and" targetitemcomponent="LightComponent" LightColor="100,255,100,125" range="30" setvalue="true" >
+			<Conditional hasstatustag="nh_mt_enemy_far" />
+			<Conditional hasstatustag="! nh_mt_enemy_med" />
+			<Conditional hasstatustag="! nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+		</StatusEffect>
+	<!-- Medium -->
+		<StatusEffect type="OnActive" Target="This" interval="1.2" duration="1.58" forceplaysounds="true" comparison="and" >
+			<Conditional hasstatustag="nh_mt_enemy_med" />
+			<Conditional hasstatustag="! nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+			<Sound file="%ModDir%/Items/Misc/motion_tracker/motion_tracker_ping_med.ogg" range="350" volume="0.2" loop="true" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This" interval="1.2" comparison="and" targetitemcomponent="LightComponent" LightColor="100,255,100,200" range="70" setvalue="true" >
+			<Conditional hasstatustag="nh_mt_enemy_med" />
+			<Conditional hasstatustag="! nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This" interval="1.2" delay="0.19" comparison="and" targetitemcomponent="LightComponent" LightColor="100,255,100,125" range="30" setvalue="true" >
+			<Conditional hasstatustag="nh_mt_enemy_med" />
+			<Conditional hasstatustag="! nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+		</StatusEffect>
+	<!-- Close -->
+		<StatusEffect type="OnActive" Target="This" interval="1.0" duration="1.58" forceplaysounds="true" comparison="and" >
+			<Conditional hasstatustag="nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+			<Sound file="%ModDir%/Items/Misc/motion_tracker/motion_tracker_ping_close.ogg" range="350" volume="0.25" loop="true" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This" interval="1.0" comparison="and" targetitemcomponent="LightComponent" LightColor="100,255,100,200" range="70" setvalue="true" >
+			<Conditional hasstatustag="nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+		</StatusEffect>
+		<StatusEffect type="OnActive" Target="This" interval="1.0" delay="0.19" comparison="and" targetitemcomponent="LightComponent" LightColor="100,255,100,125" range="30" setvalue="true" >
+			<Conditional hasstatustag="nh_mt_enemy_close" />
+			<Conditional targetcontaineditem="true" condition="gt 1.0"/>
+		</StatusEffect>
+
+		<LightComponent vulnerabletoemp="false" LightColor="100,255,100,125" Flicker="0.02" range="30" powerconsumption="10" IsOn="true">
+			<LightTexture texture="Content/Lights/light.png" origin="0.5, 0.5" size="1.0,1.0" />
+			<IsActive targetcontaineditem="true" condition="gt 1.0"/>
+		</LightComponent>
+	</Holdable>
+	
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+		<Containable items="mobilebattery">
+			<StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+		</Containable>
+	</ItemContainer>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!-- Tripwire -->
+<Item name="" description="" identifier="nh_tripwire" MaxStackSize="10" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Equipment" InventoryIconColor="85,180,255,255" DamagedByExplosions="false" AllowSellingWhenBroken="true" health="50" tags="smallitem,armcab" scale="0.6" condition="49" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" SpriteColor="255,255,255,255" AllowRotatingInEditor="True" CanFlipX="False" AllowStealingAlways="True" HideConditionBar="true" HideConditionInTooltip="true" >
+	<PreferredContainer primary="nh_dev_tool" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="75" sold="false" >
+		<Price storeidentifier="merchantoutpost" sold="true" minavailable="0" maxavailable="3" />
+		<Price storeidentifier="merchantcity" />
+		<Price storeidentifier="merchantresearch" />
+		<Price storeidentifier="merchantmilitary" sold="true" minavailable="3" maxavailable="30" />
+		<Price storeidentifier="merchantmine" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator,weaponfabricator" requiredtime="8">
+		<RequiredSkill identifier="weapons" level="50" />
+		<RequiredSkill identifier="mechanical" level="10" />
+		<RequiredItem identifier="detonator" />
+		<RequiredItem identifier="organicfiber" mincondition="0.5" />
+		<RequiredItem identifier="iron" />
+	</Fabricate>
+	<Deconstruct time="3">
+		<Item identifier="detonator" copycondition="false" />
+		<Item identifier="iron" copycondition="false" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="386,74,60,44" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons3.png" sourcerect="528,616,22,68" depth="0.8" origin="0.45,0.5"/>
+	<BrokenSprite texture="%ModDir%/Items/Weapons/weapons3.png" sourcerect="620,616,118,68" depth="0.55" origin="0.9,0.5" maxcondition="99.9" />
+	<DecorativeSprite texture="%ModDir%/Items/Weapons/weapons3.png" sourcerect="500,616,22,68" depth="0.001" offset="-100,0" />
+	<Body width="22" height="65" density="5.0" />
+	<!--<LevelResource deattachduration="4" randomoffsetfromwall="80" IsActive="False" >
+		<Commonness commonness="0" abysscommonness="0" />
+		<RequiredItem items="cuttingequipment" type="Equipped" />
+	</LevelResource>-->
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="false" canbepicked="true" handle1="-3,-15" aimpos="50,0" holdangle="-15" aimable="true" selectkey="Select" msg="ItemMsgPickUpSelect" PickingTime="5" attachable="true" reattachable="true" >
+		<StatusEffect type="OnActive" targettype="this" condition="100" IsOn="False" setvalue="true" />
+		<StatusEffect type="OnNotContained" targettype="this" condition="49" IsOn="True" setvalue="true" delay="10" disabledeltatime="true" comparison="and" stackable="false" >
+			<Conditional HasStatusTag="! strung" />
+			<Conditional Attached="True" />
+			<Conditional condition="gteq 50" />
+			<Sound file="Content/Sounds/UI/UIswitch1.ogg" range="300" volume="1.0" selectionmode="Random" />
+			<Sound file="Content/Sounds/UI/UIswitch2.ogg" range="300" volume="1.0" selectionmode="Random" />
+			<Sound file="Content/Sounds/UI/UIswitch3.ogg" range="300" volume="1.0" selectionmode="Random" />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" targettype="this" interval="10" duration="10.5" tags="strung" stackable="true" disabledeltatime="true" />
+		<StatusEffect type="OnNotContained" targettype="This" condition="100" setvalue="true" IsOn="False" comparison="and" >
+			<Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
+			<Conditional Attached="True" />
+			<Conditional condition="lt 50" />
+			<!--<RequiredItems items="explosive,oxygeniteshard" type="Contained" />-->
+			<Sound file="%ModDir%/Items/Misc/fallout_tripwire.ogg" range="800" volume="1.25" />
+			<Use />
+		</StatusEffect>
+	</Holdable>
+	<LightComponent vulnerabletoemp="false" LightColor="255,0,0,200" range="6" blinkfrequency="0.2" powerconsumption="0" castshadows="false" IsOn="true" canbeselected="false" >
+		<LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.45,1.85" />
+		<!--<sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="228,3,23,24" origin="0.45,1.6" />-->
+	</LightComponent>
+	<MotionSensor canbeselected="false" Target="Human,Monster,Pet" RangeX="35" RangeY="25" DetectOffset="-30,3" >
+		<Upgrade gameversion="1.6.18.1" RangeX="35" RangeY="25" />
+	</MotionSensor>
+	<ItemComponent characterusable="false">
+		<StatusEffect type="OnUse" targettype="Contained" delay="0.5" disabledeltatime="true" >
+			<Use />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="Contained" delay="0.55" condition="-1" setvalue="true" disabledeltatime="true" />
+		<!--<StatusEffect type="OnUse" targettype="This" delay="0.6" disabledeltatime="true" >
+			<RequiredItems items="explosive,oxygeniteshard" type="Contained" />
+			<Remove />
+		</StatusEffect>-->
+		
+		<StatusEffect type="OnBroken" targettype="This" delay="15" condition="100" IsOn="False" setvalue="true" disabledeltatime="true" >
+			<DropItem />
+		</StatusEffect>
+	</ItemComponent>
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="false" containedspritedepth="0.81" itempos="9,-9.0" removecontaineditemsondeconstruct="false" containedstateindicatorstyle="Explosive" >
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="448,448,64,64" origin="0.5,0.5" />
+		<Containable identifiers="explosive,oxygeniteshard" excludeditems="nh_havoknuke,nuke" />
+	</ItemContainer>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!-- Shield Module -->
+<Item name="" description="" identifier="nh_shieldmodule_1" MaxStackSize="4" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Equipment" InventoryIconColor="85,180,255,255" tags="mediumitem,nh_shieldmodule" scale="0.33" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" SpriteColor="255,255,255,255" >
+	<PreferredContainer primary="nh_dev_tool" amount="4" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="nh_dev_spartanarmor" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="nh_spartanarmor" spawnprobability="0.01" />
+	<PreferredContainer secondary="wrecksecarmcab" spawnprobability="0.01"/>
+	<Price baseprice="5000" BuyingPriceMultiplier="10" >
+		<Price storeidentifier="merchantoutpost" sold="false" />
+		<Price storeidentifier="merchantcity" sold="false" />
+		<Price storeidentifier="merchantresearch" sold="false" />
+		<Price storeidentifier="merchantmilitary" minavailable="1" maxavailable="3" />
+		<Price storeidentifier="merchantmine" sold="false" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="45" displayname="repairitem" >
+		<RequiredSkill identifier="electrical" level="90" />
+		<RequiredSkill identifier="mechanical" level="70" />
+		<RequiredItem identifier="nh_shieldmodule_1_broken" amount="2" />
+		<RequiredItem identifier="physicorium" amount="2" />
+		<RequiredItem identifier="lead" amount="4" />
+		<!-- Dont use up Screwdriver -->
+		<RequiredItem identifier="screwdriver" mincondition="0" usecondition="True" />
+	</Fabricate>
+	<Deconstruct time="25" >
+		<Item identifier="lithium" amount="4" />
+		<Item identifier="physicorium" amount="2" />
+		<Item identifier="lead" amount="8" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="385,128,128,128" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscprops.png" sourcerect="475,119,128,58" depth="0.55" />
+	<Body width="116" height="46" density="2.58" />
+	<Wearable slots="None" canbeselected="false" canbepicked="false" pickkey="Ragdoll" >
+		<!-- Fake modifier to show shields -->
+		<damagemodifier afflictionidentifiers="nh_energy_shields" damagemultiplier="0.0" armorsector="0.0,0.0" />
+			
+		<sprite texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="0,0,1,1" origin="0.5,0.5" limb="Torso" hideotherwearables="false" />
+	</Wearable>
+	<Holdable slots="RightHand,LeftHand" controlpose="false" handle1="0,-17" handle2="20,-17" holdpos="0,-13" holdangle="15" canbepicked="true" msg="ItemMsgPickUpSelect" pickkey="Select" />
+	<LightComponent vulnerabletoemp="false" LightColor="0,255,0,200" range="50" powerconsumption="0" pulsefrequency="0.5" pulseamount="0.9" drawbehindsubs="true" castshadows="false" IsOn="true" canbeselected="false" />
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+<!-- Broken Shield Module Item -->
+<Item name="" description="" identifier="nh_shieldmodule_1_broken" MaxStackSize="4" MaxStackSizeCharacterInventory="2" MaxStackSizeHoldableOrWearableInventory="2" category="Equipment" tags="mediumitem" scale="0.33" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" InventoryIconColor="75,200,75,255" >
+	<PreferredContainer primary="nh_dev_tool" amount="4" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="secarmcab" secondary="armcab" spawnprobability="0.07" />
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab,wreckarmcab" spawnprobability="0.05"/>
+	<PreferredContainer secondary="wrecksecarmcab" spawnprobability="0.3"/>
+	<Deconstruct time="18" >
+		<Item identifier="lithium" amount="3" />
+		<Item identifier="physicorium" amount="1" />
+		<Item identifier="lead" amount="5" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="385,128,128,128" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscprops.png" sourcerect="475,119,128,58" depth="0.55" />
+	<Body width="116" height="46" density="2.58" />
+	<Holdable slots="Any,RightHand,LeftHand" controlpose="false" handle1="0,-17" handle2="20,-17" holdpos="0,-13" holdangle="15" canbepicked="true" msg="ItemMsgPickUpSelect" pickkey="Select" />
+	<LightComponent vulnerabletoemp="false" LightColor="0,255,0,200" range="50" powerconsumption="0" pulsefrequency="0.5" pulseamount="0.9" drawbehindsubs="true" castshadows="false" IsOn="true" canbeselected="false" />
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="75,200,75,255" />
+</Item>
+
+<!-- Additional Armor -->
+<Item name="" description="" identifier="nh_armormodule_1" MaxStackSize="4" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Equipment" InventoryIconColor="85,180,255,255" tags="mediumitem,nh_armormodule" scale="0.4" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" SpriteColor="255,255,255,255" >
+	<PreferredContainer primary="nh_dev_tool" amount="4" spawnprobability="1" />
+	<PreferredContainer secondary="nh_spartanarmor" spawnprobability="1" />
+	<!--<Price baseprice="125" minavailable="7" >
+		<Price storeidentifier="merchantoutpost" multiplier="0.9" minavailable="5" />
+		<Price storeidentifier="merchantcity" minavailable="4" />
+		<Price storeidentifier="merchantresearch" multiplier="1.2" />
+		<Price storeidentifier="merchantmilitary" multiplier="1.1" />
+		<Price storeidentifier="merchantmine" minavailable="6" />
+		<Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="6" />
+	</Price>-->
+	
+	<Fabricate suitablefabricators="fabricator" requiredtime="60" >
+		<RequiredSkill identifier="mechanical" level="100" />
+		<RequiredItem tag="titanium_a" amount="15" />
+		<RequiredItem identifier="ballisticfiber" amount="2" />
+	</Fabricate>
+	<Deconstruct time="25" >
+		<RequiredItem identifier="plastic" amount="2" />
+		<RequiredItem identifier="titanium" amount="10" />
+	</Deconstruct>
+	
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="256,128,128,128" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscprops.png" sourcerect="475,119,128,58" depth="0.55" />
+	<Body width="116" height="46" density="2.58" />
+	
+	<!-- Not actually wearable this just shows in the description the damage values that the affliction does -->
+	<Wearable slots="None" canbeselected="false" canbepicked="false" pickkey="Ragdoll" >
+		<!-- Fake modifier to show speed change -->
+		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.7" armorsector="0.0,0.0" />
+			
+		<sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="2,766,128,58" origin="0.5,0.5" limb="LeftHand" scale="0.5" hideotherwearables="false" canbehiddenbyotherwearables="false" hidelimb="false" />
+		<damagemodifier afflictiontypes="damage" damagemultiplier="0.2" armorsector="0.0,0.0" />
+		<damagemodifier afflictiontypes="bleeding" damagemultiplier="0.2" armorsector="0.0,0.0" />
+		<damagemodifier afflictiontypes="burn" damagemultiplier="0.1" armorsector="0.0,0.0" />
+		<damagemodifier afflictiontypes="stun" damagemultiplier="0.3" armorsector="0.0,0.0" />
+	</Wearable>
+	<Holdable slots="RightHand+LeftHand" controlpose="false" holdpos="3,-30" handle1="-40,-10" handle2="25,-25" holdangle="10" canbepicked="true" msg="ItemMsgPickUpSelect" pickkey="Select" />
+	
+	<LightComponent vulnerabletoemp="false" LightColor="0,255,0,200" range="50" powerconsumption="0" pulsefrequency="0.5" pulseamount="0.9" drawbehindsubs="true" castshadows="false" IsOn="true" canbeselected="false" />
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!-- PSCU -->
+<Item name="" description="" identifier="nh_pscu" MaxStackSize="4" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Equipment,Electrical" InventoryIconColor="85,180,255,255" tags="smallitem,mobilebattery,nh_fusion_power" scale="0.15" health="10000" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" SpriteColor="210,210,200,255" >
+	<!--<PreferredContainer primary="batterycellrecharger" maxcondition="80" />-->
+	<PreferredContainer primary="nh_dev_tool" amount="4" spawnprobability="1" />
+	<PreferredContainer primary="nh_spartanarmor" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="nh_dev_spartanarmor" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="nh_dev_m6g_gnr" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="1000" BuyingPriceMultiplier="5" >
+		<Price storeidentifier="merchantoutpost" sold="false" />
+		<Price storeidentifier="merchantcity" minavailable="1" maxavailable="5" />
+		<Price storeidentifier="merchantresearch" multiplier="0.8" minavailable="3" maxavailable="10" />
+		<Price storeidentifier="merchantmilitary" minavailable="1" maxavailable="5" />
+		<Price storeidentifier="merchantmine" sold="false" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="45" >
+		<RequiredSkill identifier="electrical" level="99" />
+		<RequiredSkill identifier="medical" level="60" />
+		<RequiredItem identifier="physicorium" amount="3" />
+		<RequiredItem identifier="fulgurium" amount="2" />
+		<RequiredItem identifier="lithium" amount="8" />
+		<RequiredItem identifier="titaniumaluminiumalloy" />
+	</Fabricate>
+	<Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="20" >
+		<RequiredSkill identifier="electrical" level="99" />
+		<RequiredSkill identifier="medical" level="60" />
+		<RequiredItem identifier="nh_pscu" mincondition="0.0" maxcondition="0.2" usecondition="false"  />
+		<RequiredItem identifier="physicorium" amount="2" />
+		<RequiredItem identifier="fulgurium" amount="2" />
+		<RequiredItem identifier="lithium" amount="8" />
+	</Fabricate>
+	<Deconstruct time="10" >
+		<Item identifier="physicorium" mincondition="0.5" copycondition="true" />
+		<Item identifier="physicorium" amount="2" copycondition="true" />
+		<Item identifier="lithium" amount="8" copycondition="true" />
+		<Item identifier="titaniumaluminiumalloy" mincondition="0.5" copycondition="true" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="5,135,229,230" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="484,446,277,57" depth="0.55" />
+	<!--<BrokenSprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="238,135,229,230" depth="0.55" />-->
+	<Body width="260" height="45" density="30" />
+	<Holdable slots="Any,RightHand,LeftHand" handle1="-5,15" holdangle="90" msg="ItemMsgPickUpSelect" >
+		<StatusEffect type="OnBroken" targettype="this" InventoryIconColor="0,50,100,255" />
+	</Holdable>
+	<Quality>
+		<QualityStat stattype="Condition" value="0.1666" />
+	</Quality>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<Override>
+<!-- Updated UNSC welding torch, No change besides size and price -->
+<Item name="" identifier="weldingtool" category="Equipment" InventoryIconColor="85,180,255,255" Tags="smallitem,weldingequipment,tool,mountableweapon" cargocontaineridentifier="metalcrate" description="" Scale="0.32" impactsoundtag="impact_metal_light">
+	<PreferredContainer primary="engcab" spawnprobability="1" notcampaign="true"/>
+	<PreferredContainer secondary="supplycab" spawnprobability="0.2" notcampaign="true"/>
+	<PreferredContainer primary="outpostsupplycab" spawnprobability="0.5"/>
+	<PreferredContainer primary="outpostcrewcabinet" spawnprobability="0.1"/>
+	<PreferredContainer primary="wrecksupplycab,beaconsupplycab" spawnprobability="0.05"/>
+	<PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0.05"/>
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0.1"/>
+	<Price baseprice="150">
+		<Price storeidentifier="merchantoutpost" minavailable="3" />
+		<Price storeidentifier="merchantcity" minavailable="2" />
+		<Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="2" />
+		<Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="2" />
+		<Price storeidentifier="merchantmine" multiplier="0.9" minavailable="10" />
+		<Price storeidentifier="merchantengineering" minavailable="5" multiplier="0.9"/>
+	</Price>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="192,0,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="1,182,82,148" depth="0.55" origin="0.5,0.5" />
+	<!-- the item takes 10 seconds to break down in a deconstructor and turns into steel and plastic -->
+	<Deconstruct time="10">
+		<Item identifier="steel" />
+		<Item identifier="plastic" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+		<RequiredSkill identifier="mechanical" level="30" />
+		<RequiredItem identifier="steel" amount="2" />
+		<RequiredItem identifier="plastic" amount="2" />
+	</Fabricate>
+	<!-- physics body -->
+	<Body width="82" height="148" density="40" />
+	<!-- the character will hold the item 50 pixels in front of him, with his hands at the handle1 and handle2 positions -->
+	<Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,-10" handle1="-10,5" handle2="-15,50" msg="ItemMsgPickUpSelect" />
+	<RepairTool firedamage="10.0" structurefixamount="2.0" range="150" barrelpos="30,20" particles="weld" repairmultiple="true" repairthroughwalls="false" combatpriority="10" levelwallfixamount="-0.425" targetforce="10">
+		<!-- the item must contain a welding fuel tank for it to work -->
+		<RequiredItems items="weldingtoolfuel,oxygensource" type="Contained" msg="ItemMsgWeldingFuelRequired" />
+		<RequiredSkill identifier="mechanical" level="50" />
+		<ParticleEmitter particle="weld" particlespersecond="50" copyentityangle="true"/>
+		<ParticleEmitterHitStructure particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
+		<ParticleEmitterHitStructure particle="GlowDot" particlespersecond="60" emitinterval="0.7" particleamount="10" scalemin="0.9" scalemax="1.0" anglemin="0" anglemax="360" velocitymin="10" velocitymax="50" />
+		<ParticleEmitterHitStructure particle="mistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="0" velocitymax="50" />
+		<ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
+		<ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="mistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="10" velocitymax="100" />
+		<ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="0" velocitymax="50" />
+		<sound file="Content/Items/Tools/WeldingLoop.ogg" type="OnUse" range="500.0" loop="true" />
+		<!-- when using, the contained welding fuel tank will detoriate (= lose fuel) -->
+		<StatusEffect type="OnUse" targettype="Contained" targets="weldingfueltank" Condition="-1.0" />
+		<StatusEffect type="OnUse" targettype="Contained" targets="incendiumfueltank" Condition="-0.6" />
+		<!-- welding a door, it will get stuck after a while -->
+		<StatusEffect type="OnSuccess" targettype="UseTarget" targets="weldable" Stuck="5.0" />
+		<StatusEffect type="OnSuccess" targettype="UseTarget" targets="item" Condition="-3.0">
+			<Conditional HasTag="neq weldable"/>
+		</StatusEffect>
+		<!-- do burn damage to characters -->
+		<StatusEffect type="OnSuccess" targettype="Limb">
+			<Affliction identifier="burn" amount="2.5" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" delay="1.0" stackable="false" Condition="0" setvalue="true">
+			<sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
+			<Explosion range="150.0" force="3" applyfireeffects="false" >
+				<Affliction identifier="burn" strength="25" />
+				<Affliction identifier="stun" strength="5" />
+			</Explosion>
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" delay="1.0" stackable="false" Condition="0" setvalue="true">
+			<sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
+			<Explosion range="150.0" force="6" applyfireeffects="false" >
+				<Affliction identifier="burn" strength="50" />
+				<Affliction identifier="stun" strength="10" />
+			</Explosion>
+		</StatusEffect>
+		<!-- the tool can fix structures, i.e. walls and windows -->
+		<Fixable identifier="structure" />
+		<NonFixable identifier="thalamus,ice" />
+		<LightComponent vulnerabletoemp="false" LightColor="1.0,0.9,0.7,0.5" Flicker="0.5" >
+			<sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.1,1.1" />
+		</LightComponent>
+	</RepairTool>
+	<!-- one welding fuel or oxygen tank can be contained inside the welding tool -->
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-13,-15" containedspritedepth="0.56" containedstateindicatorstyle="tank">
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+		<Containable items="weldingtoolfuel,oxygensource" />
+	</ItemContainer>
+	<aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
+	<Quality>
+		<QualityStat stattype="RepairToolStructureRepairMultiplier" value="0.1"/>
+	</Quality>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" scale="0.32" />
+	<Upgrade gameversion="0.14.0.0">
+		<RepairTool>
+			<RequiredItems items="weldingtoolfuel,oxygensource" type="Contained" msg="ItemMsgWeldingFuelRequired" />
+		</RepairTool>
+	</Upgrade>
+	<Upgrade gameversion="1.6.18.1">
+		<ItemContainer itempos="-13,-15"/>
+	</Upgrade>
+	<SkillRequirementHint identifier="mechanical" level="50" />
+</Item>
+
+<!-- Updated UNSC cutting torch, No change besides size and price -->
+<Item name="" identifier="plasmacutter" category="Equipment" InventoryIconColor="85,180,255,255" Tags="smallitem,cuttingequipment,tool,mountableweapon" cargocontaineridentifier="metalcrate" description="" Scale="0.32" impactsoundtag="impact_metal_light">
+	<Preferredcontainer secondary="respawncontainer" spawnprobability="1" notcampaign="true"/>
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0.05"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab,wreckdivingcab" spawnprobability="0.05"/>
+	<PreferredContainer primary="divingcab" secondary="engcab"/>
+	<Price baseprice="150">
+		<Price storeidentifier="merchantoutpost" minavailable="3" />
+		<Price storeidentifier="merchantcity" minavailable="2" />
+		<Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="2" />
+		<Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="2" />
+		<Price storeidentifier="merchantmine" multiplier="0.9" minavailable="10" />
+		<Price storeidentifier="merchantengineering" minavailable="5" multiplier="0.9"/>
+	</Price>
+	<Deconstruct time="10">
+		<Item identifier="steel" />
+		<Item identifier="plastic" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+		<RequiredSkill identifier="mechanical" level="30" />
+		<RequiredItem identifier="steel" amount="2" />
+		<RequiredItem identifier="plastic" amount="2" />
+	</Fabricate>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="1,334,135,98" depth="0.55" origin="0.5,0.5" />
+	<Body radius="60" height="30" density="40" />
+	<Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="55,-2" handle1="-27,-20" handle2="-33,23" msg="ItemMsgPickUpSelect" />
+	<RepairTool firedamage="10.0" structurefixamount="-0.5" range="150" barrelpos="42,7" combatpriority="10" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-5.0" targetforce="10">
+		<RequiredItems items="oxygensource,weldingtoolfuel" type="Contained" msg="ItemMsgOxygenTankRequired" />
+		<RequiredSkill identifier="mechanical" level="50" />
+		<StatusEffect type="OnUse" targettype="Contained" targets="oxygensource" Condition="-1.0" />
+		<StatusEffect type="OnSuccess" targettype="UseTarget" targets="weldable" Stuck="-20.0" />
+		<StatusEffect type="OnSuccess" targettype="UseTarget" Condition="-15.0" />
+		<StatusEffect type="OnSuccess" targettype="Limb" severlimbsprobability="0.005">		
+			<Affliction identifier="burn" amount="4.0" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="Contained" targets="weldingfueltank" delay="1.0" stackable="false" Condition="0" setvalue="true">
+			<sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
+			<Explosion range="150.0" force="3" applyfireeffects="false" >
+				<Affliction identifier="burn" strength="25" />
+				<Affliction identifier="stun" strength="5" />
+			</Explosion>
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="Contained" targets="incendiumfueltank" delay="1.0" stackable="false" Condition="0" setvalue="true">
+			<sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
+			<Explosion range="150.0" ballastfloradamage="50" force="6" applyfireeffects="true" ignorefireeffectsfortags="incendiumfueltank">
+				<Affliction identifier="burn" strength="100" />
+				<Affliction identifier="stun" strength="10" />
+			</Explosion>
+		</StatusEffect>
+		<ParticleEmitter particle="plasma" particlespersecond="50" copyentityangle="true"/>
+		<ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+		<ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+		<ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+		<ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+		<ParticleEmitterHitItem identifiers="ore" particle="iceshards" particlespersecond="5" anglemin="-40" anglemax="40" velocitymin="10" velocitymax="300" scalemin="0.5" scalemax="1.0" />
+		<ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="0" velocitymax="50" />
+		<sound file="Content/Items/Tools/PlasmaCutterLoop.ogg" type="OnUse" range="750.0" loop="true" />
+		<Fixable identifier="structure" />
+		<LightComponent vulnerabletoemp="false" LightColor="0.8,0.7,1.0,1.0" Flicker="0.5" >
+			<sprite texture="Content/Items/Electricity/lightsprite.png" origin="-0.2,0.7" />
+		</LightComponent>			 
+	</RepairTool>
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="false" itemrotation="-90" itempos="-75,23" containedspritedepth="0.56" containedstateindicatorstyle="tank">
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+		<Containable items="weldingtoolfuel,oxygensource" />
+	</ItemContainer>
+	<aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
+	<Quality>
+		<QualityStat stattype="RepairToolStructureDamageMultiplier" value="0.1"/>
+		<QualityStat stattype="RepairToolDeattachTimeMultiplier" value="0.1"/>
+	</Quality>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" scale="0.32" />
+	<Upgrade gameversion="0.14.0.0">
+		<RepairTool>
+			<RequiredItems identifier="oxygensource,weldingtoolfuel" type="Contained" msg="ItemMsgOxygenTankRequired" />
+		</RepairTool>
+	</Upgrade>
+	<Upgrade gameversion="1.6.18.1">
+		<ItemContainer itemrotation="-90" itempos="-75,23"/>
+	</Upgrade>
+	<SkillRequirementHint identifier="mechanical" level="50" />
+</Item>
+
+<!-- Updated UNSC Screwdriver, no change -->
+<Item name="" identifier="screwdriver" category="Equipment" InventoryIconColor="85,180,255,255" Tags="smallitem,simpletool,tool,electricalrepairtool,screwdriveritem" spritecolor="225,225,225,255" cargocontaineridentifier="metalcrate" Scale="0.3" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+	<Preferredcontainer secondary="respawncontainer" spawnprobability="1" notcampaign="true"/>
+	<PreferredContainer primary="engcab" secondary="reactorcab"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0.2"/>
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0.5"/>
+	<PreferredContainer primary="wreckreactorcab,abandonedreactorcab,piratereactorcab" spawnprobability="0.5"/> 
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0.3"/>
+	<PreferredContainer secondary="outposttrashcan" spawnprobability="0.1" />
+	<Price baseprice="10" minavailable="10">
+		<Price storeidentifier="merchantoutpost" />
+		<Price storeidentifier="merchantcity" minavailable="5"/>
+		<Price storeidentifier="merchantresearch" multiplier="1.25" />
+		<Price storeidentifier="merchantmilitary" multiplier="1.25" />
+		<Price storeidentifier="merchantmine" />
+		<Price storeidentifier="merchantengineering" minavailable="10" multiplier="0.9"/>
+	</Price>
+	<Deconstruct time="20">
+		<Item identifier="iron" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+		<RequiredSkill identifier="mechanical" level="20" />
+		<RequiredItem identifier="iron" amount="2" />
+	</Fabricate>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="64,64,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="0,716,161,20" depth="0.55" origin="0.5,0.5" />
+	<Body width="160" height="20" density="50" />
+	<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-16,0" holdangle="60" reload="1.0" range="50" combatpriority="7" msg="ItemMsgPickUpSelect">
+		<Attack structuredamage="0" itemdamage="2" targetimpulse="2">
+			<Affliction identifier="lacerations" strength="5" />
+			<Affliction identifier="bleeding" strength="2" />
+			<Affliction identifier="stun" strength="0.05" />
+			<StatusEffect type="OnUse" target="UseTarget">
+				<Conditional entitytype="eq Character"/>
+				<Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+				<Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+			</StatusEffect>
+		</Attack>
+	</MeleeWeapon>
+	<aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+	<Quality>
+		<QualityStat stattype="RepairSpeed" value="0.1"/>
+	</Quality>
+	<Upgrade gameversion="1.6.18.1" spritecolor="225,225,225,255" InventoryIconColor="85,180,255,255" scale="0.32" />
+</Item>
+<!-- Variant Correction -->
+<Item name="" identifier="screwdriverhardened" variantof="screwdriver" allowasextracargo="true" InventoryIconColor="150,200,150,255" spritecolor="110,120,110" addedrepairspeedmultiplier="0.25">
+	<PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true"/>
+	<PreferredContainer primary="reactorcab,engcab" spawnprobability="0"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0"/>
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
+	<PreferredContainer primary="wreckreactorcab,abandonedreactorcab,piratereactorcab" spawnprobability="0" />
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
+	<PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
+	<Price baseprice="200" sold="false" />
+	<Deconstruct>
+		<Item identifier="iron" />
+		<Item identifier="depletedfuel" />
+	</Deconstruct>
+	<Fabricate requiresrecipe="true">
+		<RequiredItem identifier="depletedfuel" amount="2" />
+		<RequiredItem identifier="screwdriver" />
+	</Fabricate>
+	<MeleeWeapon>
+		<Attack targetimpulse="8" penetration="0.25">
+			<Affliction identifier="lacerations" strength="7" />
+			<Affliction identifier="radiationsickness" strength="1" />
+			<Affliction identifier="stun" strength="0.08" />
+			<Affliction identifier="bleeding" strength="2" />
+		</Attack>
+	</MeleeWeapon>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="150,200,150,255" />
+</Item>
+<Item name="" identifier="screwdriverdementonite" descriptionidentifier="dementonitetool" variantof="screwdriver" allowasextracargo="true" InventoryIconColor="255,75,75,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4">
+	<PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true"/>
+	<PreferredContainer primary="reactorcab,engcab" spawnprobability="0"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0"/>
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
+	<PreferredContainer primary="wreckreactorcab,abandonedreactorcab,piratereactorcab" spawnprobability="0" />
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
+	<PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
+	<Price baseprice="450" sold="false" canbespecial="false" />
+	<Deconstruct>
+		<Item identifier="iron" />
+		<Item identifier="dementonite" />
+	</Deconstruct>
+	<Fabricate />
+	<MeleeWeapon reload="*0.9">
+		<Attack targetimpulse="8">
+			<Affliction identifier="lacerations" strength="7.5" />
+			<Affliction identifier="psychosis" strength="5" />
+			<Affliction identifier="stun" strength="0.05" />
+		</Attack>
+		<StatusEffect type="OnFailure" target="Character">
+			<Sound file="Content/Items/Alien/AlienTurret1.ogg" range="500" />
+			<Affliction identifier="psychosis" strength="10" />
+		</StatusEffect>
+	</MeleeWeapon>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="255,75,75,255" />
+</Item>
+
+<!-- Updated UNSC Wrench, no change -->
+<Item name="" identifier="wrench" category="Equipment" InventoryIconColor="85,180,255,255" Tags="smallitem,tool,simpletool,mechanicalrepairtool,wrenchitem,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.2" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+	<Preferredcontainer secondary="respawncontainer" spawnprobability="1" notcampaign="true"/>
+	<PreferredContainer primary="engcab"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0.2"/>
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0.5"/>
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0.3"/>
+	<PreferredContainer secondary="outposttrashcan" spawnprobability="0.1" />
+	<Price baseprice="20" minavailable="10">
+		<Price storeidentifier="merchantoutpost" />
+		<Price storeidentifier="merchantcity" minavailable="5" />
+		<Price storeidentifier="merchantresearch" multiplier="1.25" />
+		<Price storeidentifier="merchantmilitary" multiplier="1.25" />
+		<Price storeidentifier="merchantmine" />
+		<Price storeidentifier="merchantengineering" minavailable="10" multiplier="0.9"/>
+	</Price>
+	<Deconstruct time="10">
+		<Item identifier="iron" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+		<RequiredSkill identifier="mechanical" level="20" />
+		<RequiredItem identifier="iron" amount="2" />
+	</Fabricate>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="165,717,263,62" depth="0.55" origin="0.5,0.5" />
+	<Body width="30" height="7" density="50" />
+	<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-12,0" holdangle="60" reload="1.0" range="50" combatpriority="8" msg="ItemMsgPickUpSelect">
+		<Attack structuredamage="0" itemdamage="2" targetimpulse="5">
+			<Affliction identifier="blunttrauma" strength="4" />
+			<Affliction identifier="stun" strength="0.2" />
+			<StatusEffect type="OnUse" target="UseTarget">
+				<Conditional entitytype="eq Character"/>
+				<Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+				<Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+			</StatusEffect>
+		</Attack>
+	</MeleeWeapon>
+	<aitarget sightrange="500" soundrange="500" fadeouttime="1" />
+	<Quality>
+		<QualityStat stattype="RepairSpeed" value="0.1"/>
+	</Quality>
+	<Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" scale="0.2" />
+</Item>
+<!-- Variant Correction -->
+<Item name="" identifier="wrenchhardened" variantof="wrench" allowasextracargo="true" InventoryIconColor="180,225,180,255" spritecolor="110,120,110" addedrepairspeedmultiplier="0.25">
+	<Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="0" notcampaign="true"/>
+	<PreferredContainer primary="engcab" spawnprobability="0"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0" />
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0"/>
+	<PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
+	<Price baseprice="200" sold="false">
+		<Price storeidentifier="merchantoutpost" />
+		<Price storeidentifier="merchantcity" multiplier="0.9" />
+		<Price storeidentifier="merchantresearch" />
+		<Price storeidentifier="merchantmilitary" />
+		<Price storeidentifier="merchantmine" />
+	</Price>
+	<Deconstruct>
+		<Item identifier="iron" />
+		<Item identifier="depletedfuel" />
+	</Deconstruct>
+	<Fabricate requiresrecipe="true">
+		<RequiredItem identifier="depletedfuel" amount="2" />
+		<RequiredItem identifier="wrench" />
+	</Fabricate>
+	<MeleeWeapon>
+		<Attack targetimpulse="8" penetration="0.25">
+			<Affliction identifier="blunttrauma" strength="8" />
+			<Affliction identifier="radiationsickness" strength="1" />
+			<Affliction identifier="stun" strength="0.3" />
+		</Attack>
+	</MeleeWeapon>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="150,200,150,255" />
+</Item>
+<Item name="" identifier="wrenchdementonite" descriptionidentifier="dementonitetool" variantof="wrench" allowasextracargo="true" InventoryIconColor="255,75,75,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4">
+	<Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="0" notcampaign="true"/>
+	<PreferredContainer primary="engcab" spawnprobability="0"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0" />
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0"/>
+	<PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
+	<Price baseprice="450" sold="false" canbespecial="false">
+		<Price storeidentifier="merchantoutpost" />
+		<Price storeidentifier="merchantcity" multiplier="0.9" />
+		<Price storeidentifier="merchantresearch" />
+		<Price storeidentifier="merchantmilitary" />
+		<Price storeidentifier="merchantmine" />
+	</Price>
+	<Deconstruct>
+		<Item identifier="iron" />
+		<Item identifier="dementonite" />
+	</Deconstruct>
+	<Fabricate />
+	<MeleeWeapon reload="*0.9">
+		<Attack targetimpulse="8">
+			<Affliction identifier="blunttrauma" strength="8.5" />
+			<Affliction identifier="psychosis" strength="5" />
+			<Affliction identifier="stun" strength="0.2" />
+		</Attack>
+		<StatusEffect type="OnFailure" target="Character">
+			<Sound file="Content/Items/Alien/AlienTurret1.ogg" range="500" />
+			<Affliction identifier="psychosis" strength="10" />
+		</StatusEffect>
+	</MeleeWeapon>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="255,75,75,255" />
+</Item>
+
+<!-- Updated UNSC crowbar, no change -->
+<Item name="" identifier="crowbar" category="Equipment" InventoryIconColor="85,180,255,255" Tags="smallitem,tool,simpletool,dooropeningtool,crowbaritem,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+	<Preferredcontainer secondary="respawncontainer" spawnprobability="1" notcampaign="true"/>
+	<PreferredContainer primary="engcab"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0.1"/>
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0.2"/>
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0.2"/>
+	<Price baseprice="20" minavailable="10">
+		<Price storeidentifier="merchantoutpost" />
+		<Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
+		<Price storeidentifier="merchantresearch" multiplier="1.25" />
+		<Price storeidentifier="merchantmilitary" multiplier="1.25" />
+		<Price storeidentifier="merchantmine" />
+	</Price>
+	<Deconstruct time="10">
+		<Item identifier="iron" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+		<RequiredSkill identifier="mechanical" level="30" />
+		<RequiredItem identifier="iron" amount="2" />
+	</Fabricate>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="1,1,238,53" depth="0.55" origin="0.5,0.5" />
+	<Body width="180" radius="25" density="50" />
+	<MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+		<Attack structuredamage="8" itemdamage="8" targetimpulse="10">
+			<Affliction identifier="blunttrauma" strength="10" />
+			<Affliction identifier="stun" strength="0.5" />
+			<StatusEffect type="OnUse" target="UseTarget">
+				<Conditional entitytype="eq Character"/>
+				<Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+				<Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+			</StatusEffect>
+		</Attack>
+	</MeleeWeapon>
+	<aitarget sightrange="1000" soundrange="500" fadeouttime="1" />
+	<Quality>
+		<QualityStat stattype="StrikingPowerMultiplier" value="0.1"/>
+	</Quality>
+	<Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+<!-- Variant Correction -->
+<Item name="" identifier="crowbarhardened" variantof="crowbar" allowasextracargo="true" InventoryIconColor="180,225,180,255" spritecolor="110,120,110" addedpickingspeedmultiplier="0.4">
+	<PreferredContainer secondary="respawncontainer" amount="1" spawnprobability="0" notcampaign="true"/>
+	<PreferredContainer primary="engcab" spawnprobability="0"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0" />
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0" />
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
+	<Price baseprice="200" sold="false" />
+	<Deconstruct>
+		<Item identifier="iron" />
+		<Item identifier="depletedfuel" />
+	</Deconstruct>
+	<Fabricate requiresrecipe="true">
+		<RequiredItem identifier="depletedfuel" amount="2" />
+		<RequiredItem identifier="crowbar" />
+	</Fabricate>
+	<MeleeWeapon>
+		<Attack targetimpulse="13" penetration="0.25">
+			<Affliction identifier="blunttrauma" strength="18" />
+			<Affliction identifier="radiationsickness" strength="1" />
+			<Affliction identifier="stun" strength="0.6" />
+		</Attack>
+	</MeleeWeapon>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="150,200,150,255" />
+</Item>
+<Item name="" identifier="crowbardementonite" descriptionidentifier="dementonitetool" variantof="crowbar" allowasextracargo="true" InventoryIconColor="255,75,75,255" spritecolor="136,142,166" addedpickingspeedmultiplier="0.6">
+	<PreferredContainer secondary="respawncontainer" amount="1" spawnprobability="0" notcampaign="true"/>
+	<PreferredContainer primary="engcab" spawnprobability="0"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0" />
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0" />
+	<PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
+	<Price baseprice="450" sold="false" canbespecial="false" />
+	<Deconstruct>
+		<Item identifier="iron" />
+		<Item identifier="dementonite" />
+	</Deconstruct>
+	<Fabricate />
+	<MeleeWeapon reload="*0.9">
+		<Attack targetimpulse="13">
+			<Affliction identifier="blunttrauma" strength="18" />
+			<Affliction identifier="psychosis" strength="5" />
+			<Affliction identifier="stun" strength="0.5" />
+		</Attack>
+		<StatusEffect type="OnFailure" target="Character">
+			<Sound file="Content/Items/Alien/AlienTurret1.ogg" range="500" />
+			<Affliction identifier="psychosis" strength="10" />
+		</StatusEffect>
+		<StatusEffect type="OnSuccess" target="Character">
+			<Sound file="Content/Items/Alien/AlienTurret2.ogg" range="500" />
+			<Affliction identifier="psychosis" strength="5" probability="0.05" />
+		</StatusEffect>
+	</MeleeWeapon>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="255,75,75,255" />
+</Item>
+
+<!-- Updated UNSC Handheld Sonar, no change -->
+<Item name="" identifier="handheldsonar" category="Equipment,Diving" Tags="smallitem,sonar,provocative" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" >
+	<Preferredcontainer secondary="respawncontainer" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="divingcab" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer secondary="wreckstoragecab,wreckdivingcab" spawnprobability="0.05" />
+	<Price baseprice="150" minavailable="1" >
+		<Price storeidentifier="merchantoutpost" />
+		<Price storeidentifier="merchantcity" minavailable="1" />
+		<Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="2" />
+		<Price storeidentifier="merchantmilitary" multiplier="1.25" />
+		<Price storeidentifier="merchantmine" />
+		<Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="2" />
+	</Price>
+	<Deconstruct time="15" >
+		<Item identifier="copper" />
+		<Item identifier="plastic" amount="2" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20" >
+		<RequiredSkill identifier="mechanical" level="30" />
+		<RequiredItem identifier="fpgacircuit" />
+		<RequiredItem identifier="plastic" />
+	</Fabricate>
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
+	<Sprite texture="Content/Items/Tools/tools.png" sourcerect="227,163,48,24" depth="0.55" origin="0.5,0.5" />
+	<Body width="40" height="22" density="12" />
+	<AiTarget sight="500" staticsight="true" />
+	<Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-25,0" msg="ItemMsgPickUpSelect" />
+	<Sonar range="6000.0" powerconsumption="10" drawhudwhenequipped="true" detectsubmarinewalls="true" displaybordersize="-0.1" characterusable="false" hasmineralscanner="true" allowuioverlap="true" >
+		<StatusEffect type="OnUse" targettype="Contained" Condition="-1.0" disabledeltatime="true" >
+			<RequiredItem items="mobilebattery" type="Contained" />
+		</StatusEffect>
+		<sound file="Content/Items/Command/SonarPing.ogg" type="OnUse" range="1000.0" frequencymultiplier="1.5" />
+		<GuiFrame relativesize="0.4,0.4" anchor="CenterLeft" relativeoffset="0.006,-0.01" />
+		<PingCircle texture="%ModDir%/UI/pingCircle.png" origin="0.5,0.5" />
+		<DirectionalPingCircle texture="Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
+		<ScreenOverlay texture="Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
+		<ScreenBackground texture="%ModDir%/UI/sonarBackground2.png" origin="0.5,0.5" />
+		<DirectionalPingBackground texture="Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
+		<DirectionalPingButton index="0" texture="Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+		<DirectionalPingButton index="1" texture="Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+		<DirectionalPingButton index="2" texture="Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+		<Blip texture="Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
+		<LineSprite texture="Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
+		<icon identifier="outpost" texture="Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5" />
+		<icon identifier="submarine" texture="Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5" />
+		<icon identifier="shuttle" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5" />
+		<icon identifier="artifact" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,414,8,8" origin="0.5,0.5" />
+		<icon identifier="location" texture="Content/UI/MainIconsAtlas.png" sourcerect="349,435,11,11" origin="0.5,0.5" />
+		<icon identifier="mineral" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,434,7,12" origin="0.5,0.5" />
+		<icon identifier="" texture="Content/UI/MainIconsAtlas.png" sourcerect="346,416,4,4" origin="0.5,0.5" />
+		<LightComponent vulnerabletoemp="false" LightColor="120,255,120,255" range="25" powerconsumption="10" pulsefrequency="0.5" pulseamount="0.8" castshadows="false" IsOn="false" canbeselected="false" >
+			<IsActive TargetItemComponent="Sonar" CurrentMode="Active" />			
+		</LightComponent>
+	</Sonar>
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery" >
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+		<Containable items="mobilebattery" >
+			<StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+		</Containable>
+	</ItemContainer>
+	<Upgrade gameversion="0.10.0.0" scale="0.5" />
+</Item>
+
+<!-- Updated UNSC Oxygen Tank, no change -->
+<!-- O² Tank -->
+<Item name="" identifier="oxygentank" category="Diving,Equipment" InventoryIconColor="85,180,255,255" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,oxygensource,refillableoxygensource" cargocontaineridentifier="metalcrate" scale="0.3" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+	<PreferredContainer secondary="respawncontainer" amount="8" spawnprobability="1" notcampaign="true"/>
+	<PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
+	<PreferredContainer primary="oxygengenerator" maxcondition="75"/>
+	<PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
+	<PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
+	<PreferredContainer secondary="supplycab" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
+	<PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
+	<PreferredContainer secondary="wrecksupplycab,beaconsupplycab" spawnprobability="0.2"/>
+	<PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
+	<PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
+	<PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
+	<Price baseprice="75">
+		<Price storeidentifier="merchantoutpost" minavailable="10"/>
+		<Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
+		<Price storeidentifier="merchantresearch" minavailable="10"/>
+		<Price storeidentifier="merchantmilitary" minavailable="10"/>
+		<Price storeidentifier="merchantmine" multiplier="1.25" minavailable="20" />
+	</Price>
+	<Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="120" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
+	<Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="0.0">
+		<RequiredSkill identifier="mechanical" level="20" />
+		<RequiredItem identifier="aluminium" amount="2" />
+	</Fabricate>
+	<Deconstruct time="10">
+		<Item identifier="aluminium" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="320,0,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="84,55,39,110" depth="0.55" origin="0.5,0.55" />
+	<Body radius="20" height="60" density="9.7" />
+	<Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+		<StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
+		<StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+			<Conditional HasStatusTag="onfire" />
+			<sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+			<Explosion range="150.0" force="3" debris="true" >
+				<Affliction identifier="burn" strength="25" />
+				<Affliction identifier="stun" strength="5" />
+			</Explosion>
+		</StatusEffect>
+	</Holdable>
+	<Quality>
+		<QualityStat stattype="Condition" value="0.1"/>
+	</Quality>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" scale="0.3" />
+</Item>
+
+<!-- Updated UNSC Welding Fuel Tank, no change -->
+<Item name="" identifier="weldingfueltank" category="Equipment,Fuel" InventoryIconColor="85,180,255,255" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,weldingtoolfuel,weldingfuel" cargocontaineridentifier="metalcrate" scale="0.3" impactsoundtag="impact_metal_light">
+	<PreferredContainer primary="nh_m7057" spawnprobability="1" CampaignOnly="True" />
+	<PreferredContainer primary="weldingtool,flamer" spawnprobability="1"/>
+	<PreferredContainer primary="engcab" minamount="4" maxamount="6" spawnprobability="1" notcampaign="true"/>
+	<PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" minamount="1" maxamount="3" spawnprobability="0.2"/>
+	<PreferredContainer primary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0.05"/>
+	<PreferredContainer secondary="supplycab"/>
+	<Price baseprice="120" displaynonempty="true">
+		<Price storeidentifier="merchantoutpost" minavailable="6" />
+		<Price storeidentifier="merchantcity" minavailable="7" />
+		<Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="3" />
+		<Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="3" />
+		<Price storeidentifier="merchantmine" multiplier="0.9" minavailable="15" />
+		<Price storeidentifier="merchantengineering" minavailable="10" multiplier="0.9"/>
+		<Price storeidentifier="merchanttutorial" multiplier="0.5" minavailable="3" />
+	</Price>
+	<Deconstruct time="10">
+		<Item identifier="aluminium" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+		<RequiredSkill identifier="mechanical" level="20" />
+		<RequiredItem identifier="aluminium" amount="2" />
+		<RequiredItem identifier="ethanol" />
+	</Fabricate>
+	<Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="5">
+		<RequiredSkill identifier="mechanical" level="15" />
+		<RequiredItem identifier="weldingfueltank" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
+		<RequiredItem identifier="ethanol" />
+	</Fabricate>
+	<Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="190" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="384,0,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="123,55,39,110" depth="0.55" origin="0.5,0.55" />
+	<Body radius="20" height="60" density="5" />
+	<Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+		<StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
+		<StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+			<Conditional HasStatusTag="onfire" />
+			<sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+			<sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
+			<Explosion range="150.0" force="3">
+				<Affliction identifier="burn" strength="25" />
+				<Affliction identifier="stun" strength="5" />
+			</Explosion>
+		</StatusEffect>
+	</Holdable>
+	<Quality>
+		<QualityStat stattype="Condition" value="0.1"/>
+	</Quality>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" scale="0.3" />
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!-- Updated UNSC comms, reduced range of communication -->
+<Item name="" identifier="headset" scale="0.2" category="Equipment" tags="smallitem,mobileradio,nh_needs_battery" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" health="2" condition="1" HideConditionBar="true" HideConditionInTooltip="true">
+	<PreferredContainer primary="crewcab" secondary="divingcab"/>
+	<Price baseprice="105">
+		<Price storeidentifier="merchantoutpost" minavailable="3" />
+		<Price storeidentifier="merchantcity" multiplier="0.9" minavailable="10" />
+		<Price storeidentifier="merchantresearch" minavailable="4" />
+		<Price storeidentifier="merchantmilitary" minavailable="6" />
+		<Price storeidentifier="merchantmine" minavailable="6" />
+	</Price>
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="513,257,126,174" depth="0.51" origin="0.5,0.5" />
+	<BrokenSprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="641,257,126,174" depth="0.6" maxcondition="0" origin="0.5,0.5" />
+	<Body radius="20" height="126" density="174" />
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+		<RequiredSkill identifier="mechanical" level="30" />
+		<RequiredItem identifier="plastic" />
+		<RequiredItem identifier="fpgacircuit" />
+	</Fabricate>
+	<Deconstruct time="3">
+		<Item identifier="plastic" amount="2" />
+		<Item identifier="copper" />
+	</Deconstruct>
+	<WifiComponent range="8000.0" LinkToChat="true" MinChatMessageInterval="0.0" >
+		<RequiredItems items="mobilebattery" type="Contained" />
+		<StatusEffect type="OnActive" targettype="This" >
+			<Conditional JamTimer="gt 0" targetitemcomponent="WifiComponent" />
+			<RequiredItems items="mobilebattery" type="Contained" />
+			<sound file="Content/Sounds/RadioStatic.ogg" range="500.0" frequencymultiplier="0.7" loop="true" volume="0.5" />
+		</StatusEffect>
+		<!-- Fix for dumb inventory mods -->
+		<StatusEffect type="Always" OneShot="True" targettype="This" condition="100" setvalue="True" disabledeltatime="True" >
+			<Conditional condition="lt 2" />
+			<SpawnItem identifier="batterycelldisposable" spawnposition="ThisInventory" />
+		</StatusEffect>
+	</WifiComponent>
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery" >
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+		<Containable items="mobilebattery" />
+	</ItemContainer>
+	<Upgrade gameversion="1.6.18.1" scale="0.2" />
+	<Upgrade gameversion="1.6.18.1">
+		<WifiComponent range="8000.0">
+			<RequiredItems items="mobilebattery" type="Contained" />
+		</WifiComponent>
+	</Upgrade>
+	<Wearable limbtype="Torso" slots="Any,Headset" msg="ItemMsgPickUpSelect" displaycontainedstatus="true" >
+		<StatusEffect type="OnWearing" targettype="Character,Contained" Condition="-0.03" >
+			<Conditional IsPlayer="true" />
+		</StatusEffect>
+		<sprite name="Headset Wearable" texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="513,257,126,174" limb="Torso" inheritlimbdepth="true" depthlimb="Head" hidelimb="false" inheritscale="false" ignorelimbscale="true" scale="0.1" hideotherwearables="false" canbehiddenbyotherwearables="false" origin="1.3,-1.0" />
+	</Wearable>
+</Item>
+</Override>
+
+<!-- Removed, just use welding fuel -->
+<Item name="" identifier="nh_gasolinetank" nameidentifier="weldingfueltank" descriptionidentifier="weldingfueltank" variantof="weldingfueltank" category="Equipment,Fuel" InventoryIconColor="85,180,255,255" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,weldingtoolfuel,weldingfuel,weldingfueltank" cargocontaineridentifier="metalcrate" scale="0.32" impactsoundtag="impact_metal_light" hideinmenus="true">
+	<!-- not naturally spawning -->
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<!-- not purchaseable -->
+	<Price sold="false" canbespecial="false" />
+	<!-- not fabricable -->
+	<Fabricate suitablefabricators="hiddenfabricator" requiredtime="1000" />
+	<Fabricate suitablefabricators="hiddenfabricator" requiredtime="1000" />
+	<Fabricate suitablefabricators="hiddenfabricator" requiredtime="1000" />
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!-- Large Gasoline tank used for Generator -->
+<!-- Jerry Can -->
+<Item name="" identifier="nh_jerrycan" health="800" category="Equipment" InventoryIconColor="85,180,255,255" Tags="smallitem" DamagedByExplosions="true" ExplosionDamageMultiplier="10" cargocontaineridentifier="metalcrate" scale="0.27" impactsoundtag="impact_metal_light" >
+	<PreferredContainer primary="nh_generator" spawnprobability="1" campaignonly="true" />
+	<Price locationtype="City" buyprice="100" />
+	<Price locationtype="Research" buyprice="100" />
+	<Price locationtype="military" buyprice="125" />
+	<Price locationtype="Outpost" buyprice="150" />
+	<Price locationtype="mine" buyprice="100" />
+	<Deconstruct time="10" >
+		<Item identifier="aluminium" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="2,66,60,60" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="84,165,156,166" depth="0.55" origin="0.5,0.5" />
+	<Body width="150" height="160" density="20" />
+	<Holdable slots="Any,RightHand,LeftHand" holdangle="90" handle1="12,80" msg="ItemMsgPickUpSelect" >
+		<StatusEffect type="OnFire" targettype="This" condition="-75" />
+		<StatusEffect type="OnBroken" targettype="This" disabledeltatime="true" noninteractable="true" />
+		<StatusEffect type="OnBroken" targettype="This" delay="1.5" disabledeltatime="true" >
+			<Explosion range="1500.0" force="0.01" shockwave="false" smoke="false" flames="true" sparks="false" underwaterbubble="false" />
+			<Explosion range="350.0" structuredamage="15" ballastfloradamage="1000" force="3.0" camerashake="20.0" shockwave="true" smoke="false" flames="true" sparks="false" underwaterbubble="false" >
+				<Affliction identifier="burn" strength="25" />
+				<Affliction identifier="stun" strength="3" />
+			</Explosion>
+			<Spawnitem identifier="nh_napalm" spawnposition="This" count="4" aimspread="360" rotationtype="Collider" />
+		</StatusEffect>
+		<StatusEffect type="OnBroken" targettype="This" delay="1.51" disabledeltatime="true" >
+			<Sound file="%ModDir%/Items/Weapons/Explosion/expl_M9frag_3.ogg" range="1500" volume="1.5" />
+			<Remove />
+		</StatusEffect>
+	</Holdable>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" scale="0.32" />
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!-- Portable Generator able to be carried around and used as a small temporary reactor for emergency power, requires gasoline and is loud and annoying -->
+<!-- Generator -->
+<Item name="" identifier="nh_generator" tags="smallitem,reactor" category="Equipment" DamagedByExplosions="true" DamagedByProjectiles="true" explosiondamagemultiplier="1.5" scale="0.25" >
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="241,1,270,214" depth="0.55" />
+	<BrokenSprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="241,217,270,214" depth="0.55" maxcondition="0" fadein="false" />
+	<Body width="270" height="214" density="50" />
+	<DecorativeSprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="241,1,270,214" scale="1.0" depth="0.549" origin="0.5,0.5" offset="20,20" offsetanim="Noise" offsetanimspeed="3.0" >
+		<AnimationConditional Voltage="gt 0.5" targetitemcomponent="LightComponent" />
+		<AnimationConditional IsActive="True" targetitemcomponent="LightComponent" />
+		<IsActiveConditional Condition="gt 0.0" />
+	</DecorativeSprite>
+	<Holdable slots="RightHand+LeftHand" msg="itemmsgdetachcrowbar" aimpos="35,-10" holdpos="35,-10" handle1="0,0" attachable="true" aimable="true" PickingTime="3" >
+		<RequiredItem items="crowbar" type="Equipped" />
+	</Holdable>
+	<PowerContainer capacity="9999" charge="0" maxoutput="1000" canbeselected="false" indicatorposition="65,33" indicatorsize="34,46" ishorizontal="true" />
+	<LightComponent vulnerabletoemp="false" LightColor="0,0,0,0" range="1" ison="False" castshadows="false" drawbehindsubs="true" allowingameediting="false" canbeselected="false" >
+		<StatusEffect type="OnActive" targettype="This" charge="9999" setvalue="true" />
+		<StatusEffect type="OnActive" targettype="Contained" condition="-0.5" >
+			<sound file="%ModDir%/Items/Misc/EK_generator_diesel_small.ogg" range="600.0" volume="0.4" loop="true" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="This" ison="false" charge="0" setvalue="true" >
+			<Conditional HasStatusTag="! nh_fueled" />
+		</StatusEffect>
+	</LightComponent>
+	
+	<Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.125" mindeteriorationdelay="120" maxdeteriorationdelay="240" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="8" fixDurationLowSkill="35" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+		<StatusEffect type="InWater" target="This" condition="-0.5" />
+		<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+		<RequiredSkill identifier="mechanical" level="45" />
+		<RequiredItem items="wrench" type="Equipped" />
+		<ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+		<ParticleEmitter particle="smoke" particlespersecond="2" scalemin="1" scalemax="2.5" anglemax="360" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+		<ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="1.0" scalemax="1.5" distancemax="20" mincondition="0.0" maxcondition="5.0" />
+		<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+			<Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+			<Affliction identifier="lacerations" strength="5" />
+			<Affliction identifier="stun" strength="4" />
+		</StatusEffect>
+	</Repairable>
+	
+	<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10" >
+		<GuiFrame relativesize="0.1,0.2" anchor="Center" style="ConnectionPanel" />
+		<RequiredSkill identifier="electrical" level="50" />
+		<RequiredItem items="screwdriver" type="Equipped" />
+		<output name="power_out" displayname="connection.powerout" />
+	</ConnectionPanel>
+	
+	<CustomInterface canbeselected="true" drawhudwhenequipped="false">
+		<GuiFrame relativesize="0.15,0.15" anchor="Center" absoluteoffset="0,-10" style="ItemUI" />
+		<TickBox text="Generator On/Off">
+			<StatusEffect type="OnUse" targettype="This" IsOn="true" >
+				<Conditional condition="gt 0.5" targetcontaineditem="true" />
+				<RequiredItems identifiers="weldingtoolfuel,weldingfuel,nh_jerrycan" type="Contained" />
+			</StatusEffect>
+			<StatusEffect type="OnSecondaryUse" targettype="This" IsOn="False" charge="0" setvalue="true" />
+		</TickBox>
+	</CustomInterface>
+	
+	<ItemContainer capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" containedstateindicatorstyle="tank">
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+		<GuiFrame relativesize="0.15,0.15" anchor="Center" style="ItemUI" />
+		<Containable identifiers="weldingtoolfuel,weldingfuel,nh_jerrycan" >
+			<StatusEffect type="OnContaining" targettype="This" tags="nh_fueled" duration="0.5" stackable="true" disabledeltatime="true" >
+				<Conditional condition="gt 0.5" targetcontaineditem="true" />
+			</StatusEffect>
+		</Containable>
+	</ItemContainer>
+	<aitarget sightrange="500" soundrange="5500" />
+</Item>
+
+<!-- Large Jackhammer capable of sufficiently mining ore -->
+<!-- <Item name="Jackhammer" identifier="nh_jackhammer" category="Equipment" Tags="smallitem,cuttingequipment,tool" cargocontaineridentifier="metalcrate" description="" Scale="0.32" impactsoundtag="impact_metal_light" >
+	<Price locationtype="City" buyprice="150" />
+	<Price locationtype="Research" buyprice="125" />
+	<Price locationtype="military" buyprice="125" />
+	<Price locationtype="Outpost" buyprice="225" />
+	<Price locationtype="mine" buyprice="25" />
+	<Deconstruct time="10" >
+		<Item identifier="steel" />
+		<Item identifier="steel" />
+		<Item identifier="steel" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20" >
+		<RequiredSkill identifier="mechanical" level="30" />
+		<RequiredItem identifier="steel" />
+		<RequiredItem identifier="steel" />
+		<RequiredItem identifier="steel" />
+	</Fabricate>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Misc/miscgear.png" sourcerect="1,332,136,98" depth="0.55" origin="0.5,0.5" />
+	<Body radius="50" height="98" width="136" density="40" />
+	<Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,0" handle1="-85,-25" handle2="-10,-27" msg="ItemMsgPickUpSelect" />
+	<RepairTool structurefixamount="-0.125" range="150" barrelpos="45,10" combatpriority="10" repairthroughholes="true" >
+		<RequiredItems items="batterycell" type="Contained" msg="ItemMsgOxygenTankRequired" />
+		<StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-1.0" />
+		<StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-20.0" Condition="-3.0" />
+		<StatusEffect type="OnUse" targettype="UseTarget" Condition="-3.0" />
+		<StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.005" >			
+			<Affliction identifier="burn" amount="1.0" />
+		</StatusEffect>
+		<ParticleEmitter particle="plasma" particlespersecond="50" copyentityangle="true" />
+		<ParticleEmitterHitStructure particle="spark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+		<ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="spark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+		<ParticleEmitterHitItem identifiers="ore" particle="iceshards" particlespersecond="5" anglemin="-40" anglemax="40" velocitymin="10" velocitymax="300" scalemin="0.5" scalemax="1.0" />
+		<ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+		<sound file="Content/Items/Tools/PlasmaCutterLoop.ogg" type="OnUse" range="500.0" loop="true" />
+		<Fixable identifier="structure" />
+		<RequiredSkill identifier="mechanical" level="30" />
+		<StatusEffect type="OnFailure" targettype="Contained" targets="oxygentank" Condition="-3.0" />
+		<StatusEffect type="OnFailure" targettype="Contained" targets="oxygenitetank" Condition="-1.5" />
+		<LightComponent vulnerabletoemp="false" LightColor="0.8,0.7,1.0,1.0" Flicker="0.5" >
+			<sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+		</LightComponent>		
+	</RepairTool>
+	<ItemContainer capacity="1" hideitems="false" itempos="-70,33" itemrotation="-90" containedspritedepth="0.56" >
+		<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
+		<Containable items="batterycell" />
+	</ItemContainer>
+	<aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
+</Item> -->
+
+<!-- Small Crate -->
+<Item name="" identifier="nh_smallcrate" tags="crate,allowcleanup" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" >
+	<Deconstruct time="20" >
+	<Item identifier="steel" />
+	</Deconstruct>
+	<Sprite texture="%ModDir%/Items/Misc/miscprops.png" sourcerect="374,40,99,71" depth="0.55" origin="0.5,0.5" />
+	<Body width="95" height="65" density="50" />
+	<Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+	<ItemContainer capacity="9" maxstacksize="32" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+		<Containable items="smallitem,mediumitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter,largemobilecontainer" />
+	</ItemContainer>
+	<Upgrade gameversion="1.6.18.1">
+		<ItemContainer capacity="9" maxstacksize="32" />
+	</Upgrade>
+</Item>
+
+<!-- Medium Crate, now an override of metalcrate -->
+<Override>
+<Item name="" identifier="metalcrate" tags="crate,allowcleanup" aliases="metalcrate_event" scale="0.45" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy">
+	<Deconstruct time="1.0"/>
+	<Sprite texture="%ModDir%/Items/Misc/miscprops.png" depth="0.54" sourcerect="571,282,143,96" origin="0.5,0.5" />
+	<Body width="135" height="90" density="25" />
+	<Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+	<ItemContainer capacity="20" maxstacksize="32" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+		<Containable items="smallitem,mediumitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter,largemobilecontainer" />
+	</ItemContainer>
+	<Upgrade gameversion="1.6.18.1">
+		<ItemContainer capacity="20" maxstacksize="32" />
+	</Upgrade>
+</Item>
+</Override>
+<Item name="" identifier="nh_mediumcrate" variantof="metalcrate" nameidentifier="metalcrate" descriptionidentifier="metalcrate" tags="crate,allowcleanup" aliases="metalcrate_event" scale="0.45" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" hideinmenus="true">
+</Item>
+
+<!-- Large Crate -->
+<Item name="" identifier="nh_largecrate" tags="allowcleanup" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy">
+	<Deconstruct time="1.5"/>
+	<Sprite texture="%ModDir%/Items/Misc/miscprops.png" depth="0.54" sourcerect="473,185,241,97" origin="0.5,0.5" />
+	<Body width="235" height="90" density="25" />
+	<Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+	<ItemContainer capacity="30" maxstacksize="32" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+		<Containable items="smallitem,mediumitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter,largemobilecontainer" />
+	</ItemContainer>
+</Item>
+
+<!-- Fusion Coil which takes damage and detonates on too much, w/ dynamic lightcomponent -->
+<Item name="" identifier="nh_fusioncoil" tags="largeitem" scale="0.5" maxstacksize="100" ShowNameInHealthBar="True" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="100" health="10" impacttolerance="8" DamagedByExplosions="true" DamagedByProjectiles="true" DamagedByMeleeWeapons="True" explosiondamagemultiplier="100" impactsoundtag="impact_soft" >
+	<Deconstruct time="20" >
+		<Item identifier="steel" />
+	</Deconstruct>
+	<Sprite texture="%ModDir%/Items/Misc/miscprops.png" sourcerect="374,210,99,169" depth="0.55" origin="0.5,0.5" />
+	<Body width="98" height="160" density="4" />
+	<Holdable slots="RightHand+LeftHand" holdpos="-30,0" handle1="-40,15" handle2="35,-30" holdangle="100" aimable="false" msg="ItemMsgPickUpSelect" />
+	
+	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,180,100,75" range="50" rotation="90" flicker="0.25" castshadows="false" allowingameediting="false" ison="true" >
+		<LightTexture texture="Content/Lights/light_fluorescent_L2.png" origin="0.5,0.5" />
+	</LightComponent>
+	
+	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,180,100,75" range="50" rotation="90" flicker="0.25" castshadows="false" allowingameediting="false" ison="true" >
+		<LightTexture texture="Content/Lights/light_fluorescent_L2.png" origin="0.5,0.5" />
+		
+		<StatusEffect type="OnDamaged" target="This" forceplaysounds="true" >
+			<Sound file="%ModDir%/Afflictions/spartan_shield_damaged.ogg" range="400" volume="1.0" />
+		</StatusEffect>
+		<StatusEffect type="OnDamaged" target="This" tags="damaged_recently" duration="15" disabledeltatime="true" stackable="true" />
+		<StatusEffect type="OnNotContained" target="This" condition="0.6" comparison="and" >
+			<Conditional HasStatusTag="! damaged_recently" />
+			<Conditional condition="gteq 1" />
+		</StatusEffect>
+		
+		<!-- Very memory using sadly, but if its making sound all the time i have no other choice -->
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" LightColor="255,180,100,120" Range="60" TargetItemComponent="LightComponent" >
+			<Conditional condition="gteq 8" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_loop_1.ogg" range="300" volume="0.25" loop="true" />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" LightColor="255,180,100,165" Range="70" TargetItemComponent="LightComponent" comparison="and" >
+			<Conditional condition="lt 6" />
+			<Conditional condition="gteq 4" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_loop_2.ogg" range="425" volume="0.4875" loop="true" />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" LightColor="255,180,100,210" Range="80" TargetItemComponent="LightComponent" comparison="and" >
+			<Conditional condition="lt 4" />
+			<Conditional condition="gteq 2" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_loop_3.ogg" range="550" volume="0.725" loop="true" />
+			<ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+			<ParticleEmitter particle="mistSmoke" particlespersecond="2" scalemin="1" scalemax="2.5" anglemax="360" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" LightColor="255,180,100,255" Range="90" TargetItemComponent="LightComponent" comparison="and" >
+			<Conditional condition="lt 2" />
+			<Conditional condition="gteq 1" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_loop_4.ogg" range="675" volume="0.9625" loop="true" />
+			<ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+			<ParticleEmitter particle="mistSmoke" particlespersecond="2" scalemin="1" scalemax="2.5" anglemax="360" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" target="This,Contained" setvalue="true" >
+			<Conditional condition="lt 1" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_loop_5.ogg" range="800" volume="1.2" loop="true" />
+			<ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+			<ParticleEmitter particle="mistSmoke" particlespersecond="2" scalemin="1" scalemax="2.5" anglemax="360" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+			<Use />
+		</StatusEffect>
+
+		<StatusEffect type="OnImpact" target="This" condition="-1" setvalue="true" />
+		<StatusEffect type="OnBroken" target="Contained" AllowWhenBroken="true" >
+			<Use />
+		</StatusEffect>
+		<StatusEffect type="OnBroken" target="This" delay="0.3" >
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_explosion_1.ogg" range="1500" volume="1.5" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_explosion_2.ogg" range="1500" volume="1.5" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_explosion_3.ogg" range="1500" volume="1.5" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_explosion_4.ogg" range="1500" volume="1.5" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_explosion_5.ogg" range="1500" volume="1.5" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_explosion_6.ogg" range="1500" volume="1.5" />
+			<Sound file="%ModDir%/Items/Misc/Fusion_Coil/fusion_coil_explosion_7.ogg" range="1500" volume="1.5" />
+			<Explosion range="350.0" structuredamage="45" itemdamage="500" ballastfloradamage="80" force="15" stun="1.0" severlimbsprobability="0.5" shockwave="false" smoke="false" flames="true" sparks="false" underwaterbubble="true" camerashake="100.0" >
+				<Affliction identifier="explosiondamage" strength="300" />
+				<Affliction identifier="bleeding" strength="75" />
+			</Explosion>
+			<Remove />
+		</StatusEffect>
+	</LightComponent>
+	
+	<ItemContainer capacity="1" maxstacksize="1" itempos="0,0" ShowConditionInContainedStateIndicator="true" drawinventory="false" canbeselected="false" hideitems="false" spawnwithid="nh_fusioncoil_light" removecontaineditemsondeconstruct="true" >
+		<Containable identifiers="nh_fusioncoil_light" />
+	</ItemContainer>
+</Item>
+
+<!-- Light is seporate or else when the coil is broken the light goes out -->
+<Item name="Fusion Coil Light" identifier="nh_fusioncoil_light" nameidentifier="nh_hide_from_console" scale="0.5" hideinmenus="true" >
+	<Sprite texture="%ModDir%/Items/Misc/miscprops.png" sourcerect="0,0,1,1" depth="0.5" origin="0.5,0.5" />
+	<Body width="10" height="10" density="50" />
+	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,180,100,255" range="0.1" rotation="90" flicker="0.25" castshadows="false" allowingameediting="false" ison="true" >
+		<LightTexture texture="Content/Lights/light_fluorescent_L2.png" origin="0.5,0.5" />
+		<StatusEffect type="OnUse" target="This" range="100" setvalue="true"/>
+	</LightComponent>
+	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,180,100,255" range="0.1" rotation="90" flicker="0.25" castshadows="false" allowingameediting="false" ison="true" >
+		<LightTexture texture="Content/Lights/light_fluorescent_L2.png" origin="0.5,0.5" />
+	</LightComponent>
+	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,180,100,255" range="0.1" rotation="90" flicker="0.25" castshadows="false" allowingameediting="false" ison="true" >
+		<LightTexture texture="Content/Lights/light_fluorescent_L2.png" origin="0.5,0.5" />
+	</LightComponent>
+</Item>
+
+<!-- Variant of Fusion Coil that sometimes spawns in outposts -->
+<Item name="Fusion Coil" identifier="nh_fusioncoil_outpost" nameidentifier="nh_hide_from_console" variantof="nh_fusioncoil" descriptionidentifier="nh_fusioncoil" ShowNameInHealthBar="True" tags="smallitem,nh_fusioncoil" scale="0.5" maxstacksize="1" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" health="10" impacttolerance="8" DamagedByExplosions="true" DamagedByProjectiles="true" explosiondamagemultiplier="100" impactsoundtag="impact_soft" hideinmenus="true" noninteractable="true" >
+	<PreferredContainer Primary="outpostsupplycab,outpostengcab,outpostengcab" spawnprobability="0.1" CampaignOnly="true" />
+	<PreferredContainer Primary="nh_dev_tool" spawnprobability="1" NotCampaign="true" />
+	<Holdable slots="Any" >
+		<StatusEffect Type="Always" OneShot="true" targettype="This" delay="0.5" disabledeltatime="true" >
+			<DropItem />
+		</StatusEffect>
+	</Holdable>
+</Item>
+
+<!-- ///////////////////////////////////////////////////////////
+//////////// Machinery /////////////////////////////////////////
+///////////////////////////////////////////////////////////// -->
+<Override>
+<Item name="Hidden Fabricator" identifier="nh_hiddenfabricator" nameidentifier="nh_hide_from_console" description="A dummy fabricator just used to hide recipes that are generated unintentionally on variant items." tags="hiddenfabricator,donttakeitems" category="machine" linkable="true" allowedlinks="deconstructor,locker" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" hideinmenus="true" indestructible="true">
+	<Deconstruct time="20">
+		<Item identifier="steel" />
+		<Item identifier="copper" amount="2" />
+		<Item identifier="plastic" />
+	</Deconstruct>
+	<Sprite name="portwepfabnormal" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="3,231,251,213" depth="0.8" canflipx="false" origin="0.5,0.5" />
+	<BrokenSprite name="portwepfabdamage1" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="256,230,251,213" depth="0.8" maxcondition="80" fadein="true" origin="0.5,0.5" />
+	<BrokenSprite name="portwepfabdamage2" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="256,230,251,213" depth="0.8" maxcondition="0" origin="0.5,0.5" />
+	<Body width="225" height="150" density="40" />
+	<Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="false">
+		<RequiredItem identifier="crowbar" type="Equipped" />
+		<StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.5" setvalue="true" />
+		<StatusEffect type="Always" target="This" disabledeltatime="true" stackable="false" setvalue="true" condition="100" allowwhenbroken="true">
+			<Conditional attached="false" />
+		</StatusEffect>
+	</Holdable>
+	<Fabricator canbeselected="true" powerconsumption="0.0" msg="ItemMsgInteractSelect" fabricationspeed="0.01">
+		<GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+		<sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="9000.0" loop="true" volume="10" />
+		<sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="9000.0" loop="true" volume="10" />
+		<sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="9000.0" loop="true" volume="10" />
+		<sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="9000.0" loop="true" volume="10" />
+		<poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
+		<StatusEffect type="InWater" target="This" condition="-0.5" />
+		<StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
+	</Fabricator>
+	<ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true">
+		<StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+	</ItemContainer>
+	<ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
+		<StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+	</ItemContainer>
+</Item>
+</Override>
+<!-- Stuff from Enhanced Armaments, no change -->
+<Override>
+<Item name="" description="" identifier="scp_portableweaponfabricator" tags="weaponfabricator,donttakeitems" category="machine" linkable="true" allowedlinks="deconstructor,locker" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+	<Price baseprice="500" soldeverywhere="false">
+		<Price storeidentifier="outpost" multiplier="1.1" minavailable="1" />
+		<Price storeidentifier="city" multiplier="0.9" minavailable="2" />
+		<Price storeidentifier="research" multiplier="1" minavailable="1" />
+		<Price storeidentifier="military" multiplier="1" minavailable="1" />
+		<Price storeidentifier="mine" multiplier="0.8" minavailable="3" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+		<RequiredSkill identifier="electrical" level="25" />
+		<RequiredSkill identifier="mechanical" level="40" />
+		<RequiredItem identifier="steel" amount="2" />
+		<RequiredItem identifier="fpgacircuit" />
+		<RequiredItem identifier="plastic" amount="2" />
+	</Fabricate>
+	<Deconstruct time="20">
+		<Item identifier="steel" />
+		<Item identifier="copper" amount="2" />
+		<Item identifier="plastic" />
+	</Deconstruct>
+	<UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+	<Sprite name="portwepfabnormal" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="3,231,251,213" depth="0.501" canflipx="false" origin="0.5,0.5" />
+	<BrokenSprite name="portwepfabdamage1" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="256,230,251,213" depth="0.8" maxcondition="80" fadein="true" origin="0.5,0.5" />
+	<BrokenSprite name="portwepfabdamage2" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="256,230,251,213" depth="0.8" maxcondition="0" origin="0.5,0.5" />
+	<Body width="225" height="150" density="40" />
+	<Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="false">
+		<RequiredItem identifier="crowbar" type="Equipped" />
+		<StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.5" setvalue="true" />
+		<StatusEffect type="Always" target="This" disabledeltatime="true" stackable="false" setvalue="true" condition="100" allowwhenbroken="true">
+			<Conditional attached="false" />
+		</StatusEffect>
+	</Holdable>
+	<Fabricator canbeselected="true" powerconsumption="300.0" msg="ItemMsgInteractSelect" fabricationspeed="1.05">
+		<GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+		<sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="800.0" loop="true" />
+		<poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
+		<StatusEffect type="InWater" target="This" condition="-0.5" />
+		<StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
+	</Fabricator>
+	<ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+		<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+		<RequiredSkill identifier="electrical" level="55" />
+		<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+			<Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+			<Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+			<Affliction identifier="stun" strength="5" />
+			<Affliction identifier="burn" strength="5" />
+		</StatusEffect>
+		<RequiredItem items="screwdriver" type="Equipped" />
+		<input name="power_in" displayname="connection.powerin" />
+		<output name="condition_out" displayname="connection.conditionout" />
+	</ConnectionPanel>
+	<Repairable selectkey="Select" header="mechanicalrepairsheader" deteriorationspeed="0.40" mindeteriorationdelay="120" maxdeteriorationdelay="240" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+		<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
+		<RequiredSkill identifier="mechanical" level="55" />
+		<RequiredItem items="wrench" type="Equipped" />
+		<ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+		<ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+		<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+		<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+			<Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+			<Affliction identifier="lacerations" strength="5" />
+			<Affliction identifier="stun" strength="5" />
+		</StatusEffect>
+	</Repairable>
+	<ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true">
+		<StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+	</ItemContainer>
+	<ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
+		<StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+	</ItemContainer>
+</Item>
+
+<Item name="" description="" identifier="scp_portableammofabricator" tags="ammofabricator,donttakeitems" category="machine" linkable="true" allowedlinks="deconstructor,locker" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+	<Price baseprice="500" soldeverywhere="false">
+		<Price storeidentifier="outpost" multiplier="1.1" minavailable="1" />
+		<Price storeidentifier="city" multiplier="0.9" minavailable="2" />
+		<Price storeidentifier="research" multiplier="1" minavailable="1" />
+		<Price storeidentifier="military" multiplier="1" minavailable="1" />
+		<Price storeidentifier="mine" multiplier="0.8" minavailable="3" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+		<RequiredSkill identifier="electrical" level="20" />
+		<RequiredSkill identifier="mechanical" level="30" />
+		<RequiredItem identifier="steel" amount="2" />
+		<RequiredItem identifier="fpgacircuit" />
+		<RequiredItem identifier="plastic" />
+	</Fabricate>
+	<Deconstruct time="20">
+		<Item identifier="steel" />
+		<Item identifier="copper" amount="2" />
+		<Item identifier="plastic" />
+	</Deconstruct>
+	<UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+	<Sprite name="portammofabnormal" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="4,6,252,217" depth="0.501" canflipx="false" origin="0.5,0.5" />
+	<BrokenSprite name="portammofabdamage1" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="257,6,252,217" depth="0.8" maxcondition="80" fadein="true" origin="0.5,0.5" />
+	<BrokenSprite name="portammofabdamage2" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="257,6,252,217" depth="0.8" maxcondition="0" origin="0.5,0.5" />
+	<Body width="225" height="150" density="40" />
+	<Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="8.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="false">
+		<RequiredItem identifier="crowbar" type="Equipped" />
+		<StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.5" setvalue="true" />
+		<StatusEffect type="Always" target="This" disabledeltatime="true" stackable="false" setvalue="true" condition="100" allowwhenbroken="true">
+			<Conditional attached="false" />
+		</StatusEffect>
+	</Holdable>
+	<Fabricator canbeselected="true" powerconsumption="300.0" msg="ItemMsgInteractSelect" fabricationspeed="1.1">
+		<GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+		<sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="800.0" loop="true" />
+		<poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
+		<StatusEffect type="InWater" target="This" condition="-0.5" />
+		<StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
+	</Fabricator>
+	<ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+		<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+		<RequiredSkill identifier="electrical" level="55" />
+		<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+			<Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+			<Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+			<Affliction identifier="stun" strength="5" />
+			<Affliction identifier="burn" strength="5" />
+		</StatusEffect>
+		<RequiredItem items="screwdriver" type="Equipped" />
+		<input name="power_in" displayname="connection.powerin" />
+		<output name="condition_out" displayname="connection.conditionout" />
+	</ConnectionPanel>
+	<Repairable selectkey="Select" header="mechanicalrepairsheader" deteriorationspeed="0.40" mindeteriorationdelay="120" maxdeteriorationdelay="240" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+		<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
+		<RequiredSkill identifier="mechanical" level="55" />
+		<RequiredItem items="wrench" type="Equipped" />
+		<ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+		<ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+		<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+		<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+			<Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+			<Affliction identifier="lacerations" strength="5" />
+			<Affliction identifier="stun" strength="5" />
+		</StatusEffect>
+	</Repairable>
+	<ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true">
+		<StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+	</ItemContainer>
+	<ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
+		<StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+	</ItemContainer>
+</Item>
+
+
+<Item name="" description="" identifier="scp_reloadfabricator" tags="reloadfabricator,donttakeitems" category="machine" linkable="true" allowedlinks="deconstructor,locker" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+	<Price baseprice="500" soldeverywhere="false">
+		<Price storeidentifier="outpost" multiplier="1.1" minavailable="1" />
+		<Price storeidentifier="city" multiplier="0.9" minavailable="2" />
+		<Price storeidentifier="research" multiplier="1" minavailable="1" />
+		<Price storeidentifier="military" multiplier="1" minavailable="1" />
+		<Price storeidentifier="mine" multiplier="0.8" minavailable="3" />
+	</Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+		<RequiredSkill identifier="electrical" level="20" />
+		<RequiredSkill identifier="mechanical" level="30" />
+		<RequiredItem identifier="steel" amount="2" />
+		<RequiredItem identifier="fpgacircuit" />
+		<RequiredItem identifier="plastic" amount="2" />
+	</Fabricate>
+	<Deconstruct time="20">
+		<Item identifier="steel" />
+		<Item identifier="copper" amount="2" />
+		<Item identifier="plastic" />
+	</Deconstruct>
+	<UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="256,960,64,64" origin="0.5,0.45" />
+	<Sprite name="reloadfabnormal" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="4,6,252,217" depth="0.501" canflipx="false" origin="0.5,0.5" />
+	<BrokenSprite name="reloadfabdamage1" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="257,6,252,217" depth="0.8" maxcondition="80" fadein="true" origin="0.5,0.5" />
+	<BrokenSprite name="reloadfabdamage2" texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="257,6,252,217" depth="0.8" maxcondition="0" origin="0.5,0.5" />
+	<Body width="225" height="150" density="40" />
+	<Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="8.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="false">
+		<RequiredItem identifier="wrench" type="Equipped" />
+		<StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.5" setvalue="true" />
+		<StatusEffect type="Always" target="This" disabledeltatime="true" stackable="false" setvalue="true" condition="100" allowwhenbroken="true">
+			<Conditional attached="false" />
+		</StatusEffect>
+	</Holdable>
+	<Fabricator canbeselected="true" powerconsumption="300.0" msg="ItemMsgInteractSelect" fabricationspeed="1.1">
+		<GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+		<sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="800.0" loop="true" />
+		<poweronsound file="Content/Items/PowerOnLight1.ogg" range="600" loop="false" />
+		<StatusEffect type="InWater" target="This" condition="-0.5" />
+		<StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" canbeselected="true" />
+	</Fabricator>
+	<ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+		<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+		<RequiredSkill identifier="electrical" level="55" />
+		<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+			<Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+			<Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+			<Affliction identifier="stun" strength="5" />
+			<Affliction identifier="burn" strength="5" />
+		</StatusEffect>
+		<RequiredItem items="screwdriver" type="Equipped" />
+		<input name="power_in" displayname="connection.powerin" />
+		<output name="condition_out" displayname="connection.conditionout" />
+	</ConnectionPanel>
+	<Repairable selectkey="Select" header="mechanicalrepairsheader" deteriorationspeed="0.40" mindeteriorationdelay="120" maxdeteriorationdelay="240" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+		<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.1,0.27" style="ItemUI" />
+		<RequiredSkill identifier="mechanical" level="55" />
+		<RequiredItem items="wrench" type="Equipped" />
+		<ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+		<ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+		<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+		<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+			<Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+			<Affliction identifier="lacerations" strength="5" />
+			<Affliction identifier="stun" strength="5" />
+		</StatusEffect>
+	</Repairable>
+	<ItemContainer capacity="6" canbeselected="true" hideitems="true" slotsperrow="6" uilabel="" allowuioverlap="true">
+		<StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+	</ItemContainer>
+	<ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true">
+		<StatusEffect type="OnContained" target="This" setvalue="true" drawinventory="false" />
+		<StatusEffect type="OnNotContained" target="This" setvalue="true" drawinventory="true" />
+	</ItemContainer>
+	<Upgrade gameversion="1.6.18.1">
+		<ItemContainer capacity="6" slotsperrow="6" />
+	</Upgrade>
+</Item>
+
+
+<Item name="" identifier="scp_portablejunctionbox" tags="junctionbox" category="machine" scale="0.5" linkable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.5">
+	<Price baseprice="455" soldeverywhere="false" minleveldifficulty="5">
+		<Price storeidentifier="merchantoutpost" multiplier="1" sold="false" />
+		<Price storeidentifier="merchantcity" multiplier="1" sold="false" />
+		<Price storeidentifier="merchantresearch" multiplier="1" sold="false" />
+		<Price storeidentifier="merchantmilitary" multiplier="1" sold="false" />
+		<Price storeidentifier="merchantmine" multiplier="1" sold="false" />
+		<Price storeidentifier="merchantengineering" multiplier="1.15" minavailable="0" maxavailable="2" />
+	</Price>
+	<Deconstruct time="10">
+		<Item identifier="aluminium" />
+		<Item identifier="copper" />
+		<Item identifier="fpgacircuit" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="20">
+		<RequiredSkill identifier="electrical" level="45" />
+		<RequiredItem identifier="aluminium" amount="2" />
+		<RequiredItem identifier="copper" amount="3" />
+		<RequiredItem identifier="fpgacircuit" />
+	</Fabricate>
+	<UpgradePreviewSprite texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="99,961,28,32" origin="0.5,0.45" />
+	<Sprite texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="521,239,137,119" depth="0.501" canflipx="false" origin="0.5,0.5" />
+	<BrokenSprite texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="660,240,138,119" depth="0.8" maxcondition="80" fadein="true" origin="0.5,0.5" />
+	<BrokenSprite texture="%ModDir%/Items/misc/portablefabricators.png" sourcerect="798,240,138,119" depth="0.8" maxcondition="5" origin="0.5,0.5" />
+	<InfectedSprite texture="Content/Items/Gardening/ballastflora.png" sourcerect="53,640,161,239" origin="0.5,0.5" />
+	<DamagedInfectedSprite texture="Content/Items/Gardening/ballastflora_burned.png" sourcerect="53,640,161,239" origin="0.5,0.5" />
+	<Body width="205" height="120" density="25" />
+	<Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachCrowbar" PickingTime="10.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="false">
+		<RequiredItem identifier="Crowbar" type="Equipped" />
+		<StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.8" setvalue="true" />
+		<StatusEffect type="Always" target="This" disabledeltatime="true" stackable="false" setvalue="true" condition="100" allowwhenbroken="true">
+			<Conditional attached="false" />
+		</StatusEffect>
+	</Holdable>
+	<PowerTransfer canbeselected="true" msg="ItemMsgInteractSelect" overloadvoltage="2.5" fireprobability="0.05">
+	<GuiFrame relativesize="0.2,0.14" minsize="450,160" anchor="Center" style="ItemUI" />
+		<StatusEffect type="InWater" target="This" condition="-0.35">
+			<Conditional currPowerConsumption="lt -10" />
+		</StatusEffect>
+	</PowerTransfer>
+	<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+		<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+		<RequiredSkill identifier="electrical" level="55" />
+		<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+			<Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+			<Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+			<Affliction identifier="stun" strength="2.5" />
+			<Affliction identifier="burn" strength="7.5" />
+		</StatusEffect>
+		<RequiredItem items="screwdriver" type="Equipped" />
+		<output name="power" displayname="connection.power" maxwires="4" />
+		<output name="condition_out" displayname="connection.conditionout" />
+	</ConnectionPanel>
+	<Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.06" mindeteriorationdelay="240" maxdeteriorationdelay="720" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="10" fixDurationLowSkill="20" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+		<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+		<RequiredSkill identifier="electrical" level="55" />
+		<RequiredItem items="screwdriver" type="Equipped" />
+		<StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+			<Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+			<Affliction identifier="stun" strength="5" />
+			<Affliction identifier="burn" strength="5" />
+		</StatusEffect>
+		<ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+		<ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+		<ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+	</Repairable>
+</Item>
+</Override>
+
+<!-- Fixing dumb dev items -->
+<Override>
+<Item name="" identifier="divingknife_murdermystery" nameidentifier="murderweapon" variantof="divingknife" Tags="smallitem,weapon,gunsmith,mountableweapon,sharptool,murderweapon,traitormissionitem" hideinmenus="true">
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<!-- not purchaseable -->
+	<Price sold="false" canbespecial="false" />
+	<!-- not fabricable -->
+	<Fabricate />
+	<MeleeWeapon>
+		<Attack>
+			<Affliction />
+			<Affliction />
+			<Affliction />
+			<Affliction identifier="mysteryaffliction" strength="20" />
+		</Attack>
+	</MeleeWeapon>
+</Item>
+
+<Item name="" identifier="screwdriver_murdermystery" nameidentifier="murderweapon" variantof="screwdriver" Tags="smallitem,simpletool,tool,electricalrepairtool,screwdriveritem,murderweapon,traitormissionitem" hideinmenus="true">
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<!-- not purchaseable -->
+	<Price sold="false" canbespecial="false" />
+	<!-- not fabricable -->
+	<Fabricate />
+	<MeleeWeapon>
+		<Attack>
+			<Affliction identifier="lacerations" strength="10" />
+			<Affliction identifier="bleeding" strength="10" />
+			<Affliction identifier="stun" strength="0.2" />
+			<Affliction identifier="mysteryaffliction" strength="20" />
+		</Attack>
+	</MeleeWeapon>
+</Item>
+
+<Item name="" identifier="wrench_murdermystery" nameidentifier="murderweapon" variantof="wrench" Tags="smallitem,tool,simpletool,mechanicalrepairtool,wrenchitem,murderweapon,traitormissionitem" hideinmenus="true">
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<PreferredContainer spawnprobability="0"/>
+	<!-- not purchaseable -->
+	<Price sold="false" canbespecial="false" />
+	<!-- not fabricable -->
+	<Fabricate />
+	<MeleeWeapon>
+		<Attack>
+			<Affliction identifier="blunttrauma" strength="10" />
+			<Affliction identifier="stun" strength="0.2" />
+			<Affliction identifier="mysteryaffliction" strength="20" />
+		</Attack>
+	</MeleeWeapon>
+</Item>
+</Override>
+
+</Items>

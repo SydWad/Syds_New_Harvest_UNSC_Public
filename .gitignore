@@ -1,0 +1,20 @@
+# Image files
+*.png
+*.jpg
+
+# Archive files
+*.zip
+*.rar
+
+# Audio files
+*.ogg
+*.wav
+*.mp3
+
+# Backup or old files
+*.old
+*.backup.xml
+*.old.xml
+
+# GIMP files
+*.xcf

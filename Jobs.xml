@@ -1,0 +1,1082 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Jobs>
+<Override>
+  <Job identifier="captain"
+       minnumber="0" maxnumber="1" minkarma="45" initialcount="1"
+       uicolor="0.65,0.73,0.84"
+       vitalitymodifier="-20"
+       pricemultiplier="1.3"
+       idlebehavior="StayInHull" >
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="0,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="0,0,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="helm" level="40,50" primary="true" />
+      <Skill identifier="weapons" level="25,35" />
+      <Skill identifier="mechanical" level="15,25" />
+      <Skill identifier="electrical" level="15,25" />
+      <Skill identifier="medical" level="5,10" />
+    </Skills>
+	<!-- Captain -->
+    <ItemSet>
+      <Item identifier="nh_captainuniform" equip="true" outfit="true" />
+      <Item identifier="nh_captain_cap" equip="true" />
+      <Item identifier="nh_m6d" equip="false" >
+        <Item identifier="nh_12.7x58mag_12" showpreview="false" />
+      </Item>
+      <Item identifier="captainspipe" >
+        <Item identifier="pipetobacco" showpreview="false" />
+      </Item>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+	<!-- Pilot -->
+    <ItemSet>
+      <Item identifier="nh_marine_uniform_2" equip="true" outfit="true" />
+      <Item identifier="nh_pilot_helmet" equip="true" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="nh_m6c" equip="false" >
+        <Item identifier="nh_11.43x23mag_12" showpreview="false" />
+      </Item>
+      <Item identifier="nh_11.43x23mag_12" equip="false" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+    <AutonomousObjectives>
+      <Order identifier="fightintruders" prioritymodifier="1" />
+      <Order identifier="extinguishfires" prioritymodifier ="1" />
+      <Order identifier="rescue" prioritymodifier="1" />
+      <Order identifier="steer" option="maintainposition" prioritymodifier="1" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.1" />
+      <Order identifier="fixleaks" prioritymodifier="0.1" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="steer" />
+    </AppropriateOrders>
+  </Job>
+</Override>
+
+<Override>
+  <Job identifier="engineer"
+       minkarma="30" initialcount="1"
+       uicolor="0.88,0.72,0.43"
+       vitalitymodifier="-10"
+       pricemultiplier="1"
+       idlebehavior="Active" >
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="256,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="96,0,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+	  <Skill identifier="electrical" level="40,50" />
+	  <Skill identifier="mechanical" level="25,35" />
+	  <Skill identifier="weapons" level="15,25" />
+	  <Skill identifier="medical" level="15,25" />
+	  <Skill identifier="helm" level="5,10" />
+    </Skills>
+    <ItemSet>
+	  <Item identifier="nh_engineeruniform" equip="true" outfit="true" />
+	  <Item identifier="nh_engineer_hardhat" equip="true" />
+      <Item identifier="screwdriver" equip="false" />
+	  <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+	  </Item>
+	  <Item identifier="idcard" equip="true" showpreview="false" />
+	</ItemSet>
+    <AutonomousObjectives>
+      <Order identifier="extinguishfires" prioritymodifier ="1" />
+      <Order identifier="repairelectrical" prioritymodifier="1" />
+      <Order identifier="rescue" prioritymodifier="1" />
+      <Order identifier="fixleaks" prioritymodifier="0.75" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.5" />
+      <Order identifier="repairsystems" prioritymodifier="0.5" />
+      <Order identifier="pumpwater" option="pumpout" prioritymodifier="0.1" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="operatereactor" />
+      <Order identifier="repairelectrical" />
+      <Order identifier="chargebatteries" />
+      <Order identifier="reportbrokendevices" />
+    </AppropriateOrders>
+  </Job>
+</Override>
+
+<Override>
+  <Job identifier="mechanic"
+       minkarma="30" initialcount="1"
+       uicolor="0.5,0.86,0.9"
+       vitalitymodifier="-10"
+       pricemultiplier="1"
+       idlebehavior="Active" >
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="128,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="48,0,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="mechanical" level="40,50" primary="true" />
+      <Skill identifier="electrical" level="25,35" />
+      <Skill identifier="weapons" level="15,25" />
+      <Skill identifier="medical" level="15,25" />
+      <Skill identifier="helm" level="5,10" />
+    </Skills>
+    <ItemSet>
+      <Item identifier="nh_mechanicuniform" equip="true" outfit="true" />
+      <Item identifier="nh_sunglasses_4" equip="true" showpreview="false" />
+      <Item identifier="wrench" equip="false" />
+      <Item identifier="weldingtool" equip="false" >
+        <Item identifier="weldingfueltank" showpreview="false" />
+      </Item>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+    <AutonomousObjectives>
+      <Order identifier="fixleaks" prioritymodifier="1" />
+      <Order identifier="repairmechanical" prioritymodifier="1" />
+      <Order identifier="extinguishfires" prioritymodifier ="1" />
+      <Order identifier="rescue" prioritymodifier="1" />
+      <Order identifier="repairsystems" prioritymodifier="0.5" />
+      <Order identifier="pumpwater" option="pumpout" prioritymodifier="0.5" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.3" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="fixleaks" />
+      <Order identifier="pumpwater" />
+      <Order identifier="repairmechanical" />
+      <Order identifier="reportbrokendevices" />
+    </AppropriateOrders>
+  </Job>
+</Override>
+
+<Override>
+  <Job identifier="securityofficer"
+       maxnumber="2" minkarma="40"
+       uicolor="0.57,0.48,0.43"
+       vitalitymodifier="10"
+       pricemultiplier="1.15"
+       idlebehavior="Patrol" >
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="640,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="48,48,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="weapons" level="40,50" primary="true" />
+      <Skill identifier="medical" level="25,35" />
+      <Skill identifier="mechanical" level="15,25" />
+      <Skill identifier="electrical" level="15,25" />
+      <Skill identifier="helm" level="5,10" />
+    </Skills>
+	<!-- Security -->
+    <ItemSet>
+      <Item identifier="nh_marine_uniform_2" equip="true" />
+      <Item identifier="nh_marinearmor1" equip="true" outfit="true" />
+      <Item identifier="nh_balaclava" equip="true" showpreview="false" />
+      <Item identifier="nh_marinehelmetcomms" equip="true" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="nh_m7smg" equip="true" >
+        <Item identifier="nh_5x23mm_60" showpreview="false" />
+      </Item>
+      <Item identifier="nh_5x23mm_60" />
+	  <Item identifier="divingknife" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+	<!-- Recon -->
+    <ItemSet>
+      <Item identifier="nh_marine_uniform_1" equip="true" outfit="true" >
+		<Item identifier="steroids" />
+      </Item>
+      <Item identifier="nh_boonie_hat" equip="true" />
+      <Item identifier="nh_ma37" equip="true" >
+        <Item identifier="nh_7.62x51mm_35" showpreview="false" />
+      </Item>
+      <Item identifier="nh_7.62x51mm_35" />
+	  <Item identifier="divingknife" />
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+	<!-- Support -->
+    <ItemSet>
+      <Item identifier="nh_marine_uniform_2" equip="true" />
+      <Item identifier="nh_marinearmor1" equip="true" />
+      <Item identifier="nh_sunglasses" equip="true" showpreview="false" />
+      <Item identifier="nh_marinehelmettroop" equip="true" />
+	  
+	  <Item identifier="divingknife" />
+	  
+      <Item identifier="nh_radio_pack" equip="true" outfit="true" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+	
+    <AutonomousObjectives>
+      <Order identifier="fightintruders" prioritymodifier="1" />
+      <Order identifier="rescue" prioritymodifier="1" />
+      <Order identifier="extinguishfires" prioritymodifier ="0.75" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2" />
+      <Order identifier="fixleaks" prioritymodifier="0.1" />
+      <Order identifier="repairsystems" prioritymodifier="0.1" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="operateweapons" />
+      <Order identifier="fightintruders" />
+    </AppropriateOrders>
+  </Job>
+</Override>
+
+<Override>
+  <Job identifier="medicaldoctor"
+       maxnumber="2" minkarma="30"
+       uicolor="0.81,0.31,0.19"
+       vitalitymodifier="-10"
+       pricemultiplier="1.15"
+       idlebehavior="Active" >
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="512,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="0,48,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="medical" level="40,50" primary="true" />
+      <Skill identifier="weapons" level="15,25" />
+      <Skill identifier="mechanical" level="15,25" />
+      <Skill identifier="electrical" level="15,25" />
+      <Skill identifier="helm" level="5,10" />
+    </Skills>
+	<!-- Doctor -->
+    <ItemSet>
+      <Item identifier="healthscanner" equip="true" outfit="true" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="nh_physicianuniform" equip="true" />
+      <Item identifier="nh_m6c" equip="false" >
+        <Item identifier="nh_11.43x23mag_12" showpreview="false" />
+      </Item>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+	<!-- Combat Medic -->
+    <ItemSet>
+      <Item identifier="nh_marinehelmetmedic" equip="true" outfit="true" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="nh_physicianuniform_2" equip="true" >
+        <Item identifier="antibleeding1" />
+        <Item identifier="antibleeding1" showpreview="false" />
+        <Item identifier="antibleeding1" showpreview="false" />
+        <Item identifier="antibleeding1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marinearmor1" equip="true" />
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+    <AutonomousObjectives>
+      <Order identifier="rescue" prioritymodifier="1" />
+      <Order identifier="extinguishfires" prioritymodifier ="0.5" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2" />
+      <Order identifier="fixleaks" prioritymodifier="0.1" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="rescue" />
+      <Order identifier="requestfirstaid" />
+    </AppropriateOrders>
+  </Job>
+</Override>
+
+<Override>
+  <Job identifier="assistant"
+       allowalways="true" minkarma="0"
+       vitalitymodifier="-10"
+       pricemultiplier="0.8"
+       idlebehavior="Active" >
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="384,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="144,0,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="weapons" level="20,30" />
+      <Skill identifier="mechanical" level="20,30" />
+      <Skill identifier="electrical" level="20,30" />
+      <Skill identifier="medical" level="20,30" />
+      <Skill identifier="helm" level="17.5,20" />
+    </Skills>
+    <ItemSet>
+      <Item identifier="nh_crewmanuniform" equip="true" outfit="true" />
+      <Item identifier="screwdriver" equip="false" />
+      <Item identifier="wrench" equip="false" />
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+    <AutonomousObjectives>
+      <Order identifier="extinguishfires" prioritymodifier ="1" />
+      <Order identifier="pumpwater" option="pumpout" prioritymodifier="1" />
+      <Order identifier="rescue" prioritymodifier="1" />
+      <Order identifier="repairsystems" prioritymodifier="0.5" />
+      <Order identifier="fixleaks" prioritymodifier="0.5" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.4" />
+    </AutonomousObjectives>
+  </Job>
+</Override>
+
+<!-- NPC ONLY JOBS -->
+  <Job identifier="NPC_SPARTAN"
+       uicolor="0.23,0.65,0.10"
+       vitalitymodifier="50"
+       pricemultiplier="1.15"
+       idlebehavior="Active"
+	   hiddenjob="true"
+	   minnumber="0"
+	   maxnumber="0" 
+	   initialcount="0" >
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="768,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="96,48,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <AutonomousObjectives>
+      <Order identifier="assaultenemy" prioritymodifier="1" />
+      <Order identifier="fightintruders" prioritymodifier="0.75" />
+      <Order identifier="extinguishfires" prioritymodifier ="0.5" />
+      <Order identifier="rescue" prioritymodifier="0.4" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2" />
+      <Order identifier="fixleaks" prioritymodifier="0.1" />
+      <Order identifier="repairsystems" prioritymodifier="0.1" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="fightintruders" />
+      <Order identifier="operateweapons" />
+    </AppropriateOrders>
+    <Skills>
+      <Skill identifier="weapons" level="90,100" primary="true" />
+      <Skill identifier="medical" level="50,60" />
+      <Skill identifier="mechanical" level="15,25" />
+      <Skill identifier="electrical" level="15,25" />
+      <Skill identifier="helm" level="85,100" />
+    </Skills>
+	<!-- Assault Rifle -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" outfit="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_1" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_ma5b" equip="true" >
+        <Item identifier="nh_7.62x51mm_120" showpreview="false" />
+      </Item>
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <Item identifier="nh_radio_pack" equip="true" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+	<!-- x2 -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" outfit="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_1" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_ma5b" equip="true" >
+        <Item identifier="nh_7.62x51mm_120" showpreview="false" />
+      </Item>
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- x3 -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" outfit="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_1" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_ma5b" equip="true" >
+        <Item identifier="nh_7.62x51mm_120" showpreview="false" />
+      </Item>
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- x4 -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" outfit="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_1" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_ma5b" equip="true" >
+        <Item identifier="nh_7.62x51mm_120" showpreview="false" />
+      </Item>
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- x5 -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" outfit="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_1" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_ma5b" equip="true" >
+        <Item identifier="nh_7.62x51mm_120" showpreview="false" />
+      </Item>
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+      <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- Battle Rifle -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" outfit="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_2" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_br55" equip="true" >
+        <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      </Item>
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <Item identifier="nh_radio_pack" equip="true" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+	<!-- x2 -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" outfit="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_2" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_br55" equip="true" >
+        <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      </Item>
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- x3 -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" outfit="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_2" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_br55" equip="true" >
+        <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      </Item>
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- Rocket Launcher -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_1" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" outfit="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_m41" equip="true" outfit="true" >
+        <Item identifier="nh_spnkr_pod_he" showpreview="false" />
+      </Item>
+      <Item identifier="nh_m7smg" equip="true" >
+        <Item identifier="nh_5x23mm_60" showpreview="false" />
+      </Item>
+      <Item identifier="nh_5x23mm_60" showpreview="false" />
+      <Item identifier="nh_5x23mm_60" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- x2 -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_1" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" outfit="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_m41" equip="true" outfit="true" >
+        <Item identifier="nh_spnkr_pod_he" showpreview="false" />
+      </Item>
+      <Item identifier="nh_m7smg" equip="true" >
+        <Item identifier="nh_5x23mm_60" showpreview="false" />
+      </Item>
+      <Item identifier="nh_5x23mm_60" showpreview="false" />
+      <Item identifier="nh_5x23mm_60" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- Spartan Laser -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_2" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="thermalgoggles" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" outfit="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="nh_m6g_gnr" equip="true" outfit="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+      </Item>
+      <Item identifier="nh_m7smg" equip="true" >
+        <Item identifier="nh_5x23mm_60" showpreview="false" />
+      </Item>
+      <Item identifier="nh_5x23mm_60" showpreview="false" />
+      <Item identifier="nh_5x23mm_60" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- Gunner -->
+    <ItemSet>
+      <Item identifier="nh_spartanarmor" equip="true" >
+        <Item identifier="nh_pscu" showpreview="false" />
+        <Item identifier="nh_biofoam" showpreview="false" />
+        <Item identifier="nh_shieldmodule_1" showpreview="false" />
+      </Item>
+      <Item identifier="nh_spartanhelmet_1" equip="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="healthscanner" showpreview="false" />
+      </Item>
+      <Item identifier="nh_marine_uniform_1" equip="true" outfit="true" />
+      <Item identifier="idcard" equip="true" showpreview="false" />
+	  
+      <Item identifier="nh_aie_486h" >
+        <Item identifier="nh_7.62x51mm_300" showpreview="false" />
+      </Item>
+      <Item identifier="nh_7.62x51mm_300" showpreview="false" />
+      <Item identifier="nh_7.62x51mm_300" showpreview="false" />
+	  <Item identifier="divingknife" />
+	  
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+  </Job>
+  
+  <Job identifier="NPC_ODST"
+       uicolor="0.0,0.15,0.65"
+       vitalitymodifier="20"
+       pricemultiplier="1.15"
+       idlebehavior="active"
+	   hiddenjob="true"
+	   minnumber="0"
+	   maxnumber="0" 
+	   initialcount="0">
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="895,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="144,48,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <AutonomousObjectives>
+      <Order identifier="assaultenemy" prioritymodifier="1" />
+      <Order identifier="fightintruders" prioritymodifier="0.75" />
+      <Order identifier="extinguishfires" prioritymodifier ="0.5" />
+      <Order identifier="rescue" prioritymodifier="0.4" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2" />
+      <Order identifier="fixleaks" prioritymodifier="0.1" />
+      <Order identifier="repairsystems" prioritymodifier="0.1" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="fightintruders" />
+      <Order identifier="operateweapons" />
+    </AppropriateOrders>
+    <Skills>
+      <Skill identifier="weapons" level="85,100" primary="true" />
+      <Skill identifier="medical" level="70,80" />
+      <Skill identifier="mechanical" level="25,35" />
+      <Skill identifier="electrical" level="15,25" />
+      <Skill identifier="helm" level="20,30" />
+    </Skills>
+	<!-- Battle Rifle -->
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+	  
+      <Item identifier="nh_odsthelmet" equip="true" outfit="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="nh_odstarmor" equip="true" />
+      <Item identifier="nh_odstuniform" equip="true" showpreview="false" />
+	  
+      <Item identifier="nh_br55" equip="true" >
+        <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      </Item>
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+	  <Item identifier="divingknife" />
+	  
+      <Item identifier="nh_radio_pack_odst" equip="true" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+	<!-- x2 -->
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+	  
+      <Item identifier="nh_odsthelmet" equip="true" outfit="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="nh_odstarmor" equip="true" />
+      <Item identifier="nh_odstuniform" equip="true" showpreview="false" />
+	  
+      <Item identifier="nh_br55" equip="true" >
+        <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      </Item>
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- Battle Rifle and Heavy Armor -->
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+	  
+      <Item identifier="nh_odsthelmet" equip="true" outfit="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="nh_odstarmor_heavy" equip="true" />
+      <Item identifier="nh_odstuniform" equip="true" showpreview="false" />
+	  
+      <Item identifier="nh_br55" equip="true" >
+        <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      </Item>
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+	  <Item identifier="divingknife" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+	<!-- Sniper -->
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+	  
+      <Item identifier="nh_odsthelmet" equip="true" outfit="true" >
+        <Item identifier="oxygentank" showpreview="false" />
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="nh_odstarmor" equip="true" />
+      <Item identifier="nh_odstuniform" equip="true" showpreview="false" />
+	  
+      <Item identifier="nh_99cs2" >
+        <Item identifier="nh_14.5x114_8" showpreview="false" />
+      </Item>
+      <Item identifier="nh_14.5x114_8" showpreview="false" />
+	  <Item identifier="divingknife" />
+	  
+      <Item identifier="nh_m7smg" >
+        <Item identifier="nh_5x23mm_60" showpreview="false" />
+      </Item>
+      <Item identifier="nh_5x23mm_60" showpreview="false" />
+      <Item identifier="nh_5x23mm_60" showpreview="false" />
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+    </ItemSet>
+  </Job>
+  
+  <Job identifier="NPC_POLICE"
+       uicolor="0.57,0.48,0.43"
+       vitalitymodifier="20"
+       pricemultiplier="1.15"
+       idlebehavior="Active"
+	   hiddenjob="true"
+	   minnumber="0"
+	   maxnumber="0" 
+	   initialcount="0" >
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="640,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="48,48,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <AutonomousObjectives>
+      <Order identifier="assaultenemy" prioritymodifier="1" />
+      <Order identifier="fightintruders" prioritymodifier="0.75" />
+      <Order identifier="extinguishfires" prioritymodifier ="0.5" />
+      <Order identifier="rescue" prioritymodifier="0.4" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2" />
+      <Order identifier="fixleaks" prioritymodifier="0.1" />
+      <Order identifier="repairsystems" prioritymodifier="0.1" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="operateweapons" />
+      <Order identifier="fightintruders" />
+    </AppropriateOrders>
+    <Skills>
+      <Skill identifier="weapons" level="85,100" primary="true" />
+      <Skill identifier="medical" level="70,80" />
+      <Skill identifier="mechanical" level="25,35" />
+      <Skill identifier="electrical" level="15,25" />
+      <Skill identifier="helm" level="20,30" />
+    </Skills>
+	<!-- Assault Rifle -->
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" tags="id_outpostsecurity" />
+	  
+      <Item identifier="nh_police_helmet_1" equip="true" />
+      <Item identifier="nh_police_armor_1" equip="true" outfit="true" />
+      <Item identifier="nh_police_uniform_1" equip="true" showpreview="false" >
+        <Item identifier="antibleeding1" amount="3" showpreview="false" />
+		<Item identifier="divingmask">
+		  <Item identifier="oxygentank" showpreview="false" />
+		</Item> 
+      </Item>
+	  
+      <Item identifier="nh_ma37_parade" equip="true" >
+        <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+      </Item>
+	  <Item identifier="nh_7.62x51mm_35" amount="3" showpreview="false" />
+	  <Item identifier="divingknife" />
+	  <Item identifier="stunbaton" >
+		<Item identifier="batterycell" showpreview="false" />
+	  </Item>
+	  <Item identifier="batterycell" amount="4" />
+	  
+	  <Item identifier="handcuffs" amount="2" />
+	  
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycell" showpreview="false" />
+      </Item>
+	  
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+	<!-- x2 -->
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" tags="id_outpostsecurity" />
+	  
+      <Item identifier="nh_police_helmet_1" equip="true" />
+      <Item identifier="nh_police_armor_1" equip="true" outfit="true" />
+      <Item identifier="nh_police_uniform_1" equip="true" showpreview="false" >
+        <Item identifier="antibleeding1" amount="3" showpreview="false" />
+		<Item identifier="divingmask">
+		  <Item identifier="oxygentank" showpreview="false" />
+		</Item> 
+      </Item>
+	  
+      <Item identifier="nh_ma37_parade" equip="true" >
+        <Item identifier="nh_7.62x51mm_60" showpreview="false" />
+      </Item>
+	  <Item identifier="nh_7.62x51mm_35" amount="3" showpreview="false" />
+	  <Item identifier="divingknife" />
+	  <Item identifier="stunbaton" >
+		<Item identifier="batterycell" showpreview="false" />
+	  </Item>
+	  <Item identifier="batterycell" amount="4" />
+	  
+	  <Item identifier="handcuffs" amount="2" />
+	  
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycell" showpreview="false" />
+      </Item>
+	  
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+	<!-- SMG -->
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" tags="id_outpostsecurity" />
+	  
+      <Item identifier="nh_police_helmet_1" equip="true" />
+      <Item identifier="nh_police_armor_1" equip="true" outfit="true" />
+      <Item identifier="nh_police_uniform_1" equip="true" showpreview="false" >
+        <Item identifier="antibleeding1" amount="3" showpreview="false" />
+		<Item identifier="divingmask">
+		  <Item identifier="oxygentank" showpreview="false" />
+		</Item> 
+      </Item>
+	  
+      <Item identifier="nh_m7smg" equip="true" >
+        <Item identifier="nh_5x23mm_60" showpreview="false" />
+      </Item>
+      <Item identifier="nh_5x23mm_60" amount="4" showpreview="false" />
+	  <Item identifier="divingknife" />
+	  <Item identifier="stunbaton" >
+		<Item identifier="batterycell" showpreview="false" />
+	  </Item>
+	  <Item identifier="batterycell" amount="4" />
+	  
+	  <Item identifier="handcuffs" amount="2" />
+	  
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycell" showpreview="false" />
+      </Item>
+	  
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+	<!-- Officer -->
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" tags="id_outpostsecurity" />
+	  
+      <Item identifier="nh_captain_cap" equip="true" />
+      <Item identifier="nh_police_armor_1" equip="true" outfit="true" />
+      <Item identifier="nh_police_uniform_1" equip="true" showpreview="false" >
+        <Item identifier="antibleeding1" amount="3" showpreview="false" />
+		<Item identifier="divingmask">
+		  <Item identifier="oxygentank" showpreview="false" />
+		</Item> 
+      </Item>
+	  
+      <Item identifier="nh_br55_parade" equip="true" >
+        <Item identifier="nh_9.5x40mag_30" showpreview="false" />
+      </Item>
+	  <Item identifier="nh_9.5x40mag_30" amount="2" showpreview="false" />
+	  <Item identifier="divingknife" />
+	  <Item identifier="stunbaton" >
+		<Item identifier="batterycell" showpreview="false" />
+	  </Item>
+	  <Item identifier="batterycell" amount="4" />
+	  
+	  <Item identifier="handcuffs" amount="2" />
+	  
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycell" showpreview="false" />
+      </Item>
+	  
+      <PreviewSprites dims="120,109" >
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="%ModDir%/Items/Jobgear/Security/secu_torso_[GENDER].png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+  </Job>
+	
+  <Job identifier="NPC_ADMIRAL"
+       uicolor="0.65,0.73,0.84"
+       vitalitymodifier="20"
+       pricemultiplier="1.15"
+       idlebehavior="Active"
+	   hiddenjob="true"
+	   minnumber="0"
+	   maxnumber="0" 
+	   initialcount="0" >
+    <Jobicon>
+      <sprite texture="%ModDir%/UI/MainUIAtlas.png" sourcerect="0,128,128,128" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/UI/CommandUIAtlas.png" sourcerect="0,0,48,48" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="helm" level="40,50" primary="true" />
+      <Skill identifier="weapons" level="25,35" />
+      <Skill identifier="mechanical" level="15,25" />
+      <Skill identifier="electrical" level="15,25" />
+      <Skill identifier="medical" level="5,10" />
+    </Skills>
+	<!-- Admiral -->
+    <ItemSet>
+      <Item identifier="nh_admiraluniform" equip="true" outfit="true" />
+      <Item identifier="nh_admiral_cap" equip="true" />
+      <Item identifier="nh_m6d" equip="false" >
+        <Item identifier="nh_12.7x58mag_12" showpreview="false" />
+      </Item>
+      <Item identifier="nh_12.7x58mag_12" amount="2" showpreview="false" />
+      <Item identifier="headset" equip="true" showpreview="false" >
+        <Item identifier="batterycelldisposable" showpreview="false" />
+      </Item>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+    </ItemSet>
+    <AutonomousObjectives>
+      <Order identifier="fightintruders" prioritymodifier="1" />
+      <Order identifier="extinguishfires" prioritymodifier ="1" />
+      <Order identifier="rescue" prioritymodifier="1" />
+      <Order identifier="steer" option="maintainposition" prioritymodifier="1" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.1" />
+      <Order identifier="fixleaks" prioritymodifier="0.1" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="steer" />
+    </AppropriateOrders>
+  </Job>
+  
+</Jobs>

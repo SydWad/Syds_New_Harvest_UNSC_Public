@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContainerTags>
+  
+  <!-- Submarine-->
+  <ContainerTag identifier="nh_dev_gun" category="Submarine" />
+  <ContainerTag identifier="nh_dev_ammo" category="Submarine" />
+  <ContainerTag identifier="nh_dev_armor" category="Submarine" />
+  <ContainerTag identifier="nh_dev_cloth" category="Submarine" />
+  <ContainerTag identifier="nh_dev_tool" category="Submarine" />
+
+</ContainerTags>

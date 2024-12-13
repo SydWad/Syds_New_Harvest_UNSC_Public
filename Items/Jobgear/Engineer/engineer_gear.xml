@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+<Item name="Engineer Uniform" identifier="nh_engineeruniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="384,128,128,128" origin="0.5,0.5" />
+	<Sprite name="Engineer Uniform" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="128,0,128,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_[GENDER].png" limb="Torso" sourcerect="0,0,97,163" origin="0.53,0.52" scale="0.75" rotation="2" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="Waist" sourcerect="7,170,82,79" origin="0.5,0.5" scale="0.75" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="RightThigh" sourcerect="99,0,80,138" origin="0.5,0.5" scale="0.8" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="RightLeg" sourcerect="99,138,80,115" origin="0.5,0.5" scale="0.8" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="LeftThigh" sourcerect="179,0,80,138" origin="0.5,0.5" scale="0.8" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="LeftLeg" sourcerect="179,138,80,115" origin="0.5,0.5" scale="0.8" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="RightArm" sourcerect="265,0,67,108" origin="0.5,0.5" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="RightForearm" sourcerect="273,107,56,80" origin="0.5,0.5" scale="0.75" rotation="355" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="LeftArm" sourcerect="333,0,58,108" origin="0.5,0.5" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="LeftForearm" sourcerect="335,107,56,80" origin="0.5,0.5" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="RightFoot" sourcerect="257,197,95,66" origin="0.5,0.4" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="LeftFoot" sourcerect="257,197,95,66" origin="0.5,0.4" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="RightHand" sourcerect="0,0,1,1" origin="0.5,0.5" scale="1.0" hidelimb="false" hideotherwearables="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Engineer/engi_outfit_male.png" limb="LeftHand" sourcerect="0,0,1,1" origin="0.5,0.5" scale="1.0" hidelimb="false" hideotherwearables="false" />
+		<damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+	</Wearable>
+</Item>
+	
+	
+<!-- Hardhat -->
+<Item name="" identifier="nh_engineer_hardhat" scale="0.3" category="Equipment" tags="smallitem,clothing" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" InventoryIconColor="255,230,0,255" spritecolor="200,180,0,255" >
+	<PreferredContainer primary="nh_dev_armor" minamount="1" maxamount="1" spawnprobability="1" NotCampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
+    <Price baseprice="25" sold="false" >
+      <Price storeidentifier="merchantcity" minavailable="1" sold="true" />
+      <Price storeidentifier="merchantmine" multiplier="0.5" minavailable="3" />
+    </Price>
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="0,300,101,67" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="0,300,101,67" depth="0.5" origin="0.5,0.5" />
+	<Body width="80" height="45" density="15" />
+	<Deconstruct time="1" >
+		<Item identifier="plastic" OutConditionMin="0.5" OutConditionMax="0.5" />
+	</Deconstruct>
+	<Wearable slots="Any,Head" >
+		<sprite name="NH Hardhat" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="0,300,100,100" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.1" origin="0.54,0.6" rotation="5" />
+		<damagemodifier afflictionidentifiers="concussion" damagemultiplier="0" armorsector="0.0,360.0"  />
+		<damagemodifier afflictionidentifiers="blunttrauma,explosiondamage,bitewounds" damagemultiplier="0.5" armorsector="0.0,360.0"  />
+	</Wearable> 
+</Item>
+</Items>

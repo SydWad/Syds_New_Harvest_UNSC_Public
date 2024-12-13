@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Style>
+<Override>
+  <PlayStyleBanner.Serious>
+    <Sprite name="PlayStyleBanner.Serious" texture="%ModDir%/UI/Server/PlaystyleSerious_2.png" sourcerect="0,0,1024,506" bannercolor="#20686c"/>
+  </PlayStyleBanner.Serious>
+  <PlayStyleBanner.Rampage>
+    <Sprite name="PlayStyleBanner.Rampage" texture="%ModDir%/UI/Server/Halo2Multiplayer.png" sourcerect="0,0,800,424" bannercolor="#8a3622"/>
+  </PlayStyleBanner.Rampage>
+</Override>
+</Style>

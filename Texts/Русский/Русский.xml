@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+
+<mapentitycategory.Halo>Хало</mapentitycategory.Halo>
+
+	<!-- Loading Screen tips -->
+	<loadingscreentip>Множество древних тайн скрыто в глубинах... Некоторые из них лучше не тревожить.</loadingscreentip>
+	<loadingscreentip>Я знаю, что ты это читаешь, я наблюдаю.</loadingscreentip>
+
+	<loadingscreentip>¯\_(ツ)_/¯</loadingscreentip>
+	
+<Override>
+	<!-- Factions -->
+	<faction.coalition>О.Н.С.C.</faction.coalition>
+	<faction.coalition.description>Объединённое Национальное Космическое Командование (ОНКК) является основной боевой силой Объединённого Земного Правительства (ОЗП), отвечающей за управление всеми военно-морскими и наземными силами. ОНКК также курирует все научные и исследовательские проекты правительства. Превосходит его только Управление Военной Разведки (УВР), которое иногда интегрируется с ОНКК для продвижения исследований и разработок в области оружия, тактики и способов обеспечения превосходства человечества в целом.</faction.coalition.description>
+	<faction.coalition.shortdescription>Военная ветвь Объединённого Земного Правительства, которая контролирует большинство, если не все, военные, научные, исследовательские и колонизационные усилия человечества.</faction.coalition.shortdescription>
+</Override>
+
+	<displayname.repairitem>[itemname] (Восстановление)</displayname.repairitem>
+
+	<!-- Jobs -->
+	<jobname.spartan>Спартанец</jobname.spartan>
+	<jobdescription.spartan>Проект "Спартанец" — это секретная программа суперсолдат, контролируемая Управлением Военной Разведки (УВР), созданная для противодействия движению инсуррекционистов и, с прибытием Ковенанта, любой другой угрозе человечеству. Их основная задача — напрямую справляться с угрозами, которые слишком опасны для отправки других бойцов. В бою они лучшие из лучших, и благодаря усилениям Спартанцев и силовой броне «Мьёльнир», они способны справиться с любой угрозой.</jobdescription.spartan>
+	<!--<jobname.spartan1>Spartan-II</jobname.spartan1>-->
+
+	<Override>
+		<jobname.assistant>Член экипажа</jobname.assistant>
+		<jobdescription.assistant>Член экипажа — это самый базовый и необходимый элемент любого экипажа, способный выполнять все задачи без специальной подготовки. Подходит для управления оружейными системами и устранения неполадок в электрооборудовании на борту. Члены экипажа — это основа персонала корабля.</jobdescription.assistant>
+		<!--<jobname.assistant1>Crewman</jobname.assistant1>
+		<jobname.assistant2>Marine Trooper</jobname.assistant2>-->
+	</Override>
+	
+	<Override>
+		<jobname.medicaldoctor>Врач</jobname.medicaldoctor>
+		<jobdescription.medicaldoctor>Врач — это главный медицинский персонал и бортовой доктор на любом корабле. Обладая обширными современными медицинскими знаниями, врачи обучены оказывать помощь раненым и лечить их с максимальной заботой и внимательностью.</jobdescription.medicaldoctor>
+		<!--<jobname.medicaldoctor1>Physician</jobname.medicaldoctor1>
+		<jobname.medicaldoctor2>Marine Medic</jobname.medicaldoctor2>-->
+	</Override>
+	
+	<Override>
+		<jobname.securityofficer>Морпех</jobname.securityofficer>
+		<jobdescription.securityofficer>Обученный обширному знанию огнестрельного оружия, общим видам вооружения и тактике, офицер службы безопасности является стандартным бортовым охранным персоналом любого корабля. Они обладают лучшей современной военной подготовкой, которую только может получить солдат.</jobdescription.securityofficer>
+		<!--<jobname.securityofficer1>Security</jobname.securityofficer1>
+		<jobname.securityofficer2>Marine Sergeant</jobname.securityofficer2>-->
+	</Override>
+	
+	<Override>	
+		<jobname.captain>Капитан</jobname.captain>
+		<jobdescription.captain>Командующий офицер всего бортового персонала определяет действия экипажа и корабля. Изучил передовые методы ведения морской войны и маневрирования.</jobdescription.captain>
+		<!--<jobname.captain1>Captain</jobname.captain1>
+		<jobname.captain2>Pilot</jobname.captain2>
+		<jobname.captain3>Admiral</jobname.captain3>-->
+	</Override>
+	
+	<Override>
+		<jobname.engineer>Инженер</jobname.engineer>
+		<jobdescription.engineer>Обладает широкими навыками в области электротехники и обслуживания, инженер специализируется на том, чтобы «держать свет включённым», так сказать, и отвечает за управление бортовым реактором и другими источниками энергии.</jobdescription.engineer>
+		<!--<jobname.engineer1>Engineer</jobname.engineer1>
+		<jobname.engineer2>Marine Technician</jobname.engineer2>-->
+	</Override>
+	
+	<Override>
+		<jobname.mechanic>Механик</jobname.mechanic>
+		<jobdescription.mechanic>Обладая обширными знаниями и выдающимися навыками работы руками, механики являются важной частью корабля и служат для поддержания его физической работоспособности.</jobdescription.mechanic>
+		<!--<jobname.mechanic1>Mechanic</jobname.mechanic1>
+		<jobname.mechanic2>Marine Mechanic</jobname.mechanic2>-->
+	</Override>	
+	
+	<!-- Descriptions -->
+	<Override>
+		<itemmsgdetachcrowbar>[[use]] Отсоединить (Лом)</itemmsgdetachcrowbar>
+	</Override>
+	
+	<!-- Gun Names -->
+	<entityname.nh_aie_486h>Тяжёлый пулемёт M247H</entityname.nh_aie_486h>
+	<entityname.nh_m6g_gnr>Спартанский Лазер W/AV M6 G/GNR</entityname.nh_m6g_gnr>
+	<entityname.nh_target_designator>Целеуказатель H-165</entityname.nh_target_designator>
+	<entityname.nh_99cs2>Снайперская Винтовка 99C-S2</entityname.nh_99cs2>
+	<entityname.nh_m41>Ракетная Установка M41-SPNKr</entityname.nh_m41>
+	<entityname.nh_m319>Гранатомёт M319</entityname.nh_m319>
+	<entityname.nh_m7057>Огнемёт M7057</entityname.nh_m7057>
+	<entityname.nh_ma3>Штурмовая Винтовка MA3 (Самодельная)</entityname.nh_ma3>
+	<entityname.nh_ma37>Штурмовая Винтовка MA37</entityname.nh_ma37>
+	<entityname.nh_ma5b>Штурмовая Винтовка MA5B</entityname.nh_ma5b>
+	<entityname.nh_ma5c>Штурмовая Винтовка MA5C</entityname.nh_ma5c>
+	<entityname.nh_br55>Боевая Винтовка BR55</entityname.nh_br55>
+	<entityname.nh_m7smg>Пистолет-пулемёт M7</entityname.nh_m7smg>
+	<entityname.nh_m7ssmg>Пистолет-пулемёт M7S</entityname.nh_m7ssmg>
+	<entityname.nh_m6d>Магнум M6D</entityname.nh_m6d>
+	<entityname.nh_m6c>Магнум M6C</entityname.nh_m6c>
+	<entityname.nh_m6csocom>M6C/SOCOM</entityname.nh_m6csocom>
+	<entityname.nh_m90>Дробовик M90</entityname.nh_m90>
+	<Override>
+	<entityname.divingknife>Боевой Нож</entityname.divingknife>
+	<entityname.divingknifehardened>Закалённый Боевой Нож</entityname.divingknifehardened>
+	<entityname.divingknifedementonite>Боевой Нож из Дементонита</entityname.divingknifedementonite>
+	</Override>
+	<!-- Gun Descriptions -->
+	<entitydescription.nh_aie_486h>‖color:gui.blue‖7.62x51 мм‖end‖ (.308Win)&#10;Тяжёлый пулемёт AIE-486H, прозванный «Кричащий», представляет собой трехствольный роторный пулемёт, произведённый компанией Misriah Armory и состоящий на вооружении Космического Командования Объединённых Наций. Это надёжная конструкция, состоящая из корпуса, в котором размещён электрический мотор, соединённый с тремя вращающимися стволами.&#10;‖color:gui.orange‖//Качество времени раскрутки//&#10;Good=‖end‖‖color:gui.green‖(-16.6%)‖end‖ ‖color:gui.orange‖Exel=‖end‖‖color:gui.green‖(-33.3%)‖end‖ ‖color:gui.orange‖Mastr=‖end‖‖color:gui.green‖(-50%)‖end‖</entitydescription.nh_aie_486h>
+	<entitydescription.nh_m6g_gnr>‖color:gui.blue‖П.С.К.У.‖end‖&#10;Оружие/противотанковая модель 6 Grindell/Galilean нелинейная винтовка (W/AV M6 G/GNR), в просторечии известная как «Спартанский Лазер» или «Сплазер», представляет собой экспериментальное переносное энергетическое противотанковое оружие.&#10;Побочные эффекты при длительном использовании могут включать, но не ограничиваются: напряжение мышц, финансовое напряжение, ожоги, радиационное воздействие, рак, постоянную потерю зрения и/или мгновенную смерть.</entitydescription.nh_m6g_gnr>
+	<entitydescription.nh_99cs2>‖color:gui.blue‖14.5x114мм‖end‖ (.57cal)&#10;‖color:gui.red‖ТРЕБУЕТ ВЫСОКОГО УРОВНЯ НАВЫКА‖end‖&#10;Мощное дальнобойное оружие, антиматериальная винтовка 99CS2 — одно из немногих оружий, способных гарантированно отправить почти любого инопланетянина в могилу.&#10;‖color:gui.green‖   2x урон при попадании в голову‖end‖</entitydescription.nh_99cs2>
+	<entitydescription.nh_m41>‖color:gui.blue‖102мм.‖end‖&#10;Многоцелевая переносная противотанковая система. M41 SPNKr, или, как его называют в просторечии, «Спанкер», использует легкие композиты для обеспечения переноски на плече и доставки противотанковых боеприпасов в любое место, где находятся силы ОНКК.</entitydescription.nh_m41>
+	<entitydescription.nh_m319>‖color:gui.blue‖M319 Индивидуальный Гранатомёт‖end‖, более официально известный как Индивидуальный Гранатомёт калибра ‖color:gui.blue‖40мм,‖end‖ M319, является однозарядным, с переломным механизмом пусковым устройством взрывчатки, производимым компанией Misriah Armory для использования Объединённым Национальным Космическим Командованием.</entitydescription.nh_m319>
+	<entitydescription.nh_m7057>‖color:gui.blue‖Топливо для сварки, напалм‖end‖&#10;‖color:gui.red‖«Для использования огнемёта нужен настоящий безумец...»‖end‖&#10;M7057/Defoliant Projector, более известный как огнемёт M7057, представляет собой зажигательное оружие, используемое в основном против укреплений на поле боя, защищённых точек/установок и с целью деморализации.</entitydescription.nh_m7057>
+	<entitydescription.nh_ma3>‖color:gui.blue‖7.62x51мм‖end‖ (.308Win)&#10;Ранний прототип штурмовых винтовок, которые сейчас используются ОНКК, документы MA3 были утечены в общественные каналы, и из-за его простоты в настоящее время он производится исключительно городскими бандами и мятежными группировками.</entitydescription.nh_ma3>
+	<entitydescription.nh_ma37>‖color:gui.blue‖7.62x51мм‖end‖ (.308Win)&#10;Одна из первых массовых штурмовых винтовок, находящихся в производстве для ОНКК, это сбалансированное оружие является основой большинства боевых групп в пространстве человечества.</entitydescription.nh_ma37>
+	<entitydescription.nh_ma5b>‖color:gui.blue‖7.62x51мм‖end‖ (.308Win)&#10;‖color:gui.red‖ТРЕБУЕТ ВЫСОКОГО УРОВНЯ НАВЫКА‖end‖&#10;Более тяжёлый, более опасный и «прожорливый» старший брат MA37. Это оружие часто используется в роли ручного пулемёта в подразделениях ОНКК.</entitydescription.nh_ma5b>
+	<entitydescription.nh_br55>‖color:gui.blue‖9.5x40мм.‖end‖&#10;‖color:gui.red‖ТРЕБУЕТ ВЫСОКОГО УРОВНЯ НАВЫКА‖end‖&#10;Точное, но сложное в использовании оружие, предназначенное для опытных стрелков. Плотный и быстрый трёхзарядный выстрел BR55 гарантирует попадание в цель, но отдача может быть неудобной для неподготовленных пользователей.&#10;‖color:gui.green‖   2x урон при попадании в голову‖end‖</entitydescription.nh_br55>
+	<entitydescription.nh_m7smg>‖color:gui.blue‖5x23мм.‖end‖&#10;Маленький, но удобный вспомогательный пистолет-пулемёт. M7 SMG обеспечивает высокую скорострельность и низкую отдачу.</entitydescription.nh_m7smg>
+	<entitydescription.nh_m7ssmg>‖color:gui.blue‖5x23мм.‖end‖&#10;‖color:gui.red‖ТРЕБУЕТ ВЫСОКОГО УРОВНЯ НАВЫКА‖end‖&#10;Тихий, точный и смертоносный. Это оружие часто используется бойцами ODST и силами специального назначения за линией врага. Гораздо дороже стандартного M7, но обеспечивает непревзойдённую точность и бесшумность.</entitydescription.nh_m7ssmg>
+	<entitydescription.nh_m6d>‖color:gui.blue‖12.7x58мм‖end‖ (.500s&amp;w)&#10;Тяжёлый и мощный пистолет, часто предпочитаемый пилотами и офицерами, которым нужна сила ружья, но с портативностью короткоствольного оружия. Магнум M6D — это настоящий зверь среди своих собратьев.&#10;‖color:gui.green‖   2x урон при попадании в голову‖end‖</entitydescription.nh_m6d>
+	<entitydescription.nh_m6c>‖color:gui.blue‖11.43x23мм‖end‖ (.45acp)&#10;Стандартное вспомогательное оружие всех военнослужащих ОНКК. Лёгкий, дешёвый и с достаточной останавливающей мощью против лёгкобронированных и неэкранированных целей.</entitydescription.nh_m6c>
+	<entitydescription.nh_m6csocom>Missing Text</entitydescription.nh_m6csocom>
+	<entitydescription.nh_m90>‖color:gui.blue‖8 калибр.‖end‖&#10;Хотя это устаревшая конструкция, помповый дробовик M90 остаётся рабочей лошадкой в сфере штурма и общего ближнего боя. Его простая конструкция хорошо подходит для нестабильной силы заряда специальных боеприпасов, используемых ОНКК.</entitydescription.nh_m90>
+
+	<!-- Ammo Names -->
+	<entityname.nh_havoknuke>"HAVOK" тактический ядерный заряд</entityname.nh_havoknuke>
+	<entityname.nh_fraggrenade>Осколочная Граната M9</entityname.nh_fraggrenade>
+	<entityname.nh_14.5x114_8>14.5x114мм 8 патронов</entityname.nh_14.5x114_8>
+	<entityname.nh_14.5x114_4>14.5x114мм 4 патрона</entityname.nh_14.5x114_4>
+	<entityname.nh_spnkr_pod_he>Ракета 102мм ОФ/Осколочная</entityname.nh_spnkr_pod_he>
+	<entityname.nh_spnkr_pod_ap>Ракета 102мм ОФ/ПТ</entityname.nh_spnkr_pod_ap>
+	<entityname.nh_40mmgrenade>Граната с Таймером 40мм</entityname.nh_40mmgrenade>
+	<entityname.nh_m7057fuel>Напалм Пирозен-V</entityname.nh_m7057fuel>
+	<entityname.nh_7.62x51mm_300>7.62x51мм 300 патронов</entityname.nh_7.62x51mm_300>
+	<entityname.nh_7.62x51mm_120>7.62x51мм 120 патронов</entityname.nh_7.62x51mm_120>
+	<entityname.nh_7.62x51mm_60>7.62x51мм 60 патронов</entityname.nh_7.62x51mm_60>
+	<entityname.nh_7.62x51mm_35>7.62x51мм 35 патронов</entityname.nh_7.62x51mm_35>
+	<entityname.nh_9.5x40mag_30>9.5x40мм 30 патронов</entityname.nh_9.5x40mag_30>
+	<entityname.nh_9.5x40mag_18>9.5x40мм 18 патронов</entityname.nh_9.5x40mag_18>
+	<entityname.nh_5x23mm_60>5x23мм 60 патронов</entityname.nh_5x23mm_60>
+	<entityname.nh_12.7x58mag_12>12.7x58мм-APHE 12 патронов</entityname.nh_12.7x58mag_12>
+	<entityname.nh_11.43x23mag_12>11.43x23мм 12 патронов</entityname.nh_11.43x23mag_12>
+	<entityname.nh_8g_buckshot>Дробь 8 калибра</entityname.nh_8g_buckshot>
+	<entityname.nh_8g_pvp>Птичья Дробь-DU 8 калибра</entityname.nh_8g_pvp>
+	<entityname.nh_8g_slug>Пуля 8 калибра</entityname.nh_8g_slug>
+	<!-- Ammo Descriptions -->
+	<entitydescription.nh_havoknuke>Тактическая ядерная мина HAVOK — одно из самых мощных наземных ядерных вооружений в арсенале ОНКК. В нижней части устройства находятся крепёжные полосы, которые позволяют прикреплять HAVOK к любой поверхности ‖color:gui.green‖или устанавливать в качестве боеголовки.‖end‖</entitydescription.nh_havoknuke>
+	<entitydescription.nh_fraggrenade>‖color:gui.blue‖Осколочная Граната M9‖end‖, разработанная компанией Misriah Armory, представляет собой осколочное взрывное устройство, используемое современными вооружёнными силами. Создана для максимальной летальности, она разбрасывает осколки на большую площадь при взрыве, что делает её крайне эффективной против вражеского персонала и слабо укреплённых позиций. Известная своей надёжностью и эффективностью в различных боевых ситуациях, осколочная граната M9 является важным инструментом в арсенале солдат, обеспечивая критическую поддержку в наступательных и оборонительных операциях.</entitydescription.nh_fraggrenade>
+	<entitydescription.nh_14.5x114_8>.57cal&#10;‖color:gui.blue‖Магазин на 8 патронов‖end‖&#10;Патрон 14.5x114мм был разработан в Советском Союзе в конце 1930-х годов для использования в противотанковых ружьях и тяжёлых пулемётах. Изначально предназначался для противотанковых ружей ПТРД и ПТРС, а позже адаптирован для использования в крупнокалиберном пулемёте КПВ. Известен своей высокой скоростью и значительными бронебойными характеристиками, широко используется в антиматериальных целях и в качестве зенитного патрона. Патрон 14.5x114мм остаётся в использовании и сегодня в различных военных приложениях по всему миру.</entitydescription.nh_14.5x114_8>
+	<entitydescription.nh_14.5x114_4>.57cal&#10;‖color:gui.blue‖Магазин на 4 патрона‖end‖&#10;Патрон 14.5x114мм был разработан в Советском Союзе в конце 1930-х годов для использования в противотанковых ружьях и тяжёлых пулемётах. Изначально предназначался для противотанковых ружей ПТРД и ПТРС, а позже адаптирован для использования в крупнокалиберном пулемёте КПВ. Известен своей высокой скоростью и значительными бронебойными характеристиками, широко используется в антиматериальных целях и в качестве зенитного патрона. Патрон 14.5x114мм остаётся в использовании и сегодня в различных военных приложениях по всему миру.</entitydescription.nh_14.5x114_4>
+	<entitydescription.nh_spnkr_pod_he>‖color:gui.blue‖102мм осколочно-фугасная‖end‖ ракета, разработанная компанией Misriah Armory, предназначена для использования в переносных противотанковых установках. Спроектированная для современных военных приложений, она обеспечивает значительную огневую мощь и разрушительные способности, делая её идеальной для противодействия живой силе и укреплённым позициям. Известна своей точностью и воздействием, 102мм осколочная ракета является важным активом в военных арсеналах, эффективно поражая укреплённые цели и обеспечивая необходимую поддержку в боевых операциях.</entitydescription.nh_spnkr_pod_he>
+	<entitydescription.nh_spnkr_pod_ap>‖color:gui.blue‖102мм бронебойная осколочно-фугасная‖end‖ ракета, разработанная компанией Misriah Armory, предназначена для использования в переносных противотанковых системах. Эта усовершенствованная ракета обеспечивает исключительную огневую мощь и бронепробиваемость, что делает её высокоэффективной против бронированных машин и укреплённых сооружений. Известна своей точностью и разрушительным воздействием, 102мм бронебойная ракета является важным средством обеспечения надёжной и мощной поддержки при столкновении с тяжело бронированными целями.</entitydescription.nh_spnkr_pod_ap>
+	<entitydescription.nh_40mmgrenade>‖color:gui.blue‖Граната с Таймером 40мм‖end‖, разработанная компанией Misriah Armory, предназначена для использования в индивидуальном гранатомёте M319. Эта осколочная граната оснащена взрывателем с задержкой, что гарантирует подрыв после заданной задержки для максимального воздействия. Идеально подходит для очистки окопанных позиций противника и создания тактических преимуществ на поле боя, граната с таймером 40мм предоставляет солдатам мощный и надёжный вариант непрямой огневой поддержки.</entitydescription.nh_40mmgrenade>
+	<entitydescription.nh_m7057fuel>Преступление войны — "S'mor-Crime", пластиковое топливо ‖color:gui.green‖прилипает к коже и перегружает энергетические щиты.‖end‖&#10;‖color:gui.red‖Не горит под водой.‖end‖</entitydescription.nh_m7057fuel>
+	<entitydescription.nh_7.62x51mm_300>.308Win&#10;‖color:gui.blue‖Магазин на 300 патронов‖end‖&#10;‖color:gui.red‖Нельзя использовать в винтовках.‖end‖&#10;Патрон 7.62x51мм НАТО был разработан в начале 1950-х годов в США и принят НАТО в 1954 году. Он был предназначен для замены патрона .30-06 Springfield в военной службе и известен своим балансом мощности и точности. Широко используется в винтовках и пулемётах, он стал стандартным патроном для сил НАТО и остаётся на вооружении сегодня, известен своим применением в таких огнестрельных оружиях, как M14, FN FAL и пулемёт M60.</entitydescription.nh_7.62x51mm_300>
+	<entitydescription.nh_7.62x51mm_120>.308Win&#10;‖color:gui.blue‖Магазин на 120 патронов‖end‖&#10;Патрон 7.62x51мм НАТО был разработан в начале 1950-х годов в США и принят НАТО в 1954 году. Он был предназначен для замены патрона .30-06 Springfield в военной службе и известен своим балансом мощности и точности. Широко используется в винтовках и пулемётах, он стал стандартным патроном для сил НАТО и остаётся на вооружении сегодня, известен своим применением в таких огнестрельных оружиях, как M14, FN FAL и пулемёт M60.</entitydescription.nh_7.62x51mm_120>
+	<entitydescription.nh_7.62x51mm_60>.308Win&#10;‖color:gui.blue‖Магазин на 60 патронов‖end‖&#10;Патрон 7.62x51мм НАТО был разработан в начале 1950-х годов в США и принят НАТО в 1954 году. Он был предназначен для замены патрона .30-06 Springfield в военной службе и известен своим балансом мощности и точности. Широко используется в винтовках и пулемётах, он стал стандартным патроном для сил НАТО и остаётся на вооружении сегодня, известен своим применением в таких огнестрельных оружиях, как M14, FN FAL и пулемёт M60.</entitydescription.nh_7.62x51mm_60>
+	<entitydescription.nh_7.62x51mm_35>.308Win&#10;‖color:gui.blue‖Магазин на 35 патронов‖end‖&#10;Патрон 7.62x51мм НАТО был разработан в начале 1950-х годов в США и принят НАТО в 1954 году. Он был предназначен для замены патрона .30-06 Springfield в военной службе и известен своим балансом мощности и точности. Широко используется в винтовках и пулемётах, он стал стандартным патроном для сил НАТО и остаётся на вооружении сегодня, известен своим применением в таких огнестрельных оружиях, как M14, FN FAL и пулемёт M60.</entitydescription.nh_7.62x51mm_35>
+	<entitydescription.nh_9.5x40mag_30>‖color:gui.blue‖Магазин на 30 патронов‖end‖&#10;Патрон 9.5x40мм — это мощный полу-бронебойный боеприпас, разработанный для боевых винтовок. Создан для современных военных нужд, он обеспечивает более высокую начальную скорость и улучшенные проникающие способности по сравнению со стандартными патронами. Этот патрон предпочитают за его эффективность в различных боевых сценариях, что делает его ценным выбором для вооружённых сил, стремящихся к превосходным характеристикам своего оружия.</entitydescription.nh_9.5x40mag_30>
+	<entitydescription.nh_9.5x40mag_18>‖color:gui.blue‖Магазин на 18 патронов‖end‖&#10;Патрон 9.5x40мм — это мощный полу-бронебойный боеприпас, разработанный для боевых винтовок. Создан для современных военных нужд, он обеспечивает более высокую начальную скорость и улучшенные проникающие способности по сравнению со стандартными патронами. Этот патрон предпочитают за его эффективность в различных боевых сценариях, что делает его ценным выбором для вооружённых сил, стремящихся к превосходным характеристикам своего оружия.</entitydescription.nh_9.5x40mag_18>
+	<entitydescription.nh_5x23mm_60>‖color:gui.blue‖Магазин на 60 патронов‖end‖&#10;Патрон 5x23мм — это компактный боеприпас с высокой начальной скоростью, предназначенный для пистолетов-пулемётов. Разработан для современных военных приложений, он обладает бронебойными способностями и не требует использования традиционной металлической гильзы. Этот безгильзовый дизайн повышает эффективность и производительность в ближнем бою, что делает его предпочтительным выбором для подразделений специального назначения и тактических групп ОНКК.</entitydescription.nh_5x23mm_60>
+	<entitydescription.nh_12.7x58mag_12>.500s&amp;w&#10;‖color:gui.blue‖Магазин на 12 патронов‖end‖&#10;Патрон .500 s&amp;w Magnum был разработан компанией Cor-Bon в сотрудничестве с Smith &amp; Wesson в 2003 году. Предназначенный для револьвера Smith &amp; Wesson Model 500, он известен своей огромной мощностью и часто используется для охоты на крупную дичь. Патрон .500 s&amp;w Magnum быстро стал одним из самых мощных доступных патронов для пистолетов, завоевав популярность среди охотников и любителей стрельбы за его впечатляющие баллистические характеристики.</entitydescription.nh_12.7x58mag_12>
+	<entitydescription.nh_11.43x23mag_12>.45acp&#10;‖color:gui.blue‖Магазин на 12 патронов‖end‖&#10;Патрон .45 ACP был разработан Джоном Браунингом в 1904 году и принят на вооружение армией США в 1911 году для использования в пистолете M1911. Известен своей останавливающей силой, он получил широкую известность в обеих мировых войнах и остаётся популярным в военных, правоохранительных и гражданских целях по сей день.</entitydescription.nh_11.43x23mag_12>
+	<entitydescription.nh_8g_buckshot>3.263мм&#10;Гильза 8 калибра с картечью, содержащая ‖color:gui.blue‖10‖end‖ свинцовых шариков.</entitydescription.nh_8g_buckshot>
+	<entitydescription.nh_8g_pvp>3.263мм&#10;Гильза 8 калибра с дробью, содержащая ‖color:gui.blue‖25‖end‖ пуль из обеднённого урана.&#10;Очень неточная, но ‖color:gui.green‖разрывает плоть и щиты в клочья.‖end‖</entitydescription.nh_8g_pvp>
+	<entitydescription.nh_8g_slug>3.263мм&#10;Гильза 8 калибра с пулей, содержащая ‖color:gui.blue‖1‖end‖ свинцовую пулю с титановым покрытием.&#10;‖color:gui.red‖Менее эффективна против энергетических щитов.‖end‖</entitydescription.nh_8g_slug>
+	
+	<!-- Armor Names -->
+	<entityname.nh_marinearmor1>Лёгкая Броня Морпехов</entityname.nh_marinearmor1>
+	<entityname.nh_marinearmor2>Тяжёлая Броня Морпехов</entityname.nh_marinearmor2>
+	<entityname.nh_marinehelmettroop>Шлем Морпеха</entityname.nh_marinehelmettroop>
+	<entityname.nh_marinehelmetcomms>Шлем Связиста Морпеха</entityname.nh_marinehelmetcomms>
+	<entityname.nh_marinehelmetmedic>Шлем Медика Морпеха</entityname.nh_marinehelmetmedic>
+	<entityname.nh_marinehelmetdiver>Шлем Водолаза Морпеха</entityname.nh_marinehelmetdiver>
+	<entityname.nh_odstarmor>Броня ODST</entityname.nh_odstarmor>
+	<entityname.nh_odstarmor_heavy>Тяжёлая Броня ODST</entityname.nh_odstarmor_heavy>
+	<entityname.nh_odsthelmet>Шлем ODST</entityname.nh_odsthelmet>
+	<entityname.nh_spartanarmor>Броня Спартанца</entityname.nh_spartanarmor>
+	<entityname.nh_spartanhelmet_1>Шлем Спартанца Mk.V</entityname.nh_spartanhelmet_1>
+	<entityname.nh_spartanhelmet_2>Шлем Спартанца EVA</entityname.nh_spartanhelmet_2>
+	<entityname.nh_spartanhelmet_2_emile>Повреждённый Шлем EVA</entityname.nh_spartanhelmet_2_emile>
+	<entityname.nh_engineer_hardhat>Каска</entityname.nh_engineer_hardhat>
+	<!-- Armor Descriptions -->
+	<entitydescription.nh_spartanarmor>‖color:gui.blue‖Защита от давления до 5,700 метров.‖end‖&#10;Силовая штурмовая броня «Мьёльнир» — это технологически продвинутая система боевого экзоскелета, разработанная для значительного улучшения силы, скорости, ловкости, рефлексов и выносливости Спартанца. Только самые элитные имеют честь носить эту легендарную броню.&#10;‖color:gui.red‖// Должна использоваться с герметичным шлемом! //‖end‖</entitydescription.nh_spartanarmor>
+	<entitydescription.nh_odstarmor>‖color:gui.blue‖Защита от давления до 4,000 метров.‖end‖&#10;‖color:gui.red‖// Должна использоваться с герметичным шлемом! //‖end‖</entitydescription.nh_odstarmor>
+	<entitydescription.nh_odsthelmet>‖color:gui.blue‖Герметичный.‖end‖</entitydescription.nh_odsthelmet>
+	<entitydescription.nh_spartanhelmet_1>‖color:gui.blue‖Герметичный.‖end‖&#10;‖color:gui.green‖Содержит‖end‖ ‖color:gui.blue‖устройство (CPAP)‖end‖ ‖color:gui.green‖, предотвращающее гипоксию даже в критическом состоянии.‖end‖</entitydescription.nh_spartanhelmet_1>
+	<entitydescription.nh_spartanhelmet_2>‖color:gui.blue‖Герметичный.‖end‖&#10;‖color:gui.green‖Содержит‖end‖ ‖color:gui.blue‖устройство (CPAP)‖end‖ ‖color:gui.green‖, предотвращающее гипоксию даже в критическом состоянии.‖end‖</entitydescription.nh_spartanhelmet_2>
+
+	<!-- Clothing Names -->
+	<entityname.nh_physicianuniform>Форма Врача</entityname.nh_physicianuniform>
+	<entityname.nh_physicianuniform_2>Форма Боевого Медика</entityname.nh_physicianuniform_2>
+	<entityname.nh_captainuniform>Форма Капитана</entityname.nh_captainuniform>
+	<entityname.nh_pilot_helmet>Шлем Пилота</entityname.nh_pilot_helmet>
+	<entityname.nh_marine_uniform_1>Форма Разведчика Морпехов</entityname.nh_marine_uniform_1>
+	<entityname.nh_marine_uniform_2>Подбронник Морпехов</entityname.nh_marine_uniform_2>
+	<entityname.nh_captain_cap>Капитанская Фуражка</entityname.nh_captain_cap>
+	<entityname.nh_boonie_hat>Панама</entityname.nh_boonie_hat>
+	<entityname.nh_bucket_hat>Шляпа-ведро</entityname.nh_bucket_hat>
+	<entityname.nh_balaclava>Маска для Лица</entityname.nh_balaclava>
+	<entityname.nh_sunglasses>Тактические Очки (Оранжевые)</entityname.nh_sunglasses>
+	<entityname.nh_sunglasses_2>Тактические Очки (Чёрные)</entityname.nh_sunglasses_2>
+	<entityname.nh_sunglasses_3>Тактические Очки (Белые)</entityname.nh_sunglasses_3>
+	<entityname.nh_sunglasses_4>Тактические Очки (Красные)</entityname.nh_sunglasses_4>
+	<entityname.nh_sunglasses_5>Тактические Очки (Синие)</entityname.nh_sunglasses_5>
+	<entityname.nh_sunglasses_6>Тактические Очки (Зелёные)</entityname.nh_sunglasses_6>
+	<entityname.nh_sunglasses_7>Тактические Очки (Фиолетовые)</entityname.nh_sunglasses_7>
+	<entityname.nh_sunglasses_8>Тактические Очки (Бирюзовые)</entityname.nh_sunglasses_8>
+	
+	<!-- Tool Names -->
+	<entityname.batterycelldisposable>Одноразовая Батарея</entityname.batterycelldisposable>
+	<entityname.nh_ammo_pack>Боекомплект</entityname.nh_ammo_pack>
+	<entityname.nh_radio_pack>Радиопакет</entityname.nh_radio_pack>
+	<entityname.nh_radio_pack_odst>Радиопакет (ODST)</entityname.nh_radio_pack_odst>
+	<entityname.nh_pscu>П.С.К.У.</entityname.nh_pscu>
+	<entityname.hn_motiontracker>Портативный Датчик Движения</entityname.hn_motiontracker>
+	<entityname.nh_tripwire>Растяжка</entityname.nh_tripwire>
+	<entityname.nh_shieldmodule_1>Модуль Щита</entityname.nh_shieldmodule_1>
+	<entityname.nh_shieldmodule_1_broken>Модуль Щита (Повреждён)</entityname.nh_shieldmodule_1_broken>
+	<entityname.nh_armormodule_1>Дополнительная Броня</entityname.nh_armormodule_1>
+	<Override>
+	<entityname.headset>Планшет Связи ОНКК</entityname.headset>
+	<entityname.weldingtool>Сварочный Аппарат</entityname.weldingtool>
+	<entityname.plasmacutter>Резак</entityname.plasmacutter>
+	<entityname.oxygentank>Баллон с O²</entityname.oxygentank>
+	<entityname.metalcrate>Средний Ящик</entityname.metalcrate>
+	</Override>
+	<entityname.nh_jerrycan>Канистра</entityname.nh_jerrycan>
+	<entityname.nh_generator>Генератор</entityname.nh_generator>
+	<entityname.nh_smallcrate>Малый Ящик</entityname.nh_smallcrate>
+	<entityname.nh_largecrate>Большой Ящик</entityname.nh_largecrate>
+	<entityname.nh_fusioncoil>Фьюжн Катушка</entityname.nh_fusioncoil>
+	<entityname.nh_titanium_a>Титан А</entityname.nh_titanium_a>
+	<entityname.nh_titanium_a_pure>Титан А</entityname.nh_titanium_a_pure>
+	<entityname.nh_titanium_a_raw>Неочищенный Титановый Кристалл</entityname.nh_titanium_a_raw>
+	<!-- Tool Descriptions -->
+	<entitydescription.nh_ammo_pack>Большой рюкзак для переноски всех боеприпасов и оружия, которые могут понадобиться отряду.&#10;Заполненные слоты значков замедляют ваше движение. Если все слоты пусты, а последний заполнен, вы всё равно будете полностью нагружены.</entitydescription.nh_ammo_pack>
+	<entitydescription.nh_radio_pack>Большая портативная радиостанция для связи на дальние расстояния на уровне командования.</entitydescription.nh_radio_pack>
+	<entitydescription.nh_pscu>Блок Управления Питанием&#10;Миниатюрный термоядерный реактор токамак, используемый для высоких энергозатрат и длительных требований к питанию.&#10;Небольшое отверстие в реакторе токамак позволяет заряженному потоку частиц поступать в камеру замедления, где они преобразуются в выходную мощность.&#10;Стандартный П.С.К.У. обеспечивает 60 минут питания для силовой брони.</entitydescription.nh_pscu>
+	<entitydescription.hn_motiontracker>Портативный и устанавливаемый на оружие инструмент, используемый для определения близости нематериальных объектов в зоне.&#10;Используя сочетание акустических датчиков, тепловизионных камер и алгоритмов предсказания ИИ, этот инструмент эффективно отслеживает и предупреждает пользователей о потенциально враждебных объектах поблизости.</entitydescription.hn_motiontracker>
+	<entitydescription.nh_tripwire>Простая нить и спусковой механизм.&#10;Зарядите взрывчатку, установите на земле, и через несколько секунд она активируется.&#10;Если вы видите мигающий КРАСНЫЙ СВЕТ, растяжка активирована.</entitydescription.nh_tripwire>
+	<entitydescription.nh_shieldmodule_1>Энергетическое экранирование — это передовая оборонительная технология, использующая поле заряженных частиц, оборачивающееся вокруг поверхности и отклоняющее объекты, которые пытаются её ударить. Большинство энергетических щитов способны отражать различные виды повреждений, от материальных снарядов до направленных потоков энергии. Несколько транспортных средств, устройств и броневых систем ОНКК, Ковенантов и Предтеч используют энергетические щиты для защиты пользователей.</entitydescription.nh_shieldmodule_1>
+	<entitydescription.nh_shieldmodule_1_broken>Проектор экранирования, повреждённый в результате боя или пренебрежения, не подлежит использованию. Возможно, он всё ещё пригодится в качестве запасных частей...</entitydescription.nh_shieldmodule_1_broken>
+	<entitydescription.nh_armormodule_1>‖color:gui.green‖"Лучшее решение — зачастую самое простое..."‖end‖&#10;Дополнительные бронепластины, которые можно установить на силовую броню. Не делает пользователя неуязвимым, но лучше, чем ничего.&#10;‖color:gui.blue‖Экстремальная стойкость к теплу.‖end‖</entitydescription.nh_armormodule_1>
+	<Override>
+	<entitydescription.divingknifehardened>Боевой нож, прошедший процесс закалки с использованием истощённого топлива. Укреплённый материал позволяет делать более глубокие порезы и удары.</entitydescription.divingknifehardened>
+	</Override>
+	<entitydescription.nh_titanium_a>Монокристаллический титан-углеродный сплав&#10;Обработанный лист сплава титана и карбида. Хотя он уступает по чистоте военному покрытию Титан-А, он разработан для упрощённого изготовления вне Земли с использованием доступных материалов. Несмотря на использование материалов более низкого качества, сплав сохраняет высокую прочность, хотя производство часто может сопровождаться ошибками.</entitydescription.nh_titanium_a>
+	<entitydescription.nh_titanium_a_pure>Монокристаллический титан-углеродный сплав&#10;Высококачественный лист титана, усиленный цирконием вместо углерода. Вырезан с точными стандартами и массово производится на орбите Земли, этот сплав обеспечивает превосходную прочность и устойчивость, что делает его предпочтительным выбором для броневых покрытий и обшивки транспортных средств.</entitydescription.nh_titanium_a_pure>
+	<entitydescription.nh_titanium_a_raw>Острый кусок необработанного карбида титана, часть процесса мелкомасштабного производства пластин Титан-А. Может содержать ценный монокристаллический титан-углеродный сплав, но требует разборки для выявления пригодных частей.</entitydescription.nh_titanium_a_raw>
+	
+	<!-- Medical Names -->
+	<entityname.nh_biofoam>Баллон с биопеной.</entityname.nh_biofoam>
+	<entityname.nh_spartaninjector>Spartan Serum</entityname.nh_spartaninjector>
+	<!-- Medical Descriptions -->
+	<entitydescription.nh_biofoam>Самозакрывающийся, заполняющий пространство коагулянт и антимикробная, ткане-регенерирующая пенополимерная пена, используемая Объединённым Национальным Космическим Командованием в качестве первой медицинской помощи. Эта пена удерживает повреждённые органы на месте и помогает остановить кровотечение и геморрагию.</entitydescription.nh_biofoam>
+	<entitydescription.nh_spartaninjector>Classified ONI super soldier serum used for the creation of Spartan II's, increases dexterity, movement speed, reaction time, vitality and overall general performance on and off the battlefield.</entitydescription.nh_spartaninjector>
+	
+	<!--<entityname.nh_hide_from_console>ས</entityname.nh_hide_from_console>-->
+	<entityname.nh_hide_from_console></entityname.nh_hide_from_console>
+	
+	<!-- Affliction Names -->
+	<afflictionname.nh_energy_shields>Энергетические Щиты.</afflictionname.nh_energy_shields>
+	<!-- Affliction Descriptions -->
+	
+	<!-- Stuff from Enhanced Armaments -->
+	<Override>
+	<entityname.scp_portableammofabricator>Портативный Фабрикатор Боеприпасов</entityname.scp_portableammofabricator>
+	<entitydescription.scp_portableammofabricator>Меньший, более компактный фабрикатор, разработанный и откалиброванный специально для производства боеприпасов, когда на подводной лодке отсутствует фабрикатор, или для создания боеприпасов с меньшим уровнем подозрений. Может быть установлен с использованием ПКМ + E.&#10;Улучшенное Вооружение</entitydescription.scp_portableammofabricator>
+	<entityname.scp_portableweaponfabricator>Портативный Фабрикатор Оружия</entityname.scp_portableweaponfabricator>
+	<entitydescription.scp_portableweaponfabricator>Меньший, более компактный фабрикатор, разработанный и откалиброванный специально для производства огнестрельного оружия на подводных лодках, не оборудованных фабрикаторами, или просто для создания оружия с меньшим уровнем подозрений. Может быть установлен с использованием ПКМ + E.&#10;Улучшенное Вооружение</entitydescription.scp_portableweaponfabricator>
+	<entityname.scp_reloadfabricator>Фабрикатор Перезарядки</entityname.scp_reloadfabricator>
+	<entitydescription.scp_reloadfabricator>Фабрикатор для перезарядки использованных магазинов. Может быть установлен с использованием ПКМ + E.&#10;Улучшенное Вооружение</entitydescription.scp_reloadfabricator>
+	<entityname.scp_portablejunctionbox>Портативная Распределительная Коробка</entityname.scp_portablejunctionbox>
+	<entitydescription.scp_portablejunctionbox>Меньшая, устанавливаемая на ходу распределительная коробка, предназначенная для расширения электросети подводной лодки. Из-за её размера и неминиатюризированных компонентов её возможности ограничены и она более подвержена перенапряжению. Может быть установлена с использованием ПКМ + E.&#10;Улучшенное Вооружение</entitydescription.scp_portablejunctionbox>
+	</Override>	
+</infotexts>

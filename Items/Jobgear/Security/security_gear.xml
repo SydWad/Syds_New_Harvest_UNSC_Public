@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+<!-- Marine Scout Uniform -->
+<Item name="" identifier="nh_marine_uniform_1" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" ShowContentsInTooltip="true">
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+	<InventoryIcon name="Security Uniform Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="0,384,128,128" origin="0.5,0.5" />
+	<Sprite name="Security Uniform" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,64,128,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+		<sprite name="Security Uniform Torso" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="18,45,99,168" origin="0.55,0.52" scale="0.7" limb="Torso" rotation="2" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Left Arm" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="135,133,49,103" origin="0.5,0.5" scale="0.7" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" depthlimb="LeftForearm" />
+		<sprite name="Security Uniform Right Arm" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="137,6,49,103" origin="0.5,0.5" scale="0.7" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" depthlimb="RightForearm" depth="0.999" />
+		<sprite name="Security Uniform Waist" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="14,4,66,87" origin="0.5,0.5" scale="1.0" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Right Thigh" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="101,9,72,135" origin="0.5,0.5" scale="0.8" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Left Thigh" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="185,9,69,135" origin="0.5,0.5" scale="0.8" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Right Leg" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="117,150,41,106" origin="0.5,0.5" scale="0.8" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Left Leg" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="199,151,41,105" origin="0.5,0.5" scale="0.8" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Right Shoe" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="5,95,57,81" origin="0.6,0.5" scale="0.65" limb="RightFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Left Shoe" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="5,95,57,81" origin="0.6,0.5" scale="0.65" limb="LeftFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<!-- Have to add dummy limb in order to have health effects apply to all limbs -->
+		<sprite name="Security Uniform Right Lower Arm" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="0,0,1,1" limb="RightForearm" hidelimb="false" />
+		<sprite name="Security Uniform Left Lower Arm" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="0,0,1,1" limb="LeftForearm" hidelimb="false" />
+		<sprite name="Security Uniform Right Hand" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="0,0,1,1" limb="RightHand" hidelimb="false" />
+		<sprite name="Security Uniform Left Hand" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="0,0,1,1" limb="LeftHand" hidelimb="false" />
+		<damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.85" armorsector="0.0,360.0" />
+		<damagemodifier afflictionidentifiers="gunshotwound" damagemultiplier="0.95" armorsector="0.0,360.0" />
+		<damagemodifier afflictiontypes="bleeding" damagemultiplier="0.95" armorsector="0.0,360.0" />
+		<damagemodifier afflictiontypes="burn" damagemultiplier="0.95" armorsector="0.0,360.0" />
+	</Wearable>
+	<ItemContainer capacity="2" maxstacksize="3" depth="0.5" hideitems="true" >
+		<SlotIcon slotindex="0" texture="Content/UI/WeaponUI.png" sourcerect="192,960,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="1" texture="Content/UI/WeaponUI.png" sourcerect="192,960,64,64" origin="0.5,0.5" />
+		<Containable items="smallitem,divingmask" excludeditems="weapon,pistolammoitem,gun,mountableweapon,tool,toolbelt,toolbox,storage,bandolier,deepdiving,clothing,armor,armour" />
+	</ItemContainer>
+</Item>
+	
+<!-- Boonie Hat -->
+<Item name="" identifier="nh_boonie_hat" aliases="nh_bucket_hat" fallbacknameidentifier="nh_bucket_hat" scale="0.4" InventoryIconColor="230,225,255,255" category="Equipment" tags="smallitem,clothing" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" >
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" NotCampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantcity" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.5" minavailable="3" />
+    </Price>
+	<Sprite texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="205,101,89,45" depth="0.5" origin="0.5,0.5" />
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="205,101,89,45" origin="0.5,0.5" />
+	<Body width="80" height="45" density="15" />
+	<Deconstruct time="1" >
+		<Item identifier="organicfiber" OutConditionMin="0.5" OutConditionMax="0.5" />
+	</Deconstruct>
+	<Wearable slots="Any,Head" >
+		<sprite name="NH Boonie Hat" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="200,100,100,100" limb="Head" rotation="10" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.4" origin="0.52,0.5" />
+		<damagemodifier afflictionidentifiers="concussion" damagemultiplier="0.5" armorsector="0.0,360.0"  />
+		<SkillModifier skillidentifier="weapons" skillvalue="5" />
+	</Wearable> 
+</Item>
+
+<!-- Marine Under Armor -->
+<Item name="" identifier="nh_marine_uniform_2" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+	<InventoryIcon name="Security Uniform Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="128,384,128,128" origin="0.5,0.5" />
+	<Sprite name="Security Uniform" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,64,128,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+		<sprite name="Security Uniform Torso" texture="%ModDir%/Items/Jobgear/Security/pilot_torso_[GENDER].png" sourcerect="18,45,99,168" origin="0.55,0.52" scale="0.75" rotation="3" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Left Arm" texture="%ModDir%/Items/Jobgear/Security/pilot_torso_[GENDER].png" sourcerect="135,133,49,103" origin="0.5,0.5" scale="0.7" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Right Arm" texture="%ModDir%/Items/Jobgear/Security/pilot_torso_[GENDER].png" sourcerect="137,6,49,103" origin="0.5,0.5" scale="0.7" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Right Lower Arm" texture="%ModDir%/Items/Jobgear/Security/pilot_torso_[GENDER].png" sourcerect="197,2,42,96" origin="0.5,0.5" scale="0.7" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Left Lower Arm" texture="%ModDir%/Items/Jobgear/Security/pilot_torso_[GENDER].png" sourcerect="200,131,41,93" origin="0.5,0.5" scale="0.7" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Waist" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="2,0,89,89" origin="0.6,0.4" scale="0.6" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Right Thigh" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="101,9,72,135" origin="0.5,0.5" scale="0.8" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Left Thigh" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="185,9,69,135" origin="0.5,0.5" scale="0.8" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Right Leg" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="117,150,41,106" origin="0.5,0.5" scale="0.8" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Left Leg" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="199,151,41,105" origin="0.5,0.5" scale="0.8" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Right Shoe" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="5,95,57,81" origin="0.6,0.5" scale="0.65" limb="RightFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Security Uniform Left Shoe" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="5,95,57,81" origin="0.6,0.5" scale="0.65" limb="LeftFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<!-- Have to add dummy limb in order to have health effects apply to all limbs -->
+		<sprite name="Security Uniform Right Hand" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="0,0,1,1" limb="RightHand" hidelimb="false" />
+		<sprite name="Security Uniform Left Hand" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="0,0,1,1" limb="LeftHand" hidelimb="false" />
+		<damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.8" armorsector="0.0,360.0" />
+		<damagemodifier afflictionidentifiers="gunshotwound" damagemultiplier="0.9" armorsector="0.0,360.0" />
+		<damagemodifier afflictiontypes="bleeding" damagemultiplier="0.9" armorsector="0.0,360.0" />
+		<damagemodifier afflictiontypes="burn" damagemultiplier="0.9" armorsector="0.0,360.0" />
+	</Wearable>
+</Item>
+
+</Items>

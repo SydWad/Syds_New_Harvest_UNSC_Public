@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+<!-- Uses battery now -->
+<Override>
+<Item name="" identifier="healthscanner" scale="0.5" category="Equipment" tags="smallitem,nh_needs_battery" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+	<PreferredContainer primary="medcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
+	<Price baseprice="150" minavailable="1">
+		<Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+		<Price storeidentifier="merchantcity" multiplier="1.2" />
+		<Price storeidentifier="merchantresearch" minavailable="8" />
+		<Price storeidentifier="merchantmilitary" multiplier="1.25" />
+		<Price storeidentifier="merchantmine" sold="false" />
+		<Price storeidentifier="merchantmedical" minavailable="8" />
+	</Price>
+	<Deconstruct time="20">
+		<Item identifier="copper" />
+		<Item identifier="plastic" amount="2" />
+	</Deconstruct>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10">
+		<RequiredSkill identifier="mechanical" level="30" />
+		<RequiredSkill identifier="medical" level="50" />
+		<RequiredItem identifier="fpgacircuit" />
+		<RequiredItem identifier="plastic" />
+	</Fabricate>
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,256,64,64" origin="0.5,0.5" />
+	<Sprite name="Health Scanner" texture="Content/Items/Jobgear/headgears.png" sourcerect="115,349,75,26" depth="0.6" origin="0.5,0.5" />
+	<Body width="70" height="24" density="15" />
+	<Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+		<sprite name="Health Scanner Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="115,349,75,26" origin="0.55,0.85" >
+			<LightComponent range="30" lightcolor="125,255,150,40" powerconsumption="1" IsOn="true" castshadows="false">
+				<LightTexture texture="Content/Lights/lightcone_old.png" origin="0.03,0.5" size="0.1,0.1" />
+			</LightComponent>
+		</sprite>
+		<StatusEffect type="OnWearing" targettype="This" drawhudwhenequipped="false" setvalue="true" targetitemcomponent="StatusHUD" >
+			<Conditional HasStatusTag="! nh_powered" />
+		</StatusEffect>
+	</Wearable>
+	<ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery" >
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+		<Containable items="mobilebattery" >
+			<StatusEffect type="OnWearing" targettype="this" voltage="1" setvalue="true" />
+			<StatusEffect type="OnWearing" targettype="Character,Contained" Condition="-0.05" >
+				<Conditional IsPlayer="true" />
+			</StatusEffect>
+			<StatusEffect type="OnWearing" targettype="Character,This" drawhudwhenequipped="true" setvalue="true" targetitemcomponent="StatusHUD" tags="nh_powered" duration="0.5" />
+		</Containable>
+	</ItemContainer>
+	<StatusHUD drawhudwhenequipped="true" />
+</Item>
+</Override>
+
+<!-- Physician Uniform -->
+<Item name="" identifier="nh_physicianuniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="256,0,128,128" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,128,128,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_[GENDER].png" limb="Torso" sourcerect="0,0,97,163" origin="0.53,0.52" scale="0.75" rotation="2" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="Waist" sourcerect="7,170,82,79" origin="0.5,0.5" scale="0.75" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="RightThigh" sourcerect="99,0,80,138" origin="0.5,0.5" scale="0.8" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="RightLeg" sourcerect="99,138,80,115" origin="0.5,0.5" scale="0.8" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="LeftThigh" sourcerect="179,0,80,138" origin="0.5,0.5" scale="0.8" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="LeftLeg" sourcerect="179,138,80,115" origin="0.5,0.5" scale="0.8" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="RightArm" sourcerect="265,0,67,108" origin="0.5,0.5" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="RightForearm" sourcerect="273,107,56,80" origin="0.5,0.5" scale="0.75" rotation="355" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="LeftArm" sourcerect="333,0,58,108" origin="0.5,0.5" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="LeftForearm" sourcerect="335,107,56,80" origin="0.5,0.5" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="RightFoot" sourcerect="257,197,95,66" origin="0.5,0.4" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="LeftFoot" sourcerect="257,197,95,66" origin="0.5,0.4" scale="0.7" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="RightHand" sourcerect="0,0,1,1" origin="0.5,0.5" scale="1.0" hidelimb="false" hideotherwearables="false" />
+			<sprite texture="%ModDir%/Items/Jobgear/Physician/phys_outfit_male.png" limb="LeftHand" sourcerect="0,0,1,1" origin="0.5,0.5" scale="1.0" hidelimb="false" hideotherwearables="false" />
+		<damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+	</Wearable>
+</Item>
+
+<!-- Combat Medic Uniform -->
+<Item name="" identifier="nh_physicianuniform_2" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" InventoryIconColor="255,225,235,255" ShowContentsInTooltip="true">
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+	<InventoryIcon texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="128,384,128,128" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,128,128,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+		<sprite name="Combat Medic Torso" texture="%ModDir%/Items/Jobgear/Physician/combat_medic_torso_[GENDER].png" sourcerect="18,45,99,168" origin="0.55,0.52" scale="0.75" rotation="3" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Left Arm" texture="%ModDir%/Items/Jobgear/Physician/combat_medic_torso_[GENDER].png" sourcerect="135,133,49,103" origin="0.5,0.5" scale="0.7" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Right Arm" texture="%ModDir%/Items/Jobgear/Physician/combat_medic_torso_[GENDER].png" sourcerect="137,6,49,103" origin="0.5,0.5" scale="0.7" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Right Lower Arm" texture="%ModDir%/Items/Jobgear/Physician/combat_medic_torso_[GENDER].png" sourcerect="197,2,42,96" origin="0.5,0.5" scale="0.7" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Left Lower Arm" texture="%ModDir%/Items/Jobgear/Physician/combat_medic_torso_[GENDER].png" sourcerect="200,131,41,93" origin="0.5,0.5" scale="0.7" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Waist" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="2,0,89,89" origin="0.6,0.4" scale="0.6" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Right Thigh" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="101,9,72,135" origin="0.5,0.5" scale="0.8" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Left Thigh" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="185,9,69,135" origin="0.5,0.5" scale="0.8" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Right Leg" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="117,150,41,106" origin="0.5,0.5" scale="0.8" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Left Leg" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="199,151,41,105" origin="0.5,0.5" scale="0.8" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Right Shoe" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="5,95,57,81" origin="0.6,0.5" scale="0.65" limb="RightFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Combat Medic Left Shoe" texture="%ModDir%/Items/Jobgear/Security/pilot_legs.png" sourcerect="5,95,57,81" origin="0.6,0.5" scale="0.65" limb="LeftFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+	</Wearable>
+	<ItemContainer capacity="2" maxstacksize="6" depth="0.5" hideitems="true" >
+		<SlotIcon slotindex="0" texture="%ModDir%/UI/Container_Icons.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="1" texture="%ModDir%/UI/Container_Icons.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+		<Containable items="medical,poison" excludeditems="mediumitem,weapon" />
+	</ItemContainer>
+</Item>
+
+</Items>

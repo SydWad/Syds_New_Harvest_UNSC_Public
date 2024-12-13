@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+<!-- Biofoam Canister -->
+<Item name="" identifier="nh_biofoam" category="Medical" health="2" MaxStackSize="12" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="2" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" useinhealthinterface="true" scale="0.225" impactsoundtag="impact_metal_light" InventoryIconColor="85,180,255,255" >
+	<PreferredContainer primary="nh_dev_tool" amount="12" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="nh_dev_spartanarmor" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="medcab" minamount="1" maxamount="3" spawnprobability="0.15"/>
+	<PreferredContainer primary="wreckmedcab" minamount="1" maxamount="2" spawnprobability="0.05"/>
+    <Price baseprice="120" BuyingPriceMultiplier="2.0" >
+      <Price storeidentifier="merchantoutpost" multiplier="1.4" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" sold="false"/>
+      <Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+      <Price storeidentifier="merchantmine" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minleveldifficulty="0" />
+    </Price>
+
+	<Fabricate suitablefabricators="medicalfabricator" requiredtime="25" >
+		<RequiredSkill identifier="medical" level="50" />
+		<RequiredItem identifier="aluminium" />
+		<RequiredItem identifier="antibleeding3" />
+		<RequiredItem identifier="antibloodloss1" />
+	</Fabricate>
+	<Deconstruct time="5">
+		<Item identifier="aluminium" amount="1" />
+		<Item identifier="antibleeding3" amount="1" copycondition="True" />
+	</Deconstruct>
+	
+    <SuitableTreatment type="bleeding" suitability="100" />
+    <SuitableTreatment type="burn" suitability="20" />
+    <SuitableTreatment type="internaldamage" suitability="10" />
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="920,0,52,125" depth="0.6" origin="0.5,0.5" />
+	<Body radius="20" height="80" density="9" />
+	<MeleeWeapon canBeCombined="true" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-3,0" holdangle="0" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+		<RequiredSkill identifier="medical" level="25"/>
+		<SkillRequirementHint identifier="medical" level="25" />
+		<StatusEffect type="OnUse" target="Contained" >
+			<Use />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This" delay="3.0" disabledeltatime="true" >
+			<SpawnItem identifier="nh_biofoam_timer" SpawnPosition="ThisInventory"  />
+		</StatusEffect>
+		
+		<StatusEffect type="OnUse" target="This,UseTarget" Condition="-1" delay="0.01" disabledeltatime="true" >
+			<ReduceAffliction type="bleeding" amount="9999" />
+		</StatusEffect>
+		<StatusEffect type="OnSuccess" target="This,AllLimbs" duration="5.0" >
+			<ReduceAffliction type="burn" amount="10" />
+			<ReduceAffliction type="internaldamage" amount="5" />
+		</StatusEffect>
+		<!-- Recover patient from critical state, but no more -->
+		<StatusEffect type="OnUse" target="This,UseTarget" duration="60" checkconditionalalways="true" >
+			<Conditional vitality="lteq 0" />
+			<ReduceAffliction type="damage" amount="0.25" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,UseTarget" duration="5" stackable="true" comparison="and" >
+			<Conditional bloodloss="gt 40" />
+			<Conditional vitality="lteq 0" />
+			<ReduceAffliction type="bloodloss" amount="10" />
+		</StatusEffect>
+		
+		<StatusEffect type="OnFailure" target="This,AllLimbs" Condition="-1" delay="0.01" disabledeltatime="true" >
+			<ReduceAffliction type="burn" amount="8" />
+			<ReduceAffliction type="internaldamage" amount="3" />
+		</StatusEffect>
+		
+		<StatusEffect type="OnUse" target="This" duration="0.35" disabledeltatime="True" allowwhenbroken="True" comparison="and" >
+			<Conditional condition="gt 0" />
+			<Sound file="Content/Items/Tools/Sprayer.ogg" range="500" volume="0.2" loop="true" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This" duration="0.5" disabledeltatime="True" allowwhenbroken="True" comparison="and" >
+			<Conditional condition="gt 0" />
+			<Sound file="Content/Items/Tools/FlareIgnite.ogg" range="500" volume="0.8" loop="true" />
+		</StatusEffect>
+		<RequiredItems items="nh_biofoam_timer" type="Contained" />
+	</MeleeWeapon>
+	<ItemContainer capacity="1" MaxStackSize="1" drawinventory="false" canbeselected="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true" spawnwithid="nh_biofoam_timer" >
+		<Containable identifiers="nh_biofoam_timer" />
+	</ItemContainer>
+	<Quality>
+		<QualityStat stattype="Condition" value="0.5" />
+	</Quality>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+<Item name="" identifier="nh_biofoam_timer" nameidentifier="nh_hide_from_console" tags="" Scale="0.5" hideinmenus="true" spritecolor="255,100,100,25" noninteractable="true" >
+	<Sprite texture="Content/Items/Materials/minerals.png" sourcerect="4,171,54,27" depth="0.55" origin="0.5,0.5" />
+	<Body width="25" height="25" density="0" />
+	<Holdable slots="Any" msg="ItemMsgPickUpSelect">
+		<StatusEffect type="OnUse" targettype="this" allowwhenbroken="true" >
+			<Remove />
+		</StatusEffect>
+		<StatusEffect type="OnBroken" targettype="this" allowwhenbroken="true" >
+			<Remove/>
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" targettype="this" allowwhenbroken="true" >
+			<Remove/>
+		</StatusEffect>
+	</Holdable>
+</Item>	
+  
+<!--<Item name="Empty Biofoam Canister" identifier="nh_brokenbiofoam" category="Material" Tags="smallitem,chem,medical" description="A used up and empty biofoam canister." useinhealthinterface="true" scale="0.3" impactsoundtag="impact_metal_light">
+	<PreferredContainer primary="wreckmedcab" minamount="0" maxamount="1" spawnprobability="0.05"/>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="920,0,52,125" depth="0.6" origin="0.5,0.5" />
+	<Body width="50" height="126" density="9" />
+</Item>-->
+
+<!-- Spartan Serum
+<Item name="" identifier="nh_spartaninjector" category="Material" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" scale="0.3" impactsoundtag="impact_metal_light" InventoryIconColor="85,180,255,255" >
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="384,448,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="961,785,63,115" depth="0.6" origin="0.5,0.5" />
+	<Body width="60" height="110" density="15" />
+	<MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+		Inject Into Spartan
+		<StatusEffect type="OnContained" target="Character" >
+			<Affliction identifier="spartanstrength" strength="300" />
+			<Affliction identifier="spartanaugmentations" strength="300" />
+			<Affliction identifier="spartanspeed" strength="300" />
+		</StatusEffect>
+		<StatusEffect type="OnContained" target="This" condition="-100"/>
+			Remove Immediately
+			<StatusEffect type="OnBroken" target="This">
+			<Remove />
+		</StatusEffect>
+	</MeleeWeapon>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item> -->
+	
+</Items>

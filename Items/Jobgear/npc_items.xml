@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+<!-- NPC Makeshift Assault Rifle thats always masterwork quality -->
+<Item name="" nameidentifier="nh_ma3" descriptionidentifier="nh_ma3" identifier="nh_ma3_npc" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="smallautoweapon,smallitem,weapon,gun,gunsmith,mountableweapon,nh_7.62x51_consumer" Scale="0.32" impactsoundtag="impact_metal_light" hideinmenus="true">
+	<Price baseprice="75" BuyingPriceMultiplier="2.0" MinLevelDifficulty="35" sold="false" CanBeSpecial="false">
+		<Price storeidentifier="merchantoutpost" sold="true" MinAvailableAmount="0" MaxAvailableAmount="3" />
+		<Price storeidentifier="merchantmine" sold="true" MinAvailableAmount="0" MaxAvailableAmount="3" >
+			<Reputation faction="separatists" min="0"/>
+		</Price>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailableAmount="0" MaxAvailableAmount="10" >
+			<Reputation faction="separatists" min="0"/>
+		</Price>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailableAmount="0" MaxAvailableAmount="15" >
+			<Reputation faction="separatists" min="0"/>
+		</Price>
+    </Price>
+	<Deconstruct time="5">
+		<Item identifier="plastic" amount="1" />
+		<Item identifier="iron" amount="3" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="1,458,327,104" depth="0.55" origin="0.5,0.5" />
+	<Body width="326" height="104" density="50" />
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true" holdpos="35,-20" aimpos="55,-5" handle1="-50,-28" handle2="95,-20" holdangle="-30" msg="ItemMsgPickUpSelect" >
+		<!-- Accuracy -->
+		<StatusEffect type="OnActive" targettype="this" tags="holding" delay="0.1" interval="0.5" duration="0.65" disabledeltatime="true" />
+		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" unskilledspread="0" spread="0" setvalue="true" >
+			<Conditional HasStatusTag="! holding" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" spread="-50" >
+			<Conditional spread="gt 1" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" unskilledspread="-30" >
+			<Conditional unskilledspread="gt 1" />
+		</StatusEffect>
+		
+		<!-- Play loading sound -->
+		<StatusEffect type="OnActive" targettype="This" stackable="false" comparison="and">
+			<RequiredItems identifiers="7.62x51ammo_s" type="Contained" />
+			<Conditional HasStatusTag="! loaded" />
+			<Sound file="%ModDir%/Sounds/Impact/impact_magazine_ma5b.ogg" range="1000" loop="false" volume="2.5" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="This" tags="loaded" delay="0.1" disabledeltatime="true" >
+			<RequiredItems identifiers="7.62x51ammo_s" type="Contained" />
+		</StatusEffect>
+	</Holdable>
+	<RangedWeapon reload="0.275" barrelpos="150,20" spread="5" unskilledspread="5" combatPriority="90" drawhudwhenequipped="true" crosshairscale="0.15" holdtrigger="true" >
+		<Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+		<CrosshairPointer texture="%ModDir%/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
+		<ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+		<ParticleEmitter particle="underwatermuzzleflashfast" particleamount="1" distance="30" anglemin="0" anglemax="0" colormultiplier="255,255,255,255" scalemultiplier="0.08,0.3" />
+		<StatusEffect type="OnUse" targettype="this" forceplaysounds="true" >
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_1.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_2.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_3.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_4.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_5.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
+		</StatusEffect>
+		<!-- Accuracy -->
+		<StatusEffect type="OnUse" targettype="this" spread="5" disabledeltatime="true">
+			<Conditional spread="lt 60" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" unskilledspread="10" disabledeltatime="true">
+			<Conditional unskilledspread="lt 60" />
+		</StatusEffect>
+		
+		<StatusEffect type="OnUse" targettype="this" >
+			<Explosion range="80.0" force="0.8" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="0.0" />
+			<Spawnitem identifier="nh_casing_med" amount="1" spawnposition="This" />
+		</StatusEffect>
+		<!--"Use" contained magazine to spawn projectiles.-->
+		<StatusEffect type="OnUse" targettype="Contained">
+			<Use />
+		</StatusEffect>
+		<RequiredItems identifiers="7.62x51ammo_s" type="Contained" msg="ItemMsgAmmoRequired" />
+		<RequiredSkill identifier="weapons" level="20" />
+		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1000" castshadows="true" setvalue="true" />
+		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1" castshadows="false" setvalue="true" delay="0.05" disabledeltatime="true" />
+		
+		<!-- Quality accuracy -->
+		<StatusEffect type="OnUse" targettype="this" spread="-0.25" unskilledspread="-0.5" disabledeltatime="true" comparison="and">
+			<Conditional Quality="eq 1" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" spread="-0.5" unskilledspread="-1" disabledeltatime="true" comparison="and">
+			<Conditional Quality="eq 2" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" spread="-0.75" unskilledspread="-1.5" disabledeltatime="true" comparison="and">
+			<Conditional Quality="eq 3" />
+		</StatusEffect>
+	</RangedWeapon>
+	
+	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,150,80,180" range="1" castshadows="false" allowingameediting="false" ison="true" >
+		<LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" />
+	</LightComponent>
+	
+	<ItemContainer itempos="12,-2" maxstacksize="1" capacity="1" hideitems="false" containedspritedepth="0.54" containedstateindicatorslot="0" >
+		<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="4,133,68,12" />
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="1" texture="%ModDir%/UI/attachment_Icons.png" sourcerect="7,181,152,152" origin="0.5,0.5" />
+		<Containable identifiers="7.62x51ammo_s" />
+		<SubContainer capacity="1" maxstacksize="1" >
+			<Containable items="flashlight" hide="true" itempos="25,-4" setactive="true" />
+			<Containable items="medium_attachment" hide="false" itempos="30,1" setactive="true" />
+		</SubContainer>
+	</ItemContainer>
+	<aitarget sightrange="2000" soundrange="4000" fadeouttime="2" />
+	<Quality qualityLevel="3" >
+		<QualityStat stattype="FiringRateMultiplier" value="0.333334" />
+	</Quality>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!-- Parade Halo Reach Assault Rifle -->
+<Item hideinmenus="true" name="" nameidentifier="nh_ma37" descriptionidentifier="nh_ma37" identifier="nh_ma37_parade" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="smallautoweapon,smallitem,weapon,gun,gunsmith,mountableweapon,nh_7.62x51_consumer" Scale="0.34" impactsoundtag="impact_metal_light">
+	<Price baseprice="250" sold="false" />
+	<!-- 3 plastic, 1 aluminium, 2 steel, 1 titanium -->
+	<Deconstruct time="10">
+		<Item identifier="plastic" amount="2" />
+		<Item identifier="aluminium" amount="1" />
+		<Item identifier="steel" amount="1" />
+		<Item identifier="titanium" amount="1" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="192,320,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="681,710,230,86" depth="0.55" origin="0.5,0.5" />
+	<Body width="230" height="86" density="50" />
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true" holdpos="-15,-15" aimpos="40,-2" handle1="-50,-25" handle2="10,0" holdangle="100" msg="ItemMsgPickUpSelect" >
+		<!-- Accuracy -->
+		<StatusEffect type="OnActive" targettype="this" tags="holding" delay="0.1" interval="0.5" duration="0.65" disabledeltatime="true" />
+		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" unskilledspread="0" spread="0" setvalue="true" >
+			<Conditional HasStatusTag="! holding" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" spread="-50" >
+			<Conditional spread="gt 5" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" unskilledspread="-30" >
+			<Conditional unskilledspread="gt 5" />
+		</StatusEffect>
+	</Holdable>
+	<RangedWeapon reload="0.13" barrelpos="115,10" unskilledspread="5" spread="5" combatPriority="90" drawhudwhenequipped="true" crosshairscale="0.15" holdtrigger="true" >
+		<Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+		<CrosshairPointer texture="%ModDir%/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
+		<!--<Crosshair texture="%ModDir%/Items/Weapons/crosshairs.png" sourcerect="1024,256,256,256" />-->
+		<ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+		<ParticleEmitter particle="underwatermuzzleflashfast" particleamount="1" distance="30" anglemin="0" anglemax="0" colormultiplier="255,255,255,255" scalemultiplier="0.08,0.3" />
+		<StatusEffect type="OnUse" targettype="this" forceplaysounds="true" >
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA37_shot_1.ogg" type="OnUse" range="3000" volume="0.45" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA37_shot_2.ogg" type="OnUse" range="3000" volume="0.45" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA37_shot_3.ogg" type="OnUse" range="3000" volume="0.45" selectionmode="Random" />
+		</StatusEffect>
+		
+		<!-- Parade Effect -->
+		<StatusEffect type="OnSecondaryUse" targettype="this" holdpos="40,-15" holdangle="-30" setvalue="true" />
+		<StatusEffect type="OnNotContained" targettype="Contained" >
+			<DropItem />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" OneShot="true" targettype="This" delay="0.1" disabledeltatime="true" >
+			<SpawnItem identifier="nh_ma37" amount="1" spawnposition="This" />
+			<RemoveItem />
+		</StatusEffect>
+		
+		<!-- Accuracy -->
+		<StatusEffect type="OnUse" targettype="this" spread="5" disabledeltatime="true">
+			<Conditional spread="lt 60" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" unskilledspread="10" disabledeltatime="true">
+			<Conditional unskilledspread="lt 60" />
+		</StatusEffect>
+		
+		<StatusEffect type="OnUse" targettype="this" >
+			<Explosion range="80.0" force="0.8" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="0.0" />
+			<Spawnitem identifier="nh_casing_med" amount="1" spawnposition="This" />
+		</StatusEffect>
+
+		<StatusEffect type="OnUse" targettype="Contained">
+			<Use />
+		</StatusEffect>
+		
+		<RequiredItems identifiers="7.62x51ammo_s" type="Contained" msg="ItemMsgAmmoRequired" />
+		<RequiredSkill identifier="weapons" level="20" />
+		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1000" castshadows="true" setvalue="true" />
+		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1" castshadows="false" setvalue="true" delay="0.05" disabledeltatime="true" />
+		
+		<!-- Quality accuracy -->
+		<StatusEffect type="OnUse" targettype="this" spread="-0.25" unskilledspread="-0.5" disabledeltatime="true" comparison="and">
+			<Conditional Quality="eq 1" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" spread="-0.5" unskilledspread="-1" disabledeltatime="true" comparison="and">
+			<Conditional Quality="eq 2" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" spread="-0.75" unskilledspread="-1.5" disabledeltatime="true" comparison="and">
+			<Conditional Quality="eq 3" />
+		</StatusEffect>
+	</RangedWeapon>
+	
+	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,150,80,180" range="1" castshadows="false" allowingameediting="false" ison="true" >
+		<LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" />
+	</LightComponent>
+	
+	<ItemContainer capacity="1" maxstacksize="1" itempos="-88,-10" hideitems="false" containedstateindicatorslot="0" containedspritedepth="0.54" >
+		<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="4,133,68,12" />
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="1" texture="%ModDir%/UI/attachment_Icons.png" sourcerect="7,181,152,152" origin="0.5,0.5" />
+		<Containable identifiers="7.62x51ammo_s">
+		</Containable>
+		<SubContainer capacity="1" maxstacksize="1">
+			<Containable items="flashlight" hide="true" itempos="20,-2" setactive="true" />
+			<Containable items="medium_attachment" hide="false" itempos="20,2" setactive="true" />
+		</SubContainer>
+	</ItemContainer>
+	<aitarget sightrange="2000" soundrange="4000" fadeouttime="3" />
+	<Quality>
+		<QualityStat stattype="FiringRateMultiplier" value="0.05" />
+	</Quality>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+
+<!-- Parade Halo 2 Battle Rifle -->
+<Item hideinmenus="true" name="" nameidentifier="nh_br55" descriptionidentifier="nh_br55" identifier="nh_br55_parade" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="smallautoweapon,smallitem,weapon,gun,gunsmith,mountableweapon,nh_9.5x40_consumer" Scale="0.32" impactsoundtag="impact_weapon_br55">
+	<Price baseprice="600" sold="false" />
+	<!-- 3 plastic, 2 aluminium, 2 steel, 2 titanium -->
+	<Deconstruct time="12">
+		<Item identifier="plastic" amount="2" />
+		<Item identifier="aluminium" amount="1" />
+		<Item identifier="titanium" amount="1" />
+		<Item identifier="steel" amount="1" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="1,189,280,92" depth="0.55" origin="0.5,0.5" />
+	<Body width="280" height="92" density="50" />
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true" holdpos="0,-10" aimpos="50,3" handle1="-53,-25" handle2="15,-3" holdangle="120" msg="ItemMsgPickUpSelect" >
+		<!-- Accuracy -->
+		<StatusEffect type="OnActive" targettype="this" tags="holding" delay="0.1" interval="0.5" duration="0.65" disabledeltatime="true" />
+		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" unskilledspread="0" spread="0" setvalue="true" >
+			<Conditional HasStatusTag="! holding" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" spread="-10" >
+			<Conditional spread="gt 0" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" unskilledspread="-8" >
+			<Conditional unskilledspread="gt 0" />
+		</StatusEffect>
+	</Holdable>
+	<RangedWeapon suitableprojectiles="nh_9.5x40mm_special" unskilledspread="0" spread="0.1" reload="0.7" barrelpos="120,5" combatPriority="90" drawhudwhenequipped="true" crosshairscale="0.15" >
+		<Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+		<CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+		<!--<Crosshair texture="%ModDir%/Items/Weapons/crosshairs.png" sourcerect="256,512,256,256" />-->
+		<ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+		<ParticleEmitter particle="underwatermuzzleflashfast" particleamount="1" distance="30" anglemin="0" anglemax="0" colormultiplier="255,255,255,255" scalemultiplier="0.08,0.3" />
+		<StatusEffect type="OnUse" targettype="this" forceplaysounds="true" >
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/BR55_shot_1.ogg" type="OnUse" range="3000" volume="1.5" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/BR55_shot_2.ogg" type="OnUse" range="3000" volume="1.5" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/BR55_shot_3.ogg" type="OnUse" range="3000" volume="1.5" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/BR55_shot_4.ogg" type="OnUse" range="3000" volume="1.5" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/BR55_shot_5.ogg" type="OnUse" range="3000" volume="1.5" selectionmode="Random" />
+		</StatusEffect>
+		
+		<!-- Parade Effect -->
+		<StatusEffect type="OnSecondaryUse" targettype="this" holdpos="40,-15" holdangle="-30" setvalue="true" />
+		<StatusEffect type="OnNotContained" targettype="Contained" >
+			<DropItem />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" OneShot="true" targettype="This" delay="0.1" disabledeltatime="true" >
+			<SpawnItem identifier="nh_br55" amount="1" spawnposition="This" />
+			<RemoveItem />
+		</StatusEffect>
+		
+		<!-- Accuracy -->
+		<StatusEffect type="OnUse" targettype="this" spread="6" disabledeltatime="true">
+			<Conditional spread="lt 60" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" unskilledspread="30" disabledeltatime="true">
+			<Conditional unskilledspread="lt 60" />
+		</StatusEffect>
+		
+		<StatusEffect type="OnUse" targettype="this" >
+			<Explosion range="80.0" force="1" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="0.5" />
+		</StatusEffect>
+		<!-- Spawn casings -->
+		<StatusEffect type="OnUse" targettype="this" disabledeltatime="true" >
+			<Spawnitem identifier="nh_casing_small" amount="1" spawnposition="This" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" delay="0.05" disabledeltatime="true" >
+			<Spawnitem identifier="nh_casing_small" amount="1" spawnposition="This" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" delay="0.1" disabledeltatime="true" >
+			<Spawnitem identifier="nh_casing_small" amount="1" spawnposition="This" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="Contained" disabledeltatime="true" targetitemslot="0" >
+			<Use />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="Contained" delay="0.05" disabledeltatime="true" targetitemslot="0" >
+			<Use />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="Contained" delay="0.1" disabledeltatime="true" targetitemslot="0" >
+			<Use />
+		</StatusEffect>
+		<!-- Spawn new special bullet inside, this is what allows it to fire three times at once -->
+		<StatusEffect type="OnUse" targettype="this" disabledeltatime="true" >
+			<Spawnitem identifier="nh_9.5x40mm_special" amount="1" spawnposition="ThisInventory" />
+		</StatusEffect>
+		
+		<RequiredSkill identifier="weapons" level="20" />
+		<RequiredItems identifiers="9.5x40ammo" type="Contained" msg="ItemMsgAmmoRequired" />
+		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1000" castshadows="true" setvalue="true" />
+		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1" castshadows="false" setvalue="true" delay="0.05" disabledeltatime="true" />
+		
+		<!-- Quality accuracy -->
+		<StatusEffect type="OnUse" targettype="this" spread="-0.9" unskilledspread="-4.5" disabledeltatime="true" comparison="and">
+			<Conditional Quality="eq 1" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" spread="-1.8" unskilledspread="-9" disabledeltatime="true" comparison="and">
+			<Conditional Quality="eq 2" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="this" spread="-2.7" unskilledspread="-13.5" disabledeltatime="true" comparison="and">
+			<Conditional Quality="eq 3" />
+		</StatusEffect>
+	</RangedWeapon>
+	
+	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,150,80,180" range="1" castshadows="false" allowingameediting="false" ison="true" >
+		<LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" />
+	</LightComponent>
+	
+	<ItemContainer capacity="1" maxstacksize="1" itempos="-29,47" hideitems="false" containedstateindicatorslot="0" containedspritedepth="0.54" removecontaineditemsondeconstruct="false" >
+		<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="4,133,68,12" />
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="1" texture="%ModDir%/UI/attachment_Icons.png" sourcerect="7,181,152,152" origin="0.5,0.5" />
+		<Containable identifiers="9.5x40ammo" hide="true" >
+		</Containable>
+		<SubContainer capacity="1" maxstacksize="1">
+			<Containable items="flashlight" hide="false" itempos="20,-5" setactive="true" />
+			<Containable items="medium_attachment" hide="false" itempos="20,-1" setactive="true" />
+		</SubContainer>
+	</ItemContainer>
+	<ItemContainer capacity="1" maxstacksize="1" itempos="0,0" drawinventory="false" canbeselected="false" hideitems="true" spawnwithid="nh_9.5x40mm_special" containedstateindicatorslot="0" removecontaineditemsondeconstruct="true" >
+		<Containable identifiers="nh_9.5x40mm_special" />
+	</ItemContainer>
+	<aitarget sightrange="2000" soundrange="4000" fadeouttime="3" />
+	<Quality>
+		<QualityStat stattype="FiringRateMultiplier" value="0.05" />
+	</Quality>
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!-- Alternate Halo Reach Grenade Launcher -->
+<Item hideinmenus="true" name="" nameidentifier="nh_m319" descriptionidentifier="nh_m319" identifier="nh_m319_parade" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon,nh_40mm_consumer" Scale="0.35" impactsoundtag="impact_metal_light" AllowSellingWhenBroken="true" HideConditionBar="true" HideConditionInTooltip="true">
+	<Price baseprice="500" sold="False" />
+	<!-- 2 plastic, 3 steel, 1 titanium -->
+	<Deconstruct time="12">
+		<Item identifier="plastic" amount="1" />
+		<Item identifier="steel" amount="2" />
+		<Item identifier="titanium" amount="1" />
+	</Deconstruct>
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="73,325,45,56" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="747,600,276,108" depth="0.55" origin="0.5,0.45" />
+	<BrokenSprite texture="%ModDir%/Items/Weapons/weapons3.png" sourcerect="745,608,269,129" depth="0.55" origin="0.52,0.31" maxcondition="0.1" />
+	<Body width="276" height="80" density="50" />
+	<Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="55,-10" aimpos="50,0" handle1="-115,-30" handle2="20,-20" holdangle="-30" msg="ItemMsgPickUpSelect" >
+		
+		<!-- Parade Effect -->
+		<StatusEffect type="OnNotContained" targettype="Contained" >
+			<DropItem />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" OneShot="true" targettype="This" delay="0.1" disabledeltatime="true" >
+			<SpawnItem identifier="nh_m319" amount="1" spawnposition="This" />
+			<RemoveItem />
+		</StatusEffect>
+		
+		<!-- Play loading sound -->
+		<StatusEffect type="OnActive" targettype="This" duration="0.45" condition="100" setvalue="true" stackable="false" disabledeltatime="true" aimpos="50,0" holdangle="-30" aimangle="0" comparison="and">
+			<RequiredItems identifiers="grenade" type="Contained" />
+			<Conditional HasStatusTag="! loaded" />
+				<Sound file="%ModDir%/Items/Weapons/General Sounds/M319_reload_1.ogg" range="300" volume="1.3" selectionmode="Random" />
+				<Sound file="%ModDir%/Items/Weapons/General Sounds/M319_reload_1.ogg" range="300" volume="1.3" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="This" tags="loaded" delay="0.1" condition="100" setvalue="true" disabledeltatime="true" >
+			<RequiredItems identifiers="grenade" type="Contained" />
+		</StatusEffect>
+	</Holdable>
+	<RangedWeapon reload="2.0" barrelpos="90,0" spread="1" unskilledspread="1" combatPriority="75" drawhudwhenequipped="true" crosshairscale="0.15">
+		<Crosshair texture="%ModDir%/Items/Weapons/m319_crosshairs.png" sourcerect="0,0,286,1028" /> <!-- 5,5,238,238 -->
+		<CrosshairPointer texture="%ModDir%/Items/Weapons/m319_crosshairs.png" sourcerect="287,0,770,741" /> <!-- 792,540,204,196 -->
+		<ParticleEmitter particle="muzzleflashrailgun" particleamount="1" velocitymin="50" velocitymax="100" scalemin="0.15" scalemax="0.2" />
+		<ParticleEmitter particle="underwatermuzzleflashfast" particleamount="1" distance="85" anglemin="0" anglemax="0" colormultiplier="255,255,255,255" scalemultiplier="0.6,1.3" />
+		<StatusEffect type="OnUse" targettype="this" forceplaysounds="true" >
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/M319_shot_1.ogg" type="OnUse" volume="1.5" range="3000" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/M319_shot_2.ogg" type="OnUse" volume="1.5" range="3000" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/M319_shot_3.ogg" type="OnUse" volume="1.5" range="3000" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/M319_shot_4.ogg" type="OnUse" volume="1.5" range="3000" selectionmode="Random" />
+		</StatusEffect>
+		
+		<!-- Adjust aiming for stupid NPCs -->
+		<StatusEffect type="OnSecondaryUse" targettype="This,Character" aimangle="15" setvalue="true" >
+			<Conditional IsPlayer="False" />
+		</StatusEffect>
+		<StatusEffect type="OnSecondaryUse" targettype="This,Character" aimangle="0" setvalue="true" >
+			<Conditional IsPlayer="True" />
+		</StatusEffect>
+		
+		<StatusEffect type="OnUse" targettype="this" >
+			<Explosion range="150.0" force="2" shockwave="false" smoke="false" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="6.0" aimangle="-2" />
+		</StatusEffect>
+		<!-- Timed grenade functionality -->
+		<StatusEffect type="OnSecondaryUse" targettype="this,contained" tags="charging" stackable="true" duration="0.3" interval="0.2" disabledeltatime="true" />
+		
+		<StatusEffect type="OnSecondaryUse" targettype="contained" condition="-50" checkconditionalalways="True" comparison="and" targetitemslot="0" > 
+			<Conditional condition="gt 25.0" />
+			<Conditional hastag="nh_timergrenade" />
+			<Conditional HasStatusTag="! fired" />
+		</StatusEffect>
+		<StatusEffect type="OnSecondaryUse" targettype="contained" condition="-15" checkconditionalalways="True" comparison="and" targetitemslot="0" > 
+			<Conditional condition="lteq 25.0" />
+			<Conditional condition="gt 1" />
+			<Conditional hastag="nh_timergrenade" />
+			<Conditional HasStatusTag="! fired" />
+		</StatusEffect>
+		<StatusEffect type="OnSecondaryUse" targettype="contained" condition="100" setvalue="true" checkconditionalalways="true" comparison="and" targetitemslot="0" > 
+			<Conditional HasStatusTag="! charging" />
+			<Conditional hastag="nh_timergrenade" />
+			<Conditional HasStatusTag="! fired" />
+		</StatusEffect>
+		
+		<!-- Cocking -->
+		<StatusEffect type="OnUse" targettype="this" condition="0.1" aimpos="50,-30" holdangle="-45" aimangle="-25" setvalue="true" delay="0.6" disabledeltatime="true" >
+			<SpawnItem identifiers="nh_casing_shell" spawnposition="This" />
+		</StatusEffect>
+		
+		<RequiredItems identifiers="grenade" type="Contained" msg="ItemMsgAmmoRequired" />
+		<!--<RequiredSkill identifier="weapons" level="60" />-->
+		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1200" castshadows="true" setvalue="true" />
+		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1" castshadows="false" setvalue="true" delay="0.05" disabledeltatime="true" />
+	</RangedWeapon>
+	
+	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,150,80,180" range="1" castshadows="false" allowingameediting="false" ison="true" >
+		<LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" />
+	</LightComponent>
+	
+	<!--Holds one grenade at a time-->
+	<ItemContainer capacity="1" maxstacksize="1" itempos="-15,10" iteminterval="0,-4" hideitems="true">
+		<ContainedStateIndicator texture="%ModDir%/UI/ContainerIndicators.png" sourcerect="4,4,114,23" />
+		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="448,448,64,64" origin="0.5,0.5" />
+		<Containable identifiers="grenade" >
+			<!-- Play loading sound
+			<StatusEffect type="OnContaining" targettype="This" duration="0.45" condition="100" setvalue="true" stackable="false" disabledeltatime="true" aimpos="50,0" holdangle="-30" aimangle="0" >
+				<Sound file="%ModDir%/Items/Weapons/General Sounds/M319_reload_1.ogg" range="300" volume="1.6" selectionmode="Random" />
+				<Sound file="%ModDir%/Items/Weapons/General Sounds/M319_reload_1.ogg" range="300" volume="1.6" />
+				<Conditional HasStatusTag="! loaded" />
+			</StatusEffect>
+			<StatusEffect type="OnContaining" targettype="This" tags="loaded" delay="0.1" condition="100" setvalue="true" disabledeltatime="true" /> -->
+		</Containable>
+	</ItemContainer>
+	<Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+		<sprite name="M319 Worn" texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="747,600,276,108" canbehiddenbyotherwearables="false" rotation="325" inheritlimbdepth="true" targetlimbdepth="RightArm" limb="Torso" scale="0.32" origin="0.4,0.1" />
+		<sprite name="M319 Sling" texture="%ModDir%/Items/Weapons/sling.png" sourcerect="0,0,333,255" canbehiddenbyotherwearables="false" rotation="345" inheritlimbdepth="true" targetlimbdepth="RightArm" limb="Torso" scale="0.15" origin="0.75,0.67" />
+	</Wearable>
+	<aitarget sightrange="3000" soundrange="2000" fadeouttime="6" />
+    <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
+</Item>
+
+<!-- UNSC / UNMP Police Helmet -->
+<Item name="" identifier="nh_police_helmet_1" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.4">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="200" sold="false" >
+		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" />
+		<Price storeidentifier="merchantcity" sold="true" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="3"  />
+		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" />
+		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
+		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" />
+	</Price>
+	<!-- 1 steel, 2 titanium -->
+	<Deconstruct time="2">
+		<Item identifier="steel" />
+		<Item identifier="titanium" />
+	</Deconstruct>
+	<Sprite texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="204,312,90,77" depth="0.6" origin="0.5,0.5" />
+	<Body radius="30" density="50" />
+	<Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
+		<sprite name="UNSC Police Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" rotation="5" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.35" sourcerect="200,300,100,100" origin="0.5,0.56" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+	</Wearable>
+</Item>
+
+<!-- UNSC / UNMP Police Armor -->
+<Item name="" identifier="nh_police_armor_1" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+	<Price baseprice="400" sold="false" >
+		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" />
+		<Price storeidentifier="merchantcity" sold="true" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="3"  />
+		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" />
+		<Price storeidentifier="merchantmilitary" multiplier="0.9" />
+		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" />
+	</Price>
+	<!-- 3 plastic, 6 aluminium, 6 titanium -->
+	<Deconstruct time="10" >
+		<Item identifier="plastic" amount="2" />
+		<Item identifier="aluminium" amount="4" />
+		<Item identifier="titanium" amount="4" />
+	</Deconstruct>
+	<InventoryIcon name="Police Armor" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="0,512,128,128" origin="0.5,0.5" />
+	<Sprite name="Police Armor" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,192,96,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="40" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+		<!-- Fake modifier to show speed change -->
+		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.9" armorsector="0.0,0.0" />
+		<sprite name="Police Armor Torso" texture="%ModDir%/Items/Jobgear/Armor/unsc_police_armor_torso.png" sourcerect="22,31,99,175" origin="0.5,0.55" scale="0.67" limb="Torso" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Police Armor Left Arm Back" texture="%ModDir%/Items/Jobgear/Armor/unsc_police_armor_torso.png" sourcerect="134,128,48,26" origin="0.5,0.6" scale="0.7" limb="LeftArm" depthlimb="LeftArm" depth="0.999" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Police Armor Left Arm Front" texture="%ModDir%/Items/Jobgear/Armor/unsc_police_armor_torso.png" sourcerect="134,158,51,70" origin="0.5,0.8" scale="0.7" limb="LeftArm" depthlimb="LeftForearm" depth="0.001" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Police Armor Right Arm" texture="%ModDir%/Items/Jobgear/Armor/unsc_police_armor_torso.png" sourcerect="134,4,51,70" origin="0.5,0.8" scale="0.7" limb="RightArm" depth="0.001" depthlimb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		
+		<sprite name="Police Armor Right Lower Arm" texture="%ModDir%/Items/Jobgear/Armor/unsc_police_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Police Armor Left Lower Arm" texture="%ModDir%/Items/Jobgear/Armor/unsc_police_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Police Armor Right Hand" texture="%ModDir%/Items/Jobgear/Armor/unsc_police_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightHand" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Police Armor Left Hand" texture="%ModDir%/Items/Jobgear/Armor/unsc_police_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="LeftHand" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		
+		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+		<StatusEffect type="OnWearing" targettype="Character" duration="0.1" stackable="false" >
+			<Affliction identifier="nh_slow" amount="10" />
+		</StatusEffect>
+	</Wearable>
+</Item>
+
+<!-- UNSC / UNMP Police Uniform -->
+<Item name="" identifier="nh_police_uniform_1" spritecolor="130,130,130,255" InventoryIconColor="160,150,150,255" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+	<InventoryIcon name="Police Uniform Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="0,384,128,128" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,64,128,64" depth="0.6" origin="0.5,0.5" />
+	<Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+	<Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+		<sprite name="Police Uniform Torso" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="18,45,99,168" origin="0.55,0.52" scale="0.7" limb="Torso" rotation="2" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Police Uniform Left Arm" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="135,133,49,103" origin="0.5,0.5" scale="0.7" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" depthlimb="LeftForearm" />
+		<sprite name="Police Uniform Right Arm" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="137,6,49,103" origin="0.5,0.5" scale="0.7" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" depthlimb="RightForearm" depth="0.999" />
+		<sprite name="Police Uniform Right Arm Symbol" texture="%ModDir%/Items/Jobgear/Armor/unsc_police_armor_torso.png" sourcerect="187,0,69,68" origin="0.53,0.9" scale="0.45" limb="RightArm" depth="0.998" depthlimb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true"/>
+		<sprite name="Police Uniform Waist" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="14,4,66,87" origin="0.5,0.5" scale="1.0" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Police Uniform Right Thigh" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="101,9,72,135" origin="0.5,0.5" scale="0.8" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Police Uniform Left Thigh" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="185,9,69,135" origin="0.5,0.5" scale="0.8" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Police Uniform Right Leg" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="117,150,41,106" origin="0.5,0.5" scale="0.8" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Police Uniform Left Leg" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="199,151,41,105" origin="0.5,0.5" scale="0.8" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Police Uniform Right Shoe" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="5,95,57,81" origin="0.6,0.5" scale="0.65" limb="RightFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<sprite name="Police Uniform Left Shoe" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="5,95,57,81" origin="0.6,0.5" scale="0.65" limb="LeftFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+		<!-- Have to add dummy limb in order to have health effects apply to all limbs -->
+		<sprite name="Police Uniform Right Lower Arm" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="0,0,1,1" limb="RightForearm" hidelimb="false" />
+		<sprite name="Police Uniform Left Lower Arm" texture="%ModDir%/Items/Jobgear/Security/marine_torso_[GENDER].png" sourcerect="0,0,1,1" limb="LeftForearm" hidelimb="false" />
+		<sprite name="Police Uniform Right Hand" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="0,0,1,1" limb="RightHand" hidelimb="false" />
+		<sprite name="Police Uniform Left Hand" texture="%ModDir%/Items/Jobgear/Security/marine_legs.png" sourcerect="0,0,1,1" limb="LeftHand" hidelimb="false" />
+		<damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.85" armorsector="0.0,360.0" />
+		<damagemodifier afflictionidentifiers="gunshotwound" damagemultiplier="0.95" armorsector="0.0,360.0" />
+		<damagemodifier afflictiontypes="bleeding" damagemultiplier="0.95" armorsector="0.0,360.0" />
+		<damagemodifier afflictiontypes="burn" damagemultiplier="0.95" armorsector="0.0,360.0" />
+	</Wearable>
+	<ItemContainer capacity="2" maxstacksize="3" depth="0.5" hideitems="true" >
+		<SlotIcon slotindex="0" texture="Content/UI/WeaponUI.png" sourcerect="192,960,64,64" origin="0.5,0.5" />
+		<SlotIcon slotindex="1" texture="Content/UI/WeaponUI.png" sourcerect="192,960,64,64" origin="0.5,0.5" />
+		<Containable items="smallitem,divingmask" excludeditems="weapon,pistolammoitem,gun,mountableweapon,tool,toolbelt,toolbox,storage,bandolier,deepdiving,clothing,armor,armour" />
+	</ItemContainer>
+</Item>
+
+</Items>

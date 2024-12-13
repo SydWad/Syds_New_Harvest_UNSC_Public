@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- Captain Uniform -->
+  <Item name="" identifier="nh_captainuniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer secondary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+    <InventoryIcon name="Captain Uniform Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Sprite name="Captain Uniform" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,0,128,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Captain Uniform Torso" texture="%ModDir%/Items/Jobgear/Captain/capt_torso_[GENDER].png" sourcerect="16,46,99,189" origin="0.53,0.55" scale="0.64" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Left Arm" texture="%ModDir%/Items/Jobgear/Captain/capt_torso_[GENDER].png" sourcerect="135,133,49,103" origin="0.5,0.5" scale="0.7" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Right Arm" texture="%ModDir%/Items/Jobgear/Captain/capt_torso_[GENDER].png" sourcerect="137,6,49,103" origin="0.5,0.5" scale="0.7" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Right Lower Arm" texture="%ModDir%/Items/Jobgear/Captain/capt_torso_[GENDER].png" sourcerect="197,2,42,96" origin="0.5,0.5" scale="0.7" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Left Lower Arm" texture="%ModDir%/Items/Jobgear/Captain/capt_torso_[GENDER].png" sourcerect="200,131,41,93" origin="0.5,0.5" scale="0.7" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Waist" texture="%ModDir%/Items/Jobgear/Captain/capt_legs.png" sourcerect="36,4,49,74" origin="0.5,0.5" scale="1.0" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Right Thigh" texture="%ModDir%/Items/Jobgear/Captain/capt_legs.png" sourcerect="101,9,72,135" origin="0.5,0.5" scale="0.8" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Left Thigh" texture="%ModDir%/Items/Jobgear/Captain/capt_legs.png" sourcerect="185,9,69,135" origin="0.5,0.5" scale="0.8" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Right Leg" texture="%ModDir%/Items/Jobgear/Captain/capt_legs.png" sourcerect="117,150,41,106" origin="0.45,0.5" scale="0.8" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Left Leg" texture="%ModDir%/Items/Jobgear/Captain/capt_legs.png" sourcerect="199,151,41,105" origin="0.45,0.5" scale="0.8" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Right Shoe" texture="%ModDir%/Items/Jobgear/Captain/capt_legs.png" sourcerect="5,95,57,81" origin="0.5,0.5" scale="0.65" limb="RightFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Captain Uniform Left Shoe" texture="%ModDir%/Items/Jobgear/Captain/capt_legs.png" sourcerect="5,95,57,81" origin="0.5,0.5" scale="0.65" limb="LeftFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.3" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.7" bleedingmultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" />
+      <SkillModifier skillidentifier="helm" skillvalue="10" />
+      <SkillModifier skillidentifier="weapons" skillvalue="5" />
+    </Wearable>
+  </Item>
+  <!-- Officer's Cap -->
+  <Item name="" identifier="nh_captain_cap" scale="0.4" SpriteColor="255,230,255,255" category="Equipment" tags="smallitem,clothing" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+    <PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" NotCampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantcity" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.5" minavailable="3" />
+    </Price>
+    <Sprite texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="108,103,80,51" depth="0.5" origin="0.5,0.5" />
+    <Body width="55" radius="16" density="15" />
+    <Deconstruct time="1">
+      <Item identifier="organicfiber" OutConditionMin="0.5" OutConditionMax="0.5" />
+    </Deconstruct>
+    <Wearable slots="Any,Head">
+      <sprite name="NH Captian Cap" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="100,100,100,100" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" origin="0.5,0.5" />
+      <damagemodifier afflictionidentifiers="concussion" damagemultiplier="0.5" armorsector="0.0,360.0" />
+      <SkillModifier skillidentifier="helm" skillvalue="5" />
+      <SkillModifier skillidentifier="weapons" skillvalue="3" />
+    </Wearable>
+  </Item>
+  <!-- Pilot Helmet -->
+  <Item name="" identifier="nh_pilot_helmet" category="Equipment" tags="smallitem,clothing,nh_needs_battery" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.35" impactsoundtag="impact_metal_light">
+    <PreferredContainer secondary="nh_dev_armor" minamount="1" maxamount="1" spawnprobability="1" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="helm" level="60" />
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="thermalgoggles" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="ballisticfiber" amount="2" />
+    </Fabricate>
+    <!-- 1 FPGA, 3 plastic, 2 aluminum 3 titanium -->
+    <Deconstruct time="5">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" amount="2" />
+      <Item identifier="aluminum" />
+      <Item identifier="titanium" amount="2" />
+    </Deconstruct>
+    <Sprite name="Captain Uniform" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="100,200,100,100" depth="0.6" origin="0.5,0.5" />
+    <Body radius="30" density="50" />
+    <Wearable slots="Head" msg="ItemMsgPickUpSelect">
+      <!-- Fake modifier to show speed change -->
+      <damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.3" armorsector="0.0,0.0" />
+      <sprite name="Pilot Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="Hair,Beard" scale="1.35" sourcerect="100,200,100,100" origin="0.5,0.48">
+        <LightComponent range="30" lightcolor="125,255,150,40" powerconsumption="1" IsOn="true" castshadows="false">
+          <LightTexture texture="Content/Lights/lightcone_old.png" origin="0.03,0.5" size="0.1,0.1" />
+        </LightComponent>
+      </sprite>
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" />
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
+      <StatValue stattype="WalkingSpeed" value="-0.1" />
+      <StatValue stattype="SwimmingSpeed" value="-0.7" />
+      <StatusEffect type="OnWearing" targettype="This" drawhudwhenequipped="false" setvalue="true" targetitemcomponent="StatusHUD">
+        <Conditional HasStatusTag="! nh_powered" />
+      </StatusEffect>
+    </Wearable>
+    <Holdable slots="LeftHand" holdpos="15,-20" handle1="15,-5" holdangle="-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" targettype="This" drawhudwhenequipped="false" setvalue="true" targetitemcomponent="StatusHUD" />
+    </Holdable>
+    <WifiComponent range="15000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <StatusEffect type="OnActive" targettype="This">
+        <Conditional JamTimer="gt 0" targetitemcomponent="WifiComponent" />
+        <RequiredItems items="mobilebattery" type="Contained" />
+        <sound file="Content/Sounds/RadioStatic.ogg" range="500.0" frequencymultiplier="0.7" loop="true" volume="0.5" />
+      </StatusEffect>
+    </WifiComponent>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <Containable items="mobilebattery">
+        <StatusEffect type="OnWearing" targettype="this" voltage="1" setvalue="true" />
+        <StatusEffect type="OnWearing" targettype="Character,Contained" Condition="-0.1">
+          <Conditional IsPlayer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" targettype="Character,This" drawhudwhenequipped="true" setvalue="true" targetitemcomponent="StatusHUD" tags="nh_powered" duration="0.5">
+          <Conditional InWater="false" />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+    <StatusHUD drawhudwhenequipped="false" overlaycolor="176,0,0,25" range="9999" thermalgoggles="true" showdeadcharacters="false" showtexts="false" />
+  </Item>
+  <!-- Admiral Cap -->
+  <Item name="Admiral Cap" identifier="nh_admiral_cap" scale="0.4" category="Equipment" tags="smallitem,clothing" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+    <PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" NotCampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.01" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantcity" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.5" minavailable="3" />
+    </Price>
+    <Sprite texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="2,203,88,51" depth="0.5" origin="0.5,0.5" />
+    <Body width="50" radius="18" density="15" />
+    <Deconstruct time="1">
+      <Item identifier="organicfiber" OutConditionMin="0.5" OutConditionMax="0.5" />
+    </Deconstruct>
+    <Wearable slots="Any,Head">
+      <sprite name="NH Captian Cap" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="0,200,100,100" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" origin="0.53,0.6" />
+      <damagemodifier afflictionidentifiers="concussion" damagemultiplier="0.5" armorsector="0.0,360.0" />
+      <SkillModifier skillidentifier="helm" skillvalue="10" />
+    </Wearable>
+  </Item>
+  <!-- Admiral Uniform -->
+  <Item name="Admiral Uniform" identifier="nh_admiraluniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer secondary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+    <InventoryIcon name="Captain Uniform Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="384,384,128,128" origin="0.5,0.5" />
+    <Sprite name="Admiral Uniform" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,0,128,64" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Admiral Uniform Torso" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_torso_[GENDER].png" sourcerect="12,27,110,200" origin="0.53,0.52" scale="0.8" limb="Torso" rotation="3" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Left Arm" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_torso_[GENDER].png" sourcerect="135,133,49,103" origin="0.5,0.48" scale="0.8" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Right Arm" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_torso_[GENDER].png" sourcerect="134,9,49,103" origin="0.5,0.48" scale="0.8" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Right Lower Arm" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_torso_[GENDER].png" sourcerect="203,2,42,96" origin="0.47,0.45" scale="0.8" limb="RightForearm" rotation="357" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Left Lower Arm" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_torso_[GENDER].png" sourcerect="203,128,41,93" origin="0.47,0.45" scale="0.8" limb="LeftForearm" rotation="357" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Waist" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_legs.png" sourcerect="18,5,68,69" origin="0.5,0.53" scale="0.9" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Right Thigh" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_legs.png" sourcerect="101,9,71,137" origin="0.5,0.5" scale="0.8" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Left Thigh" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_legs.png" sourcerect="183,9,71,137" origin="0.5,0.5" scale="0.8" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Right Leg" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_legs.png" sourcerect="115,149,42,107" origin="0.43,0.5" scale="0.8" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Left Leg" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_legs.png" sourcerect="199,151,43,105" origin="0.43,0.5" scale="0.8" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <!--<sprite name="Admiral Uniform Right Shoe" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_legs.png" sourcerect="5,95,57,81" origin="0.5,0.5" scale="0.65" limb="RightFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Left Shoe" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_legs.png" sourcerect="5,95,57,81" origin="0.5,0.5" scale="0.65" limb="LeftFoot" rotation="90" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />-->
+      <sprite name="Captain's Uniform 3 Left Shoe" texture="Content/Items/Jobgear/Captain/captain_3.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain's Uniform 3 Right Shoe" texture="Content/Items/Jobgear/Captain/captain_3.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Admiral Uniform Right Shoe Buckle" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_torso_male.png" sourcerect="39,75,3,2" origin="1.3,0.5" scale="2.0" limb="RightFoot" rotation="200" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <sprite name="Admiral Uniform Left Shoe Buckle" texture="%ModDir%/Items/Jobgear/Captain/unsc_admiral_torso_male.png" sourcerect="53,65,3,2" origin="1.0,0.5" scale="2.0" limb="LeftFoot" rotation="200" hidelimb="false" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.3" />
+      <damagemodifier afflictionidentifiers="gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.7" bleedingmultiplier="0.9" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.7" />
+      <SkillModifier skillidentifier="helm" skillvalue="15" />
+    </Wearable>
+  </Item>
+</Items>

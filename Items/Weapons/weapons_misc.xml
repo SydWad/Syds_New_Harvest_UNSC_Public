@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- i add a ས to the names of items so the player wont ever come across it trying to autofill a console command, clutter avoidance. The character is from some asian language and cant be typed in game. The item can still be spawned though if you use the item's ID instead of its name. -->
+<Items>
+<!-- Have to have splaser spawn a light since it already uses lights on it -->
+<Item name="སSplaser Muzzle Flash" identifier="nh_m6g_flash" category="Weapon" hideinmenus="true" tags="smallitem" impactsoundtag="impact_none" scale="0.1" noninteractable="true" SpriteColor="0,0,0,0" InventoryIconColor="255,255,25,255">
+	<Sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="258,2,124,124" depth="0.001" origin="0.5,0.5" />
+	<Body radius="50" density="2.55" />
+	<Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+	<LightComponent vulnerabletoemp="false" canbeselected="true" LightColor="255,0,0,255" range="1800" castshadows="true" allowingameediting="false" ison="true">
+		<LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" />
+		<StatusEffect Type="Always" OneShot="True" targettype="this" delay="0.25" disabledeltatime="true">
+			<Remove />
+		</StatusEffect>
+	</LightComponent>
+	<LightComponent vulnerabletoemp="false" canbeselected="true" LightColor="255,0,0,255" range="1800" castshadows="true" allowingameediting="false" ison="true">
+		<LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" />
+	</LightComponent>
+	<LightComponent vulnerabletoemp="false" canbeselected="true" LightColor="255,0,0,255" range="1800" castshadows="true" allowingameediting="false" ison="true">
+		<LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" />
+	</LightComponent>
+</Item>
+<Item name="སSplaser Impact Flash" identifier="nh_m6g_impactflash" category="Weapon" hideinmenus="true" tags="smallitem" impactsoundtag="impact_none" scale="0.1" noninteractable="true" SpriteColor="0,0,0,0" InventoryIconColor="255,255,25,255">
+	<Sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="258,2,124,124" depth="0.001" origin="0.5,0.5" />
+	<Body radius="50" density="2.55" />
+	<Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+	<LightComponent vulnerabletoemp="false" canbeselected="true" LightColor="255,50,0,255" range="500" castshadows="true" allowingameediting="false" ison="True">
+		<LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+		<StatusEffect Type="Always" OneShot="True" targettype="this" delay="0.1" disabledeltatime="true">
+			<Remove />
+		</StatusEffect>
+	</LightComponent>
+	<LightComponent vulnerabletoemp="false" canbeselected="true" LightColor="255,50,0,255" range="500" castshadows="true" allowingameediting="false" ison="True">
+		<LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+	</LightComponent>
+	<LightComponent vulnerabletoemp="false" canbeselected="true" LightColor="255,50,0,255" range="500" castshadows="true" allowingameediting="false" ison="True">
+		<LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+	</LightComponent>
+</Item>
+<Item name="སImpact Flash" identifier="nh_impactflash" category="Weapon" hideinmenus="true" tags="smallitem" impactsoundtag="impact_none" scale="0.1" noninteractable="true" SpriteColor="0,0,0,0" InventoryIconColor="255,255,25,255">
+	<Sprite texture="Content/UI/CommandUIAtlas.png" sourcerect="258,2,124,124" depth="0.001" origin="0.5,0.5" />
+	<Body radius="50" density="2.55" />
+	<Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+	<LightComponent vulnerabletoemp="false" canbeselected="true" LightColor="255,150,0,255" range="100" castshadows="true" allowingameediting="false" ison="True">
+		<LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+		<StatusEffect Type="Always" OneShot="True" targettype="this" delay="0.1" disabledeltatime="true">
+			<Remove />
+		</StatusEffect>
+	</LightComponent>
+	<LightComponent vulnerabletoemp="false" canbeselected="true" LightColor="255,150,0,255" range="100" castshadows="true" allowingameediting="false" ison="True">
+		<LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+	</LightComponent>
+	<LightComponent vulnerabletoemp="false" canbeselected="true" LightColor="255,150,0,255" range="100" castshadows="true" allowingameediting="false" ison="True">
+		<LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5,0.5" />
+	</LightComponent>
+</Item>
+<Item name="SPNKr Case" identifier="nh_spnkrcase" scale="0.32" category="Equipment" linkable="true" tags="crate" impactsoundtag="impact_spnkrcase" hideinmenus="true">
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="192,192,64,64" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" depth="0.55" sourcerect="1,878,327,118" origin="0.5,0.5" />
+	<Body width="328" height="118" density="80" />
+	<ItemContainer hideitems="true" capacity="2" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+		<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="5,133,67,12" />
+		<Containable identifiers="nh_spnkrrocket_he,nh_spnkrrocket_ap" />
+	</ItemContainer>
+	<!--Magazines can be combined to raise condition.-->
+	<Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+</Item>
+<!--<Item name="7.62x51mm Ammopacket" identifier="nh_ammopack762" scale="0.12" category="Weapon" tags="smallitem" impactsoundtag="impact_ammopacket">
+	Raise condition of Magazine that it is combined with.
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="0,384,64,64" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" depth="0.55" sourcerect="330,710,70,243" origin="0.5,0.5" />
+	<Body width="70" height="244" density="10" />
+	<Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+</Item>-->
+<Item name="སLarge Casing" identifier="nh_casing_large" tags="smallitem" impactsoundtag="impact_bullet" category="Misc" scale="0.4" hideinmenus="true" noninteractable="true">
+	<!-- impact_bulletsmall -->
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="915,372,53,40" depth="0.001" origin="0.7,0.5" />
+	<Body width="34" height="8" density="40" />
+	<ItemComponent>
+		<StatusEffect Type="Always" OneShot="True" targettype="this" delay="3.0" disabledeltatime="true">
+			<Remove />
+		</StatusEffect>
+	</ItemComponent>
+</Item>
+<Item name="སRifle Casing" identifier="nh_casing_med" tags="smallitem" impactsoundtag="impact_bullet" category="Misc" scale="0.3" hideinmenus="true" noninteractable="true">
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="915,372,49,40" depth="0.001" origin="0.7,0.5" />
+	<Body width="30" height="8" density="40" />
+	<ItemComponent>
+		<StatusEffect Type="Always" OneShot="True" targettype="this" delay="1.25" disabledeltatime="true" >
+			<Remove />
+		</StatusEffect>
+	</ItemComponent>
+</Item>
+<Item name="སPistol Casing" identifier="nh_casing_small" tags="smallitem" impactsoundtag="impact_bullet" category="Misc" scale="0.3" hideinmenus="true" noninteractable="true">
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="915,372,33,40" depth="0.001" origin="0.7,0.5" />
+	<Body width="14" height="8" density="40" />
+	<ItemComponent>
+		<StatusEffect Type="Always" OneShot="True" targettype="this" delay="1.25" disabledeltatime="true">
+			<Remove />
+		</StatusEffect>
+	</ItemComponent>
+</Item>
+<Item name="སShotgun Casing" identifier="nh_casing_shell" tags="smallitem" impactsoundtag="impact_shotgunshell" category="Misc" scale="0.5" hideinmenus="true" noninteractable="true" spritecolor="130,180,200,255">
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="852,170,23,9" depth="0.001" origin="0.5,0.5" />
+	<Body radius="8" density="40" />
+	<ItemComponent>
+		<StatusEffect Type="Always" OneShot="True" targettype="this" delay="10.0" disabledeltatime="true">
+			<Remove />
+		</StatusEffect>
+		<StatusEffect Type="Always" OneShot="True" targettype="this" scale="0.01" disabledeltatime="true">
+			<Conditional scale="lt 0.6" />
+		</StatusEffect>
+	</ItemComponent>
+</Item>
+<Item name="སGrenade Lever" identifier="nh_grenade_pin" tags="smallitem" impactsoundtag="impact_bullet" category="Misc" scale="0.3" hideinmenus="true" noninteractable="true">
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="960,714,59,51" depth="0.001" origin="0.5,0.5" />
+	<Body radius="18" density="40" gravityScale="0.65" angulardampening="0" friction="0" />
+	<ItemComponent>
+		<StatusEffect Type="Always" OneShot="True" targettype="this" delay="6.0" disabledeltatime="true">
+			<Remove />
+		</StatusEffect>
+	</ItemComponent>
+</Item>
+
+</Items>

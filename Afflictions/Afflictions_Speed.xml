@@ -1,0 +1,2841 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+
+<Affliction
+	name="Slowness"
+	identifier="nh_slow"
+	type="none"
+	isbuff="true"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1001" 
+	showicontoothersthreshold="1001"
+	showinhealthscannerthreshold="1001"
+	maxstrength="1000"
+	iconcolors="255,0,150,150"
+	affectmachines="true"
+	multiplybymaxvitality="false">
+    <Effect minstrength="0" 
+        maxstrength="5" 
+        strengthchange="-4" 
+        minspeedmultiplier="1.00" 
+        maxspeedmultiplier="0.95">
+    </Effect>
+
+    <Effect minstrength="5" 
+        maxstrength="10" 
+        strengthchange="-9" 
+        minspeedmultiplier="0.95" 
+        maxspeedmultiplier="0.90">
+    </Effect>
+
+    <Effect minstrength="10" 
+        maxstrength="15" 
+        strengthchange="-14" 
+        minspeedmultiplier="0.90" 
+        maxspeedmultiplier="0.85">
+    </Effect>
+
+    <Effect minstrength="15" 
+        maxstrength="20" 
+        strengthchange="-19" 
+        minspeedmultiplier="0.85" 
+        maxspeedmultiplier="0.80">
+    </Effect>
+
+    <Effect minstrength="20" 
+        maxstrength="25" 
+        strengthchange="-24" 
+        minspeedmultiplier="0.80" 
+        maxspeedmultiplier="0.75">
+    </Effect>
+
+    <Effect minstrength="25" 
+        maxstrength="30" 
+        strengthchange="-29" 
+        minspeedmultiplier="0.75" 
+        maxspeedmultiplier="0.70">
+    </Effect>
+
+    <Effect minstrength="30" 
+        maxstrength="35" 
+        strengthchange="-34" 
+        minspeedmultiplier="0.70" 
+        maxspeedmultiplier="0.65">
+    </Effect>
+
+    <Effect minstrength="35" 
+        maxstrength="40" 
+        strengthchange="-39" 
+        minspeedmultiplier="0.65" 
+        maxspeedmultiplier="0.60">
+    </Effect>
+
+    <Effect minstrength="40" 
+        maxstrength="45" 
+        strengthchange="-44" 
+        minspeedmultiplier="0.60" 
+        maxspeedmultiplier="0.55">
+    </Effect>
+
+    <Effect minstrength="45" 
+        maxstrength="50" 
+        strengthchange="-49" 
+        minspeedmultiplier="0.55" 
+        maxspeedmultiplier="0.50">
+    </Effect>
+
+    <Effect minstrength="50" 
+        maxstrength="55" 
+        strengthchange="-54" 
+        minspeedmultiplier="0.50" 
+        maxspeedmultiplier="0.45">
+    </Effect>
+
+    <Effect minstrength="55" 
+        maxstrength="60" 
+        strengthchange="-59" 
+        minspeedmultiplier="0.45" 
+        maxspeedmultiplier="0.40">
+    </Effect>
+
+    <Effect minstrength="60" 
+        maxstrength="65" 
+        strengthchange="-64" 
+        minspeedmultiplier="0.40" 
+        maxspeedmultiplier="0.35">
+    </Effect>
+
+    <Effect minstrength="65" 
+        maxstrength="70" 
+        strengthchange="-69" 
+        minspeedmultiplier="0.35" 
+        maxspeedmultiplier="0.30">
+    </Effect>
+
+    <Effect minstrength="70" 
+        maxstrength="75" 
+        strengthchange="-74" 
+        minspeedmultiplier="0.30" 
+        maxspeedmultiplier="0.25">
+    </Effect>
+
+    <Effect minstrength="75" 
+        maxstrength="80" 
+        strengthchange="-79" 
+        minspeedmultiplier="0.25" 
+        maxspeedmultiplier="0.20">
+    </Effect>
+
+    <Effect minstrength="80" 
+        maxstrength="85" 
+        strengthchange="-84" 
+        minspeedmultiplier="0.20" 
+        maxspeedmultiplier="0.15">
+    </Effect>
+
+    <Effect minstrength="85" 
+        maxstrength="90" 
+        strengthchange="-89" 
+        minspeedmultiplier="0.15" 
+        maxspeedmultiplier="0.10">
+    </Effect>
+
+    <Effect minstrength="90" 
+        maxstrength="95" 
+        strengthchange="-94" 
+        minspeedmultiplier="0.10" 
+        maxspeedmultiplier="0.05">
+    </Effect>
+
+    <Effect minstrength="95" 
+        maxstrength="100" 
+        strengthchange="-99" 
+        minspeedmultiplier="0.05" 
+        maxspeedmultiplier="0.00">
+    </Effect>
+
+    <Effect minstrength="100" 
+        maxstrength="105" 
+        strengthchange="-104" 
+        minspeedmultiplier="0.00" 
+        maxspeedmultiplier="-0.05">
+    </Effect>
+
+    <Effect minstrength="105" 
+        maxstrength="110" 
+        strengthchange="-109" 
+        minspeedmultiplier="-0.05" 
+        maxspeedmultiplier="-0.10">
+    </Effect>
+
+    <Effect minstrength="110" 
+        maxstrength="115" 
+        strengthchange="-114" 
+        minspeedmultiplier="-0.10" 
+        maxspeedmultiplier="-0.15">
+    </Effect>
+
+    <Effect minstrength="115" 
+        maxstrength="120" 
+        strengthchange="-119" 
+        minspeedmultiplier="-0.15" 
+        maxspeedmultiplier="-0.20">
+    </Effect>
+
+    <Effect minstrength="120" 
+        maxstrength="125" 
+        strengthchange="-124" 
+        minspeedmultiplier="-0.20" 
+        maxspeedmultiplier="-0.25">
+    </Effect>
+
+    <Effect minstrength="125" 
+        maxstrength="130" 
+        strengthchange="-129" 
+        minspeedmultiplier="-0.25" 
+        maxspeedmultiplier="-0.30">
+    </Effect>
+
+    <Effect minstrength="130" 
+        maxstrength="135" 
+        strengthchange="-134" 
+        minspeedmultiplier="-0.30" 
+        maxspeedmultiplier="-0.35">
+    </Effect>
+
+    <Effect minstrength="135" 
+        maxstrength="140" 
+        strengthchange="-139" 
+        minspeedmultiplier="-0.35" 
+        maxspeedmultiplier="-0.40">
+    </Effect>
+
+    <Effect minstrength="140" 
+        maxstrength="145" 
+        strengthchange="-144" 
+        minspeedmultiplier="-0.40" 
+        maxspeedmultiplier="-0.45">
+    </Effect>
+
+    <Effect minstrength="145" 
+        maxstrength="150" 
+        strengthchange="-149" 
+        minspeedmultiplier="-0.45" 
+        maxspeedmultiplier="-0.50">
+    </Effect>
+
+    <Effect minstrength="150" 
+        maxstrength="155" 
+        strengthchange="-154" 
+        minspeedmultiplier="-0.50" 
+        maxspeedmultiplier="-0.55">
+    </Effect>
+
+    <Effect minstrength="155" 
+        maxstrength="160" 
+        strengthchange="-159" 
+        minspeedmultiplier="-0.55" 
+        maxspeedmultiplier="-0.60">
+    </Effect>
+
+    <Effect minstrength="160" 
+        maxstrength="165" 
+        strengthchange="-164" 
+        minspeedmultiplier="-0.60" 
+        maxspeedmultiplier="-0.65">
+    </Effect>
+
+    <Effect minstrength="165" 
+        maxstrength="170" 
+        strengthchange="-169" 
+        minspeedmultiplier="-0.65" 
+        maxspeedmultiplier="-0.70">
+    </Effect>
+
+    <Effect minstrength="170" 
+        maxstrength="175" 
+        strengthchange="-174" 
+        minspeedmultiplier="-0.70" 
+        maxspeedmultiplier="-0.75">
+    </Effect>
+
+    <Effect minstrength="175" 
+        maxstrength="180" 
+        strengthchange="-179" 
+        minspeedmultiplier="-0.75" 
+        maxspeedmultiplier="-0.80">
+    </Effect>
+
+    <Effect minstrength="180" 
+        maxstrength="185" 
+        strengthchange="-184" 
+        minspeedmultiplier="-0.80" 
+        maxspeedmultiplier="-0.85">
+    </Effect>
+
+    <Effect minstrength="185" 
+        maxstrength="190" 
+        strengthchange="-189" 
+        minspeedmultiplier="-0.85" 
+        maxspeedmultiplier="-0.90">
+    </Effect>
+
+    <Effect minstrength="190" 
+        maxstrength="195" 
+        strengthchange="-194" 
+        minspeedmultiplier="-0.90" 
+        maxspeedmultiplier="-0.95">
+    </Effect>
+
+    <Effect minstrength="195" 
+        maxstrength="200" 
+        strengthchange="-199" 
+        minspeedmultiplier="-0.95" 
+        maxspeedmultiplier="-1.00">
+    </Effect>
+
+    <Effect minstrength="200" 
+        maxstrength="205" 
+        strengthchange="-204" 
+        minspeedmultiplier="-1.00" 
+        maxspeedmultiplier="-1.05">
+    </Effect>
+
+    <Effect minstrength="205" 
+        maxstrength="210" 
+        strengthchange="-209" 
+        minspeedmultiplier="-1.05" 
+        maxspeedmultiplier="-1.10">
+    </Effect>
+
+    <Effect minstrength="210" 
+        maxstrength="215" 
+        strengthchange="-214" 
+        minspeedmultiplier="-1.10" 
+        maxspeedmultiplier="-1.15">
+    </Effect>
+
+    <Effect minstrength="215" 
+        maxstrength="220" 
+        strengthchange="-219" 
+        minspeedmultiplier="-1.15" 
+        maxspeedmultiplier="-1.20">
+    </Effect>
+
+    <Effect minstrength="220" 
+        maxstrength="225" 
+        strengthchange="-224" 
+        minspeedmultiplier="-1.20" 
+        maxspeedmultiplier="-1.25">
+    </Effect>
+
+    <Effect minstrength="225" 
+        maxstrength="230" 
+        strengthchange="-229" 
+        minspeedmultiplier="-1.25" 
+        maxspeedmultiplier="-1.30">
+    </Effect>
+
+    <Effect minstrength="230" 
+        maxstrength="235" 
+        strengthchange="-234" 
+        minspeedmultiplier="-1.30" 
+        maxspeedmultiplier="-1.35">
+    </Effect>
+
+    <Effect minstrength="235" 
+        maxstrength="240" 
+        strengthchange="-239" 
+        minspeedmultiplier="-1.35" 
+        maxspeedmultiplier="-1.40">
+    </Effect>
+
+    <Effect minstrength="240" 
+        maxstrength="245" 
+        strengthchange="-244" 
+        minspeedmultiplier="-1.40" 
+        maxspeedmultiplier="-1.45">
+    </Effect>
+
+    <Effect minstrength="245" 
+        maxstrength="250" 
+        strengthchange="-249" 
+        minspeedmultiplier="-1.45" 
+        maxspeedmultiplier="-1.50">
+    </Effect>
+
+    <Effect minstrength="250" 
+        maxstrength="255" 
+        strengthchange="-254" 
+        minspeedmultiplier="-1.50" 
+        maxspeedmultiplier="-1.55">
+    </Effect>
+
+    <Effect minstrength="255" 
+        maxstrength="260" 
+        strengthchange="-259" 
+        minspeedmultiplier="-1.55" 
+        maxspeedmultiplier="-1.60">
+    </Effect>
+
+    <Effect minstrength="260" 
+        maxstrength="265" 
+        strengthchange="-264" 
+        minspeedmultiplier="-1.60" 
+        maxspeedmultiplier="-1.65">
+    </Effect>
+
+    <Effect minstrength="265" 
+        maxstrength="270" 
+        strengthchange="-269" 
+        minspeedmultiplier="-1.65" 
+        maxspeedmultiplier="-1.70">
+    </Effect>
+
+    <Effect minstrength="270" 
+        maxstrength="275" 
+        strengthchange="-274" 
+        minspeedmultiplier="-1.70" 
+        maxspeedmultiplier="-1.75">
+    </Effect>
+
+    <Effect minstrength="275" 
+        maxstrength="280" 
+        strengthchange="-279" 
+        minspeedmultiplier="-1.75" 
+        maxspeedmultiplier="-1.80">
+    </Effect>
+
+    <Effect minstrength="280" 
+        maxstrength="285" 
+        strengthchange="-284" 
+        minspeedmultiplier="-1.80" 
+        maxspeedmultiplier="-1.85">
+    </Effect>
+
+    <Effect minstrength="285" 
+        maxstrength="290" 
+        strengthchange="-289" 
+        minspeedmultiplier="-1.85" 
+        maxspeedmultiplier="-1.90">
+    </Effect>
+
+    <Effect minstrength="290" 
+        maxstrength="295" 
+        strengthchange="-294" 
+        minspeedmultiplier="-1.90" 
+        maxspeedmultiplier="-1.95">
+    </Effect>
+
+    <Effect minstrength="295" 
+        maxstrength="300" 
+        strengthchange="-299" 
+        minspeedmultiplier="-1.95" 
+        maxspeedmultiplier="-2.00">
+    </Effect>
+
+    <Effect minstrength="300" 
+        maxstrength="305" 
+        strengthchange="-304" 
+        minspeedmultiplier="-2.00" 
+        maxspeedmultiplier="-2.05">
+    </Effect>
+
+    <Effect minstrength="305" 
+        maxstrength="310" 
+        strengthchange="-309" 
+        minspeedmultiplier="-2.05" 
+        maxspeedmultiplier="-2.10">
+    </Effect>
+
+    <Effect minstrength="310" 
+        maxstrength="315" 
+        strengthchange="-314" 
+        minspeedmultiplier="-2.10" 
+        maxspeedmultiplier="-2.15">
+    </Effect>
+
+    <Effect minstrength="315" 
+        maxstrength="320" 
+        strengthchange="-319" 
+        minspeedmultiplier="-2.15" 
+        maxspeedmultiplier="-2.20">
+    </Effect>
+
+    <Effect minstrength="320" 
+        maxstrength="325" 
+        strengthchange="-324" 
+        minspeedmultiplier="-2.20" 
+        maxspeedmultiplier="-2.25">
+    </Effect>
+
+    <Effect minstrength="325" 
+        maxstrength="330" 
+        strengthchange="-329" 
+        minspeedmultiplier="-2.25" 
+        maxspeedmultiplier="-2.30">
+    </Effect>
+
+    <Effect minstrength="330" 
+        maxstrength="335" 
+        strengthchange="-334" 
+        minspeedmultiplier="-2.30" 
+        maxspeedmultiplier="-2.35">
+    </Effect>
+
+    <Effect minstrength="335" 
+        maxstrength="340" 
+        strengthchange="-339" 
+        minspeedmultiplier="-2.35" 
+        maxspeedmultiplier="-2.40">
+    </Effect>
+
+    <Effect minstrength="340" 
+        maxstrength="345" 
+        strengthchange="-344" 
+        minspeedmultiplier="-2.40" 
+        maxspeedmultiplier="-2.45">
+    </Effect>
+
+    <Effect minstrength="345" 
+        maxstrength="350" 
+        strengthchange="-349" 
+        minspeedmultiplier="-2.45" 
+        maxspeedmultiplier="-2.50">
+    </Effect>
+
+    <Effect minstrength="350" 
+        maxstrength="355" 
+        strengthchange="-354" 
+        minspeedmultiplier="-2.50" 
+        maxspeedmultiplier="-2.55">
+    </Effect>
+
+    <Effect minstrength="355" 
+        maxstrength="360" 
+        strengthchange="-359" 
+        minspeedmultiplier="-2.55" 
+        maxspeedmultiplier="-2.60">
+    </Effect>
+
+    <Effect minstrength="360" 
+        maxstrength="365" 
+        strengthchange="-364" 
+        minspeedmultiplier="-2.60" 
+        maxspeedmultiplier="-2.65">
+    </Effect>
+
+    <Effect minstrength="365" 
+        maxstrength="370" 
+        strengthchange="-369" 
+        minspeedmultiplier="-2.65" 
+        maxspeedmultiplier="-2.70">
+    </Effect>
+
+    <Effect minstrength="370" 
+        maxstrength="375" 
+        strengthchange="-374" 
+        minspeedmultiplier="-2.70" 
+        maxspeedmultiplier="-2.75">
+    </Effect>
+
+    <Effect minstrength="375" 
+        maxstrength="380" 
+        strengthchange="-379" 
+        minspeedmultiplier="-2.75" 
+        maxspeedmultiplier="-2.80">
+    </Effect>
+
+    <Effect minstrength="380" 
+        maxstrength="385" 
+        strengthchange="-384" 
+        minspeedmultiplier="-2.80" 
+        maxspeedmultiplier="-2.85">
+    </Effect>
+
+    <Effect minstrength="385" 
+        maxstrength="390" 
+        strengthchange="-389" 
+        minspeedmultiplier="-2.85" 
+        maxspeedmultiplier="-2.90">
+    </Effect>
+
+    <Effect minstrength="390" 
+        maxstrength="395" 
+        strengthchange="-394" 
+        minspeedmultiplier="-2.90" 
+        maxspeedmultiplier="-2.95">
+    </Effect>
+
+    <Effect minstrength="395" 
+        maxstrength="400" 
+        strengthchange="-399" 
+        minspeedmultiplier="-2.95" 
+        maxspeedmultiplier="-3.00">
+    </Effect>
+
+    <Effect minstrength="400" 
+        maxstrength="405" 
+        strengthchange="-404" 
+        minspeedmultiplier="-3.00" 
+        maxspeedmultiplier="-3.05">
+    </Effect>
+
+    <Effect minstrength="405" 
+        maxstrength="410" 
+        strengthchange="-409" 
+        minspeedmultiplier="-3.05" 
+        maxspeedmultiplier="-3.10">
+    </Effect>
+
+    <Effect minstrength="410" 
+        maxstrength="415" 
+        strengthchange="-414" 
+        minspeedmultiplier="-3.10" 
+        maxspeedmultiplier="-3.15">
+    </Effect>
+
+    <Effect minstrength="415" 
+        maxstrength="420" 
+        strengthchange="-419" 
+        minspeedmultiplier="-3.15" 
+        maxspeedmultiplier="-3.20">
+    </Effect>
+
+    <Effect minstrength="420" 
+        maxstrength="425" 
+        strengthchange="-424" 
+        minspeedmultiplier="-3.20" 
+        maxspeedmultiplier="-3.25">
+    </Effect>
+
+    <Effect minstrength="425" 
+        maxstrength="430" 
+        strengthchange="-429" 
+        minspeedmultiplier="-3.25" 
+        maxspeedmultiplier="-3.30">
+    </Effect>
+
+    <Effect minstrength="430" 
+        maxstrength="435" 
+        strengthchange="-434" 
+        minspeedmultiplier="-3.30" 
+        maxspeedmultiplier="-3.35">
+    </Effect>
+
+    <Effect minstrength="435" 
+        maxstrength="440" 
+        strengthchange="-439" 
+        minspeedmultiplier="-3.35" 
+        maxspeedmultiplier="-3.40">
+    </Effect>
+
+    <Effect minstrength="440" 
+        maxstrength="445" 
+        strengthchange="-444" 
+        minspeedmultiplier="-3.40" 
+        maxspeedmultiplier="-3.45">
+    </Effect>
+
+    <Effect minstrength="445" 
+        maxstrength="450" 
+        strengthchange="-449" 
+        minspeedmultiplier="-3.45" 
+        maxspeedmultiplier="-3.50">
+    </Effect>
+
+    <Effect minstrength="450" 
+        maxstrength="455" 
+        strengthchange="-454" 
+        minspeedmultiplier="-3.50" 
+        maxspeedmultiplier="-3.55">
+    </Effect>
+
+    <Effect minstrength="455" 
+        maxstrength="460" 
+        strengthchange="-459" 
+        minspeedmultiplier="-3.55" 
+        maxspeedmultiplier="-3.60">
+    </Effect>
+
+    <Effect minstrength="460" 
+        maxstrength="465" 
+        strengthchange="-464" 
+        minspeedmultiplier="-3.60" 
+        maxspeedmultiplier="-3.65">
+    </Effect>
+
+    <Effect minstrength="465" 
+        maxstrength="470" 
+        strengthchange="-469" 
+        minspeedmultiplier="-3.65" 
+        maxspeedmultiplier="-3.70">
+    </Effect>
+
+    <Effect minstrength="470" 
+        maxstrength="475" 
+        strengthchange="-474" 
+        minspeedmultiplier="-3.70" 
+        maxspeedmultiplier="-3.75">
+    </Effect>
+
+    <Effect minstrength="475" 
+        maxstrength="480" 
+        strengthchange="-479" 
+        minspeedmultiplier="-3.75" 
+        maxspeedmultiplier="-3.80">
+    </Effect>
+
+    <Effect minstrength="480" 
+        maxstrength="485" 
+        strengthchange="-484" 
+        minspeedmultiplier="-3.80" 
+        maxspeedmultiplier="-3.85">
+    </Effect>
+
+    <Effect minstrength="485" 
+        maxstrength="490" 
+        strengthchange="-489" 
+        minspeedmultiplier="-3.85" 
+        maxspeedmultiplier="-3.90">
+    </Effect>
+
+    <Effect minstrength="490" 
+        maxstrength="495" 
+        strengthchange="-494" 
+        minspeedmultiplier="-3.90" 
+        maxspeedmultiplier="-3.95">
+    </Effect>
+
+    <Effect minstrength="495" 
+        maxstrength="500" 
+        strengthchange="-499" 
+        minspeedmultiplier="-3.95" 
+        maxspeedmultiplier="-4.00">
+    </Effect>
+
+    <Effect minstrength="500" 
+        maxstrength="505" 
+        strengthchange="-504" 
+        minspeedmultiplier="-4.00" 
+        maxspeedmultiplier="-4.05">
+    </Effect>
+
+    <Effect minstrength="505" 
+        maxstrength="510" 
+        strengthchange="-509" 
+        minspeedmultiplier="-4.05" 
+        maxspeedmultiplier="-4.10">
+    </Effect>
+
+    <Effect minstrength="510" 
+        maxstrength="515" 
+        strengthchange="-514" 
+        minspeedmultiplier="-4.10" 
+        maxspeedmultiplier="-4.15">
+    </Effect>
+
+    <Effect minstrength="515" 
+        maxstrength="520" 
+        strengthchange="-519" 
+        minspeedmultiplier="-4.15" 
+        maxspeedmultiplier="-4.20">
+    </Effect>
+
+    <Effect minstrength="520" 
+        maxstrength="525" 
+        strengthchange="-524" 
+        minspeedmultiplier="-4.20" 
+        maxspeedmultiplier="-4.25">
+    </Effect>
+
+    <Effect minstrength="525" 
+        maxstrength="530" 
+        strengthchange="-529" 
+        minspeedmultiplier="-4.25" 
+        maxspeedmultiplier="-4.30">
+    </Effect>
+
+    <Effect minstrength="530" 
+        maxstrength="535" 
+        strengthchange="-534" 
+        minspeedmultiplier="-4.30" 
+        maxspeedmultiplier="-4.35">
+    </Effect>
+
+    <Effect minstrength="535" 
+        maxstrength="540" 
+        strengthchange="-539" 
+        minspeedmultiplier="-4.35" 
+        maxspeedmultiplier="-4.40">
+    </Effect>
+
+    <Effect minstrength="540" 
+        maxstrength="545" 
+        strengthchange="-544" 
+        minspeedmultiplier="-4.40" 
+        maxspeedmultiplier="-4.45">
+    </Effect>
+
+    <Effect minstrength="545" 
+        maxstrength="550" 
+        strengthchange="-549" 
+        minspeedmultiplier="-4.45" 
+        maxspeedmultiplier="-4.50">
+    </Effect>
+
+    <Effect minstrength="550" 
+        maxstrength="555" 
+        strengthchange="-554" 
+        minspeedmultiplier="-4.50" 
+        maxspeedmultiplier="-4.55">
+    </Effect>
+
+    <Effect minstrength="555" 
+        maxstrength="560" 
+        strengthchange="-559" 
+        minspeedmultiplier="-4.55" 
+        maxspeedmultiplier="-4.60">
+    </Effect>
+
+    <Effect minstrength="560" 
+        maxstrength="565" 
+        strengthchange="-564" 
+        minspeedmultiplier="-4.60" 
+        maxspeedmultiplier="-4.65">
+    </Effect>
+
+    <Effect minstrength="565" 
+        maxstrength="570" 
+        strengthchange="-569" 
+        minspeedmultiplier="-4.65" 
+        maxspeedmultiplier="-4.70">
+    </Effect>
+
+    <Effect minstrength="570" 
+        maxstrength="575" 
+        strengthchange="-574" 
+        minspeedmultiplier="-4.70" 
+        maxspeedmultiplier="-4.75">
+    </Effect>
+
+    <Effect minstrength="575" 
+        maxstrength="580" 
+        strengthchange="-579" 
+        minspeedmultiplier="-4.75" 
+        maxspeedmultiplier="-4.80">
+    </Effect>
+
+    <Effect minstrength="580" 
+        maxstrength="585" 
+        strengthchange="-584" 
+        minspeedmultiplier="-4.80" 
+        maxspeedmultiplier="-4.85">
+    </Effect>
+
+    <Effect minstrength="585" 
+        maxstrength="590" 
+        strengthchange="-589" 
+        minspeedmultiplier="-4.85" 
+        maxspeedmultiplier="-4.90">
+    </Effect>
+
+    <Effect minstrength="590" 
+        maxstrength="595" 
+        strengthchange="-594" 
+        minspeedmultiplier="-4.90" 
+        maxspeedmultiplier="-4.95">
+    </Effect>
+
+    <Effect minstrength="595" 
+        maxstrength="600" 
+        strengthchange="-599" 
+        minspeedmultiplier="-4.95" 
+        maxspeedmultiplier="-5.00">
+    </Effect>
+
+    <Effect minstrength="600" 
+        maxstrength="605" 
+        strengthchange="-604" 
+        minspeedmultiplier="-5.00" 
+        maxspeedmultiplier="-5.05">
+    </Effect>
+
+    <Effect minstrength="605" 
+        maxstrength="610" 
+        strengthchange="-609" 
+        minspeedmultiplier="-5.05" 
+        maxspeedmultiplier="-5.10">
+    </Effect>
+
+    <Effect minstrength="610" 
+        maxstrength="615" 
+        strengthchange="-614" 
+        minspeedmultiplier="-5.10" 
+        maxspeedmultiplier="-5.15">
+    </Effect>
+
+    <Effect minstrength="615" 
+        maxstrength="620" 
+        strengthchange="-619" 
+        minspeedmultiplier="-5.15" 
+        maxspeedmultiplier="-5.20">
+    </Effect>
+
+    <Effect minstrength="620" 
+        maxstrength="625" 
+        strengthchange="-624" 
+        minspeedmultiplier="-5.20" 
+        maxspeedmultiplier="-5.25">
+    </Effect>
+
+    <Effect minstrength="625" 
+        maxstrength="630" 
+        strengthchange="-629" 
+        minspeedmultiplier="-5.25" 
+        maxspeedmultiplier="-5.30">
+    </Effect>
+
+    <Effect minstrength="630" 
+        maxstrength="635" 
+        strengthchange="-634" 
+        minspeedmultiplier="-5.30" 
+        maxspeedmultiplier="-5.35">
+    </Effect>
+
+    <Effect minstrength="635" 
+        maxstrength="640" 
+        strengthchange="-639" 
+        minspeedmultiplier="-5.35" 
+        maxspeedmultiplier="-5.40">
+    </Effect>
+
+    <Effect minstrength="640" 
+        maxstrength="645" 
+        strengthchange="-644" 
+        minspeedmultiplier="-5.40" 
+        maxspeedmultiplier="-5.45">
+    </Effect>
+
+    <Effect minstrength="645" 
+        maxstrength="650" 
+        strengthchange="-649" 
+        minspeedmultiplier="-5.45" 
+        maxspeedmultiplier="-5.50">
+    </Effect>
+
+    <Effect minstrength="650" 
+        maxstrength="655" 
+        strengthchange="-654" 
+        minspeedmultiplier="-5.50" 
+        maxspeedmultiplier="-5.55">
+    </Effect>
+
+    <Effect minstrength="655" 
+        maxstrength="660" 
+        strengthchange="-659" 
+        minspeedmultiplier="-5.55" 
+        maxspeedmultiplier="-5.60">
+    </Effect>
+
+    <Effect minstrength="660" 
+        maxstrength="665" 
+        strengthchange="-664" 
+        minspeedmultiplier="-5.60" 
+        maxspeedmultiplier="-5.65">
+    </Effect>
+
+    <Effect minstrength="665" 
+        maxstrength="670" 
+        strengthchange="-669" 
+        minspeedmultiplier="-5.65" 
+        maxspeedmultiplier="-5.70">
+    </Effect>
+
+    <Effect minstrength="670" 
+        maxstrength="675" 
+        strengthchange="-674" 
+        minspeedmultiplier="-5.70" 
+        maxspeedmultiplier="-5.75">
+    </Effect>
+
+    <Effect minstrength="675" 
+        maxstrength="680" 
+        strengthchange="-679" 
+        minspeedmultiplier="-5.75" 
+        maxspeedmultiplier="-5.80">
+    </Effect>
+
+    <Effect minstrength="680" 
+        maxstrength="685" 
+        strengthchange="-684" 
+        minspeedmultiplier="-5.80" 
+        maxspeedmultiplier="-5.85">
+    </Effect>
+
+    <Effect minstrength="685" 
+        maxstrength="690" 
+        strengthchange="-689" 
+        minspeedmultiplier="-5.85" 
+        maxspeedmultiplier="-5.90">
+    </Effect>
+
+    <Effect minstrength="690" 
+        maxstrength="695" 
+        strengthchange="-694" 
+        minspeedmultiplier="-5.90" 
+        maxspeedmultiplier="-5.95">
+    </Effect>
+
+    <Effect minstrength="695" 
+        maxstrength="700" 
+        strengthchange="-699" 
+        minspeedmultiplier="-5.95" 
+        maxspeedmultiplier="-6.00">
+    </Effect>
+
+    <Effect minstrength="700" 
+        maxstrength="705" 
+        strengthchange="-704" 
+        minspeedmultiplier="-6.00" 
+        maxspeedmultiplier="-6.05">
+    </Effect>
+
+    <Effect minstrength="705" 
+        maxstrength="710" 
+        strengthchange="-709" 
+        minspeedmultiplier="-6.05" 
+        maxspeedmultiplier="-6.10">
+    </Effect>
+
+    <Effect minstrength="710" 
+        maxstrength="715" 
+        strengthchange="-714" 
+        minspeedmultiplier="-6.10" 
+        maxspeedmultiplier="-6.15">
+    </Effect>
+
+    <Effect minstrength="715" 
+        maxstrength="720" 
+        strengthchange="-719" 
+        minspeedmultiplier="-6.15" 
+        maxspeedmultiplier="-6.20">
+    </Effect>
+
+    <Effect minstrength="720" 
+        maxstrength="725" 
+        strengthchange="-724" 
+        minspeedmultiplier="-6.20" 
+        maxspeedmultiplier="-6.25">
+    </Effect>
+
+    <Effect minstrength="725" 
+        maxstrength="730" 
+        strengthchange="-729" 
+        minspeedmultiplier="-6.25" 
+        maxspeedmultiplier="-6.30">
+    </Effect>
+
+    <Effect minstrength="730" 
+        maxstrength="735" 
+        strengthchange="-734" 
+        minspeedmultiplier="-6.30" 
+        maxspeedmultiplier="-6.35">
+    </Effect>
+
+    <Effect minstrength="735" 
+        maxstrength="740" 
+        strengthchange="-739" 
+        minspeedmultiplier="-6.35" 
+        maxspeedmultiplier="-6.40">
+    </Effect>
+
+    <Effect minstrength="740" 
+        maxstrength="745" 
+        strengthchange="-744" 
+        minspeedmultiplier="-6.40" 
+        maxspeedmultiplier="-6.45">
+    </Effect>
+
+    <Effect minstrength="745" 
+        maxstrength="750" 
+        strengthchange="-749" 
+        minspeedmultiplier="-6.45" 
+        maxspeedmultiplier="-6.50">
+    </Effect>
+
+    <Effect minstrength="750" 
+        maxstrength="755" 
+        strengthchange="-754" 
+        minspeedmultiplier="-6.50" 
+        maxspeedmultiplier="-6.55">
+    </Effect>
+
+    <Effect minstrength="755" 
+        maxstrength="760" 
+        strengthchange="-759" 
+        minspeedmultiplier="-6.55" 
+        maxspeedmultiplier="-6.60">
+    </Effect>
+
+    <Effect minstrength="760" 
+        maxstrength="765" 
+        strengthchange="-764" 
+        minspeedmultiplier="-6.60" 
+        maxspeedmultiplier="-6.65">
+    </Effect>
+
+    <Effect minstrength="765" 
+        maxstrength="770" 
+        strengthchange="-769" 
+        minspeedmultiplier="-6.65" 
+        maxspeedmultiplier="-6.70">
+    </Effect>
+
+    <Effect minstrength="770" 
+        maxstrength="775" 
+        strengthchange="-774" 
+        minspeedmultiplier="-6.70" 
+        maxspeedmultiplier="-6.75">
+    </Effect>
+
+    <Effect minstrength="775" 
+        maxstrength="780" 
+        strengthchange="-779" 
+        minspeedmultiplier="-6.75" 
+        maxspeedmultiplier="-6.80">
+    </Effect>
+
+    <Effect minstrength="780" 
+        maxstrength="785" 
+        strengthchange="-784" 
+        minspeedmultiplier="-6.80" 
+        maxspeedmultiplier="-6.85">
+    </Effect>
+
+    <Effect minstrength="785" 
+        maxstrength="790" 
+        strengthchange="-789" 
+        minspeedmultiplier="-6.85" 
+        maxspeedmultiplier="-6.90">
+    </Effect>
+
+    <Effect minstrength="790" 
+        maxstrength="795" 
+        strengthchange="-794" 
+        minspeedmultiplier="-6.90" 
+        maxspeedmultiplier="-6.95">
+    </Effect>
+
+    <Effect minstrength="795" 
+        maxstrength="800" 
+        strengthchange="-799" 
+        minspeedmultiplier="-6.95" 
+        maxspeedmultiplier="-7.00">
+    </Effect>
+
+    <Effect minstrength="800" 
+        maxstrength="805" 
+        strengthchange="-804" 
+        minspeedmultiplier="-7.00" 
+        maxspeedmultiplier="-7.05">
+    </Effect>
+
+    <Effect minstrength="805" 
+        maxstrength="810" 
+        strengthchange="-809" 
+        minspeedmultiplier="-7.05" 
+        maxspeedmultiplier="-7.10">
+    </Effect>
+
+    <Effect minstrength="810" 
+        maxstrength="815" 
+        strengthchange="-814" 
+        minspeedmultiplier="-7.10" 
+        maxspeedmultiplier="-7.15">
+    </Effect>
+
+    <Effect minstrength="815" 
+        maxstrength="820" 
+        strengthchange="-819" 
+        minspeedmultiplier="-7.15" 
+        maxspeedmultiplier="-7.20">
+    </Effect>
+
+    <Effect minstrength="820" 
+        maxstrength="825" 
+        strengthchange="-824" 
+        minspeedmultiplier="-7.20" 
+        maxspeedmultiplier="-7.25">
+    </Effect>
+
+    <Effect minstrength="825" 
+        maxstrength="830" 
+        strengthchange="-829" 
+        minspeedmultiplier="-7.25" 
+        maxspeedmultiplier="-7.30">
+    </Effect>
+
+    <Effect minstrength="830" 
+        maxstrength="835" 
+        strengthchange="-834" 
+        minspeedmultiplier="-7.30" 
+        maxspeedmultiplier="-7.35">
+    </Effect>
+
+    <Effect minstrength="835" 
+        maxstrength="840" 
+        strengthchange="-839" 
+        minspeedmultiplier="-7.35" 
+        maxspeedmultiplier="-7.40">
+    </Effect>
+
+    <Effect minstrength="840" 
+        maxstrength="845" 
+        strengthchange="-844" 
+        minspeedmultiplier="-7.40" 
+        maxspeedmultiplier="-7.45">
+    </Effect>
+
+    <Effect minstrength="845" 
+        maxstrength="850" 
+        strengthchange="-849" 
+        minspeedmultiplier="-7.45" 
+        maxspeedmultiplier="-7.50">
+    </Effect>
+
+    <Effect minstrength="850" 
+        maxstrength="855" 
+        strengthchange="-854" 
+        minspeedmultiplier="-7.50" 
+        maxspeedmultiplier="-7.55">
+    </Effect>
+
+    <Effect minstrength="855" 
+        maxstrength="860" 
+        strengthchange="-859" 
+        minspeedmultiplier="-7.55" 
+        maxspeedmultiplier="-7.60">
+    </Effect>
+
+    <Effect minstrength="860" 
+        maxstrength="865" 
+        strengthchange="-864" 
+        minspeedmultiplier="-7.60" 
+        maxspeedmultiplier="-7.65">
+    </Effect>
+
+    <Effect minstrength="865" 
+        maxstrength="870" 
+        strengthchange="-869" 
+        minspeedmultiplier="-7.65" 
+        maxspeedmultiplier="-7.70">
+    </Effect>
+
+    <Effect minstrength="870" 
+        maxstrength="875" 
+        strengthchange="-874" 
+        minspeedmultiplier="-7.70" 
+        maxspeedmultiplier="-7.75">
+    </Effect>
+
+    <Effect minstrength="875" 
+        maxstrength="880" 
+        strengthchange="-879" 
+        minspeedmultiplier="-7.75" 
+        maxspeedmultiplier="-7.80">
+    </Effect>
+
+    <Effect minstrength="880" 
+        maxstrength="885" 
+        strengthchange="-884" 
+        minspeedmultiplier="-7.80" 
+        maxspeedmultiplier="-7.85">
+    </Effect>
+
+    <Effect minstrength="885" 
+        maxstrength="890" 
+        strengthchange="-889" 
+        minspeedmultiplier="-7.85" 
+        maxspeedmultiplier="-7.90">
+    </Effect>
+
+    <Effect minstrength="890" 
+        maxstrength="895" 
+        strengthchange="-894" 
+        minspeedmultiplier="-7.90" 
+        maxspeedmultiplier="-7.95">
+    </Effect>
+
+    <Effect minstrength="895" 
+        maxstrength="900" 
+        strengthchange="-899" 
+        minspeedmultiplier="-7.95" 
+        maxspeedmultiplier="-8.00">
+    </Effect>
+
+    <Effect minstrength="900" 
+        maxstrength="905" 
+        strengthchange="-904" 
+        minspeedmultiplier="-8.00" 
+        maxspeedmultiplier="-8.05">
+    </Effect>
+
+    <Effect minstrength="905" 
+        maxstrength="910" 
+        strengthchange="-909" 
+        minspeedmultiplier="-8.05" 
+        maxspeedmultiplier="-8.10">
+    </Effect>
+
+    <Effect minstrength="910" 
+        maxstrength="915" 
+        strengthchange="-914" 
+        minspeedmultiplier="-8.10" 
+        maxspeedmultiplier="-8.15">
+    </Effect>
+
+    <Effect minstrength="915" 
+        maxstrength="920" 
+        strengthchange="-919" 
+        minspeedmultiplier="-8.15" 
+        maxspeedmultiplier="-8.20">
+    </Effect>
+
+    <Effect minstrength="920" 
+        maxstrength="925" 
+        strengthchange="-924" 
+        minspeedmultiplier="-8.20" 
+        maxspeedmultiplier="-8.25">
+    </Effect>
+
+    <Effect minstrength="925" 
+        maxstrength="930" 
+        strengthchange="-929" 
+        minspeedmultiplier="-8.25" 
+        maxspeedmultiplier="-8.30">
+    </Effect>
+
+    <Effect minstrength="930" 
+        maxstrength="935" 
+        strengthchange="-934" 
+        minspeedmultiplier="-8.30" 
+        maxspeedmultiplier="-8.35">
+    </Effect>
+
+    <Effect minstrength="935" 
+        maxstrength="940" 
+        strengthchange="-939" 
+        minspeedmultiplier="-8.35" 
+        maxspeedmultiplier="-8.40">
+    </Effect>
+
+    <Effect minstrength="940" 
+        maxstrength="945" 
+        strengthchange="-944" 
+        minspeedmultiplier="-8.40" 
+        maxspeedmultiplier="-8.45">
+    </Effect>
+
+    <Effect minstrength="945" 
+        maxstrength="950" 
+        strengthchange="-949" 
+        minspeedmultiplier="-8.45" 
+        maxspeedmultiplier="-8.50">
+    </Effect>
+
+    <Effect minstrength="950" 
+        maxstrength="955" 
+        strengthchange="-954" 
+        minspeedmultiplier="-8.50" 
+        maxspeedmultiplier="-8.55">
+    </Effect>
+
+    <Effect minstrength="955" 
+        maxstrength="960" 
+        strengthchange="-959" 
+        minspeedmultiplier="-8.55" 
+        maxspeedmultiplier="-8.60">
+    </Effect>
+
+    <Effect minstrength="960" 
+        maxstrength="965" 
+        strengthchange="-964" 
+        minspeedmultiplier="-8.60" 
+        maxspeedmultiplier="-8.65">
+    </Effect>
+
+    <Effect minstrength="965" 
+        maxstrength="970" 
+        strengthchange="-969" 
+        minspeedmultiplier="-8.65" 
+        maxspeedmultiplier="-8.70">
+    </Effect>
+
+    <Effect minstrength="970" 
+        maxstrength="975" 
+        strengthchange="-974" 
+        minspeedmultiplier="-8.70" 
+        maxspeedmultiplier="-8.75">
+    </Effect>
+
+    <Effect minstrength="975" 
+        maxstrength="980" 
+        strengthchange="-979" 
+        minspeedmultiplier="-8.75" 
+        maxspeedmultiplier="-8.80">
+    </Effect>
+
+    <Effect minstrength="980" 
+        maxstrength="985" 
+        strengthchange="-984" 
+        minspeedmultiplier="-8.80" 
+        maxspeedmultiplier="-8.85">
+    </Effect>
+
+    <Effect minstrength="985" 
+        maxstrength="990" 
+        strengthchange="-989" 
+        minspeedmultiplier="-8.85" 
+        maxspeedmultiplier="-8.90">
+    </Effect>
+
+    <Effect minstrength="990" 
+        maxstrength="995" 
+        strengthchange="-994" 
+        minspeedmultiplier="-8.90" 
+        maxspeedmultiplier="-8.95">
+    </Effect>
+
+    <Effect minstrength="995" 
+        maxstrength="1000" 
+        strengthchange="-999" 
+        minspeedmultiplier="-8.95" 
+        maxspeedmultiplier="-9.00">
+    </Effect>
+	
+	<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" />
+</Affliction>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+//////////// FAST  ///////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////// -->
+<Affliction
+	name="Swiftess"
+	identifier="nh_fast"
+	type="none"
+	isbuff="true"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="1001" 
+	showicontoothersthreshold="1001"
+	showinhealthscannerthreshold="1001"
+	maxstrength="1000"
+	iconcolors="0,255,255,150"
+	affectmachines="true"
+	multiplybymaxvitality="false">	
+    <Effect minstrength="0" 
+        maxstrength="5" 
+        strengthchange="-4" 
+        minspeedmultiplier="1.00" 
+        maxspeedmultiplier="1.05">
+    </Effect>
+
+    <Effect minstrength="5" 
+        maxstrength="10" 
+        strengthchange="-9" 
+        minspeedmultiplier="1.05" 
+        maxspeedmultiplier="1.10">
+    </Effect>
+
+    <Effect minstrength="10" 
+        maxstrength="15" 
+        strengthchange="-14" 
+        minspeedmultiplier="1.10" 
+        maxspeedmultiplier="1.15">
+    </Effect>
+
+    <Effect minstrength="15" 
+        maxstrength="20" 
+        strengthchange="-19" 
+        minspeedmultiplier="1.15" 
+        maxspeedmultiplier="1.20">
+    </Effect>
+
+    <Effect minstrength="20" 
+        maxstrength="25" 
+        strengthchange="-24" 
+        minspeedmultiplier="1.20" 
+        maxspeedmultiplier="1.25">
+    </Effect>
+
+    <Effect minstrength="25" 
+        maxstrength="30" 
+        strengthchange="-29" 
+        minspeedmultiplier="1.25" 
+        maxspeedmultiplier="1.30">
+    </Effect>
+
+    <Effect minstrength="30" 
+        maxstrength="35" 
+        strengthchange="-34" 
+        minspeedmultiplier="1.30" 
+        maxspeedmultiplier="1.35">
+    </Effect>
+
+    <Effect minstrength="35" 
+        maxstrength="40" 
+        strengthchange="-39" 
+        minspeedmultiplier="1.35" 
+        maxspeedmultiplier="1.40">
+    </Effect>
+
+    <Effect minstrength="40" 
+        maxstrength="45" 
+        strengthchange="-44" 
+        minspeedmultiplier="1.40" 
+        maxspeedmultiplier="1.45">
+    </Effect>
+
+    <Effect minstrength="45" 
+        maxstrength="50" 
+        strengthchange="-49" 
+        minspeedmultiplier="1.45" 
+        maxspeedmultiplier="1.50">
+    </Effect>
+
+    <Effect minstrength="50" 
+        maxstrength="55" 
+        strengthchange="-54" 
+        minspeedmultiplier="1.50" 
+        maxspeedmultiplier="1.55">
+    </Effect>
+
+    <Effect minstrength="55" 
+        maxstrength="60" 
+        strengthchange="-59" 
+        minspeedmultiplier="1.55" 
+        maxspeedmultiplier="1.60">
+    </Effect>
+
+    <Effect minstrength="60" 
+        maxstrength="65" 
+        strengthchange="-64" 
+        minspeedmultiplier="1.60" 
+        maxspeedmultiplier="1.65">
+    </Effect>
+
+    <Effect minstrength="65" 
+        maxstrength="70" 
+        strengthchange="-69" 
+        minspeedmultiplier="1.65" 
+        maxspeedmultiplier="1.70">
+    </Effect>
+
+    <Effect minstrength="70" 
+        maxstrength="75" 
+        strengthchange="-74" 
+        minspeedmultiplier="1.70" 
+        maxspeedmultiplier="1.75">
+    </Effect>
+
+    <Effect minstrength="75" 
+        maxstrength="80" 
+        strengthchange="-79" 
+        minspeedmultiplier="1.75" 
+        maxspeedmultiplier="1.80">
+    </Effect>
+
+    <Effect minstrength="80" 
+        maxstrength="85" 
+        strengthchange="-84" 
+        minspeedmultiplier="1.80" 
+        maxspeedmultiplier="1.85">
+    </Effect>
+
+    <Effect minstrength="85" 
+        maxstrength="90" 
+        strengthchange="-89" 
+        minspeedmultiplier="1.85" 
+        maxspeedmultiplier="1.90">
+    </Effect>
+
+    <Effect minstrength="90" 
+        maxstrength="95" 
+        strengthchange="-94" 
+        minspeedmultiplier="1.90" 
+        maxspeedmultiplier="1.95">
+    </Effect>
+
+    <Effect minstrength="95" 
+        maxstrength="100" 
+        strengthchange="-99" 
+        minspeedmultiplier="1.95" 
+        maxspeedmultiplier="2.00">
+    </Effect>
+
+    <Effect minstrength="100" 
+        maxstrength="105" 
+        strengthchange="-104" 
+        minspeedmultiplier="2.00" 
+        maxspeedmultiplier="2.05">
+    </Effect>
+
+    <Effect minstrength="105" 
+        maxstrength="110" 
+        strengthchange="-109" 
+        minspeedmultiplier="2.05" 
+        maxspeedmultiplier="2.10">
+    </Effect>
+
+    <Effect minstrength="110" 
+        maxstrength="115" 
+        strengthchange="-114" 
+        minspeedmultiplier="2.10" 
+        maxspeedmultiplier="2.15">
+    </Effect>
+
+    <Effect minstrength="115" 
+        maxstrength="120" 
+        strengthchange="-119" 
+        minspeedmultiplier="2.15" 
+        maxspeedmultiplier="2.20">
+    </Effect>
+
+    <Effect minstrength="120" 
+        maxstrength="125" 
+        strengthchange="-124" 
+        minspeedmultiplier="2.20" 
+        maxspeedmultiplier="2.25">
+    </Effect>
+
+    <Effect minstrength="125" 
+        maxstrength="130" 
+        strengthchange="-129" 
+        minspeedmultiplier="2.25" 
+        maxspeedmultiplier="2.30">
+    </Effect>
+
+    <Effect minstrength="130" 
+        maxstrength="135" 
+        strengthchange="-134" 
+        minspeedmultiplier="2.30" 
+        maxspeedmultiplier="2.35">
+    </Effect>
+
+    <Effect minstrength="135" 
+        maxstrength="140" 
+        strengthchange="-139" 
+        minspeedmultiplier="2.35" 
+        maxspeedmultiplier="2.40">
+    </Effect>
+
+    <Effect minstrength="140" 
+        maxstrength="145" 
+        strengthchange="-144" 
+        minspeedmultiplier="2.40" 
+        maxspeedmultiplier="2.45">
+    </Effect>
+
+    <Effect minstrength="145" 
+        maxstrength="150" 
+        strengthchange="-149" 
+        minspeedmultiplier="2.45" 
+        maxspeedmultiplier="2.50">
+    </Effect>
+
+    <Effect minstrength="150" 
+        maxstrength="155" 
+        strengthchange="-154" 
+        minspeedmultiplier="2.50" 
+        maxspeedmultiplier="2.55">
+    </Effect>
+
+    <Effect minstrength="155" 
+        maxstrength="160" 
+        strengthchange="-159" 
+        minspeedmultiplier="2.55" 
+        maxspeedmultiplier="2.60">
+    </Effect>
+
+    <Effect minstrength="160" 
+        maxstrength="165" 
+        strengthchange="-164" 
+        minspeedmultiplier="2.60" 
+        maxspeedmultiplier="2.65">
+    </Effect>
+
+    <Effect minstrength="165" 
+        maxstrength="170" 
+        strengthchange="-169" 
+        minspeedmultiplier="2.65" 
+        maxspeedmultiplier="2.70">
+    </Effect>
+
+    <Effect minstrength="170" 
+        maxstrength="175" 
+        strengthchange="-174" 
+        minspeedmultiplier="2.70" 
+        maxspeedmultiplier="2.75">
+    </Effect>
+
+    <Effect minstrength="175" 
+        maxstrength="180" 
+        strengthchange="-179" 
+        minspeedmultiplier="2.75" 
+        maxspeedmultiplier="2.80">
+    </Effect>
+
+    <Effect minstrength="180" 
+        maxstrength="185" 
+        strengthchange="-184" 
+        minspeedmultiplier="2.80" 
+        maxspeedmultiplier="2.85">
+    </Effect>
+
+    <Effect minstrength="185" 
+        maxstrength="190" 
+        strengthchange="-189" 
+        minspeedmultiplier="2.85" 
+        maxspeedmultiplier="2.90">
+    </Effect>
+
+    <Effect minstrength="190" 
+        maxstrength="195" 
+        strengthchange="-194" 
+        minspeedmultiplier="2.90" 
+        maxspeedmultiplier="2.95">
+    </Effect>
+
+    <Effect minstrength="195" 
+        maxstrength="200" 
+        strengthchange="-199" 
+        minspeedmultiplier="2.95" 
+        maxspeedmultiplier="3.00">
+    </Effect>
+
+    <Effect minstrength="200" 
+        maxstrength="205" 
+        strengthchange="-204" 
+        minspeedmultiplier="3.00" 
+        maxspeedmultiplier="3.05">
+    </Effect>
+
+    <Effect minstrength="205" 
+        maxstrength="210" 
+        strengthchange="-209" 
+        minspeedmultiplier="3.05" 
+        maxspeedmultiplier="3.10">
+    </Effect>
+
+    <Effect minstrength="210" 
+        maxstrength="215" 
+        strengthchange="-214" 
+        minspeedmultiplier="3.10" 
+        maxspeedmultiplier="3.15">
+    </Effect>
+
+    <Effect minstrength="215" 
+        maxstrength="220" 
+        strengthchange="-219" 
+        minspeedmultiplier="3.15" 
+        maxspeedmultiplier="3.20">
+    </Effect>
+
+    <Effect minstrength="220" 
+        maxstrength="225" 
+        strengthchange="-224" 
+        minspeedmultiplier="3.20" 
+        maxspeedmultiplier="3.25">
+    </Effect>
+
+    <Effect minstrength="225" 
+        maxstrength="230" 
+        strengthchange="-229" 
+        minspeedmultiplier="3.25" 
+        maxspeedmultiplier="3.30">
+    </Effect>
+
+    <Effect minstrength="230" 
+        maxstrength="235" 
+        strengthchange="-234" 
+        minspeedmultiplier="3.30" 
+        maxspeedmultiplier="3.35">
+    </Effect>
+
+    <Effect minstrength="235" 
+        maxstrength="240" 
+        strengthchange="-239" 
+        minspeedmultiplier="3.35" 
+        maxspeedmultiplier="3.40">
+    </Effect>
+
+    <Effect minstrength="240" 
+        maxstrength="245" 
+        strengthchange="-244" 
+        minspeedmultiplier="3.40" 
+        maxspeedmultiplier="3.45">
+    </Effect>
+
+    <Effect minstrength="245" 
+        maxstrength="250" 
+        strengthchange="-249" 
+        minspeedmultiplier="3.45" 
+        maxspeedmultiplier="3.50">
+    </Effect>
+
+    <Effect minstrength="250" 
+        maxstrength="255" 
+        strengthchange="-254" 
+        minspeedmultiplier="3.50" 
+        maxspeedmultiplier="3.55">
+    </Effect>
+
+    <Effect minstrength="255" 
+        maxstrength="260" 
+        strengthchange="-259" 
+        minspeedmultiplier="3.55" 
+        maxspeedmultiplier="3.60">
+    </Effect>
+
+    <Effect minstrength="260" 
+        maxstrength="265" 
+        strengthchange="-264" 
+        minspeedmultiplier="3.60" 
+        maxspeedmultiplier="3.65">
+    </Effect>
+
+    <Effect minstrength="265" 
+        maxstrength="270" 
+        strengthchange="-269" 
+        minspeedmultiplier="3.65" 
+        maxspeedmultiplier="3.70">
+    </Effect>
+
+    <Effect minstrength="270" 
+        maxstrength="275" 
+        strengthchange="-274" 
+        minspeedmultiplier="3.70" 
+        maxspeedmultiplier="3.75">
+    </Effect>
+
+    <Effect minstrength="275" 
+        maxstrength="280" 
+        strengthchange="-279" 
+        minspeedmultiplier="3.75" 
+        maxspeedmultiplier="3.80">
+    </Effect>
+
+    <Effect minstrength="280" 
+        maxstrength="285" 
+        strengthchange="-284" 
+        minspeedmultiplier="3.80" 
+        maxspeedmultiplier="3.85">
+    </Effect>
+
+    <Effect minstrength="285" 
+        maxstrength="290" 
+        strengthchange="-289" 
+        minspeedmultiplier="3.85" 
+        maxspeedmultiplier="3.90">
+    </Effect>
+
+    <Effect minstrength="290" 
+        maxstrength="295" 
+        strengthchange="-294" 
+        minspeedmultiplier="3.90" 
+        maxspeedmultiplier="3.95">
+    </Effect>
+
+    <Effect minstrength="295" 
+        maxstrength="300" 
+        strengthchange="-299" 
+        minspeedmultiplier="3.95" 
+        maxspeedmultiplier="4.00">
+    </Effect>
+
+    <Effect minstrength="300" 
+        maxstrength="305" 
+        strengthchange="-304" 
+        minspeedmultiplier="4.00" 
+        maxspeedmultiplier="4.05">
+    </Effect>
+
+    <Effect minstrength="305" 
+        maxstrength="310" 
+        strengthchange="-309" 
+        minspeedmultiplier="4.05" 
+        maxspeedmultiplier="4.10">
+    </Effect>
+
+    <Effect minstrength="310" 
+        maxstrength="315" 
+        strengthchange="-314" 
+        minspeedmultiplier="4.10" 
+        maxspeedmultiplier="4.15">
+    </Effect>
+
+    <Effect minstrength="315" 
+        maxstrength="320" 
+        strengthchange="-319" 
+        minspeedmultiplier="4.15" 
+        maxspeedmultiplier="4.20">
+    </Effect>
+
+    <Effect minstrength="320" 
+        maxstrength="325" 
+        strengthchange="-324" 
+        minspeedmultiplier="4.20" 
+        maxspeedmultiplier="4.25">
+    </Effect>
+
+    <Effect minstrength="325" 
+        maxstrength="330" 
+        strengthchange="-329" 
+        minspeedmultiplier="4.25" 
+        maxspeedmultiplier="4.30">
+    </Effect>
+
+    <Effect minstrength="330" 
+        maxstrength="335" 
+        strengthchange="-334" 
+        minspeedmultiplier="4.30" 
+        maxspeedmultiplier="4.35">
+    </Effect>
+
+    <Effect minstrength="335" 
+        maxstrength="340" 
+        strengthchange="-339" 
+        minspeedmultiplier="4.35" 
+        maxspeedmultiplier="4.40">
+    </Effect>
+
+    <Effect minstrength="340" 
+        maxstrength="345" 
+        strengthchange="-344" 
+        minspeedmultiplier="4.40" 
+        maxspeedmultiplier="4.45">
+    </Effect>
+
+    <Effect minstrength="345" 
+        maxstrength="350" 
+        strengthchange="-349" 
+        minspeedmultiplier="4.45" 
+        maxspeedmultiplier="4.50">
+    </Effect>
+
+    <Effect minstrength="350" 
+        maxstrength="355" 
+        strengthchange="-354" 
+        minspeedmultiplier="4.50" 
+        maxspeedmultiplier="4.55">
+    </Effect>
+
+    <Effect minstrength="355" 
+        maxstrength="360" 
+        strengthchange="-359" 
+        minspeedmultiplier="4.55" 
+        maxspeedmultiplier="4.60">
+    </Effect>
+
+    <Effect minstrength="360" 
+        maxstrength="365" 
+        strengthchange="-364" 
+        minspeedmultiplier="4.60" 
+        maxspeedmultiplier="4.65">
+    </Effect>
+
+    <Effect minstrength="365" 
+        maxstrength="370" 
+        strengthchange="-369" 
+        minspeedmultiplier="4.65" 
+        maxspeedmultiplier="4.70">
+    </Effect>
+
+    <Effect minstrength="370" 
+        maxstrength="375" 
+        strengthchange="-374" 
+        minspeedmultiplier="4.70" 
+        maxspeedmultiplier="4.75">
+    </Effect>
+
+    <Effect minstrength="375" 
+        maxstrength="380" 
+        strengthchange="-379" 
+        minspeedmultiplier="4.75" 
+        maxspeedmultiplier="4.80">
+    </Effect>
+
+    <Effect minstrength="380" 
+        maxstrength="385" 
+        strengthchange="-384" 
+        minspeedmultiplier="4.80" 
+        maxspeedmultiplier="4.85">
+    </Effect>
+
+    <Effect minstrength="385" 
+        maxstrength="390" 
+        strengthchange="-389" 
+        minspeedmultiplier="4.85" 
+        maxspeedmultiplier="4.90">
+    </Effect>
+
+    <Effect minstrength="390" 
+        maxstrength="395" 
+        strengthchange="-394" 
+        minspeedmultiplier="4.90" 
+        maxspeedmultiplier="4.95">
+    </Effect>
+
+    <Effect minstrength="395" 
+        maxstrength="400" 
+        strengthchange="-399" 
+        minspeedmultiplier="4.95" 
+        maxspeedmultiplier="5.00">
+    </Effect>
+
+    <Effect minstrength="400" 
+        maxstrength="405" 
+        strengthchange="-404" 
+        minspeedmultiplier="5.00" 
+        maxspeedmultiplier="5.05">
+    </Effect>
+
+    <Effect minstrength="405" 
+        maxstrength="410" 
+        strengthchange="-409" 
+        minspeedmultiplier="5.05" 
+        maxspeedmultiplier="5.10">
+    </Effect>
+
+    <Effect minstrength="410" 
+        maxstrength="415" 
+        strengthchange="-414" 
+        minspeedmultiplier="5.10" 
+        maxspeedmultiplier="5.15">
+    </Effect>
+
+    <Effect minstrength="415" 
+        maxstrength="420" 
+        strengthchange="-419" 
+        minspeedmultiplier="5.15" 
+        maxspeedmultiplier="5.20">
+    </Effect>
+
+    <Effect minstrength="420" 
+        maxstrength="425" 
+        strengthchange="-424" 
+        minspeedmultiplier="5.20" 
+        maxspeedmultiplier="5.25">
+    </Effect>
+
+    <Effect minstrength="425" 
+        maxstrength="430" 
+        strengthchange="-429" 
+        minspeedmultiplier="5.25" 
+        maxspeedmultiplier="5.30">
+    </Effect>
+
+    <Effect minstrength="430" 
+        maxstrength="435" 
+        strengthchange="-434" 
+        minspeedmultiplier="5.30" 
+        maxspeedmultiplier="5.35">
+    </Effect>
+
+    <Effect minstrength="435" 
+        maxstrength="440" 
+        strengthchange="-439" 
+        minspeedmultiplier="5.35" 
+        maxspeedmultiplier="5.40">
+    </Effect>
+
+    <Effect minstrength="440" 
+        maxstrength="445" 
+        strengthchange="-444" 
+        minspeedmultiplier="5.40" 
+        maxspeedmultiplier="5.45">
+    </Effect>
+
+    <Effect minstrength="445" 
+        maxstrength="450" 
+        strengthchange="-449" 
+        minspeedmultiplier="5.45" 
+        maxspeedmultiplier="5.50">
+    </Effect>
+
+    <Effect minstrength="450" 
+        maxstrength="455" 
+        strengthchange="-454" 
+        minspeedmultiplier="5.50" 
+        maxspeedmultiplier="5.55">
+    </Effect>
+
+    <Effect minstrength="455" 
+        maxstrength="460" 
+        strengthchange="-459" 
+        minspeedmultiplier="5.55" 
+        maxspeedmultiplier="5.60">
+    </Effect>
+
+    <Effect minstrength="460" 
+        maxstrength="465" 
+        strengthchange="-464" 
+        minspeedmultiplier="5.60" 
+        maxspeedmultiplier="5.65">
+    </Effect>
+
+    <Effect minstrength="465" 
+        maxstrength="470" 
+        strengthchange="-469" 
+        minspeedmultiplier="5.65" 
+        maxspeedmultiplier="5.70">
+    </Effect>
+
+    <Effect minstrength="470" 
+        maxstrength="475" 
+        strengthchange="-474" 
+        minspeedmultiplier="5.70" 
+        maxspeedmultiplier="5.75">
+    </Effect>
+
+    <Effect minstrength="475" 
+        maxstrength="480" 
+        strengthchange="-479" 
+        minspeedmultiplier="5.75" 
+        maxspeedmultiplier="5.80">
+    </Effect>
+
+    <Effect minstrength="480" 
+        maxstrength="485" 
+        strengthchange="-484" 
+        minspeedmultiplier="5.80" 
+        maxspeedmultiplier="5.85">
+    </Effect>
+
+    <Effect minstrength="485" 
+        maxstrength="490" 
+        strengthchange="-489" 
+        minspeedmultiplier="5.85" 
+        maxspeedmultiplier="5.90">
+    </Effect>
+
+    <Effect minstrength="490" 
+        maxstrength="495" 
+        strengthchange="-494" 
+        minspeedmultiplier="5.90" 
+        maxspeedmultiplier="5.95">
+    </Effect>
+
+    <Effect minstrength="495" 
+        maxstrength="500" 
+        strengthchange="-499" 
+        minspeedmultiplier="5.95" 
+        maxspeedmultiplier="6.00">
+    </Effect>
+
+    <Effect minstrength="500" 
+        maxstrength="505" 
+        strengthchange="-504" 
+        minspeedmultiplier="6.00" 
+        maxspeedmultiplier="6.05">
+    </Effect>
+
+    <Effect minstrength="505" 
+        maxstrength="510" 
+        strengthchange="-509" 
+        minspeedmultiplier="6.05" 
+        maxspeedmultiplier="6.10">
+    </Effect>
+
+    <Effect minstrength="510" 
+        maxstrength="515" 
+        strengthchange="-514" 
+        minspeedmultiplier="6.10" 
+        maxspeedmultiplier="6.15">
+    </Effect>
+
+    <Effect minstrength="515" 
+        maxstrength="520" 
+        strengthchange="-519" 
+        minspeedmultiplier="6.15" 
+        maxspeedmultiplier="6.20">
+    </Effect>
+
+    <Effect minstrength="520" 
+        maxstrength="525" 
+        strengthchange="-524" 
+        minspeedmultiplier="6.20" 
+        maxspeedmultiplier="6.25">
+    </Effect>
+
+    <Effect minstrength="525" 
+        maxstrength="530" 
+        strengthchange="-529" 
+        minspeedmultiplier="6.25" 
+        maxspeedmultiplier="6.30">
+    </Effect>
+
+    <Effect minstrength="530" 
+        maxstrength="535" 
+        strengthchange="-534" 
+        minspeedmultiplier="6.30" 
+        maxspeedmultiplier="6.35">
+    </Effect>
+
+    <Effect minstrength="535" 
+        maxstrength="540" 
+        strengthchange="-539" 
+        minspeedmultiplier="6.35" 
+        maxspeedmultiplier="6.40">
+    </Effect>
+
+    <Effect minstrength="540" 
+        maxstrength="545" 
+        strengthchange="-544" 
+        minspeedmultiplier="6.40" 
+        maxspeedmultiplier="6.45">
+    </Effect>
+
+    <Effect minstrength="545" 
+        maxstrength="550" 
+        strengthchange="-549" 
+        minspeedmultiplier="6.45" 
+        maxspeedmultiplier="6.50">
+    </Effect>
+
+    <Effect minstrength="550" 
+        maxstrength="555" 
+        strengthchange="-554" 
+        minspeedmultiplier="6.50" 
+        maxspeedmultiplier="6.55">
+    </Effect>
+
+    <Effect minstrength="555" 
+        maxstrength="560" 
+        strengthchange="-559" 
+        minspeedmultiplier="6.55" 
+        maxspeedmultiplier="6.60">
+    </Effect>
+
+    <Effect minstrength="560" 
+        maxstrength="565" 
+        strengthchange="-564" 
+        minspeedmultiplier="6.60" 
+        maxspeedmultiplier="6.65">
+    </Effect>
+
+    <Effect minstrength="565" 
+        maxstrength="570" 
+        strengthchange="-569" 
+        minspeedmultiplier="6.65" 
+        maxspeedmultiplier="6.70">
+    </Effect>
+
+    <Effect minstrength="570" 
+        maxstrength="575" 
+        strengthchange="-574" 
+        minspeedmultiplier="6.70" 
+        maxspeedmultiplier="6.75">
+    </Effect>
+
+    <Effect minstrength="575" 
+        maxstrength="580" 
+        strengthchange="-579" 
+        minspeedmultiplier="6.75" 
+        maxspeedmultiplier="6.80">
+    </Effect>
+
+    <Effect minstrength="580" 
+        maxstrength="585" 
+        strengthchange="-584" 
+        minspeedmultiplier="6.80" 
+        maxspeedmultiplier="6.85">
+    </Effect>
+
+    <Effect minstrength="585" 
+        maxstrength="590" 
+        strengthchange="-589" 
+        minspeedmultiplier="6.85" 
+        maxspeedmultiplier="6.90">
+    </Effect>
+
+    <Effect minstrength="590" 
+        maxstrength="595" 
+        strengthchange="-594" 
+        minspeedmultiplier="6.90" 
+        maxspeedmultiplier="6.95">
+    </Effect>
+
+    <Effect minstrength="595" 
+        maxstrength="600" 
+        strengthchange="-599" 
+        minspeedmultiplier="6.95" 
+        maxspeedmultiplier="7.00">
+    </Effect>
+
+    <Effect minstrength="600" 
+        maxstrength="605" 
+        strengthchange="-604" 
+        minspeedmultiplier="7.00" 
+        maxspeedmultiplier="7.05">
+    </Effect>
+
+    <Effect minstrength="605" 
+        maxstrength="610" 
+        strengthchange="-609" 
+        minspeedmultiplier="7.05" 
+        maxspeedmultiplier="7.10">
+    </Effect>
+
+    <Effect minstrength="610" 
+        maxstrength="615" 
+        strengthchange="-614" 
+        minspeedmultiplier="7.10" 
+        maxspeedmultiplier="7.15">
+    </Effect>
+
+    <Effect minstrength="615" 
+        maxstrength="620" 
+        strengthchange="-619" 
+        minspeedmultiplier="7.15" 
+        maxspeedmultiplier="7.20">
+    </Effect>
+
+    <Effect minstrength="620" 
+        maxstrength="625" 
+        strengthchange="-624" 
+        minspeedmultiplier="7.20" 
+        maxspeedmultiplier="7.25">
+    </Effect>
+
+    <Effect minstrength="625" 
+        maxstrength="630" 
+        strengthchange="-629" 
+        minspeedmultiplier="7.25" 
+        maxspeedmultiplier="7.30">
+    </Effect>
+
+    <Effect minstrength="630" 
+        maxstrength="635" 
+        strengthchange="-634" 
+        minspeedmultiplier="7.30" 
+        maxspeedmultiplier="7.35">
+    </Effect>
+
+    <Effect minstrength="635" 
+        maxstrength="640" 
+        strengthchange="-639" 
+        minspeedmultiplier="7.35" 
+        maxspeedmultiplier="7.40">
+    </Effect>
+
+    <Effect minstrength="640" 
+        maxstrength="645" 
+        strengthchange="-644" 
+        minspeedmultiplier="7.40" 
+        maxspeedmultiplier="7.45">
+    </Effect>
+
+    <Effect minstrength="645" 
+        maxstrength="650" 
+        strengthchange="-649" 
+        minspeedmultiplier="7.45" 
+        maxspeedmultiplier="7.50">
+    </Effect>
+
+    <Effect minstrength="650" 
+        maxstrength="655" 
+        strengthchange="-654" 
+        minspeedmultiplier="7.50" 
+        maxspeedmultiplier="7.55">
+    </Effect>
+
+    <Effect minstrength="655" 
+        maxstrength="660" 
+        strengthchange="-659" 
+        minspeedmultiplier="7.55" 
+        maxspeedmultiplier="7.60">
+    </Effect>
+
+    <Effect minstrength="660" 
+        maxstrength="665" 
+        strengthchange="-664" 
+        minspeedmultiplier="7.60" 
+        maxspeedmultiplier="7.65">
+    </Effect>
+
+    <Effect minstrength="665" 
+        maxstrength="670" 
+        strengthchange="-669" 
+        minspeedmultiplier="7.65" 
+        maxspeedmultiplier="7.70">
+    </Effect>
+
+    <Effect minstrength="670" 
+        maxstrength="675" 
+        strengthchange="-674" 
+        minspeedmultiplier="7.70" 
+        maxspeedmultiplier="7.75">
+    </Effect>
+
+    <Effect minstrength="675" 
+        maxstrength="680" 
+        strengthchange="-679" 
+        minspeedmultiplier="7.75" 
+        maxspeedmultiplier="7.80">
+    </Effect>
+
+    <Effect minstrength="680" 
+        maxstrength="685" 
+        strengthchange="-684" 
+        minspeedmultiplier="7.80" 
+        maxspeedmultiplier="7.85">
+    </Effect>
+
+    <Effect minstrength="685" 
+        maxstrength="690" 
+        strengthchange="-689" 
+        minspeedmultiplier="7.85" 
+        maxspeedmultiplier="7.90">
+    </Effect>
+
+    <Effect minstrength="690" 
+        maxstrength="695" 
+        strengthchange="-694" 
+        minspeedmultiplier="7.90" 
+        maxspeedmultiplier="7.95">
+    </Effect>
+
+    <Effect minstrength="695" 
+        maxstrength="700" 
+        strengthchange="-699" 
+        minspeedmultiplier="7.95" 
+        maxspeedmultiplier="8.00">
+    </Effect>
+
+    <Effect minstrength="700" 
+        maxstrength="705" 
+        strengthchange="-704" 
+        minspeedmultiplier="8.00" 
+        maxspeedmultiplier="8.05">
+    </Effect>
+
+    <Effect minstrength="705" 
+        maxstrength="710" 
+        strengthchange="-709" 
+        minspeedmultiplier="8.05" 
+        maxspeedmultiplier="8.10">
+    </Effect>
+
+    <Effect minstrength="710" 
+        maxstrength="715" 
+        strengthchange="-714" 
+        minspeedmultiplier="8.10" 
+        maxspeedmultiplier="8.15">
+    </Effect>
+
+    <Effect minstrength="715" 
+        maxstrength="720" 
+        strengthchange="-719" 
+        minspeedmultiplier="8.15" 
+        maxspeedmultiplier="8.20">
+    </Effect>
+
+    <Effect minstrength="720" 
+        maxstrength="725" 
+        strengthchange="-724" 
+        minspeedmultiplier="8.20" 
+        maxspeedmultiplier="8.25">
+    </Effect>
+
+    <Effect minstrength="725" 
+        maxstrength="730" 
+        strengthchange="-729" 
+        minspeedmultiplier="8.25" 
+        maxspeedmultiplier="8.30">
+    </Effect>
+
+    <Effect minstrength="730" 
+        maxstrength="735" 
+        strengthchange="-734" 
+        minspeedmultiplier="8.30" 
+        maxspeedmultiplier="8.35">
+    </Effect>
+
+    <Effect minstrength="735" 
+        maxstrength="740" 
+        strengthchange="-739" 
+        minspeedmultiplier="8.35" 
+        maxspeedmultiplier="8.40">
+    </Effect>
+
+    <Effect minstrength="740" 
+        maxstrength="745" 
+        strengthchange="-744" 
+        minspeedmultiplier="8.40" 
+        maxspeedmultiplier="8.45">
+    </Effect>
+
+    <Effect minstrength="745" 
+        maxstrength="750" 
+        strengthchange="-749" 
+        minspeedmultiplier="8.45" 
+        maxspeedmultiplier="8.50">
+    </Effect>
+
+    <Effect minstrength="750" 
+        maxstrength="755" 
+        strengthchange="-754" 
+        minspeedmultiplier="8.50" 
+        maxspeedmultiplier="8.55">
+    </Effect>
+
+    <Effect minstrength="755" 
+        maxstrength="760" 
+        strengthchange="-759" 
+        minspeedmultiplier="8.55" 
+        maxspeedmultiplier="8.60">
+    </Effect>
+
+    <Effect minstrength="760" 
+        maxstrength="765" 
+        strengthchange="-764" 
+        minspeedmultiplier="8.60" 
+        maxspeedmultiplier="8.65">
+    </Effect>
+
+    <Effect minstrength="765" 
+        maxstrength="770" 
+        strengthchange="-769" 
+        minspeedmultiplier="8.65" 
+        maxspeedmultiplier="8.70">
+    </Effect>
+
+    <Effect minstrength="770" 
+        maxstrength="775" 
+        strengthchange="-774" 
+        minspeedmultiplier="8.70" 
+        maxspeedmultiplier="8.75">
+    </Effect>
+
+    <Effect minstrength="775" 
+        maxstrength="780" 
+        strengthchange="-779" 
+        minspeedmultiplier="8.75" 
+        maxspeedmultiplier="8.80">
+    </Effect>
+
+    <Effect minstrength="780" 
+        maxstrength="785" 
+        strengthchange="-784" 
+        minspeedmultiplier="8.80" 
+        maxspeedmultiplier="8.85">
+    </Effect>
+
+    <Effect minstrength="785" 
+        maxstrength="790" 
+        strengthchange="-789" 
+        minspeedmultiplier="8.85" 
+        maxspeedmultiplier="8.90">
+    </Effect>
+
+    <Effect minstrength="790" 
+        maxstrength="795" 
+        strengthchange="-794" 
+        minspeedmultiplier="8.90" 
+        maxspeedmultiplier="8.95">
+    </Effect>
+
+    <Effect minstrength="795" 
+        maxstrength="800" 
+        strengthchange="-799" 
+        minspeedmultiplier="8.95" 
+        maxspeedmultiplier="9.00">
+    </Effect>
+
+    <Effect minstrength="800" 
+        maxstrength="805" 
+        strengthchange="-804" 
+        minspeedmultiplier="9.00" 
+        maxspeedmultiplier="9.05">
+    </Effect>
+
+    <Effect minstrength="805" 
+        maxstrength="810" 
+        strengthchange="-809" 
+        minspeedmultiplier="9.05" 
+        maxspeedmultiplier="9.10">
+    </Effect>
+
+    <Effect minstrength="810" 
+        maxstrength="815" 
+        strengthchange="-814" 
+        minspeedmultiplier="9.10" 
+        maxspeedmultiplier="9.15">
+    </Effect>
+
+    <Effect minstrength="815" 
+        maxstrength="820" 
+        strengthchange="-819" 
+        minspeedmultiplier="9.15" 
+        maxspeedmultiplier="9.20">
+    </Effect>
+
+    <Effect minstrength="820" 
+        maxstrength="825" 
+        strengthchange="-824" 
+        minspeedmultiplier="9.20" 
+        maxspeedmultiplier="9.25">
+    </Effect>
+
+    <Effect minstrength="825" 
+        maxstrength="830" 
+        strengthchange="-829" 
+        minspeedmultiplier="9.25" 
+        maxspeedmultiplier="9.30">
+    </Effect>
+
+    <Effect minstrength="830" 
+        maxstrength="835" 
+        strengthchange="-834" 
+        minspeedmultiplier="9.30" 
+        maxspeedmultiplier="9.35">
+    </Effect>
+
+    <Effect minstrength="835" 
+        maxstrength="840" 
+        strengthchange="-839" 
+        minspeedmultiplier="9.35" 
+        maxspeedmultiplier="9.40">
+    </Effect>
+
+    <Effect minstrength="840" 
+        maxstrength="845" 
+        strengthchange="-844" 
+        minspeedmultiplier="9.40" 
+        maxspeedmultiplier="9.45">
+    </Effect>
+
+    <Effect minstrength="845" 
+        maxstrength="850" 
+        strengthchange="-849" 
+        minspeedmultiplier="9.45" 
+        maxspeedmultiplier="9.50">
+    </Effect>
+
+    <Effect minstrength="850" 
+        maxstrength="855" 
+        strengthchange="-854" 
+        minspeedmultiplier="9.50" 
+        maxspeedmultiplier="9.55">
+    </Effect>
+
+    <Effect minstrength="855" 
+        maxstrength="860" 
+        strengthchange="-859" 
+        minspeedmultiplier="9.55" 
+        maxspeedmultiplier="9.60">
+    </Effect>
+
+    <Effect minstrength="860" 
+        maxstrength="865" 
+        strengthchange="-864" 
+        minspeedmultiplier="9.60" 
+        maxspeedmultiplier="9.65">
+    </Effect>
+
+    <Effect minstrength="865" 
+        maxstrength="870" 
+        strengthchange="-869" 
+        minspeedmultiplier="9.65" 
+        maxspeedmultiplier="9.70">
+    </Effect>
+
+    <Effect minstrength="870" 
+        maxstrength="875" 
+        strengthchange="-874" 
+        minspeedmultiplier="9.70" 
+        maxspeedmultiplier="9.75">
+    </Effect>
+
+    <Effect minstrength="875" 
+        maxstrength="880" 
+        strengthchange="-879" 
+        minspeedmultiplier="9.75" 
+        maxspeedmultiplier="9.80">
+    </Effect>
+
+    <Effect minstrength="880" 
+        maxstrength="885" 
+        strengthchange="-884" 
+        minspeedmultiplier="9.80" 
+        maxspeedmultiplier="9.85">
+    </Effect>
+
+    <Effect minstrength="885" 
+        maxstrength="890" 
+        strengthchange="-889" 
+        minspeedmultiplier="9.85" 
+        maxspeedmultiplier="9.90">
+    </Effect>
+
+    <Effect minstrength="890" 
+        maxstrength="895" 
+        strengthchange="-894" 
+        minspeedmultiplier="9.90" 
+        maxspeedmultiplier="9.95">
+    </Effect>
+
+    <Effect minstrength="895" 
+        maxstrength="900" 
+        strengthchange="-899" 
+        minspeedmultiplier="9.95" 
+        maxspeedmultiplier="10.00">
+    </Effect>
+
+    <Effect minstrength="900" 
+        maxstrength="905" 
+        strengthchange="-904" 
+        minspeedmultiplier="10.00" 
+        maxspeedmultiplier="10.05">
+    </Effect>
+
+    <Effect minstrength="905" 
+        maxstrength="910" 
+        strengthchange="-909" 
+        minspeedmultiplier="10.05" 
+        maxspeedmultiplier="10.10">
+    </Effect>
+
+    <Effect minstrength="910" 
+        maxstrength="915" 
+        strengthchange="-914" 
+        minspeedmultiplier="10.10" 
+        maxspeedmultiplier="10.15">
+    </Effect>
+
+    <Effect minstrength="915" 
+        maxstrength="920" 
+        strengthchange="-919" 
+        minspeedmultiplier="10.15" 
+        maxspeedmultiplier="10.20">
+    </Effect>
+
+    <Effect minstrength="920" 
+        maxstrength="925" 
+        strengthchange="-924" 
+        minspeedmultiplier="10.20" 
+        maxspeedmultiplier="10.25">
+    </Effect>
+
+    <Effect minstrength="925" 
+        maxstrength="930" 
+        strengthchange="-929" 
+        minspeedmultiplier="10.25" 
+        maxspeedmultiplier="10.30">
+    </Effect>
+
+    <Effect minstrength="930" 
+        maxstrength="935" 
+        strengthchange="-934" 
+        minspeedmultiplier="10.30" 
+        maxspeedmultiplier="10.35">
+    </Effect>
+
+    <Effect minstrength="935" 
+        maxstrength="940" 
+        strengthchange="-939" 
+        minspeedmultiplier="10.35" 
+        maxspeedmultiplier="10.40">
+    </Effect>
+
+    <Effect minstrength="940" 
+        maxstrength="945" 
+        strengthchange="-944" 
+        minspeedmultiplier="10.40" 
+        maxspeedmultiplier="10.45">
+    </Effect>
+
+    <Effect minstrength="945" 
+        maxstrength="950" 
+        strengthchange="-949" 
+        minspeedmultiplier="10.45" 
+        maxspeedmultiplier="10.50">
+    </Effect>
+
+    <Effect minstrength="950" 
+        maxstrength="955" 
+        strengthchange="-954" 
+        minspeedmultiplier="10.50" 
+        maxspeedmultiplier="10.55">
+    </Effect>
+
+    <Effect minstrength="955" 
+        maxstrength="960" 
+        strengthchange="-959" 
+        minspeedmultiplier="10.55" 
+        maxspeedmultiplier="10.60">
+    </Effect>
+
+    <Effect minstrength="960" 
+        maxstrength="965" 
+        strengthchange="-964" 
+        minspeedmultiplier="10.60" 
+        maxspeedmultiplier="10.65">
+    </Effect>
+
+    <Effect minstrength="965" 
+        maxstrength="970" 
+        strengthchange="-969" 
+        minspeedmultiplier="10.65" 
+        maxspeedmultiplier="10.70">
+    </Effect>
+
+    <Effect minstrength="970" 
+        maxstrength="975" 
+        strengthchange="-974" 
+        minspeedmultiplier="10.70" 
+        maxspeedmultiplier="10.75">
+    </Effect>
+
+    <Effect minstrength="975" 
+        maxstrength="980" 
+        strengthchange="-979" 
+        minspeedmultiplier="10.75" 
+        maxspeedmultiplier="10.80">
+    </Effect>
+
+    <Effect minstrength="980" 
+        maxstrength="985" 
+        strengthchange="-984" 
+        minspeedmultiplier="10.80" 
+        maxspeedmultiplier="10.85">
+    </Effect>
+
+    <Effect minstrength="985" 
+        maxstrength="990" 
+        strengthchange="-989" 
+        minspeedmultiplier="10.85" 
+        maxspeedmultiplier="10.90">
+    </Effect>
+
+    <Effect minstrength="990" 
+        maxstrength="995" 
+        strengthchange="-994" 
+        minspeedmultiplier="10.90" 
+        maxspeedmultiplier="10.95">
+    </Effect>
+
+    <Effect minstrength="995" 
+        maxstrength="1000" 
+        strengthchange="-999" 
+        minspeedmultiplier="10.95" 
+        maxspeedmultiplier="11.00">
+    </Effect>
+	
+	<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" />
+</Affliction>
+
+</Afflictions>
